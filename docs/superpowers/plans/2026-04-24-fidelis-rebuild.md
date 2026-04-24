@@ -114,45 +114,47 @@ git commit -m "chore: scaffold Next.js app with static export"
 
 ## Task 2: Wire up theme tokens + fonts
 
+> **Note (Tailwind v4 adaptation):** The scaffold landed on Next 16 + Tailwind v4. Tailwind v4 has **no `tailwind.config.ts`** — all theme tokens live inline in CSS via `@theme`. Step 2.1 below uses the v4 syntax.
+
 **Files:**
-- Modify: `tailwind.config.ts`
 - Modify: `app/globals.css`
 - Modify: `app/layout.tsx`
-- Create: `lib/cn.ts`
+- Create: `lib/cn.ts`, `lib/siteConfig.ts`
 
-- [ ] **Step 2.1: Add Natural Earth tokens to Tailwind**
+- [ ] **Step 2.1: Add Natural Earth tokens via Tailwind v4 @theme**
 
-Overwrite `tailwind.config.ts`:
-```ts
-import type { Config } from "tailwindcss";
+Overwrite `app/globals.css`:
+```css
+@import "tailwindcss";
 
-const config: Config = {
-  content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
-  theme: {
-    extend: {
-      colors: {
-        "forest-floor": "#1A2A1C",
-        "deep-olive":   "#2A3D2C",
-        "moss-olive":   "#4A5D3C",
-        linen:          "#D4C4A0",
-        bone:           "#FAF5E4",
-        "sage-dust":    "#B4B09A",
-        ink:            "#1C1A16",
-      },
-      fontFamily: {
-        display: ["var(--font-space-grotesk)", "ui-sans-serif", "system-ui"],
-        sans:    ["var(--font-inter)", "ui-sans-serif", "system-ui"],
-      },
-      letterSpacing: {
-        eyebrow: "0.2em",
-        button:  "0.15em",
-      },
-    },
-  },
-  plugins: [],
-};
-export default config;
+@theme {
+  --color-forest-floor: #1A2A1C;
+  --color-deep-olive:   #2A3D2C;
+  --color-moss-olive:   #4A5D3C;
+  --color-linen:        #D4C4A0;
+  --color-bone:         #FAF5E4;
+  --color-sage-dust:    #B4B09A;
+  --color-ink:          #1C1A16;
+
+  --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui;
+  --font-sans:    var(--font-inter), ui-sans-serif, system-ui;
+
+  --tracking-eyebrow: 0.2em;
+  --tracking-button:  0.15em;
+}
+
+@layer base {
+  :root { color-scheme: only light; }
+  body {
+    background: var(--color-bone);
+    color: var(--color-ink);
+    font-feature-settings: "ss01", "cv11";
+  }
+  ::selection { background: #D4C4A0; color: #2A3D2C; }
+}
 ```
+
+This gives classes like `bg-deep-olive`, `text-linen`, `font-display`, `tracking-eyebrow`, `tracking-button` automatically.
 
 - [ ] **Step 2.2: Load fonts + GA4 in root layout**
 
@@ -227,20 +229,9 @@ import { twMerge } from "tailwind-merge";
 export function cn(...inputs: ClassValue[]) { return twMerge(clsx(inputs)); }
 ```
 
-- [ ] **Step 2.5: Reset globals.css**
+- [ ] **Step 2.5: (Obsolete under Tailwind v4 — globals.css was overwritten in 2.1)**
 
-Overwrite `app/globals.css`:
-```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer base {
-  :root { color-scheme: only light; }
-  body { font-feature-settings: "ss01", "cv11"; }
-  ::selection { background: #D4C4A0; color: #2A3D2C; }
-}
-```
+Skip. No separate action.
 
 - [ ] **Step 2.6: Verify build**
 
