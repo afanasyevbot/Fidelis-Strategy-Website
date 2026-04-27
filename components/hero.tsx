@@ -1,34 +1,110 @@
-import { Eyebrow } from "./eyebrow";
 import { CtaButton } from "./cta-button";
 import { siteConfig } from "@/lib/siteConfig";
 
+/**
+ * Full-viewport video hero.
+ *
+ * Video: drop hero-tree.mp4 into /public/
+ * Overlays darken the bright sky/field so white text is always readable.
+ * Text fades in after the video has played for ~4 seconds.
+ */
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-deep-olive to-moss-olive text-bone">
-      {/* Reserved slot for the user's Claude-designed animated hero asset.
-          To swap: replace the div below with the animation; keep absolute inset-0
-          and give copy wrapper a higher z-index if needed. See docs/deploy.md. */}
+    <section className="relative h-screen overflow-hidden bg-forest-floor text-bone flex flex-col justify-end">
+
+      {/* ── Background video ── */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+        style={{
+          objectPosition: "center center",
+          // CSS color grade — pushes bright golden/blue video into forest-floor palette
+          // warm olive grade — sepia adds warmth, small hue-rotate keeps it olive not pure green
+          filter: "brightness(0.52) sepia(0.35) hue-rotate(22deg) saturate(1.15) contrast(1.08)",
+        }}
+      >
+        <source src="/hero-video.mp4" type="video/mp4" />
+      </video>
+
+      {/* ── Overlays — tame the bright sky, anchor text ── */}
+      {/* Bottom gradient — makes text readable */}
       <div
-        id="hero-animation-slot"
         aria-hidden
-        className="absolute inset-0 opacity-0 pointer-events-none"
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "linear-gradient(to top, rgba(13,26,14,0.97) 0%, rgba(13,26,14,0.82) 22%, rgba(13,26,14,0.40) 50%, rgba(13,26,14,0.15) 75%, transparent 100%)",
+        }}
       />
-      <div className="relative mx-auto max-w-6xl px-6 py-28 md:py-36">
-        <Eyebrow size="lg">MOST CONSULTANTS ADVISE</Eyebrow>
-        <h1 className="font-display font-bold text-5xl md:text-[60px] leading-[1] mt-8 tracking-[-0.02em] max-w-[820px]">
-          We <em className="not-italic md:italic text-linen font-bold">build</em> what they can&apos;t.
+      {/* Left vignette — headline readable against open field */}
+      <div
+        aria-hidden
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "linear-gradient(to right, rgba(13,26,14,0.70) 0%, rgba(13,26,14,0.25) 40%, transparent 65%)",
+        }}
+      />
+      {/* Top fade — blends behind nav */}
+      <div
+        aria-hidden
+        className="absolute inset-x-0 top-0 h-32 pointer-events-none"
+        style={{
+          background: "linear-gradient(to bottom, rgba(13,26,14,0.65) 0%, transparent 100%)",
+        }}
+      />
+      {/* Global tint — brings bright video into the brand palette */}
+      <div
+        aria-hidden
+        className="absolute inset-0 pointer-events-none"
+        style={{ background: "rgba(13,26,14,0.25)" }}
+      />
+
+      {/* ── Content ── */}
+      <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 w-full pb-16 md:pb-28 flex flex-col items-center text-center">
+
+        <p className="hero-text hero-delay-1 font-sans text-[11px] font-bold uppercase tracking-[0.25em] text-linen/70 mb-5">
+          Growth Strategy + AI
+        </p>
+
+        <h1 className="hero-text hero-delay-2 font-display font-bold text-4xl sm:text-5xl md:text-[68px] lg:text-[76px] leading-[1.05] md:leading-[1] tracking-[-0.03em] max-w-[780px]">
+          Grow the{" "}
+          <em className="not-italic text-linen">top line</em>
+          {" "}—{" "}
+          <br className="hidden md:block" />
+          with AI.
         </h1>
-        <p className="font-display text-xl md:text-[26px] leading-tight mt-5 text-linen tracking-[-0.01em] md:whitespace-nowrap">
-          Strategy, AI systems, custom apps — grown for your business.
+
+        <p className="hero-text hero-delay-3 font-display text-lg md:text-[24px] leading-snug mt-6 text-linen/75 tracking-[-0.01em]">
+          Growth strategy. AI-powered execution. Built for you.
         </p>
-        <p className="font-sans text-base md:text-[17px] leading-[1.65] mt-6 text-[#C8C4AC] max-w-[640px]">
-          Custom lead-enrichment pipelines, AI outreach agents, internal tools, operator dashboards.
-          We don&apos;t hand you recommendations. We ship the systems that execute on them.
+
+        <p className="hero-text hero-delay-4 font-sans text-[15px] md:text-[17px] leading-[1.65] mt-5 text-linen/55 max-w-[560px]">
+          We design your growth strategy{" "}
+          <em className="not-italic font-semibold text-linen/75">and</em>{" "}
+          build the AI-powered systems that execute it — custom to your
+          business, your market, and your team.
         </p>
-        <div className="flex flex-wrap gap-3 mt-10">
-          <CtaButton href={siteConfig.bookingUrl} external>Book a Discovery Call →</CtaButton>
-          <CtaButton href="#what-we-build" variant="secondary">See What We Build</CtaButton>
+
+        <div className="hero-text hero-delay-5 flex flex-wrap justify-center gap-3 mt-10">
+          <CtaButton href={siteConfig.bookingUrl} external>
+            Book your 30-min Growth Audit →
+          </CtaButton>
+          <CtaButton href="#what-we-build" variant="secondary">
+            See the work
+          </CtaButton>
         </div>
+
+        <p className="hero-text hero-delay-5 font-sans text-[13px] text-linen/40 mt-5">
+          Not ready to talk?{" "}
+          <a href="/contact" className="underline hover:text-linen/70">
+            Send a note instead
+          </a>{" "}
+          — no call required.
+        </p>
       </div>
     </section>
   );

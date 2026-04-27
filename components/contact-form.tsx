@@ -3,31 +3,35 @@ import { useState } from "react";
 import { siteConfig } from "@/lib/siteConfig";
 
 export function ContactForm() {
-  const [status, setStatus] = useState<"idle" | "loading" | "ok" | "err">("idle");
+  const [sent, setSent] = useState(false);
 
-  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setStatus("loading");
     const data = new FormData(e.currentTarget);
-    try {
-      const r = await fetch(`https://formspree.io/f/${siteConfig.formspreeId}`, {
-        method: "POST",
-        body: data,
-        headers: { Accept: "application/json" },
-      });
-      setStatus(r.ok ? "ok" : "err");
-      if (r.ok) e.currentTarget.reset();
-    } catch {
-      setStatus("err");
-    }
+    const name    = data.get("name")    as string;
+    const email   = data.get("email")   as string;
+    const company = data.get("company") as string;
+    const message = data.get("message") as string;
+
+    const subject = encodeURIComponent(`Fidelis inquiry — ${name}${company ? ` · ${company}` : ""}`);
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}${company ? `\nCompany: ${company}` : ""}\n\n${message}`
+    );
+
+    window.location.href = `mailto:${siteConfig.email}?subject=${subject}&body=${body}`;
+    setSent(true);
   }
 
-  if (status === "ok") {
+  if (sent) {
     return (
       <div className="p-6 border border-moss-olive/30 bg-bone">
-        <p className="font-display text-2xl text-deep-olive">Got it — talk soon.</p>
+        <p className="font-display font-bold text-2xl text-deep-olive">Your email client should have opened.</p>
         <p className="font-sans text-[15px] text-ink/70 mt-2">
-          We&apos;ll reply within one business day.
+          If it didn&apos;t,{" "}
+          <a href={`mailto:${siteConfig.email}`} className="underline text-deep-olive hover:text-moss-olive">
+            email us directly
+          </a>{" "}
+          — we reply within one business day.
         </p>
       </div>
     );
@@ -40,25 +44,20 @@ export function ContactForm() {
     <form onSubmit={onSubmit} className="space-y-4">
       <input name="name" required placeholder="Your name" className={input} />
       <input type="email" name="email" required placeholder="Email" className={input} />
-      <input name="company" placeholder="Company" className={input} />
-      <textarea name="message" required rows={5} placeholder="What are you trying to build?" className={input} />
-      <select name="budget" className={input} defaultValue="">
-        <option value="" disabled>Budget range (optional)</option>
-        <option>Under $10k</option>
-        <option>$10k – $25k</option>
-        <option>$25k – $75k</option>
-        <option>$75k+</option>
-      </select>
+      <input name="company" placeholder="Company (optional)" className={input} />
+      <textarea
+        name="message"
+        required
+        rows={5}
+        placeholder="What are you trying to build, fix, or grow? A sentence or two is fine."
+        className={input}
+      />
       <button
         type="submit"
-        disabled={status === "loading"}
-        className="inline-flex items-center justify-center font-sans text-[11px] font-semibold uppercase tracking-button px-6 py-3 bg-deep-olive text-bone hover:bg-forest-floor disabled:opacity-60"
+        className="inline-flex items-center justify-center font-sans text-[11px] font-semibold uppercase tracking-button px-6 py-3 bg-moss-olive text-bone hover:bg-deep-olive/90"
       >
-        {status === "loading" ? "Sending…" : "Send →"}
+        Send →
       </button>
-      {status === "err" && (
-        <p className="text-sm text-red-700">Something went wrong — email us directly instead.</p>
-      )}
     </form>
   );
 }

@@ -11,15 +11,15 @@ export function Eyebrow({
   size?: "md" | "lg";
   className?: string;
 }) {
-  const color = tone === "linen" ? "text-linen" : "text-moss-olive";
+  const color = tone === "linen" ? "text-linen" : "text-deep-olive";
   const sz =
     size === "lg"
-      ? "text-[14px] tracking-[0.25em]"
-      : "text-[10px] tracking-eyebrow";
+      ? "text-[15px] tracking-[0.28em]"
+      : "text-[13px] tracking-[0.22em]";
   return (
     <div
       className={cn(
-        "font-sans font-semibold uppercase",
+        "font-sans font-bold uppercase",
         sz,
         color,
         className,

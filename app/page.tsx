@@ -6,7 +6,11 @@ import { ProblemSection } from "@/components/problem-section";
 import { GrowthEngine } from "@/components/growth-engine";
 import { ProofSection } from "@/components/proof-section";
 import { AboutTeaser } from "@/components/about-teaser";
+import { AuditCta } from "@/components/audit-cta";
+import { WhoThisIsFor } from "@/components/who-this-is-for";
+import { ComparisonBlock } from "@/components/comparison-block";
 import { FinalCta } from "@/components/final-cta";
+import { FidelisPulse } from "@/components/fidelis-pulse";
 
 export default function HomePage() {
   return (
@@ -14,10 +18,14 @@ export default function HomePage() {
       <Nav />
       <main>
         <Hero />
-        <WhatWeBuildHome />
         <ProblemSection />
         <GrowthEngine tone="bone" />
+        <WhatWeBuildHome />
+        <WhoThisIsFor />
         <ProofSection />
+        <ComparisonBlock />
+        <FidelisPulse />
+        <AuditCta />
         <AboutTeaser />
         <FinalCta />
       </main>

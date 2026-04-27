@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Eyebrow } from "./eyebrow";
 import { CtaButton } from "./cta-button";
 
@@ -5,14 +6,39 @@ export function AboutTeaser() {
   return (
     <section className="bg-bone">
       <div className="mx-auto max-w-4xl px-6 py-24 text-center">
-        <Eyebrow tone="moss">ABOUT</Eyebrow>
-        <h2 className="font-display text-4xl md:text-[42px] text-deep-olive mt-6 tracking-tight">
+        <div className="flex justify-center mb-6">
+          <Image
+            src="/logo.png?v=2"
+            alt="Fidelis Strategy Crest"
+            width={140}
+            height={140}
+            style={{ filter: "saturate(0.7) brightness(1.05)", mixBlendMode: "multiply" }}
+          />
+        </div>
+        <Eyebrow size="lg" tone="moss">ABOUT</Eyebrow>
+        <h2 className="font-display font-bold text-4xl md:text-[48px] text-deep-olive mt-8 tracking-tight uppercase">
           Faithful. Loyal. Trustworthy.
         </h2>
-        <p className="font-sans text-[17px] text-ink/80 leading-relaxed mt-6 max-w-2xl mx-auto">
-          Fidelis is Latin for faithful. We&apos;re a small team of operators who believe
-          the right consulting partner doesn&apos;t just advise — they stick with you
-          through the ship.
+        <p className="font-sans text-[15px] text-ink/60 mt-3">
+          <strong>Fidelis</strong> <span className="text-moss-olive">(fi-DEL-is)</span> is Latin for faithful. Not a tagline. The operating principle.
+        </p>
+        <div className="mt-10 flex justify-center">
+          <div className="relative h-28 w-28 rounded-full overflow-hidden border-2 border-moss-olive">
+            <Image
+              src="/matthew.jpg"
+              alt="Matthew Afanasiev — Founder, Fidelis Strategy"
+              fill
+              className="object-cover object-top"
+              sizes="112px"
+            />
+          </div>
+        </div>
+        <div className="font-sans text-[13px] uppercase tracking-button text-moss-olive mt-4 font-semibold">
+          Matthew Afanasiev · Founder
+        </div>
+        <p className="font-sans text-[15px] text-ink/70 leading-relaxed mt-2 max-w-xl mx-auto">
+          SaaS sales and operations background, now helping owner-operated businesses grow their top line through growth strategy and AI-powered systems.
+          <span className="block mt-2 text-deep-olive font-semibold">Every system Fidelis builds and deploys, Matthew has built himself.</span>
         </p>
         <div className="mt-10">
           <CtaButton href="/about" variant="secondary" className="border-deep-olive text-deep-olive hover:bg-deep-olive hover:text-bone">

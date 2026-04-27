@@ -8,7 +8,7 @@ export default function NotFound() {
     <>
       <Nav />
       <main>
-        <section className="bg-deep-olive text-bone min-h-[70vh] flex items-center">
+        <section className="bg-moss-olive text-bone min-h-[70vh] flex items-center">
           <div className="mx-auto max-w-3xl px-6 py-24 text-center">
             <Eyebrow size="lg">404</Eyebrow>
             <h1 className="font-display font-bold text-5xl md:text-[60px] leading-[1.02] mt-8 tracking-[-0.02em]">

@@ -1,0 +1,63 @@
+<h2>Lighter Bone options</h2>
+<p class="subtitle">Pushing Bone whiter while keeping warmth. Each shown side-by-side with Linen so you can check contrast.</p>
+
+<div class="section">
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:12px;">
+
+    <div onclick="toggleSelect(this)" data-choice="current" style="cursor:pointer;border:1px solid #ccc;border-radius:6px;overflow:hidden;">
+      <div style="display:flex;height:90px;">
+        <div style="flex:1;background:#F0EAD6;"></div>
+        <div style="flex:1;background:#D4C4A0;"></div>
+      </div>
+      <div style="padding:12px;"><strong>Current</strong><br/><span style="font-size:11px;opacity:.7;">Bone #F0EAD6 vs Linen · subtle</span></div>
+    </div>
+
+    <div onclick="toggleSelect(this)" data-choice="a" style="cursor:pointer;border:1px solid #ccc;border-radius:6px;overflow:hidden;">
+      <div style="display:flex;height:90px;">
+        <div style="flex:1;background:#F5F0DE;"></div>
+        <div style="flex:1;background:#D4C4A0;"></div>
+      </div>
+      <div style="padding:12px;"><strong>A · Soft</strong><br/><span style="font-size:11px;opacity:.7;">Bone #F5F0DE · slightly brighter</span></div>
+    </div>
+
+    <div onclick="toggleSelect(this)" data-choice="b" style="cursor:pointer;border:2px solid #D4C4A0;border-radius:6px;overflow:hidden;">
+      <div style="display:flex;height:90px;">
+        <div style="flex:1;background:#FAF5E4;"></div>
+        <div style="flex:1;background:#D4C4A0;"></div>
+      </div>
+      <div style="padding:12px;"><strong>B · Ivory (my rec)</strong><br/><span style="font-size:11px;opacity:.7;">Bone #FAF5E4 · clear contrast, still warm</span></div>
+    </div>
+
+    <div onclick="toggleSelect(this)" data-choice="c" style="cursor:pointer;border:1px solid #ccc;border-radius:6px;overflow:hidden;">
+      <div style="display:flex;height:90px;">
+        <div style="flex:1;background:#FDFAEF;"></div>
+        <div style="flex:1;background:#D4C4A0;"></div>
+      </div>
+      <div style="padding:12px;"><strong>C · Near-white</strong><br/><span style="font-size:11px;opacity:.7;">Bone #FDFAEF · barely tinted</span></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- In-context test -->
+<div class="section" style="margin-top:30px;">
+  <span class="label">In context — B (Ivory #FAF5E4) demo</span>
+  <div style="border-radius:8px;overflow:hidden;margin-top:12px;">
+    <div style="background:#2A3D2C;color:#FAF5E4;padding:32px;">
+      <div style="font-family:Inter;font-size:10px;letter-spacing:3px;color:#D4C4A0;font-weight:600;">OUR MOAT</div>
+      <div style="font-family:Fraunces,serif;font-size:34px;margin-top:8px;">Real systems, shipped.</div>
+    </div>
+    <div style="background:#FAF5E4;color:#2A3D2C;padding:32px;">
+      <div style="font-family:Inter;font-size:10px;letter-spacing:3px;color:#4A5D3C;font-weight:600;">WHAT WE BUILD</div>
+      <div style="font-family:Fraunces,serif;font-size:34px;margin-top:8px;">What we <em style="color:#D4C4A0;background:#2A3D2C;padding:2px 8px;">build</em>.</div>
+      <div style="margin-top:16px;"><span style="background:#D4C4A0;color:#2A3D2C;padding:10px 16px;font-family:Inter;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;">BOOK A CALL →</span></div>
+      <p style="font-size:12px;opacity:.6;margin-top:16px;">Notice: Linen button now clearly pops against the lighter Bone. Previously they blended.</p>
+    </div>
+    <div style="background:#2A3D2C;color:#FAF5E4;padding:32px;">
+      <div style="font-family:Inter;font-size:10px;letter-spacing:3px;color:#D4C4A0;font-weight:600;">PROBLEM</div>
+      <div style="font-family:Fraunces,serif;font-size:34px;margin-top:8px;">The cost of staying still.</div>
+    </div>
+  </div>
+</div>
+
+<p class="subtitle" style="margin-top:24px;">Pick A, B, or C. B (Ivory) keeps the editorial warmth — C goes fully crisp if you want more contrast.</p>

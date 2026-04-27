@@ -1,82 +1,157 @@
+import Image from "next/image";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { Eyebrow } from "@/components/eyebrow";
 import { FinalCta } from "@/components/final-cta";
+import { breadcrumbSchema } from "@/lib/seo";
 
 export const metadata = {
-  title: "Paradise Capital — Fidelis Case Study",
-  description: "How Fidelis built a weekly scrape + enrichment + Slack recap pipeline for Paradise Capital deal sourcing.",
+  title: "Case Study: Paradise Capital — +30% Pipeline with AI Deal Sourcing",
+  description:
+    "How Fidelis built a weekly AI-powered deal-sourcing intel engine for Paradise Capital — +30% pipeline lift and $2M projected revenue.",
+  alternates: { canonical: "/case-studies/paradise-capital" },
+  openGraph: {
+    type: "article",
+    title: "Paradise Capital: +30% Pipeline with AI Deal Sourcing",
+    description:
+      "How Fidelis built a weekly AI-powered deal-sourcing intel engine for Paradise Capital.",
+    url: "/case-studies/paradise-capital",
+  },
 };
 
 const built = [
-  { title: "Weekly scrape pipeline", body: "Automated scrape of target universe on a weekly cron via Claude Code Routines." },
-  { title: "AI enrichment layer",     body: "Each scraped record enriched with firmographic + AI-extracted signals." },
-  { title: "Slack recap agent",        body: "Weekly digest posted to #lead-gen with the top candidates ranked." },
+  { title: "Automated prospecting", body: "The top of the funnel runs on its own — new targets identified and surfaced every week without anyone on the team doing the legwork." },
+  { title: "AI-powered fit scoring", body: "Every candidate is evaluated against Paradise Capital's deal criteria automatically. The team only sees opportunities worth their time." },
+  { title: "Consistent outreach", body: "Shortlisted targets get outreach in a single, consistent voice — ready to send, no drafting from scratch each week." },
+  { title: "Automated team updates", body: "The team gets a ranked summary of what the system found each week, delivered directly to where they already work." },
+  { title: "Connected to their workflow", body: "Approved targets move straight into follow-up. No copy-paste, no manual hand-off between tools." },
 ];
 
 export default function Page() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbSchema([
+              { name: "Home", url: "/" },
+              { name: "Case Studies", url: "/case-studies/paradise-capital" },
+              { name: "Paradise Capital", url: "/case-studies/paradise-capital" },
+            ])
+          ),
+        }}
+      />
       <Nav />
       <main>
-        <section className="bg-deep-olive text-bone">
+        <section className="bg-moss-olive text-bone">
           <div className="mx-auto max-w-5xl px-6 py-24">
             <Eyebrow size="lg">CASE STUDY</Eyebrow>
-            <h1 className="font-display font-bold text-5xl md:text-[60px] leading-[1.02] mt-8 tracking-[-0.02em]">
-              Paradise Capital
-            </h1>
+            <div className="flex items-center gap-5 mt-8">
+              <div className="shrink-0 bg-bone rounded-sm px-4 py-2">
+                <Image
+                  src="/paradise-capital-logo.jpeg"
+                  alt="Paradise Capital"
+                  width={120}
+                  height={40}
+                  className="object-contain"
+                />
+              </div>
+              <h1 className="font-display font-bold text-5xl md:text-[60px] leading-[1.02] tracking-[-0.02em]">
+                Paradise Capital
+              </h1>
+            </div>
             <p className="font-display text-2xl md:text-[26px] leading-tight mt-5 text-linen max-w-3xl tracking-[-0.01em]">
               {/* TODO: confirm dates with Matthew */}
-              Weekly deal-sourcing intel engine. 2024 – ongoing.
+              Weekly deal-sourcing intel engine. 2025 – ongoing.
             </p>
           </div>
         </section>
 
+        {/* Paul's quote — high up, right after hero */}
         <section className="bg-bone">
-          <div className="mx-auto max-w-4xl px-6 py-24">
-            <Eyebrow tone="moss">THE PROBLEM</Eyebrow>
-            <h2 className="font-display text-4xl text-deep-olive mt-6 tracking-tight">Sourcing without signal.</h2>
-            <p className="font-sans text-[17px] text-ink/80 leading-relaxed mt-6">
-              {/* TODO: confirm with client */}
-              The team was spending days each week on manual scraping and filtering —
-              time that should have gone to diligence and conversations, not data plumbing.
-            </p>
+          <div className="mx-auto max-w-4xl px-6 py-16">
+            <blockquote className="border-l-4 border-moss-olive pl-8">
+              <p className="font-display font-light text-2xl md:text-3xl text-deep-olive leading-snug">
+                &ldquo;Fidelis Strategy took the time to truly understand our business
+                and core values before delivering actionable strategies. We expect to
+                increase our referral pipeline by 30% and generate an additional
+                $2 million in revenue in the next year.&rdquo;
+              </p>
+              <footer className="mt-5 font-sans text-[13px] tracking-wide text-moss-olive uppercase font-semibold">
+                Paul Niccum · CEO, Paradise Capital
+              </footer>
+            </blockquote>
           </div>
         </section>
 
-        <section className="bg-deep-olive text-bone">
-          <div className="mx-auto max-w-6xl px-6 py-24">
-            <Eyebrow>WHAT WE BUILT</Eyebrow>
-            <h2 className="font-display text-4xl md:text-[42px] mt-6 tracking-tight">A weekly intel engine.</h2>
-            <div className="grid md:grid-cols-3 gap-4 mt-12">
-              {built.map((b) => (
-                <div key={b.title} className="p-6 bg-moss-olive">
-                  <h3 className="font-display font-medium text-xl text-linen">{b.title}</h3>
-                  <p className="font-sans text-[15px] text-bone/85 leading-relaxed mt-3">{b.body}</p>
-                </div>
-              ))}
-            </div>
+        <section className="bg-bone border-t border-moss-olive/15">
+          <div className="mx-auto max-w-4xl px-6 pb-24 pt-16">
+            <Eyebrow size="lg" tone="moss">THE PROBLEM</Eyebrow>
+            <h2 className="font-display font-bold text-4xl md:text-[48px] text-deep-olive mt-8 tracking-tight">Best-in-class at closing. No automated system for finding what to close.</h2>
+            <p className="font-sans text-[17px] text-ink/80 leading-relaxed mt-6">
+              Paradise Capital is exceptional at what they do. When a deal lands in front of them, they evaluate it thoroughly, structure it well, and close it. That edge is real and hard-earned.
+            </p>
+            <p className="font-sans text-[17px] text-ink/80 leading-relaxed mt-4">
+              The gap was at the top of the funnel. There was no repeatable system for finding new acquisition targets — no consistent sourcing cadence, no criteria-based filtering. The team's time and talent went to the deals already in front of them. The ones they hadn't found yet weren't getting found.
+            </p>
           </div>
         </section>
 
         <section className="bg-moss-olive text-bone">
+          <div className="mx-auto max-w-6xl px-6 py-24">
+            <Eyebrow size="lg">WHAT WE BUILT</Eyebrow>
+            <h2 className="font-display font-bold text-4xl md:text-[48px] mt-8 tracking-tight">A weekly intel engine.</h2>
+            {/* First card full-width, remaining 4 in 2x2 */}
+            <div className="mt-12 space-y-4">
+              <div className="p-8 bg-moss-olive border border-linen/25">
+                <h3 className="font-display font-bold text-2xl md:text-[26px] text-linen">{built[0].title}</h3>
+                <p className="font-sans text-[16px] text-bone/85 leading-relaxed mt-3 max-w-2xl">{built[0].body}</p>
+              </div>
+              <div className="grid md:grid-cols-2 gap-4">
+                {built.slice(1).map((b) => (
+                  <div key={b.title} className="p-6 bg-moss-olive border border-linen/25">
+                    <h3 className="font-display font-bold text-xl md:text-[22px] text-linen">{b.title}</h3>
+                    <p className="font-sans text-[15px] text-bone/85 leading-relaxed mt-3">{b.body}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-moss-olive text-bone border-t border-linen/15">
           <div className="mx-auto max-w-4xl px-6 py-24">
-            <Eyebrow>OUTCOME</Eyebrow>
-            <h2 className="font-display text-4xl mt-6 tracking-tight">From manual to automatic.</h2>
-            <blockquote className="mt-8">
-              <p className="font-display font-light text-2xl md:text-3xl leading-snug">
-                {/* TODO: replace with actual client quote */}
-                &ldquo;Fidelis didn&apos;t just tell us what to build — they built it. The
-                weekly intel pipeline is now core to how we source deals.&rdquo;
-              </p>
-              <footer className="mt-4 text-[13px] tracking-wide text-linen uppercase">
-                Paradise Capital
-              </footer>
-            </blockquote>
+            <Eyebrow size="lg">OUTCOME</Eyebrow>
+            <h2 className="font-display font-bold text-4xl md:text-[48px] mt-8 tracking-tight">From no process to a pipeline that runs itself.</h2>
             {/* TODO: add metrics (hours saved/week, qualified leads/week) once confirmed */}
           </div>
         </section>
 
+        <section className="bg-bone border-t border-moss-olive/15">
+          <div className="mx-auto max-w-4xl px-6 py-16">
+            <div className="font-sans text-[12px] uppercase tracking-button text-moss-olive font-semibold">
+              Related
+            </div>
+            <ul className="mt-4 space-y-2 font-sans text-[15px]">
+              <li>
+                <a href="/blog/ai-lead-engine-vs-apollo" className="text-deep-olive hover:text-moss-olive underline decoration-moss-olive/30 underline-offset-2">
+                  → AI lead engine vs Apollo: why a signal-based system beats a database
+                </a>
+              </li>
+              <li>
+                <a href="/process" className="text-deep-olive hover:text-moss-olive underline decoration-moss-olive/30 underline-offset-2">
+                  → The 4D Growth Engine — how this engagement was structured
+                </a>
+              </li>
+              <li>
+                <a href="/blog/ai-lead-engine-vs-apollo" className="text-deep-olive hover:text-moss-olive underline decoration-moss-olive/30 underline-offset-2">
+                  → AI lead engine vs Apollo: why a signal-based system beats a database
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
         <FinalCta />
       </main>
       <Footer />

@@ -1,1 +1,51 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><path d="M30 6 L50 14 L50 32 Q50 46 30 54 Q10 46 10 32 L10 14 Z" fill="#4A5D3C" stroke="#D4C4A0" stroke-width="1.5"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 210">
+  <!-- Eagle left wing -->
+  <path d="M 98,54 C 86,50 70,42 50,30 C 32,19 12,12 4,20 C 1,26 14,35 32,44 C 52,54 74,57 90,57" fill="#D4C4A0"/>
+  <!-- Eagle right wing -->
+  <path d="M 102,54 C 114,50 130,42 150,30 C 168,19 188,12 196,20 C 199,26 186,35 168,44 C 148,54 126,57 110,57" fill="#D4C4A0"/>
+  <!-- Wing texture lines left -->
+  <path d="M 88,57 C 72,53 54,44 36,34" stroke="#2A3D2C" stroke-width="0.6" fill="none" opacity="0.4"/>
+  <path d="M 88,57 C 68,50 48,40 28,28" stroke="#2A3D2C" stroke-width="0.6" fill="none" opacity="0.3"/>
+  <!-- Wing texture lines right -->
+  <path d="M 112,57 C 128,53 146,44 164,34" stroke="#2A3D2C" stroke-width="0.6" fill="none" opacity="0.4"/>
+  <path d="M 112,57 C 132,50 152,40 172,28" stroke="#2A3D2C" stroke-width="0.6" fill="none" opacity="0.3"/>
+  <!-- Eagle body -->
+  <ellipse cx="100" cy="60" rx="13" ry="11" fill="#D4C4A0"/>
+  <!-- Eagle head (profile right) -->
+  <ellipse cx="109" cy="51" rx="8" ry="7" fill="#D4C4A0"/>
+  <!-- Beak -->
+  <path d="M 116,50 L 124,53 L 116,55 Z" fill="#C4B080"/>
+  <!-- Eye -->
+  <circle cx="112" cy="49" r="2" fill="#2A3D2C"/>
+  <circle cx="112.5" cy="48.5" r="0.7" fill="#D4C4A0"/>
+  <!-- Talons -->
+  <path d="M 91,70 L 88,76 M 95,71 L 93,77 M 100,71 L 100,77 M 105,71 L 107,77 M 109,70 L 112,76" stroke="#D4C4A0" stroke-width="1.4" stroke-linecap="round"/>
+
+  <!-- Shield body -->
+  <path d="M 62,72 L 138,72 L 138,124 C 138,152 120,167 100,173 C 80,167 62,152 62,124 Z" fill="#2A3D2C" stroke="#D4C4A0" stroke-width="2.5"/>
+  <!-- Shield inner border -->
+  <path d="M 68,78 L 132,78 L 132,124 C 132,148 116,161 100,166 C 84,161 68,148 68,124 Z" fill="none" stroke="#D4C4A0" stroke-width="1.1" opacity="0.45"/>
+  <!-- FS monogram -->
+  <text x="100" y="130" font-family="Georgia,'Times New Roman',serif" font-size="42" fill="#D4C4A0" text-anchor="middle" dominant-baseline="middle" font-weight="bold" letter-spacing="-2">FS</text>
+
+  <!-- Left laurel branch stem -->
+  <path d="M 100,173 C 86,176 70,172 52,162 C 36,151 22,136 14,118" stroke="#D4C4A0" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+  <!-- Left laurel leaves -->
+  <ellipse cx="83" cy="174" rx="8.5" ry="3.2" transform="rotate(-18 83 174)" fill="#D4C4A0" opacity="0.8"/>
+  <ellipse cx="68" cy="170" rx="8.5" ry="3.2" transform="rotate(-32 68 170)" fill="#D4C4A0" opacity="0.8"/>
+  <ellipse cx="53" cy="162" rx="8" ry="3" transform="rotate(-48 53 162)" fill="#D4C4A0" opacity="0.75"/>
+  <ellipse cx="38" cy="150" rx="7.5" ry="2.8" transform="rotate(-62 38 150)" fill="#D4C4A0" opacity="0.7"/>
+  <ellipse cx="24" cy="135" rx="7" ry="2.6" transform="rotate(-74 24 135)" fill="#D4C4A0" opacity="0.65"/>
+
+  <!-- Right laurel branch stem -->
+  <path d="M 100,173 C 114,176 130,172 148,162 C 164,151 178,136 186,118" stroke="#D4C4A0" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+  <!-- Right laurel leaves -->
+  <ellipse cx="117" cy="174" rx="8.5" ry="3.2" transform="rotate(18 117 174)" fill="#D4C4A0" opacity="0.8"/>
+  <ellipse cx="132" cy="170" rx="8.5" ry="3.2" transform="rotate(32 132 170)" fill="#D4C4A0" opacity="0.8"/>
+  <ellipse cx="147" cy="162" rx="8" ry="3" transform="rotate(48 147 162)" fill="#D4C4A0" opacity="0.75"/>
+  <ellipse cx="162" cy="150" rx="7.5" ry="2.8" transform="rotate(62 162 150)" fill="#D4C4A0" opacity="0.7"/>
+  <ellipse cx="176" cy="135" rx="7" ry="2.6" transform="rotate(74 176 135)" fill="#D4C4A0" opacity="0.65"/>
+
+  <!-- Branch junction dot -->
+  <circle cx="100" cy="174" r="2.5" fill="#D4C4A0" opacity="0.75"/>
+</svg>

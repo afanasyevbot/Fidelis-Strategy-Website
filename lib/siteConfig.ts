@@ -2,14 +2,29 @@ export const siteConfig = {
   name: "Fidelis Strategy",
   tagline: "Faithful. Loyal. Trustworthy.",
   url: "https://fidelisstrategy.net",
-  email: "matthew@fidelisstrategy.net",   // TODO: confirm with user
-  bookingUrl: "https://cal.com/fidelis/discovery", // TODO: confirm
-  formspreeId: "xxxxxxxx",                // TODO: confirm
-  gaId: "G-XXXXXXX",                      // TODO: confirm
+
+  // Contact — TODO: confirm with Matthew
+  email: "Mafanasiev@fidelisstrategy.net",
+  phone: "651-468-1408",
+  linkedinUrl: "https://www.linkedin.com/in/matthewafanasiev/",
+  bookingUrl: "https://calendly.com/mafanasiev-fidelisstrategy/30min",
+
+  // Analytics — replace with real GA4 measurement ID when ready
+  gaId: "G-YTNMFSRD8L",
+
+  // Pricing band — INTERNAL reference only. Hidden from public site
+  // to preserve anchor flexibility per-deal. Do not surface in copy.
+  pricingBand: "Engagements typically $25K – $150K · 30–90 day delivery",
+
+  // Proof line — promoted from case study, shown in hero/footer.
+  heroProof: "+30% pipeline. +$2M projected revenue. Built for Paradise Capital.",
+
   nav: [
+    { label: "Process",        href: "/process" },
     { label: "What We Build", href: "/what-we-build" },
     { label: "About",         href: "/about" },
-    { label: "Case Studies",  href: "/case-studies/paradise-capital" },
+    { label: "Case Study",    href: "/case-studies/paradise-capital" },
+    { label: "Blog",          href: "/blog" },
     { label: "Contact",       href: "/contact" },
-  ],
+  ] as Array<{ label: string; href: string; external?: boolean }>,
 };
