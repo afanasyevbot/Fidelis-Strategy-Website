@@ -122,7 +122,7 @@ export default function Page() {
                       </p>
                       <div className="flex flex-wrap items-center gap-4 mt-5">
                         <a
-                          href="https://fidelis-dashboard.vercel.app"
+                          href="https://fidelispulse.com"
                           target="_blank"
                           rel="noopener noreferrer"
                           className={cn(
@@ -144,7 +144,7 @@ export default function Page() {
                       "px-6 md:px-8 pb-6 md:pb-8",
                       lightSection ? "border-t border-moss-olive/15 bg-deep-olive/5 pt-6" : "border-t border-linen/10 bg-linen/5 pt-6"
                     )}>
-                      <a href="https://fidelis-dashboard.vercel.app" target="_blank" rel="noopener noreferrer">
+                      <a href="https://fidelispulse.com" target="_blank" rel="noopener noreferrer">
                         <Image
                           src="/marketing/dashboard-apex-hero.png"
                           alt="Fidelis Pulse dashboard — cash runway, gross margin, anomaly alerts"

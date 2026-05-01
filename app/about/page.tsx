@@ -102,7 +102,7 @@ export default function Page() {
                 this myself. So I dove deeper and built. The results were
                 real, and the experience changed how I think about
                 everything. That includes{" "}
-                <a href="https://fidelis-dashboard.vercel.app" target="_blank" rel="noopener noreferrer" className="text-deep-olive underline decoration-moss-olive/40 underline-offset-2 hover:text-moss-olive">Fidelis Pulse</a>,
+                <a href="https://fidelispulse.com" target="_blank" rel="noopener noreferrer" className="text-deep-olive underline decoration-moss-olive/40 underline-offset-2 hover:text-moss-olive">Fidelis Pulse</a>,
                 a dashboard that gives you a pulse on your business — see
                 where everything stands so you can make the right calls —
                 and Glow Routine, a consumer wellness app.

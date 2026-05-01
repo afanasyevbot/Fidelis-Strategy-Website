@@ -43,10 +43,10 @@ export function FidelisPulse() {
               ))}
             </ul>
             <div className="mt-8 flex flex-wrap gap-3">
-              <CtaButton href="https://fidelis-dashboard.vercel.app" external>
+              <CtaButton href="https://fidelispulse.com" external>
                 See Fidelis Pulse →
               </CtaButton>
-              <CtaButton href="https://fidelis-dashboard.vercel.app" external variant="secondary">
+              <CtaButton href="https://fidelispulse.com" external variant="secondary">
                 Start free — no card required
               </CtaButton>
             </div>
@@ -54,7 +54,7 @@ export function FidelisPulse() {
 
           {/* Dashboard screenshot + quote */}
           <div>
-            <a href="https://fidelis-dashboard.vercel.app" target="_blank" rel="noopener noreferrer">
+            <a href="https://fidelispulse.com" target="_blank" rel="noopener noreferrer">
               <Image
                 src="/marketing/dashboard-apex-hero.png"
                 alt="Fidelis Pulse dashboard — cash runway, gross margin, AR aging"

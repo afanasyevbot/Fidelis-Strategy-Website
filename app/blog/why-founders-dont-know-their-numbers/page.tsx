@@ -231,7 +231,7 @@ export default function Post() {
                 This is a problem worth solving at the system level, not
                 just managing around. That&apos;s why I built{" "}
                 <a
-                  href="https://fidelis-dashboard.vercel.app"
+                  href="https://fidelispulse.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-deep-olive underline decoration-moss-olive/40 underline-offset-2 hover:text-moss-olive"
@@ -276,7 +276,7 @@ export default function Post() {
                 and see your first pulse before you decide if it&apos;s worth paying for.
               </p>
               <div className="flex flex-wrap gap-3">
-                <CtaButton href="https://fidelis-dashboard.vercel.app" external>
+                <CtaButton href="https://fidelispulse.com" external>
                   See your business pulse →
                 </CtaButton>
                 <CtaButton href={siteConfig.bookingUrl} external variant="secondary">
