@@ -24,7 +24,7 @@ export function CtaButton({
       : "border border-linen text-linen hover:bg-linen hover:text-deep-olive";
   const cls = cn(base, styles, className);
   return external ? (
-    <a href={href} className={cls} target="_blank" rel="noreferrer">
+    <a href={href} className={cls} target="_blank" rel="noopener noreferrer">
       {children}
     </a>
   ) : (
