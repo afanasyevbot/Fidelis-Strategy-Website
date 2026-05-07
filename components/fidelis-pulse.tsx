@@ -46,7 +46,7 @@ export function FidelisPulse() {
               <CtaButton href="https://fidelispulse.com" external>
                 See Fidelis Pulse →
               </CtaButton>
-              <CtaButton href="https://fidelispulse.com" external variant="secondary">
+              <CtaButton href="https://fidelispulse.com/#pricing" external variant="secondary">
                 Start free — no card required
               </CtaButton>
             </div>
