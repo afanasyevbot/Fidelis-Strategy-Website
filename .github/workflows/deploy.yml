@@ -27,7 +27,7 @@ jobs:
           sshpass -p "$SSH_PASSWORD" rsync -avzr --delete \
             -e "ssh -p $SSH_PORT -o StrictHostKeyChecking=no" \
             out/ \
-            $SSH_USERNAME@$SSH_HOST:~/public_html/
+            $SSH_USERNAME@$SSH_HOST:~/domains/fidelisstrategy.net/public_html/
         env:
           SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
           SSH_PORT: ${{ secrets.SSH_PORT }}
@@ -38,7 +38,7 @@ jobs:
         run: |
           sshpass -p "$SSH_PASSWORD" ssh -p $SSH_PORT -o StrictHostKeyChecking=no \
             $SSH_USERNAME@$SSH_HOST \
-            'find ~/public_html -name "*.html" -exec touch -m {} \; && echo "Cache invalidated"'
+            'find ~/domains/fidelisstrategy.net/public_html -name "*.html" -exec touch -m {} \; && echo "Cache invalidated"'
         env:
           SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
           SSH_PORT: ${{ secrets.SSH_PORT }}
