@@ -23,13 +23,13 @@ export function AboutTeaser() {
           <strong>Fidelis</strong> <span className="text-moss-olive">(fi-DEL-is)</span> is Latin for faithful. Not a tagline. The operating principle.
         </p>
         <div className="mt-10 flex justify-center">
-          <div className="relative h-28 w-28 rounded-full overflow-hidden border-2 border-moss-olive">
+          <div className="relative h-44 w-44 rounded-full overflow-hidden border-2 border-moss-olive">
             <Image
               src="/matthew.jpg"
               alt="Matthew Afanasiev — Founder, Fidelis Strategy"
               fill
               className="object-cover object-top"
-              sizes="112px"
+              sizes="176px"
             />
           </div>
         </div>
