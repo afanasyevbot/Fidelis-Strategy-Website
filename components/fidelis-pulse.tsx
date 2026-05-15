@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Eyebrow } from "./eyebrow";
 import { CtaButton } from "./cta-button";
-import { PulseHeroMocks, AdvisorConsoleMock } from "./pulse-mocks";
+import { PulseHeroMocks, AdvisorHeroMocks } from "./pulse-mocks";
 
 const ownerFeatures = [
   "A single Business Pulse score — one number that rolls up cash, margin, growth, and AR health, so you know where you stand at a glance",
@@ -109,7 +109,7 @@ export function FidelisPulse() {
               rel="noopener noreferrer"
               className="block opacity-95 hover:opacity-100 transition-opacity"
             >
-              {isOwner ? <PulseHeroMocks /> : <AdvisorConsoleMock />}
+              {isOwner ? <PulseHeroMocks /> : <AdvisorHeroMocks />}
             </a>
             <div className="mt-5 p-5 border border-linen/15 bg-linen/5">
               {isOwner ? (

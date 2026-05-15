@@ -426,6 +426,90 @@ export function PulseHeroMocks() {
   );
 }
 
+export function AdvisorHeroMocks() {
+  return (
+    <div className="relative w-full" style={{ aspectRatio: "5 / 4" }}>
+      <div className="absolute" style={{ left: 0, top: 0, width: "72%" }}>
+        <PulseKPISimpleMock />
+      </div>
+      <div className="absolute" style={{ right: 0, bottom: 0, width: "64%" }}>
+        <AdvisorConsoleMock />
+      </div>
+    </div>
+  );
+}
+
+function PulseKPISimpleMock() {
+  return (
+    <div
+      aria-label="Fidelis Pulse: Atlas Logistics overview"
+      style={{
+        background: CARD,
+        border: `1px solid ${LINE}`,
+        borderRadius: 8,
+        overflow: "hidden",
+        fontFamily: SANS,
+        color: INK,
+        boxShadow: "0 24px 60px -22px rgba(26,22,20,0.22), 0 6px 16px -8px rgba(26,22,20,0.08)",
+      }}
+    >
+      <div style={{ display: "flex", alignItems: "center", gap: 10, padding: "10px 14px", borderBottom: `1px solid ${LINE}`, background: CARD, fontSize: 12 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+          <div style={{ width: 16, height: 16, background: ACCENT, color: "#fff", fontWeight: 700, fontSize: 9, borderRadius: 3, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: SERIF }}>F</div>
+          <span style={{ fontFamily: SERIF, fontWeight: 600 }}>Fidelis Pulse</span>
+        </div>
+        <span style={{ color: INK_MUTED }}>·</span>
+        <span style={{ color: INK_MUTED }}>Atlas Logistics</span>
+        <span style={{ marginLeft: "auto", fontSize: 9, letterSpacing: "0.16em", textTransform: "uppercase" as const, fontWeight: 700, padding: "3px 7px", background: ACCENT_SOFT, color: ACCENT, borderRadius: 3 }}>Buyer Ready</span>
+      </div>
+      <div style={{ display: "flex", gap: 18, padding: "8px 14px", borderBottom: `1px solid ${LINE}`, fontSize: 12 }}>
+        <span style={{ fontWeight: 600, borderBottom: `2px solid ${ACCENT}`, paddingBottom: 4, marginBottom: -1 }}>Overview</span>
+        <span style={{ color: INK_MUTED }}>Cash &amp; AR</span>
+        <span style={{ color: INK_MUTED }}>Sales</span>
+        <span style={{ color: INK_MUTED }}>Operations</span>
+      </div>
+      <div style={{ padding: "16px 18px" }}>
+        <div style={eyebrow}>Overview · April 2026</div>
+        <div style={{ fontFamily: SERIF, fontSize: 17, fontWeight: 600, marginTop: 2, letterSpacing: "-0.005em" }}>How your business is doing</div>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 16, marginTop: 14 }}>
+          <Kpi label="Revenue (TTM)" value="$4.8M" delta="+14.0% YoY" tone="good" />
+          <Kpi label="Gross margin" value="41.2%" delta="+2.4 pts" tone="good" />
+          <Kpi label="Cash runway" value="11.2 mo" delta="Healthy" tone="muted" />
+        </div>
+        <div style={{ marginTop: 16, paddingTop: 14, borderTop: `1px solid ${LINE}` }}>
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <div style={eyebrow}>Revenue · trailing 12 mo</div>
+            <div style={{ fontSize: 10, color: INK_MUTED }}>Apr 2025 to Apr 2026</div>
+          </div>
+          <div style={{ display: "flex", alignItems: "baseline", gap: 8, marginTop: 4 }}>
+            <div style={{ fontFamily: SERIF, fontSize: 22, fontWeight: 600 }}>$4.8M</div>
+            <div style={{ fontSize: 11, color: GOOD, fontWeight: 600 }}>▲ $590K</div>
+          </div>
+          <svg viewBox="0 0 400 50" preserveAspectRatio="none" style={{ display: "block", width: "100%", height: 38, marginTop: 4 }}>
+            <defs><linearGradient id="ks" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stopColor={ACCENT} stopOpacity="0.18"/><stop offset="100%" stopColor={ACCENT} stopOpacity="0"/></linearGradient></defs>
+            <polyline points="0,38 36,33 72,35 108,28 144,30 180,22 216,24 252,16 288,18 324,11 360,9 400,6" fill="none" stroke={ACCENT} strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+            <polygon points="0,38 36,33 72,35 108,28 144,30 180,22 216,24 252,16 288,18 324,11 360,9 400,6 400,50 0,50" fill="url(#ks)"/>
+          </svg>
+        </div>
+        <div style={{ marginTop: 16, paddingTop: 14, borderTop: `1px solid ${LINE}` }}>
+          <div style={eyebrow}>Cash position and receivables</div>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginTop: 8 }}>
+            <div>
+              <div style={{ ...eyebrow, fontSize: 9 }}>Operating cash today</div>
+              <div style={{ fontFamily: SERIF, fontSize: 18, fontWeight: 600, marginTop: 2 }}>$1.62M</div>
+            </div>
+            <div>
+              <div style={{ ...eyebrow, fontSize: 9 }}>AR outstanding</div>
+              <div style={{ fontFamily: SERIF, fontSize: 18, fontWeight: 600, marginTop: 2 }}>$720K</div>
+              <div style={{ fontSize: 10.5, color: WARN, fontWeight: 600, marginTop: 2 }}>18% over 60 days</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // ─── Advisor multi-client console ────────────────────────────────────────
 export function AdvisorConsoleMock() {
   return (
