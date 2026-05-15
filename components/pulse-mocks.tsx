@@ -119,25 +119,22 @@ export function PulseKPIMock() {
       </div>
 
       <div style={{ padding: "16px 18px" }}>
-        <div style={eyebrow}>Overview · April 2026</div>
-
-        <div style={{ display: "flex", alignItems: "center", gap: 16, marginTop: 8 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
           <PulseScoreGauge score={78} />
-          <div style={{ flex: 1 }}>
+          <div style={{ flex: 1, minWidth: 0 }}>
+            <div style={eyebrow}>Business Pulse · April 2026</div>
             <div
               style={{
                 fontFamily: SERIF,
-                fontSize: 17,
+                fontSize: 16,
                 fontWeight: 600,
+                marginTop: 2,
                 letterSpacing: "-0.005em",
               }}
             >
-              Business Pulse · Strong
+              Strong &amp; trending up
             </div>
-            <div style={{ fontSize: 11.5, color: INK_MUTED, marginTop: 2, lineHeight: 1.45 }}>
-              Weighted score across cash, margin, growth, and AR health.
-            </div>
-            <div style={{ fontSize: 11, color: GOOD, fontWeight: 600, marginTop: 4 }}>
+            <div style={{ fontSize: 11, color: GOOD, fontWeight: 600, marginTop: 2 }}>
               ▲ +4 pts vs last month
             </div>
           </div>
@@ -148,7 +145,7 @@ export function PulseKPIMock() {
             display: "grid",
             gridTemplateColumns: "repeat(3, 1fr)",
             gap: 16,
-            marginTop: 16,
+            marginTop: 14,
             paddingTop: 14,
             borderTop: `1px solid ${LINE}`,
           }}
@@ -418,13 +415,166 @@ function ActionItem({ n, label, tone, body }: { n: string; label: string; tone: 
  *  fidelispulse.com/pulse uses. */
 export function PulseHeroMocks() {
   return (
-    <div className="relative w-full" style={{ aspectRatio: "4 / 3" }}>
-      <div className="absolute" style={{ left: 0, top: "6%", width: "82%" }}>
+    <div className="relative w-full" style={{ aspectRatio: "5 / 4" }}>
+      <div className="absolute" style={{ left: 0, top: 0, width: "70%" }}>
         <PulseKPIMock />
       </div>
-      <div className="absolute" style={{ right: 0, bottom: 0, width: "72%" }}>
+      <div className="absolute" style={{ right: 0, bottom: 0, width: "58%" }}>
         <PulseActionsMock />
       </div>
+    </div>
+  );
+}
+
+// ─── Advisor multi-client console ────────────────────────────────────────
+export function AdvisorConsoleMock() {
+  return (
+    <div
+      aria-label="Fidelis Advisor demo: Smith & Co M&A client portfolio"
+      style={{
+        background: CARD,
+        border: `1px solid ${LINE}`,
+        borderRadius: 8,
+        overflow: "hidden",
+        fontFamily: SANS,
+        color: INK,
+        boxShadow:
+          "0 24px 60px -22px rgba(26,22,20,0.22), 0 6px 16px -8px rgba(26,22,20,0.08)",
+      }}
+    >
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: 10,
+          padding: "10px 14px",
+          borderBottom: `1px solid ${LINE}`,
+          background: CARD,
+          fontSize: 12,
+        }}
+      >
+        <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+          <div
+            style={{
+              width: 16,
+              height: 16,
+              background: ACCENT,
+              color: "#fff",
+              fontWeight: 700,
+              fontSize: 9,
+              borderRadius: 3,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              fontFamily: SERIF,
+            }}
+          >
+            F
+          </div>
+          <span style={{ fontFamily: SERIF, fontWeight: 600 }}>Fidelis Advisor</span>
+        </div>
+        <span style={{ color: INK_MUTED }}>·</span>
+        <span style={{ color: INK_MUTED }}>Smith &amp; Co M&amp;A</span>
+        <span style={{ marginLeft: "auto", fontSize: 11, color: INK_MUTED }}>8 active</span>
+      </div>
+
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: 28,
+          padding: "12px 16px",
+          borderBottom: `1px solid ${LINE}`,
+          background: CARD,
+        }}
+      >
+        <Stat label="Active" value="8" />
+        <Stat label="Need attention" value="3" tone="warn" />
+        <Stat label="At LOI" value="2" tone="good" />
+        <div style={{ marginLeft: "auto", textAlign: "right" }}>
+          <div style={{ ...eyebrow, fontSize: 9 }}>Pipeline est.</div>
+          <div style={{ fontFamily: SERIF, fontSize: 18, fontWeight: 600, marginTop: 2 }}>$32M</div>
+        </div>
+      </div>
+
+      <div style={{ padding: "14px 16px" }}>
+        <div style={{ ...eyebrow, color: ACCENT }}>Needs your attention this week</div>
+        <div style={{ marginTop: 8 }}>
+          <AdvisorRow name="Cedar Ridge HVAC" stage="At LOI" score={84} status="urgent" note="Buyer requested AR aging" />
+          <AdvisorRow name="Atlas Logistics" stage="In market" score={72} status="watch" note="3 NDAs out, no replies" />
+          <AdvisorRow name="Northbridge Builders" stage="Diligence" score={91} status="watch" note="Stale: 2 days idle" />
+        </div>
+
+        <div style={{ ...eyebrow, marginTop: 16 }}>Portfolio · on track</div>
+        <div style={{ marginTop: 8 }}>
+          <AdvisorRow name="Crestline Services" stage="Pre-marketing" score={68} status="ok" />
+          <AdvisorRow name="Riverside HVAC" stage="Prep" score={54} status="ok" />
+          <AdvisorRow name="Beacon Industrial" stage="Diligence" score={77} status="ok" />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Stat({ label, value, tone }: { label: string; value: string; tone?: "good" | "warn" }) {
+  const color = tone === "good" ? GOOD : tone === "warn" ? WARN : INK;
+  return (
+    <div>
+      <div style={{ ...eyebrow, fontSize: 9 }}>{label}</div>
+      <div style={{ fontFamily: SERIF, fontSize: 18, fontWeight: 600, marginTop: 2, color }}>
+        {value}
+      </div>
+    </div>
+  );
+}
+
+function AdvisorRow({
+  name,
+  stage,
+  score,
+  status,
+  note,
+}: {
+  name: string;
+  stage: string;
+  score: number;
+  status: "urgent" | "watch" | "ok";
+  note?: string;
+}) {
+  const dotColor = status === "urgent" ? "#B3261E" : status === "watch" ? WARN : GOOD;
+  return (
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        gap: 10,
+        padding: "8px 0",
+        borderTop: `1px solid ${LINE}`,
+      }}
+    >
+      <span
+        style={{ width: 7, height: 7, borderRadius: "50%", background: dotColor, flexShrink: 0 }}
+        aria-hidden
+      />
+      <div style={{ minWidth: 0, flex: 1 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+          <span style={{ fontSize: 12.5, fontWeight: 500 }}>{name}</span>
+          <span style={{ fontSize: 11, color: INK_MUTED }}>· {stage}</span>
+        </div>
+        {note && <div style={{ fontSize: 11, color: INK_MUTED, marginTop: 1 }}>{note}</div>}
+      </div>
+      <span
+        style={{
+          fontFamily: SERIF,
+          fontSize: 14,
+          fontWeight: 600,
+          width: 26,
+          textAlign: "right",
+          flexShrink: 0,
+        }}
+      >
+        {score}
+      </span>
     </div>
   );
 }

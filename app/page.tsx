@@ -11,6 +11,7 @@ import { WhoThisIsFor } from "@/components/who-this-is-for";
 import { ComparisonBlock } from "@/components/comparison-block";
 import { FinalCta } from "@/components/final-cta";
 import { FidelisPulse } from "@/components/fidelis-pulse";
+import { FidelisAdvisor } from "@/components/fidelis-advisor";
 
 export default function HomePage() {
   return (
@@ -25,6 +26,7 @@ export default function HomePage() {
         <ProofSection />
         <ComparisonBlock />
         <FidelisPulse />
+        <FidelisAdvisor />
         <AuditCta />
         <AboutTeaser />
         <FinalCta />
