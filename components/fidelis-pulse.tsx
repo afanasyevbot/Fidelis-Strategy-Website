@@ -111,30 +111,6 @@ export function FidelisPulse() {
             >
               {isOwner ? <PulseHeroMocks /> : <AdvisorHeroMocks />}
             </a>
-            <div className="mt-5 p-5 border border-linen/15 bg-linen/5">
-              {isOwner ? (
-                <>
-                  <p className="font-display font-light text-[17px] text-bone/85 leading-relaxed italic">
-                    &ldquo;Most owners don&apos;t need more data. They need a clear picture of
-                    where things actually stand — and the one thing worth doing about it this
-                    week.&rdquo;
-                  </p>
-                  <p className="font-sans text-[12px] uppercase tracking-button text-linen/50 mt-3 font-semibold">
-                    The conviction behind Pulse
-                  </p>
-                </>
-              ) : (
-                <>
-                  <p className="font-display font-light text-[17px] text-bone/85 leading-relaxed italic">
-                    &ldquo;Advisors don&apos;t need another CRM. They need one screen that tells
-                    them which client to call today and why.&rdquo;
-                  </p>
-                  <p className="font-sans text-[12px] uppercase tracking-button text-linen/50 mt-3 font-semibold">
-                    The conviction behind Advisor
-                  </p>
-                </>
-              )}
-            </div>
           </div>
         </div>
       </div>
