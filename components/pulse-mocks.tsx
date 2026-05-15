@@ -419,7 +419,7 @@ export function PulseHeroMocks() {
       <div className="absolute" style={{ left: 0, top: 0, width: "70%" }}>
         <PulseKPIMock />
       </div>
-      <div className="absolute" style={{ right: 0, bottom: 0, width: "58%" }}>
+      <div className="absolute" style={{ right: 0, bottom: 0, width: "72%" }}>
         <PulseActionsMock />
       </div>
     </div>
