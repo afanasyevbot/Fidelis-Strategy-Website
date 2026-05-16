@@ -107,18 +107,38 @@ export default function Page() {
                         "font-sans text-[15px] leading-relaxed mt-3 max-w-2xl",
                         lightSection ? "text-ink/75" : "text-bone/80"
                       )}>
-                        Fidelis Pulse is our own operator dashboard — a product we built on the
-                        same stack we deploy for clients. It connects to QuickBooks and gives
-                        business owners a single view of cash runway, gross margin, and AR aging.
-                        The idea is simple: get a pulse on your business, see where everything is
-                        at, and make the right decisions from there.
+                        Fidelis Pulse is a real SaaS product we built and operate — the same stack we
+                        deploy when we build your custom dashboard. It ships in two versions today.
                       </p>
-                      <p className={cn(
-                        "font-sans text-[15px] leading-relaxed mt-3 max-w-2xl",
+                      <ul className={cn(
+                        "mt-4 space-y-2 max-w-2xl font-sans text-[15px] leading-relaxed",
                         lightSection ? "text-ink/75" : "text-bone/80"
                       )}>
-                        When we build your dashboard, this is the proof that we&apos;ve already
-                        done it — for a real product, with real users, on a real P&amp;L.
+                        <li className="flex gap-3">
+                          <span className={cn("shrink-0 mt-1", lightSection ? "text-deep-olive" : "text-linen")} aria-hidden>◇</span>
+                          <span>
+                            <strong className={cn("font-semibold", lightSection ? "text-deep-olive" : "text-bone")}>For owners</strong> — a live single-business dashboard
+                            synced from QuickBooks, Xero, Stripe, and Plaid. One Pulse score, cash and margin
+                            health, AR aging, anomaly alerts, AI commentary in plain English, and a 60-day
+                            action plan.
+                          </span>
+                        </li>
+                        <li className="flex gap-3">
+                          <span className={cn("shrink-0 mt-1", lightSection ? "text-deep-olive" : "text-linen")} aria-hidden>◇</span>
+                          <span>
+                            <strong className={cn("font-semibold", lightSection ? "text-deep-olive" : "text-bone")}>For M&amp;A advisors</strong> — a multi-client cockpit
+                            for firms running owner-operated businesses toward an exit. Buyer Readiness scoring,
+                            stage-aware alerts, white-labeled share-outs, and pipeline value at a glance
+                            <em className="not-italic"> (shown below)</em>.
+                          </span>
+                        </li>
+                      </ul>
+                      <p className={cn(
+                        "font-sans text-[15px] leading-relaxed mt-4 max-w-2xl",
+                        lightSection ? "text-ink/75" : "text-bone/80"
+                      )}>
+                        When we build your dashboard, this is the proof we&apos;ve already done it — for a real
+                        product, with real users, on a real P&amp;L.
                       </p>
                       <div className="flex flex-wrap items-center gap-4 mt-5">
                         <a
@@ -147,7 +167,7 @@ export default function Page() {
                       <a href="https://fidelispulse.com" target="_blank" rel="noopener noreferrer">
                         <Image
                           src="/marketing/dashboard-apex-hero.png"
-                          alt="Fidelis Pulse dashboard — cash runway, gross margin, anomaly alerts"
+                          alt="Fidelis Pulse — advisor view drilled into a client P&L: revenue, gross margin, cash runway, and net margin year-over-year"
                           width={900}
                           height={560}
                           className="w-full rounded-sm opacity-90 hover:opacity-100 transition-opacity"
