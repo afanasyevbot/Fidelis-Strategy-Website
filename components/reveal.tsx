@@ -66,7 +66,7 @@ export function Reveal({
     return () => io.disconnect();
   }, [rootMargin]);
 
-  const Tag = tag as keyof JSX.IntrinsicElements;
+  const Tag = tag as keyof React.JSX.IntrinsicElements;
   return (
     <Tag
       // @ts-expect-error – dynamic ref typing fine for our use
