@@ -23,7 +23,166 @@
     color: var(--color-ink);
     font-feature-settings: "ss01", "cv11";
   }
-  ::selection { background: #D4C4A0; color: #2A3D2C; }
+  ::selection { background: var(--color-linen); color: var(--color-deep-olive); }
+
+  /* Consistent keyboard focus ring across all interactive elements. */
+  :where(a, button, input, textarea, select, [role="button"], [tabindex]):focus-visible {
+    outline: 2px solid var(--color-linen);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* Smooth scrolling for in-page anchors. */
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+}
+
+/* ---------- Scroll reveal ----------
+   Wrap content with <Reveal /> to fade in on scroll. */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+.reveal[data-reveal="fade"] { transform: none; }
+.reveal[data-reveal="right"] { transform: translateX(-18px); }
+.reveal[data-revealed="true"] {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Stagger children — apply data-reveal-child to direct children of a Reveal
+   with stagger=true and they fade in one after another. */
+.reveal[data-stagger="true"] [data-reveal-child] {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal[data-stagger="true"][data-revealed="true"] [data-reveal-child] {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+.reveal[data-stagger="true"][data-revealed="true"] [data-reveal-child]:nth-child(1) { transition-delay: 0ms; }
+.reveal[data-stagger="true"][data-revealed="true"] [data-reveal-child]:nth-child(2) { transition-delay: 90ms; }
+.reveal[data-stagger="true"][data-revealed="true"] [data-reveal-child]:nth-child(3) { transition-delay: 180ms; }
+.reveal[data-stagger="true"][data-revealed="true"] [data-reveal-child]:nth-child(4) { transition-delay: 270ms; }
+.reveal[data-stagger="true"][data-revealed="true"] [data-reveal-child]:nth-child(5) { transition-delay: 360ms; }
+.reveal[data-stagger="true"][data-revealed="true"] [data-reveal-child]:nth-child(6) { transition-delay: 450ms; }
+.reveal[data-stagger="true"][data-revealed="true"] [data-reveal-child]:nth-child(7) { transition-delay: 540ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal[data-stagger="true"] [data-reveal-child] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* ---------- Card hover lift ----------
+   Subtle elevate + border brighten on hover. Use `.card-lift` on cards.
+   The shadow color matches forest-floor at low alpha for natural depth. */
+.card-lift {
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+.card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 36px -16px rgba(26, 42, 28, 0.28),
+              0 6px 14px -8px rgba(26, 42, 28, 0.18);
+}
+
+/* Arrow nudge — pair with `.arrow-nudge` and put `[data-arrow]` on the icon. */
+.arrow-nudge [data-arrow] {
+  display: inline-block;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.arrow-nudge:hover [data-arrow],
+.group:hover .arrow-nudge [data-arrow] {
+  transform: translateX(4px);
+}
+
+/* Magnetic-feel CTA — gentle scale + shadow on press. */
+.btn-press {
+  transition:
+    transform 0.18s cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.25s ease;
+}
+.btn-press:hover { transform: translateY(-1px); }
+.btn-press:active { transform: translateY(0); }
+
+@media (prefers-reduced-motion: reduce) {
+  .card-lift, .arrow-nudge [data-arrow], .btn-press {
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+/* ---------- Underline grow on text links ---------- */
+.link-underline {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  transition: background-size 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.link-underline:hover { background-size: 100% 1px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .link-underline { background-size: 100% 1px; transition: none; }
+}
+
+/* ---------- Section divider — subtle horizontal hairline accents ---------- */
+.accent-divider {
+  position: relative;
+}
+.accent-divider::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -1px;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(212, 196, 160, 0.35) 50%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+/* ---------- Scroll cue — vertical line that ticks downward forever ---------- */
+@keyframes scroll-cue {
+  0%   { transform: translateY(-100%); }
+  60%  { transform: translateY(100%); }
+  100% { transform: translateY(100%); }
+}
+.scroll-cue-line {
+  animation: scroll-cue 2.4s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .scroll-cue-line { animation: none; }
+}
+
+/* ---------- Subtle floating accent — tiny decorative motion for product mocks ---------- */
+@keyframes float-soft {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
+}
+.float-soft { animation: float-soft 7s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .float-soft { animation: none; }
 }
 
 /* ---------- Hero topographic animation ----------

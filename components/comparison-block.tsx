@@ -1,4 +1,5 @@
 import { Eyebrow } from "./eyebrow";
+import { Reveal } from "./reveal";
 
 const cols = [
   {
@@ -31,7 +32,7 @@ export function ComparisonBlock() {
   return (
     <section className="bg-bone">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 py-16 md:py-24">
-        <div className="max-w-3xl">
+        <Reveal className="max-w-3xl">
           <Eyebrow tone="moss">HOW WE WORK TOGETHER</Eyebrow>
           <h2 className="font-display font-bold text-3xl md:text-[48px] text-deep-olive mt-6 tracking-tight leading-[1.05]">
             Strategy. Build. Or both.
@@ -40,18 +41,19 @@ export function ComparisonBlock() {
             Each model is the right answer for a different team. Here&apos;s
             how we think about it — honestly.
           </p>
-        </div>
+        </Reveal>
 
-        <div className="grid md:grid-cols-3 gap-6 mt-12">
+        <Reveal stagger className="grid md:grid-cols-3 gap-6 mt-12 items-stretch">
           {cols.map((c) => {
             const isPrimary = c.tone === "primary";
             return (
               <div
                 key={c.label}
+                data-reveal-child
                 className={
                   isPrimary
-                    ? "bg-deep-olive text-bone p-8 border-2 border-deep-olive shadow-[0_8px_30px_rgba(42,61,44,0.22)]"
-                    : "bg-bone text-ink p-8 border-2 border-moss-olive"
+                    ? "card-lift bg-deep-olive text-bone p-8 border-2 border-deep-olive shadow-[0_8px_30px_rgba(42,61,44,0.22)] md:-translate-y-2"
+                    : "card-lift bg-bone text-ink p-8 border-2 border-moss-olive/70 hover:border-moss-olive"
                 }
               >
                 <div
@@ -113,7 +115,7 @@ export function ComparisonBlock() {
               </div>
             );
           })}
-        </div>
+        </Reveal>
       </div>
     </section>
   );

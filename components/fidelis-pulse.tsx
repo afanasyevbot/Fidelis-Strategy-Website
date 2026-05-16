@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Eyebrow } from "./eyebrow";
 import { CtaButton } from "./cta-button";
 import { PulseHeroMocks, AdvisorHeroMocks } from "./pulse-mocks";
+import { Reveal } from "./reveal";
 
 const ownerFeatures = [
   "A single Business Pulse score — one number that rolls up cash, margin, growth, and AR health, so you know where you stand at a glance",
@@ -32,7 +33,7 @@ export function FidelisPulse() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 py-16 md:py-24">
 
         {/* Header */}
-        <div className="max-w-4xl">
+        <Reveal className="max-w-4xl">
           <Eyebrow size="lg">FIDELIS PULSE · SAAS PRODUCT</Eyebrow>
           <h2 className="font-display font-bold text-3xl md:text-[52px] mt-8 tracking-tight leading-[1.05]">
             {isOwner ? (
@@ -46,19 +47,20 @@ export function FidelisPulse() {
               ? "A single source of truth for cash, margin, and everything moving inside the business you run today. Connect your books and start tracking in minutes."
               : "Built for M&A and advisory firms running owner-operated businesses toward an exit. See every engagement, who needs you this week, and what each deal is worth."}
           </p>
-        </div>
+        </Reveal>
 
         {/* Tab switcher */}
-        <div className="mt-10 flex gap-1 p-1 rounded-md w-fit" style={{ background: "rgba(212,196,160,0.10)" }}>
+        <div className="mt-10 flex gap-1 p-1 rounded-md w-fit border border-linen/15" style={{ background: "rgba(212,196,160,0.10)" }}>
           {(["owner", "advisor"] as const).map((t) => (
             <button
               key={t}
               onClick={() => setTab(t)}
+              aria-pressed={tab === t}
               className={[
-                "font-sans text-[13px] font-semibold px-5 py-2 rounded transition-all",
+                "font-sans text-[13px] font-semibold px-5 py-2 rounded transition-all duration-300",
                 tab === t
-                  ? "bg-linen text-forest-floor"
-                  : "text-linen/60 hover:text-linen/90",
+                  ? "bg-linen text-forest-floor shadow-[0_2px_10px_rgba(212,196,160,0.25)]"
+                  : "text-linen/60 hover:text-linen hover:bg-linen/[0.06]",
               ].join(" ")}
             >
               {t === "owner" ? "For owners" : "For advisors"}
@@ -67,12 +69,16 @@ export function FidelisPulse() {
         </div>
 
         {/* Content grid */}
-        <div className="grid md:grid-cols-2 gap-12 mt-12 items-start">
+        <div className="grid md:grid-cols-2 gap-12 mt-12 items-start" key={tab}>
           {/* Features + CTAs */}
-          <div>
+          <Reveal stagger tag="div">
             <ul className="space-y-4">
               {(isOwner ? ownerFeatures : advisorFeatures).map((f) => (
-                <li key={f} className="flex gap-3 font-sans text-[16px] text-bone/90 leading-relaxed">
+                <li
+                  key={f}
+                  data-reveal-child
+                  className="flex gap-3 font-sans text-[16px] text-bone/90 leading-relaxed"
+                >
                   <span className="text-linen font-semibold shrink-0 mt-0.5">◇</span>
                   <span>{f}</span>
                 </li>
@@ -99,19 +105,19 @@ export function FidelisPulse() {
                 </>
               )}
             </div>
-          </div>
+          </Reveal>
 
           {/* Live product mock + quote */}
-          <div>
+          <Reveal as="fade" delay={150}>
             <a
               href={isOwner ? "https://fidelispulse.com" : "https://fidelispulse.com/advisor"}
               target="_blank"
               rel="noopener noreferrer"
-              className="block opacity-95 hover:opacity-100 transition-opacity"
+              className="block opacity-95 hover:opacity-100 transition-all duration-500 hover:scale-[1.015]"
             >
               {isOwner ? <PulseHeroMocks /> : <AdvisorHeroMocks />}
             </a>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

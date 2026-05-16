@@ -100,12 +100,24 @@ export function Hero() {
 
         <p className="hero-text hero-delay-5 font-sans text-[13px] text-linen/40 mt-5">
           Not ready to talk?{" "}
-          <a href="/contact" className="underline hover:text-linen/70">
+          <a href="/contact" className="link-underline hover:text-linen/80">
             Send a note instead
           </a>{" "}
           — no call required.
         </p>
       </div>
+
+      {/* Scroll cue */}
+      <a
+        href="#what-we-build"
+        aria-label="Scroll to content"
+        className="hero-text hero-delay-5 hidden md:flex absolute bottom-6 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-linen/50 hover:text-linen transition-colors z-10"
+      >
+        <span className="font-sans text-[10px] uppercase tracking-[0.3em]">Scroll</span>
+        <span className="relative block w-[1px] h-10 bg-linen/30 overflow-hidden">
+          <span className="absolute inset-x-0 top-0 h-3 bg-linen scroll-cue-line" />
+        </span>
+      </a>
     </section>
   );
 }

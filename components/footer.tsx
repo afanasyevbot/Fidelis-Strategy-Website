@@ -14,7 +14,7 @@ export function Footer() {
   return (
     <footer className="bg-forest-floor text-bone">
       {/* Main footer grid */}
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 py-14 grid md:grid-cols-3 gap-10">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 py-14 grid md:grid-cols-3 gap-8 md:gap-10">
         {/* Brand */}
         <div>
           <div className="flex items-center gap-3 mb-3">
@@ -42,7 +42,7 @@ export function Footer() {
               <li key={i.href}>
                 <Link
                   href={i.href}
-                  className="font-sans text-[14px] text-bone/75 hover:text-linen transition-colors"
+                  className="font-sans text-[14px] text-bone/75 hover:text-linen transition-colors link-underline"
                 >
                   {i.label}
                 </Link>
@@ -60,7 +60,7 @@ export function Footer() {
             <div>
               <a
                 href={`mailto:${siteConfig.email}`}
-                className="font-sans text-[14px] text-bone/75 hover:text-linen transition-colors"
+                className="font-sans text-[14px] text-bone/75 hover:text-linen transition-colors link-underline"
               >
                 {siteConfig.email}
               </a>
@@ -68,7 +68,7 @@ export function Footer() {
             <div>
               <a
                 href={`tel:${siteConfig.phone.replace(/\D/g, "")}`}
-                className="font-sans text-[14px] text-bone/75 hover:text-linen transition-colors"
+                className="font-sans text-[14px] text-bone/75 hover:text-linen transition-colors link-underline"
               >
                 {siteConfig.phone}
               </a>
@@ -78,7 +78,7 @@ export function Footer() {
                 href={siteConfig.linkedinUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-sans text-[14px] text-bone/75 hover:text-linen transition-colors"
+                className="font-sans text-[14px] text-bone/75 hover:text-linen transition-colors link-underline"
               >
                 LinkedIn →
               </a>

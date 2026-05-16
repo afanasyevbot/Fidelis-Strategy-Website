@@ -1,5 +1,6 @@
 import { cn } from "@/lib/cn";
 import { Eyebrow } from "./eyebrow";
+import { Reveal } from "./reveal";
 
 const steps = [
   { n: "01", label: "DISCOVER", body: "We study your operations, go-to-market, sales process, and tools.", deliverable: "Operations + GTM audit" },
@@ -16,6 +17,7 @@ export function GrowthEngine({ tone = "bone" }: { tone?: "bone" | "dark" }) {
   return (
     <section className={bg}>
       <div className="mx-auto max-w-6xl px-4 sm:px-6 py-16 md:py-24">
+        <Reveal>
         <p className="font-display font-bold text-2xl md:text-4xl text-linen mb-6 tracking-tight">Here&apos;s where we come in.</p>
         <Eyebrow size="lg" tone={eyebrowTone as "moss" | "linen"}>OUR PROCESS</Eyebrow>
         <h2 className="font-display font-bold text-3xl md:text-[48px] mt-8 tracking-tight max-w-3xl">
@@ -37,27 +39,37 @@ export function GrowthEngine({ tone = "bone" }: { tone?: "bone" | "dark" }) {
             generic framework with your logo on it. Then we build it.
           </p>
         </div>
-        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 mt-12">
+        </Reveal>
+        <Reveal stagger className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 mt-12">
           {steps.map((s) => (
             <div
               key={s.n}
+              data-reveal-child
               className={cn(
-                "p-6 bg-moss-olive text-bone border border-linen/25",
-                s.emphasized && "border-2 border-linen"
+                "card-lift relative p-6 bg-moss-olive text-bone border border-linen/25 hover:border-linen/70 overflow-hidden",
+                s.emphasized && "border-2 border-linen bg-deep-olive"
               )}
             >
+              {s.emphasized && (
+                <span
+                  aria-hidden
+                  className="absolute -top-px -right-px bg-linen text-deep-olive text-[10px] font-bold tracking-button uppercase px-2 py-[3px]"
+                >
+                  Where we live
+                </span>
+              )}
               <div className="font-display text-4xl text-linen leading-none">{s.n}</div>
               <div className="font-display text-[22px] font-bold text-linen mt-3 tracking-tight">
                 {s.label}
               </div>
               <p className="font-sans text-[13px] leading-relaxed mt-2 text-bone/85">{s.body}</p>
-              <div className="mt-4 pt-3 border-t border-linen/20">
+              <div className="mt-4 pt-3 border-t border-linen/25">
                 <div className="font-sans text-[11px] uppercase tracking-button text-linen/70">Output</div>
                 <div className="font-sans text-[12px] text-bone mt-1 leading-snug">{s.deliverable}</div>
               </div>
             </div>
           ))}
-        </div>
+        </Reveal>
       </div>
     </section>
   );

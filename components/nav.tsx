@@ -11,6 +11,7 @@ import { cn } from "@/lib/cn";
 export function Nav() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   // Close menu on route change
   useEffect(() => {
@@ -23,14 +24,39 @@ export function Nav() {
     return () => { document.body.style.overflow = ""; };
   }, [open]);
 
+  // Track scroll for elevation effect
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <>
-      <header className="sticky top-0 z-50 bg-deep-olive/95 backdrop-blur border-b border-white/5">
+      <header
+        className={cn(
+          "sticky top-0 z-50 bg-deep-olive/95 backdrop-blur border-b transition-all duration-300",
+          scrolled
+            ? "border-linen/15 shadow-[0_4px_24px_-8px_rgba(13,26,14,0.6)]"
+            : "border-white/5",
+        )}
+      >
         <nav className="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 text-bone">
-            <Image src="/logo.png?v=2" alt="Fidelis Strategy" width={64} height={64} priority style={{ filter: "saturate(0.7) brightness(1.05)" }} />
-            <span className="text-lg tracking-wide" style={{ fontFamily: "var(--font-cinzel), Georgia, serif" }}>Fidelis Strategy</span>
+          <Link href="/" className="group flex items-center gap-2 text-bone">
+            <Image
+              src="/logo.png?v=2"
+              alt="Fidelis Strategy"
+              width={64}
+              height={64}
+              priority
+              style={{ filter: "saturate(0.7) brightness(1.05)" }}
+              className="transition-transform duration-500 group-hover:rotate-[8deg]"
+            />
+            <span className="text-lg tracking-wide" style={{ fontFamily: "var(--font-cinzel), Georgia, serif" }}>
+              Fidelis Strategy
+            </span>
           </Link>
 
           {/* Desktop nav */}
@@ -39,6 +65,11 @@ export function Nav() {
               const isActive = !i.external && (
                 i.href === "/" ? pathname === "/" : pathname.startsWith(i.href)
               );
+              const baseLink = cn(
+                "relative inline-flex items-center transition-colors duration-200 hover:text-linen",
+                "after:absolute after:left-0 after:right-0 after:-bottom-1 after:h-[2px] after:bg-linen after:origin-left after:transition-transform after:duration-300",
+                isActive ? "text-linen font-semibold after:scale-x-100" : "text-bone/80 after:scale-x-0 hover:after:scale-x-100",
+              );
               return (
                 <li key={i.href}>
                   {i.external ? (
@@ -46,18 +77,12 @@ export function Nav() {
                       href={i.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-linen transition-colors text-bone/80"
+                      className={baseLink}
                     >
                       {i.label}
                     </a>
                   ) : (
-                    <Link
-                      href={i.href}
-                      className={cn(
-                        "transition-colors hover:text-linen",
-                        isActive ? "text-linen font-semibold" : "text-bone/80"
-                      )}
-                    >
+                    <Link href={i.href} className={baseLink}>
                       {i.label}
                     </Link>
                   )}
@@ -156,7 +181,7 @@ export function Nav() {
               href={siteConfig.bookingUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full text-center bg-linen text-deep-olive font-sans font-semibold text-[14px] py-3 px-6 rounded tracking-button uppercase"
+              className="btn-press block w-full text-center bg-linen text-deep-olive font-sans font-semibold text-[14px] py-3 px-6 rounded tracking-button uppercase"
               onClick={() => setOpen(false)}
             >
               Book a Call →
