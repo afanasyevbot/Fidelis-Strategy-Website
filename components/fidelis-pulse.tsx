@@ -71,7 +71,7 @@ export function FidelisPulse() {
         {/* Content grid */}
         <div className="grid md:grid-cols-2 gap-12 mt-12 items-start" key={tab}>
           {/* Features + CTAs */}
-          <Reveal stagger tag="div">
+          <Reveal stagger>
             <ul className="space-y-4">
               {(isOwner ? ownerFeatures : advisorFeatures).map((f) => (
                 <li

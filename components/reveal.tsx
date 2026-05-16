@@ -12,8 +12,6 @@ type Props = {
   /** Reveal direction */
   as?: "up" | "fade" | "right";
   className?: string;
-  /** Render as a different element. Defaults to div. */
-  tag?: "div" | "section" | "ul" | "li" | "article";
   /** rootMargin trigger; default fires when ~15% in view */
   rootMargin?: string;
 };
@@ -30,10 +28,9 @@ export function Reveal({
   stagger = false,
   as = "up",
   className,
-  tag = "div",
   rootMargin = "0px 0px -10% 0px",
 }: Props) {
-  const ref = useRef<HTMLElement | null>(null);
+  const ref = useRef<HTMLDivElement | null>(null);
   const [shown, setShown] = useState(false);
 
   useEffect(() => {
@@ -66,10 +63,8 @@ export function Reveal({
     return () => io.disconnect();
   }, [rootMargin]);
 
-  const Tag = tag as keyof React.JSX.IntrinsicElements;
   return (
-    <Tag
-      // @ts-expect-error – dynamic ref typing fine for our use
+    <div
       ref={ref}
       data-reveal={as}
       data-revealed={shown ? "true" : "false"}
@@ -78,6 +73,6 @@ export function Reveal({
       className={cn("reveal", className)}
     >
       {children}
-    </Tag>
+    </div>
   );
 }
