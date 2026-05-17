@@ -26,7 +26,7 @@ export default function Page() {
               The kinds of systems we build.
             </h1>
             <p className="font-display text-2xl md:text-[26px] leading-tight mt-5 text-linen max-w-3xl tracking-[-0.01em]">
-              Every engagement is custom. These are the categories we work in most — your build is shaped to your business.
+              Every engagement is custom. These are the categories we work in most, and your build is shaped to your business.
             </p>
           </div>
         </section>
