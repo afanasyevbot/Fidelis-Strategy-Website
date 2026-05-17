@@ -2,9 +2,9 @@ import { Eyebrow } from "./eyebrow";
 import { Reveal } from "./reveal";
 
 const fits = [
-  "You run an owner-operated business — services, brokerage, or agency — and every major decision still runs through you.",
+  "You run an owner-operated business (services, brokerage, or agency), and every major decision still runs through you.",
   "You know the business needs to operate differently, but you haven't found a partner who understands both the strategy and the build.",
-  "You see what AI is doing to your industry. You want to move fast — without guessing which tools actually matter for your business.",
+  "You see what AI is doing to your industry. You want to move fast, without guessing which tools actually matter for your business.",
   "You want one partner who stays in it with you from the first conversation through the systems going live.",
 ];
 
@@ -20,7 +20,7 @@ export function WhoThisIsFor() {
             </h2>
             <p className="font-display font-light text-lg md:text-2xl text-linen mt-5 max-w-3xl leading-snug">
               You&apos;ve built something real. Now the business needs systems,
-              strategy, and execution — not another vendor to manage.
+              strategy, and execution. Not another vendor to manage.
             </p>
           </div>
         </Reveal>

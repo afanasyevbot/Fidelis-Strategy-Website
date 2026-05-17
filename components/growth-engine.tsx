@@ -24,18 +24,18 @@ export function GrowthEngine({ tone = "bone" }: { tone?: "bone" | "dark" }) {
           The 4D Growth Engine.
         </h2>
         <p className="font-display font-light text-lg md:text-xl mt-3 max-w-2xl text-linen">
-          The four-stage process behind every Fidelis engagement — from first conversation to systems that compound.
+          The four-stage process behind every Fidelis engagement, from first conversation to systems that compound.
         </p>
         <div className="mt-6 space-y-3 max-w-3xl font-sans text-[16px] text-bone/80 leading-relaxed">
           <p>
-            Before we build anything, we take the time to learn your business — how you operate,
+            Before we build anything, we take the time to learn your business: how you operate,
             how you go to market, how deals move through your sales process, and what technology
             you&apos;re already running on. We analyze all of it to find where growth is hiding
             and where it&apos;s being left on the table.
           </p>
           <p>
             The result is your <strong className="text-linen font-semibold">4D Growth Plan</strong>: a strategic
-            roadmap built around your specific business, your market, and your goals — not a
+            roadmap built around your specific business, your market, and your goals. Not a
             generic framework with your logo on it. Then we build it.
           </p>
         </div>

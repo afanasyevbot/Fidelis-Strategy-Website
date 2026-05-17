@@ -14,7 +14,7 @@ export const metadata = {
 const principles = [
   { title: "Build, don't just brief.", body: "Every engagement ends with working systems your team uses every day. That's the bar." },
   { title: "Own the outcome.", body: "We stay with you through launch, optimization, and the next iteration. Growth is compounding work." },
-  { title: "One partner. One accountability line.", body: "Strategy, design, and the AI build — all from a small team that knows your business deeply." },
+  { title: "One partner. One accountability line.", body: "Strategy, design, and the AI build. All from a small team that knows your business deeply." },
 ];
 
 export default function Page() {
@@ -40,7 +40,7 @@ export default function Page() {
               Faithful. Loyal. Trustworthy.
             </h1>
             <p className="font-display text-2xl md:text-[26px] leading-tight mt-5 text-linen max-w-3xl tracking-[-0.01em]">
-              <strong>Fidelis</strong> (fi-DEL-is) is Latin for faithful. That&apos;s not a tagline — it&apos;s the operating principle behind every plan we write and every system we build.
+              <strong>Fidelis</strong> (fi-DEL-is) is Latin for faithful. Not a tagline. The operating principle behind every plan we write and every system we build.
             </p>
           </div>
         </section>
@@ -103,8 +103,8 @@ export default function Page() {
                 real, and the experience changed how I think about
                 everything. That includes{" "}
                 <a href="https://fidelispulse.com" target="_blank" rel="noopener noreferrer" className="text-deep-olive underline decoration-moss-olive/40 underline-offset-2 hover:text-moss-olive">Fidelis Pulse</a>,
-                a dashboard that gives you a pulse on your business — see
-                where everything stands so you can make the right calls —
+                a dashboard that gives you a pulse on your business so you can see
+                where everything stands and make the right calls,
                 and Glow Routine, a consumer wellness app.
                 That&apos;s what Fidelis is built on: growth strategy and
                 AI-powered systems that actually move the business forward.

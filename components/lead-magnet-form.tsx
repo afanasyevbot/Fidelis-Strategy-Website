@@ -42,7 +42,7 @@ export function LeadMagnetForm() {
           <a href="/growth-audit/checklist" className="link-underline text-deep-olive hover:text-moss-olive">
             read it online here
           </a>{" "}
-          — no email required.
+          with no email required.
         </p>
       </div>
     );
@@ -63,7 +63,7 @@ export function LeadMagnetForm() {
         Send me the checklist <span data-arrow className="ml-2">→</span>
       </button>
       <p className="font-sans text-[12px] text-ink/55 leading-relaxed">
-        We&apos;ll reply within one business day. No sequence, no drip — just the checklist.
+        We&apos;ll reply within one business day. No sequence, no drip. Just the checklist.
       </p>
     </form>
   );

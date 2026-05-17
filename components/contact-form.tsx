@@ -38,7 +38,7 @@ export function ContactForm() {
           <a href={`mailto:${siteConfig.email}`} className="link-underline text-deep-olive hover:text-moss-olive">
             email us directly
           </a>{" "}
-          — we reply within one business day.
+          We reply within one business day.
         </p>
       </div>
     );

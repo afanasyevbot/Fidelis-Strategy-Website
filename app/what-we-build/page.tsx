@@ -187,17 +187,17 @@ export default function Page() {
             <div className="max-w-3xl">
               <Eyebrow tone="moss">DON&apos;T SEE YOUR EXACT NEED?</Eyebrow>
               <h2 className="font-display font-bold text-3xl md:text-[42px] text-deep-olive mt-6 tracking-tight leading-[1.05]">
-                Every build starts with your business — not a template.
+                Every build starts with your business, not a template.
               </h2>
               <p className="font-sans text-[17px] text-ink/75 leading-relaxed mt-5 max-w-2xl">
                 The categories above are where we work most often. But the businesses we work with
-                don&apos;t come to us with a predefined spec — they come with a growth problem, an
+                don&apos;t come to us with a predefined spec. They come with a growth problem, an
                 operational bottleneck, or a revenue opportunity they haven&apos;t been able to unlock.
                 We figure out the right build together.
               </p>
               <p className="font-sans text-[17px] text-ink/75 leading-relaxed mt-4 max-w-2xl">
-                If you&apos;re not sure which system fits — or you need something that doesn&apos;t
-                map cleanly to any of these — that&apos;s exactly the right time to talk.
+                If you&apos;re not sure which system fits, or you need something that doesn&apos;t
+                map cleanly to any of these, that&apos;s exactly the right time to talk.
                 Tell us what you&apos;re working on and we&apos;ll tell you honestly what would help.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -208,7 +208,7 @@ export default function Page() {
                   Tell us what you&apos;re building <span data-arrow className="ml-2">→</span>
                 </a>
                 <span className="font-sans text-[13px] text-ink/50">
-                  No call required — a note is fine.
+                  No call required. A note is fine.
                 </span>
               </div>
             </div>

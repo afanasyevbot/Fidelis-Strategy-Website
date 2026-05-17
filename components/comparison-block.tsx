@@ -14,7 +14,7 @@ const cols = [
     label: "BUILD ONLY",
     headline: "Hands on the tools.",
     body:
-      "Agencies, freelancers, dev shops. They&apos;ll build whatever you spec — but the strategy is your job, and so is the integration.",
+      "Agencies, freelancers, dev shops. They'll build whatever you spec, but the strategy is your job — and so is the integration.",
     fitFor: "When the strategy is clear and you just need execution capacity.",
     tone: "muted" as const,
   },
@@ -39,7 +39,7 @@ export function ComparisonBlock() {
           </h2>
           <p className="font-display font-light text-lg md:text-xl text-moss-olive mt-4 max-w-2xl">
             Each model is the right answer for a different team. Here&apos;s
-            how we think about it — honestly.
+            how we think about it. Honestly.
           </p>
         </Reveal>
 

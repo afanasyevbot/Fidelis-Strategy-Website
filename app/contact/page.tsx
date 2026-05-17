@@ -39,7 +39,7 @@ export default function Page() {
                 Just send a note.
               </h2>
               <p className="font-sans text-[16px] text-ink/80 leading-relaxed mt-4">
-                Tell us what you&apos;re working on — even if it&apos;s rough.
+                Tell us what you&apos;re working on, even if it&apos;s rough.
                 No call required, no commitment. We&apos;ll read it and reply
                 with thoughts, questions, or whether it makes sense to talk.
               </p>
@@ -55,7 +55,7 @@ export default function Page() {
               <p className="font-sans text-[16px] text-ink/80 leading-relaxed mt-4">
                 A 30-minute Growth Audit. We&apos;ll talk about what you&apos;re
                 trying to build and whether we&apos;re the right partner.
-                No pitch deck, no sales script — just a real conversation.
+                No pitch deck, no sales script. Just a real conversation.
               </p>
               <div className="mt-8">
                 <CtaButton href={siteConfig.bookingUrl} external>
