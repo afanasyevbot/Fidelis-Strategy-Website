@@ -1,9 +1,9 @@
-import Image from "next/image";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { Eyebrow } from "@/components/eyebrow";
 import { GrowthEngine } from "@/components/growth-engine";
 import { FinalCta } from "@/components/final-cta";
+import { AdvisorHeroMocks } from "@/components/pulse-mocks";
 import { systems } from "@/content/systems";
 import { cn } from "@/lib/cn";
 
@@ -164,14 +164,14 @@ export default function Page() {
                       "px-6 md:px-8 pb-6 md:pb-8",
                       lightSection ? "border-t border-moss-olive/15 bg-deep-olive/5 pt-6" : "border-t border-linen/10 bg-linen/5 pt-6"
                     )}>
-                      <a href="https://fidelispulse.com" target="_blank" rel="noopener noreferrer">
-                        <Image
-                          src="/marketing/dashboard-apex-hero.png"
-                          alt="Fidelis Pulse — advisor view drilled into a client P&L: revenue, gross margin, cash runway, and net margin year-over-year"
-                          width={900}
-                          height={560}
-                          className="w-full rounded-sm opacity-90 hover:opacity-100 transition-opacity"
-                        />
+                      <a
+                        href="https://fidelispulse.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block opacity-90 hover:opacity-100 transition-opacity"
+                        aria-label="See Fidelis Pulse — advisor cockpit showing client KPIs and multi-client console"
+                      >
+                        <AdvisorHeroMocks />
                       </a>
                     </div>
                   </div>
