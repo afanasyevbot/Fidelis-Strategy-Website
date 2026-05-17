@@ -25,6 +25,36 @@ const WARN_BORDER = "rgba(199, 119, 0, 0.30)";
 const SERIF = '"Iowan Old Style", "Charter", "Source Serif 4", Georgia, serif';
 const SANS = "var(--font-inter), ui-sans-serif, system-ui, sans-serif";
 
+// ── Logo mark helpers (inline SVG — no image files needed) ─────────────────
+// Adapted from fidelis-dashboard/components/logos/FidelisLogos.tsx
+
+function PulseMark({ size = 20 }: { size?: number }) {
+  return (
+    <svg width={size} height={Math.round(size * 50 / 56)} viewBox="0 0 56 50" fill="none" aria-hidden>
+      {/* L-bracket */}
+      <path d="M 40 9 L 12 9 L 12 43" stroke={INK} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+      {/* EKG spike */}
+      <path d="M 12 27 L 19.5 27 L 22 19 L 25 36 L 27.5 27 L 46 27" stroke={ACCENT} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function AdvisorMark({ size = 22 }: { size?: number }) {
+  const h = Math.round(size * 56 / 64);
+  return (
+    <svg width={size} height={h} viewBox="0 0 64 56" fill="none" aria-hidden>
+      {/* Track */}
+      <path d="M 12.95 45 A 22 22 0 1 1 51.05 45" stroke="rgba(61,51,37,0.15)" strokeWidth="4.5" strokeLinecap="round" />
+      {/* ~88% filled arc */}
+      <path d="M 12.95 45 A 22 22 0 0 1 48.35 19.28" stroke={ACCENT} strokeWidth="4.5" strokeLinecap="round" />
+      {/* Needle dot */}
+      <circle cx="48.35" cy="19.28" r="3" fill={ACCENT} />
+      {/* F monogram */}
+      <text x="32" y="41" textAnchor="middle" fontFamily="'Space Grotesk', sans-serif" fontWeight="700" fontSize="18" fill={INK}>F</text>
+    </svg>
+  );
+}
+
 const eyebrow: React.CSSProperties = {
   fontSize: 10,
   letterSpacing: "0.16em",
@@ -60,24 +90,8 @@ export function PulseKPIMock() {
           fontSize: 12,
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-          <div
-            style={{
-              width: 16,
-              height: 16,
-              background: ACCENT,
-              color: "#fff",
-              fontWeight: 700,
-              fontSize: 9,
-              borderRadius: 3,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontFamily: SERIF,
-            }}
-          >
-            F
-          </div>
+        <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+          <PulseMark size={18} />
           <span style={{ fontFamily: SERIF, fontWeight: 600 }}>Fidelis Pulse</span>
         </div>
         <span style={{ color: INK_MUTED }}>·</span>
@@ -288,24 +302,8 @@ export function PulseActionsMock() {
           fontSize: 12,
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-          <div
-            style={{
-              width: 16,
-              height: 16,
-              background: ACCENT,
-              color: "#fff",
-              fontWeight: 700,
-              fontSize: 9,
-              borderRadius: 3,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontFamily: SERIF,
-            }}
-          >
-            F
-          </div>
+        <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+          <PulseMark size={18} />
           <span style={{ fontFamily: SERIF, fontWeight: 600 }}>Fidelis Pulse</span>
         </div>
         <span style={{ color: INK_MUTED }}>·</span>
@@ -454,8 +452,8 @@ function PulseKPISimpleMock() {
       }}
     >
       <div style={{ display: "flex", alignItems: "center", gap: 10, padding: "10px 14px", borderBottom: `1px solid ${LINE}`, background: CARD, fontSize: 12 }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-          <div style={{ width: 16, height: 16, background: ACCENT, color: "#fff", fontWeight: 700, fontSize: 9, borderRadius: 3, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: SERIF }}>F</div>
+        <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+          <PulseMark size={18} />
           <span style={{ fontFamily: SERIF, fontWeight: 600 }}>Fidelis Pulse</span>
         </div>
         <span style={{ color: INK_MUTED }}>·</span>
@@ -537,24 +535,8 @@ export function AdvisorConsoleMock() {
           fontSize: 12,
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-          <div
-            style={{
-              width: 16,
-              height: 16,
-              background: ACCENT,
-              color: "#fff",
-              fontWeight: 700,
-              fontSize: 9,
-              borderRadius: 3,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontFamily: SERIF,
-            }}
-          >
-            F
-          </div>
+        <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+          <AdvisorMark size={20} />
           <span style={{ fontFamily: SERIF, fontWeight: 600 }}>Fidelis Advisor</span>
         </div>
         <span style={{ color: INK_MUTED }}>·</span>
