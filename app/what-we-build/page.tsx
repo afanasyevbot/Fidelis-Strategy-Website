@@ -181,6 +181,40 @@ export default function Page() {
           );
         })}
 
+        {/* Custom build callout */}
+        <section className="bg-bone border-y border-moss-olive/15">
+          <div className="mx-auto max-w-5xl px-6 py-20">
+            <div className="max-w-3xl">
+              <Eyebrow tone="moss">DON&apos;T SEE YOUR EXACT NEED?</Eyebrow>
+              <h2 className="font-display font-bold text-3xl md:text-[42px] text-deep-olive mt-6 tracking-tight leading-[1.05]">
+                Every build starts with your business — not a template.
+              </h2>
+              <p className="font-sans text-[17px] text-ink/75 leading-relaxed mt-5 max-w-2xl">
+                The categories above are where we work most often. But the businesses we work with
+                don&apos;t come to us with a predefined spec — they come with a growth problem, an
+                operational bottleneck, or a revenue opportunity they haven&apos;t been able to unlock.
+                We figure out the right build together.
+              </p>
+              <p className="font-sans text-[17px] text-ink/75 leading-relaxed mt-4 max-w-2xl">
+                If you&apos;re not sure which system fits — or you need something that doesn&apos;t
+                map cleanly to any of these — that&apos;s exactly the right time to talk.
+                Tell us what you&apos;re working on and we&apos;ll tell you honestly what would help.
+              </p>
+              <div className="mt-8 flex flex-wrap items-center gap-4">
+                <a
+                  href="/contact"
+                  className="btn-press arrow-nudge inline-flex items-center justify-center font-sans text-[11px] font-semibold uppercase tracking-button px-6 py-3 bg-deep-olive text-bone hover:bg-moss-olive shadow-[0_2px_0_rgba(26,42,28,0.08)]"
+                >
+                  Tell us what you&apos;re building <span data-arrow className="ml-2">→</span>
+                </a>
+                <span className="font-sans text-[13px] text-ink/50">
+                  No call required — a note is fine.
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <GrowthEngine tone="bone" />
         <FinalCta eyebrow="READY" headline="Let's build your system." />
       </main>
