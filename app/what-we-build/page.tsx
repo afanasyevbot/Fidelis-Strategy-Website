@@ -28,6 +28,13 @@ export default function Page() {
             <p className="font-display text-2xl md:text-[26px] leading-tight mt-5 text-linen max-w-3xl tracking-[-0.01em]">
               Every engagement is custom. These are the categories we work in most, and your build is shaped to your business.
             </p>
+            <p className="font-sans text-[15px] text-linen/60 mt-4 max-w-xl">
+              Don&apos;t see what you need?{" "}
+              <a href="/contact" className="text-linen/80 underline underline-offset-2 hover:text-linen transition-colors">
+                Tell us what you&apos;re trying to solve
+              </a>
+              {" "}— we build to the problem, not the category.
+            </p>
           </div>
         </section>
 
