@@ -47,39 +47,47 @@ export default function Page() {
         <section className="bg-moss-olive text-bone">
           <div className="mx-auto max-w-5xl px-6 py-24">
             <Eyebrow size="lg">CASE STUDY</Eyebrow>
-            <div className="flex items-center gap-5 mt-8">
-              <div className="shrink-0 bg-bone rounded-sm px-4 py-2">
-                <Image
-                  src="/paradise-capital-logo.jpeg"
-                  alt="Paradise Capital"
-                  width={120}
-                  height={40}
-                  className="object-contain"
-                />
-              </div>
-              <h1 className="font-display font-bold text-5xl md:text-[60px] leading-[1.02] tracking-[-0.02em]">
-                Paradise Capital
-              </h1>
+            {/* Premium logo mark — SVG recreation optimised for dark background */}
+            <div className="mt-10 mb-6">
+              <svg viewBox="0 0 220 52" xmlns="http://www.w3.org/2000/svg" className="h-10 w-auto" aria-label="Paradise Capital">
+                {/* Circle mark: outer ring + inner crescent */}
+                <circle cx="24" cy="26" r="23" fill="none" stroke="#c4a466" strokeWidth="1.5" />
+                <circle cx="24" cy="26" r="15" fill="#c4a466" />
+                <circle cx="32" cy="26" r="15" fill="#3d5a3e" />
+                {/* Thin vertical rule */}
+                <line x1="58" y1="6" x2="58" y2="46" stroke="#c4a466" strokeWidth="0.75" opacity="0.5" />
+                {/* Wordmark */}
+                <text x="70" y="22" fontFamily="Georgia, 'Times New Roman', serif" fontSize="12.5" letterSpacing="3.5" fill="#e8e0cc" fontWeight="400">PARADISE</text>
+                <text x="70" y="40" fontFamily="Georgia, 'Times New Roman', serif" fontSize="12.5" letterSpacing="3.5" fill="#c4a466" fontWeight="400">CAPITAL</text>
+              </svg>
             </div>
+            <h1 className="font-display font-bold text-5xl md:text-[60px] leading-[1.02] tracking-[-0.02em]">
+              Paradise Capital
+            </h1>
             <p className="font-display text-2xl md:text-[26px] leading-tight mt-5 text-linen max-w-3xl tracking-[-0.01em]">
-              {/* TODO: confirm dates with Matthew */}
               Weekly deal-sourcing intel engine. 2025 – ongoing.
             </p>
           </div>
         </section>
 
-        {/* Paul's quote — high up, right after hero */}
+        {/* Paul's quote — premium treatment */}
         <section className="bg-bone">
-          <div className="mx-auto max-w-4xl px-6 py-16">
-            <blockquote className="border-l-4 border-moss-olive pl-8">
-              <p className="font-display font-light text-2xl md:text-3xl text-deep-olive leading-snug">
-                &ldquo;Fidelis Strategy took the time to truly understand our business
+          <div className="mx-auto max-w-4xl px-6 py-20">
+            <blockquote className="relative">
+              {/* Decorative quotation mark */}
+              <span className="block font-display text-[96px] leading-none text-moss-olive/15 select-none -mb-6 -ml-2" aria-hidden="true">&ldquo;</span>
+              <p className="font-display font-light text-[26px] md:text-[32px] text-deep-olive leading-[1.35] tracking-[-0.01em]">
+                Fidelis Strategy took the time to truly understand our business
                 and core values before delivering actionable strategies. We expect to
                 increase our referral pipeline by 30% and generate an additional
-                $2 million in revenue in the next year.&rdquo;
+                $2 million in revenue in the next year.
               </p>
-              <footer className="mt-5 font-sans text-[13px] tracking-wide text-moss-olive uppercase font-semibold">
-                Paul Niccum · CEO, Paradise Capital
+              <footer className="mt-8 flex items-center gap-4">
+                <div className="h-px flex-1 max-w-[40px] bg-moss-olive/40" />
+                <div>
+                  <div className="font-sans text-[13px] tracking-[0.12em] text-deep-olive font-semibold uppercase">Paul Niccum</div>
+                  <div className="font-sans text-[12px] tracking-[0.06em] text-moss-olive uppercase mt-0.5">CEO, Paradise Capital</div>
+                </div>
               </footer>
             </blockquote>
           </div>
