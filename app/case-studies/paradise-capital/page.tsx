@@ -47,19 +47,14 @@ export default function Page() {
         <section className="bg-moss-olive text-bone">
           <div className="mx-auto max-w-5xl px-6 py-24">
             <Eyebrow size="lg">CASE STUDY</Eyebrow>
-            {/* Premium logo mark — SVG recreation optimised for dark background */}
             <div className="mt-10 mb-6">
-              <svg viewBox="0 0 220 52" xmlns="http://www.w3.org/2000/svg" className="h-10 w-auto" aria-label="Paradise Capital">
-                {/* Circle mark: outer ring + inner crescent */}
-                <circle cx="24" cy="26" r="23" fill="none" stroke="#c4a466" strokeWidth="1.5" />
-                <circle cx="24" cy="26" r="15" fill="#c4a466" />
-                <circle cx="32" cy="26" r="15" fill="#3d5a3e" />
-                {/* Thin vertical rule */}
-                <line x1="58" y1="6" x2="58" y2="46" stroke="#c4a466" strokeWidth="0.75" opacity="0.5" />
-                {/* Wordmark */}
-                <text x="70" y="22" fontFamily="Georgia, 'Times New Roman', serif" fontSize="12.5" letterSpacing="3.5" fill="#e8e0cc" fontWeight="400">PARADISE</text>
-                <text x="70" y="40" fontFamily="Georgia, 'Times New Roman', serif" fontSize="12.5" letterSpacing="3.5" fill="#c4a466" fontWeight="400">CAPITAL</text>
-              </svg>
+              <Image
+                src="/paradise-capital-logo-transparent.avif"
+                alt="Paradise Capital"
+                width={180}
+                height={60}
+                className="object-contain brightness-0 invert opacity-90"
+              />
             </div>
             <h1 className="font-display font-bold text-5xl md:text-[60px] leading-[1.02] tracking-[-0.02em]">
               Paradise Capital
