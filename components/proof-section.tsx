@@ -69,6 +69,38 @@ export function ProofSection() {
           </CtaButton>
         </Reveal>
 
+        {/* Linked by Lexi */}
+        <Reveal delay={60}>
+          <div className="mt-16 pt-10 border-t border-linen/20">
+            <p className="font-display font-bold text-base uppercase tracking-widest text-linen mb-6">
+              Linked by Lexi
+            </p>
+          </div>
+        </Reveal>
+
+        <Reveal delay={120}>
+          <blockquote className="relative">
+            <div className="font-display text-[120px] md:text-[160px] leading-none text-linen/25 select-none absolute -top-8 -left-2 md:-left-6">
+              &ldquo;
+            </div>
+            <div className="border-l-4 border-linen pl-6 md:pl-10 relative z-10">
+              <p className="font-display font-semibold text-xl md:text-2xl leading-relaxed text-bone">
+                Matthew at Fidelis Strategy built a custom consumer wellness app
+                tailored exactly to my workflow and routines. Instead of having a
+                chaotic process or no way to keep track, he designed something around
+                how I actually operate, which made it{" "}
+                <span className="text-linen">far more effective and simple to stick with.</span>
+              </p>
+              <footer className="mt-5 flex items-center gap-3">
+                <div className="w-8 h-[2px] bg-linen/50" />
+                <span className="font-sans text-[13px] tracking-widest text-linen uppercase">
+                  Lexi · Founder, Linked by Lexi
+                </span>
+              </footer>
+            </div>
+          </blockquote>
+        </Reveal>
+
         {/* Grace Evangelical Church */}
         <Reveal delay={60}>
           <div className="mt-16 pt-10 border-t border-linen/20">
@@ -108,38 +140,6 @@ export function ProofSection() {
           <CtaButton href="https://eagangrace.com" external>
             Visit eagangrace.com →
           </CtaButton>
-        </Reveal>
-
-        {/* Linked by Lexi */}
-        <Reveal delay={60}>
-          <div className="mt-16 pt-10 border-t border-linen/20">
-            <p className="font-display font-bold text-base uppercase tracking-widest text-linen mb-6">
-              Linked by Lexi
-            </p>
-          </div>
-        </Reveal>
-
-        <Reveal delay={120}>
-          <blockquote className="relative">
-            <div className="font-display text-[120px] md:text-[160px] leading-none text-linen/25 select-none absolute -top-8 -left-2 md:-left-6">
-              &ldquo;
-            </div>
-            <div className="border-l-4 border-linen pl-6 md:pl-10 relative z-10">
-              <p className="font-display font-semibold text-xl md:text-2xl leading-relaxed text-bone">
-                Matthew at Fidelis Strategy built a custom consumer wellness app
-                tailored exactly to my workflow and routines. Instead of having a
-                chaotic process or no way to keep track, he designed something around
-                how I actually operate, which made it{" "}
-                <span className="text-linen">far more effective and simple to stick with.</span>
-              </p>
-              <footer className="mt-5 flex items-center gap-3">
-                <div className="w-8 h-[2px] bg-linen/50" />
-                <span className="font-sans text-[13px] tracking-widest text-linen uppercase">
-                  Lexi · Founder, Linked by Lexi
-                </span>
-              </footer>
-            </div>
-          </blockquote>
         </Reveal>
       </div>
     </section>
