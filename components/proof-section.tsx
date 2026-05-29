@@ -13,7 +13,7 @@ export function ProofSection() {
         {/* Paradise Capital */}
         <Reveal delay={60}>
           <div className="mt-10 pt-10 border-t border-linen/20">
-            <p className="font-sans text-[11px] uppercase tracking-widest text-linen/60 mb-6">
+            <p className="font-display font-bold text-base uppercase tracking-widest text-linen mb-6">
               Paradise Capital
             </p>
           </div>
@@ -72,7 +72,7 @@ export function ProofSection() {
         {/* Linked by Lexi */}
         <Reveal delay={60}>
           <div className="mt-16 pt-10 border-t border-linen/20">
-            <p className="font-sans text-[11px] uppercase tracking-widest text-linen/60 mb-6">
+            <p className="font-display font-bold text-base uppercase tracking-widest text-linen mb-6">
               Linked by Lexi
             </p>
           </div>
