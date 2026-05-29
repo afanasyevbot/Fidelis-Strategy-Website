@@ -69,6 +69,47 @@ export function ProofSection() {
           </CtaButton>
         </Reveal>
 
+        {/* Grace Evangelical Church */}
+        <Reveal delay={60}>
+          <div className="mt-16 pt-10 border-t border-linen/20">
+            <p className="font-display font-bold text-base uppercase tracking-widest text-linen mb-6">
+              Grace Evangelical Church
+            </p>
+          </div>
+        </Reveal>
+
+        <Reveal delay={120}>
+          <blockquote className="relative">
+            <div className="font-display text-[120px] md:text-[160px] leading-none text-linen/25 select-none absolute -top-8 -left-2 md:-left-6">
+              &ldquo;
+            </div>
+            <div className="border-l-4 border-linen pl-6 md:pl-10 relative z-10">
+              <p className="font-display font-semibold text-xl md:text-2xl leading-relaxed text-bone">
+                Fidelis Strategy gave their time and expertise pro bono to help our small church.
+                Matthew rebuilt our website from the ground up, moved our entire staff off generic
+                Gmail accounts onto proper professional emails through a nonprofit Microsoft 365
+                tenant, and integrated an online donation platform directly into the new site,
+                removing the friction for our members to give electronically. We used to be
+                embarrassed to share our website. Now we are proudly sharing it across every
+                platform we have. We are excited about what is ahead, including a{" "}
+                <span className="text-linen">Phase 2 QuickBooks implementation.</span>
+              </p>
+              <footer className="mt-5 flex items-center gap-3">
+                <div className="w-8 h-[2px] bg-linen/50" />
+                <span className="font-sans text-[13px] tracking-widest text-linen uppercase">
+                  Leadership · Grace Evangelical Church
+                </span>
+              </footer>
+            </div>
+          </blockquote>
+        </Reveal>
+
+        <Reveal delay={160} className="mt-8">
+          <CtaButton href="https://eagangrace.com" external>
+            Visit eagangrace.com →
+          </CtaButton>
+        </Reveal>
+
         {/* Linked by Lexi */}
         <Reveal delay={60}>
           <div className="mt-16 pt-10 border-t border-linen/20">
