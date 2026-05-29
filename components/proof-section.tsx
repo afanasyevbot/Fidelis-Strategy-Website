@@ -7,17 +7,19 @@ export function ProofSection() {
     <section className="bg-moss-olive text-bone">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 py-16 md:py-24">
         <Reveal>
-          <Eyebrow size="lg">PROOF</Eyebrow>
-          <h2 className="font-display font-bold text-2xl md:text-[48px] mt-8 tracking-tight max-w-3xl leading-tight">
-            +30% pipeline. +$2M projected revenue. One engagement.
-          </h2>
-          <p className="font-display font-light text-lg md:text-2xl text-linen mt-4 max-w-2xl tracking-tight">
-            Don&apos;t take our word for it.
-          </p>
+          <Eyebrow size="lg">WHAT CLIENTS SAY</Eyebrow>
         </Reveal>
 
-        {/* Headline stat strip */}
-        <Reveal stagger delay={80} className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {/* Paradise Capital */}
+        <Reveal delay={60}>
+          <div className="mt-10 pt-10 border-t border-linen/20">
+            <p className="font-sans text-[11px] uppercase tracking-widest text-linen/60 mb-6">
+              Paradise Capital
+            </p>
+          </div>
+        </Reveal>
+
+        <Reveal stagger delay={80} className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {[
             { stat: "+30%", label: "Projected referral pipeline" },
             { stat: "+$2M", label: "Projected new revenue" },
@@ -39,8 +41,7 @@ export function ProofSection() {
         </Reveal>
 
         <Reveal delay={120}>
-          <blockquote className="mt-12 relative">
-            {/* Large decorative quote mark */}
+          <blockquote className="mt-10 relative">
             <div className="font-display text-[120px] md:text-[160px] leading-none text-linen/25 select-none absolute -top-8 -left-2 md:-left-6">
               &ldquo;
             </div>
@@ -61,10 +62,43 @@ export function ProofSection() {
             </div>
           </blockquote>
         </Reveal>
-        <Reveal delay={160} className="mt-10">
+
+        <Reveal delay={160} className="mt-8">
           <CtaButton href="/case-studies/paradise-capital">
             Read the full case study →
           </CtaButton>
+        </Reveal>
+
+        {/* Linked by Lexi */}
+        <Reveal delay={60}>
+          <div className="mt-16 pt-10 border-t border-linen/20">
+            <p className="font-sans text-[11px] uppercase tracking-widest text-linen/60 mb-6">
+              Linked by Lexi
+            </p>
+          </div>
+        </Reveal>
+
+        <Reveal delay={120}>
+          <blockquote className="relative">
+            <div className="font-display text-[120px] md:text-[160px] leading-none text-linen/25 select-none absolute -top-8 -left-2 md:-left-6">
+              &ldquo;
+            </div>
+            <div className="border-l-4 border-linen pl-6 md:pl-10 relative z-10">
+              <p className="font-display font-semibold text-xl md:text-2xl leading-relaxed text-bone">
+                Matthew at Fidelis Strategy built a custom consumer wellness app
+                tailored exactly to my workflow and routines. Instead of having a
+                chaotic process or no way to keep track, he designed something around
+                how I actually operate, which made it{" "}
+                <span className="text-linen">far more effective and simple to stick with.</span>
+              </p>
+              <footer className="mt-5 flex items-center gap-3">
+                <div className="w-8 h-[2px] bg-linen/50" />
+                <span className="font-sans text-[13px] tracking-widest text-linen uppercase">
+                  Lexi · Founder, Linked by Lexi
+                </span>
+              </footer>
+            </div>
+          </blockquote>
         </Reveal>
       </div>
     </section>
