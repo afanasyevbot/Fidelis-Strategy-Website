@@ -117,14 +117,13 @@ export function ProofSection() {
             </div>
             <div className="border-l-4 border-linen pl-6 md:pl-10 relative z-10">
               <p className="font-display font-semibold text-xl md:text-2xl leading-relaxed text-bone">
-                Fidelis Strategy gave their time and expertise pro bono to help our small church.
+                Fidelis Strategy gave their time pro bono to help our small church.
                 Matthew rebuilt our website from the ground up, moved our entire staff off generic
-                Gmail accounts onto proper professional emails through a nonprofit Microsoft 365
+                Gmail accounts onto proper emails through a nonprofit Microsoft 365
                 tenant, and integrated an online donation platform directly into the new site,
                 removing the friction for our members to give electronically. We used to be
                 embarrassed to share our website. Now we are proudly sharing it across every
-                platform we have. We are excited about what is ahead, including a{" "}
-                <span className="text-linen">Phase 2 QuickBooks implementation.</span>
+                platform we have.
               </p>
               <footer className="mt-5 flex items-center gap-3">
                 <div className="w-8 h-[2px] bg-linen/50" />
