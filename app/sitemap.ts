@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
     "",
     "/what-we-build",
+    "/pulse",
     "/process",
     "/case-studies/paradise-capital",
     "/teardowns/ai-lead-engine",
@@ -28,7 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const priorityFor = (path: string): number => {
     if (path === "") return 1.0;
     if (["/process", "/what-we-build", "/about", "/growth-audit"].includes(path)) return 0.9;
-    if (path.startsWith("/case-studies/") || path.startsWith("/teardowns/") || (path.startsWith("/blog/") && path !== "/blog")) return 0.8;
+    if (path === "/pulse" || path.startsWith("/case-studies/") || path.startsWith("/teardowns/") || (path.startsWith("/blog/") && path !== "/blog")) return 0.8;
     if (path === "/blog") return 0.7;
     return 0.6; // /contact and similar
   };
