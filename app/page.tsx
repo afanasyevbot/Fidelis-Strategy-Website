@@ -7,7 +7,6 @@ import { GrowthEngine } from "@/components/growth-engine";
 import { ProofSection } from "@/components/proof-section";
 import { AboutTeaser } from "@/components/about-teaser";
 import { AuditCta } from "@/components/audit-cta";
-import { WhoThisIsFor } from "@/components/who-this-is-for";
 import { RecentBuilds } from "@/components/recent-builds";
 import { ComparisonBlock } from "@/components/comparison-block";
 import { FinalCta } from "@/components/final-cta";
@@ -22,7 +21,6 @@ export default function HomePage() {
         <ProblemSection />
         <GrowthEngine tone="bone" />
         <WhatWeBuildHome />
-        <WhoThisIsFor />
         <RecentBuilds />
         <ProofSection />
         <ComparisonBlock />

@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/contact",
     "/growth-audit",
     "/blog",
+    "/blog/why-off-the-shelf-software-is-dead",
     "/blog/why-strategies-dont-get-implemented",
     "/blog/ai-lead-engine-vs-apollo",
     "/blog/ai-systems-that-move-revenue",

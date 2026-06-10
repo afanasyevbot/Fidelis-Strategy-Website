@@ -1,6 +1,17 @@
 import { Eyebrow } from "./eyebrow";
 import { Reveal } from "./reveal";
 
+const paths = [
+  {
+    title: "Running on spreadsheets, memory, and hustle?",
+    body: "You've built something real without real systems. We start with the growth strategy, then build your first ones — shaped to how you already work, not a template you have to learn.",
+  },
+  {
+    title: "Drowning in tools your team works around?",
+    body: "The software was supposed to help. Instead your team copies data between tabs and keeps the real process in a spreadsheet. We replace the workarounds with systems built around how your team actually operates.",
+  },
+];
+
 const points = [
   {
     title: "You're still the system.",
@@ -51,6 +62,37 @@ export function ProblemSection() {
               </p>
             </div>
           ))}
+        </Reveal>
+
+        {/* Two starting points — folded in from the former Who This Is For section */}
+        <Reveal delay={80} className="mt-16 pt-12 border-t border-linen/20">
+          <h3 className="font-display font-bold text-2xl md:text-[32px] text-linen tracking-tight">
+            Which sounds like you?
+          </h3>
+        </Reveal>
+        <Reveal stagger className="grid md:grid-cols-2 gap-5 mt-8">
+          {paths.map((p) => (
+            <div
+              key={p.title}
+              data-reveal-child
+              className="card-lift group flex gap-4 p-6 border border-linen/20 bg-linen/[0.06] hover:bg-linen/10 hover:border-linen/45"
+            >
+              <span className="text-linen font-bold text-lg shrink-0 mt-0.5 transition-transform duration-300 group-hover:translate-x-1">→</span>
+              <div>
+                <h4 className="font-display font-bold text-lg md:text-xl text-linen tracking-tight">
+                  {p.title}
+                </h4>
+                <p className="font-sans text-[15px] text-bone/85 leading-relaxed mt-2">{p.body}</p>
+              </div>
+            </div>
+          ))}
+        </Reveal>
+        <Reveal delay={120}>
+          <p className="font-sans text-[15px] text-bone/70 leading-relaxed mt-8 max-w-2xl">
+            Either way, you work with one partner — for owner-operated businesses
+            like services, brokerages, and agencies, from the first conversation
+            through the systems going live.
+          </p>
         </Reveal>
       </div>
     </section>

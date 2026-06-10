@@ -13,6 +13,12 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "why-off-the-shelf-software-is-dead",
+    title: "Off-the-shelf software is dead. Here’s what’s replacing it.",
+    dek: "For decades, bending your business around generic software was the only affordable option. AI broke that math — and the spreadsheet your team keeps next to the CRM is the proof.",
+    date: "2026-06-09",
+  },
+  {
     slug: "why-founders-dont-know-their-numbers",
     title: "When you\u2019re running the business, the numbers can get away from you",
     dek: "Owner-operated businesses run on one person\u2019s energy. That same person is usually the last one with a clear view of the financials — and why that gap is more expensive than most realize.",

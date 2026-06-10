@@ -6,7 +6,7 @@ type Build = {
   type: string;
   client: string;
   body: string;
-  status: "Live" | "In build";
+  status: "Live" | "In progress";
   href?: string;
 };
 
@@ -22,7 +22,7 @@ const builds: Build[] = [
     type: "Buyer Database & Matching Engine",
     client: "Paradise Capital — they came back",
     body: "A living buyer database with AI matching: every sell-side deal scored against enriched buyer profiles, so the right buyers surface in minutes instead of weeks.",
-    status: "In build",
+    status: "In progress",
   },
   {
     type: "Lead Generation Platform",
@@ -58,11 +58,11 @@ export function RecentBuilds() {
         <Reveal>
           <Eyebrow size="lg" tone="moss">RECENT BUILDS</Eyebrow>
           <h2 className="font-display font-bold text-3xl md:text-[48px] text-deep-olive mt-8 tracking-tight max-w-3xl">
-            Real systems. Shipped.
+            Real systems, running in real businesses.
           </h2>
           <p className="font-display font-light text-lg md:text-xl text-moss-olive mt-3 max-w-2xl">
             We keep client systems private, so no screenshots — but here&apos;s
-            what&apos;s gone out the door recently.
+            what we&apos;ve built recently and what each one does.
           </p>
         </Reveal>
         <Reveal stagger className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
