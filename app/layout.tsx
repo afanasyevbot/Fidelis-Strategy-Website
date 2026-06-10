@@ -27,11 +27,11 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: {
-    default: "Fidelis Strategy — Grow the top line, with AI.",
+    default: "Fidelis Strategy — Growth strategy. And the systems built to run it.",
     template: "%s · Fidelis Strategy",
   },
   description:
-    "Growth strategy + AI execution for owner-operated businesses. We design the plan and build the AI-powered systems that run it — lead engines, outreach agents, operator dashboards.",
+    "Growth strategy + custom AI systems for owner-operated businesses. Whether you run on spreadsheets or software that doesn't fit, we design the plan and build the systems that execute it.",
   metadataBase: new URL(siteConfig.url),
   alternates: { canonical: "/" },
   icons: {
@@ -41,18 +41,18 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: "Fidelis Strategy",
-    title: "Fidelis Strategy — Grow the top line, with AI.",
+    title: "Fidelis Strategy — Growth strategy. And the systems built to run it.",
     description:
-      "Growth strategy + AI execution for owner-operated businesses. One partner, strategy through launch.",
+      "Growth strategy + custom AI systems for owner-operated businesses. One partner, strategy through launch.",
     url: siteConfig.url,
     locale: "en_US",
     // OG image is generated at build time by app/opengraph-image.tsx — Next auto-attaches it.
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fidelis Strategy — Grow the top line, with AI.",
+    title: "Fidelis Strategy — Growth strategy. And the systems built to run it.",
     description:
-      "Growth strategy + AI execution for owner-operated businesses. One partner, strategy through launch.",
+      "Growth strategy + custom AI systems for owner-operated businesses. One partner, strategy through launch.",
     // Twitter image is generated at build time by app/twitter-image.tsx — Next auto-attaches it.
   },
   robots: {

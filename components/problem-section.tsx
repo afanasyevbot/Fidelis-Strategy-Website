@@ -23,7 +23,7 @@ export function ProblemSection() {
         <Reveal>
           <Eyebrow size="lg">FOR OWNER-OPERATORS</Eyebrow>
           <h2 className="font-display font-bold text-3xl md:text-[48px] mt-8 tracking-tight break-words">
-            The market has shifted. Most playbooks haven&apos;t.
+            Stop running your business on memory, spreadsheets, and software that doesn&apos;t fit.
           </h2>
           <p className="font-display font-light text-lg md:text-2xl text-linen mt-4 max-w-2xl tracking-tight">
             Three patterns we see in almost every conversation.

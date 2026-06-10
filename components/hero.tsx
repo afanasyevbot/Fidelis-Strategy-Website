@@ -70,23 +70,21 @@ export function Hero() {
           Growth Strategy + AI
         </p>
 
-        <h1 className="hero-text hero-delay-2 font-display font-bold text-4xl sm:text-5xl md:text-[68px] lg:text-[76px] leading-[1.05] md:leading-[1] tracking-[-0.03em] max-w-[780px]">
-          Grow the{" "}
-          <em className="not-italic text-linen">top line</em>
-          {" "}—{" "}
+        <h1 className="hero-text hero-delay-2 font-display font-bold text-4xl sm:text-5xl md:text-[54px] lg:text-[64px] leading-[1.05] md:leading-[1.04] tracking-[-0.03em] max-w-[1080px]">
+          Growth strategy.{" "}
           <br className="hidden md:block" />
-          with AI.
+          And the <em className="not-italic text-linen">systems</em>{" "}built to run&nbsp;it.
         </h1>
 
         <p className="hero-text hero-delay-3 font-display text-lg md:text-[24px] leading-snug mt-6 text-linen/75 tracking-[-0.01em]">
-          Growth strategy. AI-powered execution. Built for you.
+          Built around how your team actually works.
         </p>
 
-        <p className="hero-text hero-delay-4 font-sans text-[15px] md:text-[17px] leading-[1.65] mt-5 text-linen/55 max-w-[560px]">
-          We design your growth strategy{" "}
+        <p className="hero-text hero-delay-4 font-sans text-[15px] md:text-[17px] leading-[1.65] mt-5 text-linen/55 max-w-[600px]">
+          Whether you&apos;re running on spreadsheets and memory — or software
+          that doesn&apos;t fit — we design your growth plan{" "}
           <em className="not-italic font-semibold text-linen/75">and</em>{" "}
-          build the AI-powered systems that execute it — custom to your
-          business, your market, and your team.
+          build the custom AI systems that execute it.
         </p>
 
         <div className="hero-text hero-delay-5 flex flex-wrap justify-center gap-3 mt-10">

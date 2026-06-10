@@ -22,8 +22,8 @@ export default function Page() {
         <section className="bg-moss-olive text-bone">
           <div className="mx-auto max-w-6xl px-6 py-24">
             <Eyebrow size="lg">WHAT WE BUILD</Eyebrow>
-            <h1 className="font-display font-bold text-5xl md:text-[60px] leading-[1.02] mt-8 tracking-[-0.02em] max-w-3xl">
-              The kinds of systems we build.
+            <h1 className="font-display font-bold text-5xl md:text-[60px] leading-[1.02] mt-8 tracking-[-0.02em] max-w-4xl">
+              Stop bending your business around someone else&apos;s software.
             </h1>
             <p className="font-display text-2xl md:text-[26px] leading-tight mt-5 text-linen max-w-3xl tracking-[-0.01em]">
               Every engagement is custom. These are the categories we work in most, and your build is shaped to your business.

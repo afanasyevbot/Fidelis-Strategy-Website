@@ -4,7 +4,7 @@ import { join } from "node:path";
 
 export const runtime = "nodejs";
 export const dynamic = "force-static";
-export const alt = "Fidelis Strategy — Grow the top line, with AI.";
+export const alt = "Fidelis Strategy — Growth strategy. And the systems built to run it.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -60,7 +60,7 @@ export default async function Image() {
               textAlign: "center",
             }}
           >
-            Grow the top line, with AI.
+            Growth strategy. And the systems built to run it.
           </div>
           <div
             style={{
