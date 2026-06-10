@@ -20,7 +20,7 @@ const builds: Build[] = [
   },
   {
     type: "Buyer Database & Matching Engine",
-    client: "Paradise Capital — they came back",
+    client: "M&A advisory firm — a repeat client",
     body: "A living buyer database with AI matching: every sell-side deal scored against enriched buyer profiles, so the right buyers surface in minutes instead of weeks.",
     status: "In progress",
   },
