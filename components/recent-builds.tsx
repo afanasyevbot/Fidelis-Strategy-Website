@@ -14,14 +14,14 @@ type Build = {
 const builds: Build[] = [
   {
     type: "AI Pipeline Engine",
-    client: "M&A advisory firm",
+    client: "Paradise Capital · M&A advisory",
     body: "Finds and fit-scores owner-operated businesses from multiple sources, then drafts first-touch outreach in the partner's voice. Nothing sends without human approval.",
     status: "Live",
   },
   {
-    type: "Buyer Intelligence Platform",
-    client: "Same M&A firm — they came back",
-    body: "Ranks likely buyers for every sell-side deal — enriched, scored, and searchable — so buyer matching takes minutes instead of weeks.",
+    type: "Buyer Database & Matching Engine",
+    client: "Paradise Capital — they came back",
+    body: "A living buyer database with AI matching: every sell-side deal scored against enriched buyer profiles, so the right buyers surface in minutes instead of weeks.",
     status: "In build",
   },
   {
@@ -43,9 +43,9 @@ const builds: Build[] = [
     status: "Live",
   },
   {
-    type: "Fidelis Pulse — Our Own SaaS",
-    client: "Built and operated by Fidelis",
-    body: "The business-health dashboard we ship to market ourselves — one Pulse score, live from your books. Proof we hold our own work to a product standard.",
+    type: "Fidelis Pulse & Fidelis Advisor",
+    client: "Our own SaaS — built and operated by Fidelis",
+    body: "Pulse gives owners one business-health score, live from their books. Advisor gives M&A firms one cockpit for every client they run toward an exit.",
     status: "Live",
     href: "/pulse",
   },
