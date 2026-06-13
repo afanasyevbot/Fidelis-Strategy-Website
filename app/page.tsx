@@ -11,10 +11,15 @@ import { RecentBuilds } from "@/components/recent-builds";
 import { ComparisonBlock } from "@/components/comparison-block";
 import { FinalCta } from "@/components/final-cta";
 import { PulseTeaser } from "@/components/pulse-teaser";
+import { organizationSchema } from "@/lib/seo";
 
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema()) }}
+      />
       <Nav />
       <main>
         <Hero />
