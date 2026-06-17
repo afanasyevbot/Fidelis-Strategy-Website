@@ -16,7 +16,7 @@ export function WhatWeBuildHome() {
             AI systems that grow the top line.
           </h2>
           <p className="font-display font-light text-lg md:text-xl text-moss-olive mt-3 max-w-2xl">
-            Every build is custom, designed around your business, your market, and your team.
+            Every build is custom, designed around your business, your market, and your team. The systems below are common starting points — if it runs on a process, we can build it.
           </p>
         </Reveal>
         <Reveal stagger className="grid md:grid-cols-2 gap-4 mt-12">
