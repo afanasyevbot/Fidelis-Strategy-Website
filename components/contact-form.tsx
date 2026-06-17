@@ -2,27 +2,60 @@
 import { useState } from "react";
 import { siteConfig } from "@/lib/siteConfig";
 
-export function ContactForm() {
-  const [sent, setSent] = useState(false);
+type Status = "idle" | "submitting" | "sent" | "error";
 
-  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+export function ContactForm() {
+  const [status, setStatus] = useState<Status>("idle");
+
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const data = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const data = new FormData(form);
     const name    = data.get("name")    as string;
     const email   = data.get("email")   as string;
     const company = data.get("company") as string;
     const message = data.get("message") as string;
 
-    const subject = encodeURIComponent(`Fidelis inquiry — ${name}${company ? ` · ${company}` : ""}`);
-    const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}${company ? `\nCompany: ${company}` : ""}\n\n${message}`
-    );
+    // No key configured yet → fall back to the visitor's mail client so the
+    // form still works. Remove once siteConfig.web3formsKey is set.
+    if (!siteConfig.web3formsKey) {
+      const subject = encodeURIComponent(`Fidelis inquiry — ${name}${company ? ` · ${company}` : ""}`);
+      const body = encodeURIComponent(
+        `Name: ${name}\nEmail: ${email}${company ? `\nCompany: ${company}` : ""}\n\n${message}`
+      );
+      window.location.href = `mailto:${siteConfig.email}?subject=${subject}&body=${body}`;
+      setStatus("sent");
+      return;
+    }
 
-    window.location.href = `mailto:${siteConfig.email}?subject=${subject}&body=${body}`;
-    setSent(true);
+    setStatus("submitting");
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: siteConfig.web3formsKey,
+          subject: `Fidelis inquiry — ${name}${company ? ` · ${company}` : ""}`,
+          from_name: "Fidelis Strategy — Contact",
+          name,
+          email,
+          company: company || "—",
+          message,
+        }),
+      });
+      const json = await res.json();
+      if (json.success) {
+        setStatus("sent");
+        form.reset();
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   }
 
-  if (sent) {
+  if (status === "sent") {
     return (
       <div
         role="status"
@@ -32,13 +65,13 @@ export function ContactForm() {
         <div className="flex items-center gap-2 font-sans text-[12px] uppercase tracking-button text-deep-olive font-semibold">
           <span aria-hidden>✓</span> Sent
         </div>
-        <p className="font-display font-bold text-2xl text-deep-olive mt-2">Your email client should have opened.</p>
+        <p className="font-display font-bold text-2xl text-deep-olive mt-2">Thanks — got your note.</p>
         <p className="font-sans text-[15px] text-ink/70 mt-2">
-          If it didn&apos;t,{" "}
+          We reply within one business day. Need us sooner?{" "}
           <a href={`mailto:${siteConfig.email}`} className="link-underline text-deep-olive hover:text-moss-olive">
             email us directly
-          </a>{" "}
-          We reply within one business day.
+          </a>
+          .
         </p>
       </div>
     );
@@ -59,12 +92,22 @@ export function ContactForm() {
         placeholder="What are you trying to build, fix, or grow? A sentence or two is fine."
         className={input}
       />
+      {/* Honeypot — bots fill this, humans don't. Web3Forms drops these. */}
+      <input type="checkbox" name="botcheck" tabIndex={-1} className="hidden" aria-hidden />
       <button
         type="submit"
-        className="btn-press arrow-nudge inline-flex items-center justify-center font-sans text-[11px] font-semibold uppercase tracking-button px-6 py-3 bg-moss-olive text-bone hover:bg-deep-olive"
+        disabled={status === "submitting"}
+        className="btn-press arrow-nudge inline-flex items-center justify-center font-sans text-[11px] font-semibold uppercase tracking-button px-6 py-3 bg-moss-olive text-bone hover:bg-deep-olive disabled:opacity-60 disabled:cursor-not-allowed"
       >
-        Send <span data-arrow className="ml-2">→</span>
+        {status === "submitting" ? "Sending…" : "Send"}
+        <span data-arrow className="ml-2">→</span>
       </button>
+      {status === "error" && (
+        <p role="alert" className="font-sans text-[13px] text-red-700">
+          Something went wrong. Email us directly at{" "}
+          <a href={`mailto:${siteConfig.email}`} className="link-underline">{siteConfig.email}</a>.
+        </p>
+      )}
     </form>
   );
 }
