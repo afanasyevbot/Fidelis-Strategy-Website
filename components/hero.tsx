@@ -1,5 +1,4 @@
 import { CtaButton } from "./cta-button";
-import { siteConfig } from "@/lib/siteConfig";
 
 /**
  * Full-viewport video hero.
@@ -67,7 +66,7 @@ export function Hero() {
       <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 w-full pb-16 md:pb-28 flex flex-col items-center text-center">
 
         <p className="hero-text hero-delay-1 font-sans text-[11px] font-bold uppercase tracking-[0.25em] text-linen/70 mb-5">
-          Growth Strategy + AI
+          Growth Strategy + Custom AI Systems
         </p>
 
         <h1 className="hero-text hero-delay-2 font-display font-bold text-4xl sm:text-5xl md:text-[54px] lg:text-[64px] leading-[1.05] md:leading-[1.04] tracking-[-0.03em] max-w-[1080px]">
@@ -76,32 +75,29 @@ export function Hero() {
           And the <em className="not-italic text-linen">systems</em>{" "}built to run&nbsp;it.
         </h1>
 
-        <p className="hero-text hero-delay-3 font-display text-lg md:text-[24px] leading-snug mt-6 text-linen/75 tracking-[-0.01em]">
-          Built around how your team actually works.
+        <p className="hero-text hero-delay-3 font-display text-lg md:text-[24px] leading-snug mt-6 text-linen/80 tracking-[-0.01em] max-w-[640px]">
+          We design your growth strategy{" "}
+          <em className="not-italic font-semibold text-linen">and</em>{" "}
+          build the custom AI systems that run it.
         </p>
 
-        <p className="hero-text hero-delay-4 font-sans text-[15px] md:text-[17px] leading-[1.65] mt-5 text-linen/55 max-w-[600px]">
-          Whether you&apos;re running on spreadsheets and memory — or software
-          that doesn&apos;t fit — we design your growth plan{" "}
-          <em className="not-italic font-semibold text-linen/75">and</em>{" "}
-          build the custom AI systems that execute it.
+        <p className="hero-text hero-delay-4 font-sans text-[15px] md:text-[17px] leading-[1.65] mt-5 text-linen/55 max-w-[640px]">
+          Whether you&apos;re running on spreadsheets and memory — or software that
+          doesn&apos;t fit — Fidelis builds it around how you actually work. The
+          person who writes the plan is the person who builds the systems.
         </p>
 
         <div className="hero-text hero-delay-5 flex flex-wrap justify-center gap-3 mt-10">
-          <CtaButton href={siteConfig.bookingUrl} external>
-            Book your 30-min Growth Audit →
+          <CtaButton href="/growth-audit">
+            Get your free Growth Audit →
           </CtaButton>
-          <CtaButton href="#what-we-build" variant="secondary">
+          <CtaButton href="#recent-builds" variant="secondary">
             See the work
           </CtaButton>
         </div>
 
-        <p className="hero-text hero-delay-5 font-sans text-[13px] text-linen/40 mt-5">
-          Not ready to talk?{" "}
-          <a href="/contact" className="link-underline hover:text-linen/80">
-            Send a note instead
-          </a>{" "}
-          — no call required.
+        <p className="hero-text hero-delay-5 font-sans text-[13px] text-linen/45 mt-5">
+          24 questions, one page, emailed — no call required.
         </p>
       </div>
 

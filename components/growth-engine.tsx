@@ -1,11 +1,10 @@
-import { cn } from "@/lib/cn";
 import { Eyebrow } from "./eyebrow";
 import { Reveal } from "./reveal";
 
 const steps = [
   { n: "01", label: "DISCOVER", body: "We study your operations, go-to-market, sales process, and tools.", deliverable: "Operations + GTM audit" },
   { n: "02", label: "DESIGN",   body: "We write your 4D Growth Plan — the roadmap built around your business.", deliverable: "Your 4D Growth Plan" },
-  { n: "03", label: "DEPLOY",   body: "We build the AI systems, apps, and workflows the plan calls for.", deliverable: "Working AI systems in your environment", emphasized: true },
+  { n: "03", label: "DEPLOY",   body: "We build the AI systems, apps, and workflows the plan calls for.", deliverable: "Working AI systems in your environment" },
   { n: "04", label: "DRIVE",    body: "We track results, tune the systems, and keep growth compounding.", deliverable: "Quarterly tune-ups + dashboards" },
 ];
 
@@ -38,6 +37,9 @@ export function GrowthEngine({ tone = "bone" }: { tone?: "bone" | "dark" }) {
             roadmap built around your specific business, your market, and your goals. Not a
             generic framework with your logo on it. Then we build it.
           </p>
+          <p>
+            The free <strong className="text-linen font-semibold">4D Growth Audit</strong> is Day 1, Discover — started for free.
+          </p>
         </div>
         </Reveal>
         <Reveal stagger className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 mt-12">
@@ -45,19 +47,8 @@ export function GrowthEngine({ tone = "bone" }: { tone?: "bone" | "dark" }) {
             <div
               key={s.n}
               data-reveal-child
-              className={cn(
-                "card-lift relative p-6 bg-moss-olive text-bone border border-linen/25 hover:border-linen/70 overflow-hidden",
-                s.emphasized && "border-2 border-linen bg-deep-olive"
-              )}
+              className="card-lift relative p-6 bg-moss-olive text-bone border border-linen/25 hover:border-linen/70 overflow-hidden"
             >
-              {s.emphasized && (
-                <span
-                  aria-hidden
-                  className="absolute -top-px -right-px bg-linen text-deep-olive text-[10px] font-bold tracking-button uppercase px-2 py-[3px]"
-                >
-                  Where we live
-                </span>
-              )}
               <div className="font-display text-4xl text-linen leading-none">{s.n}</div>
               <div className="font-display text-[22px] font-bold text-linen mt-3 tracking-tight">
                 {s.label}

@@ -14,16 +14,16 @@ const paths = [
 
 const points = [
   {
-    title: "You're still the system.",
-    body: "Every deal, decision, and relationship runs through you. It works — until it doesn't. Growth is capped at your calendar, and the business can't run without you in the room.",
+    title: "Three hours, every Friday.",
+    body: "Rebuilding the same report by hand because the numbers live in four tools that don't talk to each other. Work that should take minutes.",
   },
   {
-    title: "No engine. No pipeline.",
-    body: "Leads come in through referrals and gut feel. Great month when you're selling hard, slow month when you're heads-down in delivery. There's nothing running in the background generating opportunities while you work.",
+    title: "The deal that went quiet.",
+    body: "It slipped because the follow-up lived in someone's head instead of a system. You'll never know exactly what it cost — which is the problem.",
   },
   {
-    title: "Your tools don't talk. Your team works around it.",
-    body: "CRM, marketing, ops — three different worlds. Data copied between spreadsheets. Reports built by hand. Hours of work every week that should take minutes, if the systems were actually connected.",
+    title: "A pipeline number nobody trusts.",
+    body: "The CRM has the official version. The real one lives in a spreadsheet beside it. So every forecast starts with a debate instead of a fact.",
   },
 ];
 
@@ -32,12 +32,12 @@ export function ProblemSection() {
     <section className="bg-forest-floor text-bone">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 py-16 md:py-24">
         <Reveal>
-          <Eyebrow size="lg">FOR OWNER-OPERATORS</Eyebrow>
+          <Eyebrow size="lg">WHAT IT&apos;S COSTING YOU</Eyebrow>
           <h2 className="font-display font-bold text-3xl md:text-[48px] mt-8 tracking-tight break-words">
-            Stop running your business on memory, spreadsheets, and software that doesn&apos;t fit.
+            The most expensive line item isn&apos;t on the invoice.
           </h2>
           <p className="font-display font-light text-lg md:text-2xl text-linen mt-4 max-w-2xl tracking-tight">
-            Three patterns we see in almost every conversation.
+            The bending adds up — quietly, every week.
           </p>
         </Reveal>
         <Reveal stagger className="grid md:grid-cols-3 gap-6 mt-12">
@@ -63,8 +63,30 @@ export function ProblemSection() {
             </div>
           ))}
         </Reveal>
+        <Reveal delay={120}>
+          <p className="font-sans text-[15px] md:text-[16px] text-linen/70 leading-relaxed mt-8 max-w-2xl">
+            None of it shows up on an invoice — which is exactly why it never gets fixed.
+          </p>
+        </Reveal>
 
-        {/* Two starting points — folded in from the former Who This Is For section */}
+        {/* The reframe — absolve the reader, name the villain, plant the stance */}
+        <Reveal delay={80} className="mt-16 pt-12 border-t border-linen/20 max-w-3xl">
+          <h3 className="font-display font-bold text-2xl md:text-[34px] text-linen tracking-tight leading-[1.1]">
+            You didn&apos;t get sloppy. You bought software built for the average business.
+          </h3>
+          <p className="font-sans text-[16px] text-bone/85 leading-relaxed mt-5">
+            Every copy-paste and workaround is your team paying that gap by hand. The
+            fix isn&apos;t more discipline — it&apos;s software shaped to how you
+            already work.
+          </p>
+          <p className="font-display text-lg md:text-2xl text-linen mt-6 tracking-tight">
+            Buy what&apos;s universal — accounting, email, payroll.{" "}
+            <span className="text-bone">Build what&apos;s yours</span> — how you find
+            customers, move deals, and deliver.
+          </p>
+        </Reveal>
+
+        {/* Two starting points */}
         <Reveal delay={80} className="mt-16 pt-12 border-t border-linen/20">
           <h3 className="font-display font-bold text-2xl md:text-[32px] text-linen tracking-tight">
             Which sounds like you?

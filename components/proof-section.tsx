@@ -8,11 +8,14 @@ export function ProofSection() {
       <div className="mx-auto max-w-5xl px-4 sm:px-6 py-16 md:py-24">
         <Reveal>
           <Eyebrow size="lg">WHAT CLIENTS SAY</Eyebrow>
+          <h2 className="font-display font-bold text-3xl md:text-[44px] mt-8 tracking-tight leading-[1.05] max-w-3xl">
+            The kind of work clients come back for.
+          </h2>
         </Reveal>
 
         {/* Paradise Capital */}
         <Reveal delay={60}>
-          <div className="mt-10 pt-10 border-t border-linen/20">
+          <div className="mt-12 pt-10 border-t border-linen/20">
             <p className="font-display font-bold text-base uppercase tracking-widest text-linen mb-6">
               Paradise Capital
             </p>

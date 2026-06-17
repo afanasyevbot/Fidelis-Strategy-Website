@@ -7,7 +7,17 @@ export function FinalCta({
   eyebrow = "START YOUR GROWTH JOURNEY",
   headline = "You've built something real. Let's take it further.",
   sub = "A 30-minute call. We'll talk about where the business is, where you want it, and how to grow the top line. No pitch deck — just a real conversation.",
-}: { eyebrow?: string; headline?: string; sub?: string }) {
+  primaryHref,
+  primaryLabel = "Book a Discovery Call →",
+}: {
+  eyebrow?: string;
+  headline?: string;
+  sub?: string;
+  /** Override the primary CTA target. Defaults to the booking URL. */
+  primaryHref?: string;
+  primaryLabel?: string;
+}) {
+  const isInternal = primaryHref && primaryHref.startsWith("/");
   return (
     <section className="relative bg-moss-olive text-bone overflow-hidden">
       {/* Subtle radial glow accent */}
@@ -31,7 +41,12 @@ export function FinalCta({
         </Reveal>
         <Reveal delay={120}>
           <div className="mt-10">
-            <CtaButton href={siteConfig.bookingUrl} external>Book a Discovery Call →</CtaButton>
+            <CtaButton
+              href={primaryHref ?? siteConfig.bookingUrl}
+              external={!isInternal}
+            >
+              {primaryLabel}
+            </CtaButton>
           </div>
           <p className="font-sans text-[13px] text-linen/80 mt-5">
             Not ready to talk? <a href="/contact" className="link-underline hover:text-bone">Send a note instead</a> — no call required.

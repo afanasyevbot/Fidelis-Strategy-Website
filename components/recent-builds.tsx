@@ -20,9 +20,9 @@ const builds: Build[] = [
   },
   {
     type: "Buyer Database & Matching Engine",
-    client: "M&A advisory firm — a repeat client",
+    client: "M&A advisory firm",
     body: "A living buyer database with AI matching: every sell-side deal scored against enriched buyer profiles, so the right buyers surface in minutes instead of weeks.",
-    status: "In progress",
+    status: "Live",
   },
   {
     type: "Lead Generation Platform",
@@ -53,7 +53,7 @@ const builds: Build[] = [
 
 export function RecentBuilds() {
   return (
-    <section className="bg-bone">
+    <section id="recent-builds" className="bg-bone scroll-mt-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 py-16 md:py-24">
         <Reveal>
           <Eyebrow size="lg" tone="moss">RECENT BUILDS</Eyebrow>
