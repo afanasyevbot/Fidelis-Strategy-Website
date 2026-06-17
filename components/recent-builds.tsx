@@ -44,7 +44,7 @@ const builds: Build[] = [
   },
   {
     type: "Fidelis Pulse & Fidelis Advisor",
-    client: "Our own SaaS — built and operated by Fidelis",
+    client: "Our own product — built and operated by Fidelis",
     body: "Pulse gives owners one business-health score, live from their books. Advisor gives M&A firms one cockpit for every client they run toward an exit.",
     status: "Live",
     href: "/pulse",
