@@ -36,6 +36,7 @@ export function LeadMagnetForm() {
           access_key: siteConfig.web3formsKey,
           subject: "New 4D Growth Audit checklist request",
           from_name: "Fidelis Strategy — Checklist",
+          replyto: email, // hitting Reply goes straight to the lead
           name,
           email,
           company: company || "—",

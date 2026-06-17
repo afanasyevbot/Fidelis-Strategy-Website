@@ -37,6 +37,7 @@ export function ContactForm() {
           access_key: siteConfig.web3formsKey,
           subject: `Fidelis inquiry — ${name}${company ? ` · ${company}` : ""}`,
           from_name: "Fidelis Strategy — Contact",
+          replyto: email, // hitting Reply goes straight to the lead
           name,
           email,
           company: company || "—",
