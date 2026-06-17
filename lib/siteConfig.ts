@@ -12,6 +12,11 @@ export const siteConfig = {
   // Analytics — replace with real GA4 measurement ID when ready
   gaId: "G-YTNMFSRD8L",
 
+  // Web3Forms access key — powers the checklist + contact forms on this
+  // static site (no server). Safe to expose publicly. Get yours free at
+  // web3forms.com. Until this is set, forms fall back to opening a mail client.
+  web3formsKey: "2591fd46-1309-4746-afa8-94474da37113",
+
   // Pricing band — INTERNAL reference only. Hidden from public site
   // to preserve anchor flexibility per-deal. Do not surface in copy.
   pricingBand: "Engagements typically $25K – $150K · 30–90 day delivery",

@@ -2,26 +2,58 @@
 import { useState } from "react";
 import { siteConfig } from "@/lib/siteConfig";
 
-export function LeadMagnetForm() {
-  const [sent, setSent] = useState(false);
+type Status = "idle" | "submitting" | "sent" | "error";
 
-  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+export function LeadMagnetForm() {
+  const [status, setStatus] = useState<Status>("idle");
+
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const data    = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const data = new FormData(form);
     const name    = data.get("name")    as string;
     const email   = data.get("email")   as string;
     const company = data.get("company") as string;
 
-    const subject = encodeURIComponent("4D Growth Audit checklist request");
-    const body = encodeURIComponent(
-      `Hi Matthew,\n\nCan you send me the 4D Growth Audit checklist?\n\nName: ${name}\nEmail: ${email}${company ? `\nCompany: ${company}` : ""}`
-    );
+    // No key configured yet → fall back to the visitor's mail client so the
+    // form still works. Remove once siteConfig.web3formsKey is set.
+    if (!siteConfig.web3formsKey) {
+      const subject = encodeURIComponent("4D Growth Audit checklist request");
+      const body = encodeURIComponent(
+        `Hi Matthew,\n\nCan you send me the 4D Growth Audit checklist?\n\nName: ${name}\nEmail: ${email}${company ? `\nCompany: ${company}` : ""}`
+      );
+      window.location.href = `mailto:${siteConfig.email}?subject=${subject}&body=${body}`;
+      setStatus("sent");
+      return;
+    }
 
-    window.location.href = `mailto:${siteConfig.email}?subject=${subject}&body=${body}`;
-    setSent(true);
+    setStatus("submitting");
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: siteConfig.web3formsKey,
+          subject: "New 4D Growth Audit checklist request",
+          from_name: "Fidelis Strategy — Checklist",
+          name,
+          email,
+          company: company || "—",
+        }),
+      });
+      const json = await res.json();
+      if (json.success) {
+        setStatus("sent");
+        form.reset();
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   }
 
-  if (sent) {
+  if (status === "sent") {
     return (
       <div className="space-y-4">
         <div
@@ -32,17 +64,17 @@ export function LeadMagnetForm() {
           <div className="flex items-center gap-2 font-sans text-[12px] uppercase tracking-button text-deep-olive font-semibold">
             <span aria-hidden>✓</span> Sent
           </div>
-          <p className="font-display font-bold text-xl text-deep-olive mt-2">Your email client should have opened.</p>
+          <p className="font-display font-bold text-xl text-deep-olive mt-2">You&apos;re on the list.</p>
           <p className="font-sans text-[14px] text-ink/70 mt-2">
-            Hit send and we&apos;ll reply with the checklist within one business day.
+            We&apos;ll email you the checklist within one business day.
           </p>
         </div>
         <p className="font-sans text-[13px] text-ink/55">
-          Or{" "}
+          Want it now?{" "}
           <a href="/growth-audit/checklist" className="link-underline text-deep-olive hover:text-moss-olive">
-            read it online here
+            Read it online here
           </a>{" "}
-          with no email required.
+          — no waiting.
         </p>
       </div>
     );
@@ -56,12 +88,22 @@ export function LeadMagnetForm() {
       <input name="name" required placeholder="Your name" className={input} />
       <input type="email" name="email" required placeholder="Work email" className={input} />
       <input name="company" placeholder="Company (optional)" className={input} />
+      {/* Honeypot — bots fill this, humans don't. Web3Forms drops these. */}
+      <input type="checkbox" name="botcheck" tabIndex={-1} className="hidden" aria-hidden />
       <button
         type="submit"
-        className="btn-press arrow-nudge inline-flex items-center justify-center font-sans text-[11px] font-semibold uppercase tracking-button px-6 py-3 bg-moss-olive text-bone hover:bg-deep-olive"
+        disabled={status === "submitting"}
+        className="btn-press arrow-nudge inline-flex items-center justify-center font-sans text-[11px] font-semibold uppercase tracking-button px-6 py-3 bg-moss-olive text-bone hover:bg-deep-olive disabled:opacity-60 disabled:cursor-not-allowed"
       >
-        Send me the checklist <span data-arrow className="ml-2">→</span>
+        {status === "submitting" ? "Sending…" : "Send me the checklist"}
+        <span data-arrow className="ml-2">→</span>
       </button>
+      {status === "error" && (
+        <p role="alert" className="font-sans text-[13px] text-red-700">
+          Something went wrong. Email us directly at{" "}
+          <a href={`mailto:${siteConfig.email}`} className="link-underline">{siteConfig.email}</a>.
+        </p>
+      )}
       <p className="font-sans text-[12px] text-ink/55 leading-relaxed">
         We&apos;ll reply within one business day. No sequence, no drip. Just the checklist.
       </p>
