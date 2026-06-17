@@ -39,7 +39,10 @@ export default function Page() {
         </section>
 
         {systems.map((s, i) => {
-          const lightSection = i % 2 === 1;
+          // First section must be light so it contrasts the dark hero above
+          // (otherwise hero + section 0 are both moss-olive and blend into one
+          // giant green block with an empty void between them).
+          const lightSection = i % 2 === 0;
           return (
             <section
               key={s.slug}
