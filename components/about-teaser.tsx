@@ -42,7 +42,6 @@ export function AboutTeaser() {
           </div>
           <p className="font-sans text-[15px] text-ink/70 leading-relaxed mt-2 max-w-xl mx-auto">
             SaaS sales and operations background, now helping owner-operated businesses grow their top line through growth strategy and AI-powered systems.
-            <span className="block mt-2 text-deep-olive font-semibold">Every system Fidelis builds and deploys, Matthew has built himself.</span>
           </p>
           <div className="mt-10">
             <CtaButton href="/about" variant="secondary" className="border-deep-olive text-deep-olive hover:bg-deep-olive hover:text-bone">
