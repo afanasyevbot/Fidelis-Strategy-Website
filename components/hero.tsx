@@ -109,9 +109,9 @@ export function Hero() {
         </h1>
 
         <p className="hero-text hero-delay-3 font-display text-lg md:text-[24px] leading-snug mt-6 text-linen/80 tracking-[-0.01em] max-w-[640px]">
-          AI systems that{" "}
-          <em className="not-italic font-semibold text-linen">find, score, and act</em>{" "}
-          on your best opportunities — shaped to how your business actually runs.
+          We design your growth strategy{" "}
+          <em className="not-italic font-semibold text-linen">and</em>{" "}
+          build the custom AI systems that run it.
         </p>
 
         <p className="hero-text hero-delay-4 font-sans text-[15px] md:text-[17px] leading-[1.65] mt-5 text-linen/70 max-w-[640px]">
