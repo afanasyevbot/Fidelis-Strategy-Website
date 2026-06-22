@@ -127,7 +127,17 @@ export default function Page() {
           <div className="mx-auto max-w-4xl px-6 py-24">
             <Eyebrow size="lg">OUTCOME</Eyebrow>
             <h2 className="font-display font-bold text-4xl md:text-[48px] mt-8 tracking-tight">From no process to a pipeline that runs itself.</h2>
-            {/* TODO: add metrics (hours saved/week, qualified leads/week) once confirmed */}
+            <p className="font-sans text-[17px] text-bone/85 leading-relaxed mt-6 max-w-2xl">
+              The change was structural: from no repeatable way to find deals to a
+              system that surfaces a ranked, fit-scored set of new targets every
+              week — first-touch outreach drafted in the team&apos;s voice, nothing
+              sent without a human yes.
+            </p>
+            <p className="font-sans text-[17px] text-bone/85 leading-relaxed mt-4 max-w-2xl">
+              The top of the funnel now runs on its own, so Paradise Capital&apos;s
+              time and judgment go to evaluating and closing the deals it surfaces
+              instead of hunting for them — the work only they can do.
+            </p>
           </div>
         </section>
 
@@ -148,8 +158,8 @@ export default function Page() {
                 </a>
               </li>
               <li>
-                <a href="/blog/ai-lead-engine-vs-apollo" className="text-deep-olive hover:text-moss-olive underline decoration-moss-olive/30 underline-offset-2">
-                  → AI lead engine vs Apollo: why a signal-based system beats a database
+                <a href="/teardowns/ai-lead-engine" className="text-deep-olive hover:text-moss-olive underline decoration-moss-olive/30 underline-offset-2">
+                  → The AI Lead Engine, taken apart: the signals, the scoring, and what we got wrong
                 </a>
               </li>
             </ul>

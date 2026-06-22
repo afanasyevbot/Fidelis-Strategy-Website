@@ -7,6 +7,7 @@ type Props = {
   variant?: "primary" | "secondary";
   className?: string;
   external?: boolean;
+  onClick?: () => void;
 };
 
 export function CtaButton({
@@ -15,6 +16,7 @@ export function CtaButton({
   variant = "primary",
   className,
   external,
+  onClick,
 }: Props) {
   const base =
     "btn-press arrow-nudge inline-flex items-center justify-center font-sans text-[11px] font-semibold uppercase tracking-button px-6 py-3";
@@ -24,11 +26,11 @@ export function CtaButton({
       : "border border-linen text-linen hover:bg-linen hover:text-deep-olive";
   const cls = cn(base, styles, className);
   return external ? (
-    <a href={href} className={cls} target="_blank" rel="noopener noreferrer">
+    <a href={href} className={cls} target="_blank" rel="noopener noreferrer" onClick={onClick}>
       {children}
     </a>
   ) : (
-    <Link href={href} className={cls}>
+    <Link href={href} className={cls} onClick={onClick}>
       {children}
     </Link>
   );

@@ -33,7 +33,7 @@ const builds: Build[] = [
   {
     type: "Consumer Wellness App",
     client: "Linked by Lexi",
-    body: "A custom routine-tracking app built around how one founder actually operates — daily checklists, reminders, streaks, and an AI advisor in her pocket.",
+    body: "Glow Routine — a custom routine-tracking app built around how one founder actually operates: daily checklists, reminders, streaks, and an AI advisor in her pocket.",
     status: "Live",
   },
   {

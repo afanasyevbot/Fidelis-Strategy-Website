@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { siteConfig } from "@/lib/siteConfig";
+import { trackEvent } from "@/lib/analytics";
 
 type Status = "idle" | "submitting" | "sent" | "error";
 
@@ -44,6 +45,7 @@ export function LeadMagnetForm() {
       });
       const json = await res.json();
       if (json.success) {
+        trackEvent("generate_lead", { form: "growth_audit_checklist" });
         setStatus("sent");
         form.reset();
       } else {

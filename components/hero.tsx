@@ -3,7 +3,7 @@ import { CtaButton } from "./cta-button";
 /**
  * Full-viewport video hero.
  *
- * Video: drop hero-tree.mp4 into /public/
+ * Video source: /public/hero-video.mp4
  * Overlays darken the bright sky/field so white text is always readable.
  * Text fades in after the video has played for ~4 seconds.
  */
@@ -81,7 +81,7 @@ export function Hero() {
           build the custom AI systems that run it.
         </p>
 
-        <p className="hero-text hero-delay-4 font-sans text-[15px] md:text-[17px] leading-[1.65] mt-5 text-linen/55 max-w-[640px]">
+        <p className="hero-text hero-delay-4 font-sans text-[15px] md:text-[17px] leading-[1.65] mt-5 text-linen/70 max-w-[640px]">
           Whether you&apos;re running on spreadsheets and memory — or software that
           doesn&apos;t fit — Fidelis builds it around how you actually work. The
           person who writes the plan is the person who builds the systems.
@@ -96,7 +96,7 @@ export function Hero() {
           </CtaButton>
         </div>
 
-        <p className="hero-text hero-delay-5 font-sans text-[13px] text-linen/45 mt-5">
+        <p className="hero-text hero-delay-5 font-sans text-[13px] text-linen/70 mt-5">
           24 questions, one page, emailed — no call required.
         </p>
       </div>
