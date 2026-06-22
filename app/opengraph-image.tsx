@@ -29,6 +29,7 @@ export default async function Image() {
           alignItems: "center",
           justifyContent: "center",
           gap: "48px",
+          padding: "0 110px",
           background: COLORS.mossOlive,
           fontFamily: "system-ui, sans-serif",
         }}
@@ -48,7 +49,8 @@ export default async function Image() {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            gap: "16px",
+            gap: "20px",
+            maxWidth: "860px",
           }}
         >
           <div
