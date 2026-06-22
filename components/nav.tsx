@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { siteConfig } from "@/lib/siteConfig";
 import { CtaButton } from "./cta-button";
+import { trackEvent } from "@/lib/analytics";
 import { cn } from "@/lib/cn";
 
 export function Nav() {
@@ -92,7 +93,12 @@ export function Nav() {
           </ul>
 
           {/* Desktop CTA */}
-          <CtaButton href={siteConfig.bookingUrl} external className="hidden md:inline-flex text-[10px] py-2 px-4">
+          <CtaButton
+            href={siteConfig.bookingUrl}
+            external
+            className="hidden md:inline-flex text-[10px] py-2 px-4"
+            onClick={() => trackEvent("book_call_click", { location: "nav_desktop" })}
+          >
             Book a Call →
           </CtaButton>
 
@@ -182,7 +188,10 @@ export function Nav() {
               target="_blank"
               rel="noopener noreferrer"
               className="btn-press block w-full text-center bg-linen text-deep-olive font-sans font-semibold text-[14px] py-3 px-6 rounded tracking-button uppercase"
-              onClick={() => setOpen(false)}
+              onClick={() => {
+                trackEvent("book_call_click", { location: "nav_mobile" });
+                setOpen(false);
+              }}
             >
               Book a Call →
             </a>
