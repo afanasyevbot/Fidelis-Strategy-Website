@@ -4,80 +4,134 @@ import { join } from "node:path";
 
 export const runtime = "nodejs";
 export const dynamic = "force-static";
-export const alt = "Fidelis Strategy — Growth strategy. And the systems built to run it.";
+export const alt =
+  "Fidelis Strategy — Growth strategy. And the systems built to run it.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 const COLORS = {
-  mossOlive: "#4A5D3C",
-  linen: "#D4C4A0",
+  moss: "#4A5D3C",
+  mossDeep: "#384729",
   bone: "#FAF5E4",
+  linen: "#D4C4A0",
+  gold: "#C7A24A",
 };
 
+function asset(...p: string[]) {
+  return readFileSync(join(process.cwd(), ...p));
+}
+
 export default async function Image() {
-  const logoData = readFileSync(join(process.cwd(), "public", "logo.png"));
-  const logoBase64 = `data:image/png;base64,${logoData.toString("base64")}`;
+  const crest = `data:image/png;base64,${asset("public", "logo.png").toString("base64")}`;
+  const cinzel = asset("public", "fonts", "Cinzel-700.ttf");
+  const interRegular = asset("public", "fonts", "Inter-400.ttf");
+  const interBold = asset("public", "fonts", "Inter-700.ttf");
 
   return new ImageResponse(
     (
       <div
         style={{
+          position: "relative",
           width: "100%",
           height: "100%",
           display: "flex",
           flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          gap: "48px",
-          padding: "0 110px",
-          background: COLORS.mossOlive,
-          fontFamily: "system-ui, sans-serif",
+          justifyContent: "space-between",
+          padding: "84px 96px",
+          background: `linear-gradient(145deg, ${COLORS.moss} 0%, ${COLORS.mossDeep} 100%)`,
+          fontFamily: "Inter",
+          overflow: "hidden",
         }}
       >
-        {/* Logo */}
+        {/* Crest watermark, bleeding off the right edge */}
         <img
-          src={logoBase64}
-          alt=""
-          width={320}
-          height={120}
-          style={{ objectFit: "contain" }}
+          src={crest}
+          width={660}
+          height={660}
+          style={{
+            position: "absolute",
+            top: -22,
+            right: -168,
+            opacity: 0.08,
+          }}
         />
 
-        {/* Tagline */}
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            gap: "20px",
-            maxWidth: "860px",
-          }}
-        >
+        {/* Top block: eyebrow, rule, headline, support */}
+        <div style={{ display: "flex", flexDirection: "column" }}>
           <div
             style={{
-              fontSize: "56px",
+              display: "flex",
+              fontFamily: "Cinzel",
               fontWeight: 700,
+              fontSize: 30,
+              letterSpacing: "0.2em",
+              color: COLORS.gold,
+            }}
+          >
+            FIDELIS STRATEGY
+          </div>
+
+          <div
+            style={{
+              width: 76,
+              height: 5,
+              borderRadius: 3,
+              background: COLORS.gold,
+              marginTop: 30,
+              marginBottom: 38,
+            }}
+          />
+
+          <div
+            style={{
+              display: "flex",
+              fontWeight: 700,
+              fontSize: 52,
+              lineHeight: 1.14,
+              letterSpacing: "-0.015em",
               color: COLORS.bone,
-              letterSpacing: "-0.02em",
-              lineHeight: 1.1,
-              textAlign: "center",
+              maxWidth: 690,
             }}
           >
             Growth strategy. And the systems built to run it.
           </div>
+
           <div
             style={{
-              fontSize: "26px",
-              fontWeight: 300,
+              display: "flex",
+              marginTop: 32,
+              fontWeight: 400,
+              fontSize: 28,
+              lineHeight: 1.3,
               color: COLORS.linen,
-              letterSpacing: "0.01em",
+              maxWidth: 690,
             }}
           >
-            fidelisstrategy.net
+            Custom AI systems for owner-operated businesses.
           </div>
+        </div>
+
+        {/* Bottom: URL */}
+        <div
+          style={{
+            display: "flex",
+            fontWeight: 500,
+            fontSize: 24,
+            letterSpacing: "0.04em",
+            color: COLORS.linen,
+          }}
+        >
+          fidelisstrategy.net
         </div>
       </div>
     ),
-    { ...size }
+    {
+      ...size,
+      fonts: [
+        { name: "Cinzel", data: cinzel, weight: 700, style: "normal" },
+        { name: "Inter", data: interRegular, weight: 400, style: "normal" },
+        { name: "Inter", data: interBold, weight: 700, style: "normal" },
+      ],
+    }
   );
 }
