@@ -47,7 +47,7 @@ export function Nav() {
           {/* Logo */}
           <Link href="/" className="group flex items-center gap-2 text-bone">
             <Image
-              src="/logo.png?v=2"
+              src="/logo.png?v=3"
               alt="Fidelis Strategy"
               width={64}
               height={64}

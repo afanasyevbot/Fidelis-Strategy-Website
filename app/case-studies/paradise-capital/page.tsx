@@ -20,10 +20,10 @@ export const metadata = {
 };
 
 const built = [
-  { title: "Automated prospecting", body: "The top of the funnel runs on its own — new targets identified and surfaced every week without anyone on the team doing the legwork." },
-  { title: "AI-powered fit scoring", body: "Every candidate is evaluated against Paradise Capital's deal criteria automatically. The team only sees opportunities worth their time." },
-  { title: "Consistent outreach", body: "Shortlisted targets get outreach in a single, consistent voice — ready to send, no drafting from scratch each week." },
-  { title: "Automated team updates", body: "The team gets a ranked summary of what the system found each week, delivered directly to where they already work." },
+  { title: "Automated prospecting", body: "The top of the funnel is built to run on its own — new targets identified and surfaced on a regular cadence, without the team doing the legwork." },
+  { title: "AI-powered fit scoring", body: "Every candidate is scored against Paradise Capital's deal criteria automatically, so the team can focus on the opportunities worth their time." },
+  { title: "Consistent outreach", body: "Shortlisted targets get first-touch outreach drafted in a single, consistent voice — ready to send, no drafting from scratch." },
+  { title: "Automated team updates", body: "The system compiles a ranked summary of what it finds and delivers it where the team already works." },
   { title: "Connected to their workflow", body: "Approved targets move straight into follow-up. No copy-paste, no manual hand-off between tools." },
 ];
 
@@ -126,17 +126,17 @@ export default function Page() {
         <section className="bg-moss-olive text-bone border-t border-linen/15">
           <div className="mx-auto max-w-4xl px-6 py-24">
             <Eyebrow size="lg">OUTCOME</Eyebrow>
-            <h2 className="font-display font-bold text-4xl md:text-[48px] mt-8 tracking-tight">From no process to a pipeline that runs itself.</h2>
+            <h2 className="font-display font-bold text-4xl md:text-[48px] mt-8 tracking-tight">A sourcing system built around how Paradise evaluates a deal.</h2>
             <p className="font-sans text-[17px] text-bone/85 leading-relaxed mt-6 max-w-2xl">
-              The change was structural: from no repeatable way to find deals to a
-              system that surfaces a ranked, fit-scored set of new targets every
-              week — first-touch outreach drafted in the team&apos;s voice, nothing
-              sent without a human yes.
+              We designed and built the engine end to end — multi-source
+              prospecting, AI fit-scoring against Paradise Capital&apos;s deal
+              criteria, and first-touch outreach drafted in the partner&apos;s
+              voice, with a human approving every send.
             </p>
             <p className="font-sans text-[17px] text-bone/85 leading-relaxed mt-4 max-w-2xl">
-              The top of the funnel now runs on its own, so Paradise Capital&apos;s
-              time and judgment go to evaluating and closing the deals it surfaces
-              instead of hunting for them — the work only they can do.
+              Where there&apos;d been no repeatable way to source acquisition
+              targets, Paradise now has a system built around their criteria —
+              designed to run lean, without adding headcount.
             </p>
           </div>
         </section>

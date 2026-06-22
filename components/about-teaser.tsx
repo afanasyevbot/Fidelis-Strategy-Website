@@ -10,7 +10,7 @@ export function AboutTeaser() {
         <Reveal>
           <div className="flex justify-center mb-6">
             <Image
-              src="/logo.png?v=2"
+              src="/logo.png?v=3"
               alt="Fidelis Strategy Crest"
               width={140}
               height={140}

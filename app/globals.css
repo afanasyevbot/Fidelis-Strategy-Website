@@ -172,11 +172,11 @@
 }
 
 /* Staggered delays */
-.hero-delay-1 { animation-delay: 1.8s; }   /* eyebrow */
-.hero-delay-2 { animation-delay: 2.4s; }   /* h1 */
-.hero-delay-3 { animation-delay: 3.0s; }   /* subheading */
-.hero-delay-4 { animation-delay: 3.5s; }   /* body copy */
-.hero-delay-5 { animation-delay: 4.0s; }   /* CTAs + footnote */
+.hero-delay-1 { animation-delay: 0.1s; }   /* eyebrow */
+.hero-delay-2 { animation-delay: 0.25s; }  /* h1 — LCP element, kept fast */
+.hero-delay-3 { animation-delay: 0.5s; }   /* subheading */
+.hero-delay-4 { animation-delay: 0.7s; }   /* body copy */
+.hero-delay-5 { animation-delay: 0.95s; }  /* CTAs + footnote */
 
 @media (prefers-reduced-motion: reduce) {
   .hero-text { opacity: 1; animation: none; }
