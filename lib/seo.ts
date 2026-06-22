@@ -61,6 +61,7 @@ export function organizationSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
+    "@id": `${baseUrl}/#organization`,
     name: siteConfig.name,
     url: baseUrl,
     image: `${baseUrl}/opengraph-image`,

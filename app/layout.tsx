@@ -74,6 +74,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const orgSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": `${siteConfig.url}/#organization`,
     name: siteConfig.name,
     url: siteConfig.url,
     logo: `${siteConfig.url}/og-image.png`,

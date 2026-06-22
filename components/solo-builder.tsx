@@ -29,6 +29,10 @@ export function SoloBuilder() {
               build is documented and yours,</strong>{" "}
               running in your own environment, so it keeps running no matter what.
             </p>
+            <p>
+              Because every build is mine end to end, I take on a limited number
+              of engagements at a time.
+            </p>
           </div>
         </Reveal>
         <Reveal delay={160}>

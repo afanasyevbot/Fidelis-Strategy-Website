@@ -15,14 +15,14 @@ export function MaCut() {
     <section className="bg-forest-floor text-bone">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 py-16 md:py-24">
         <Reveal className="max-w-4xl">
-          <Eyebrow size="lg">FOR M&amp;A ADVISORY FIRMS</Eyebrow>
+          <Eyebrow size="lg">WHERE I&apos;VE GONE DEEPEST</Eyebrow>
           <h2 className="font-display font-bold text-3xl md:text-[48px] mt-8 tracking-tight leading-[1.05]">
-            Everything an advisory firm needs, built around how you run a deal.
+            M&amp;A advisory is where I&apos;ve built the most.
           </h2>
           <p className="font-display font-light text-lg md:text-2xl text-linen mt-5 max-w-3xl leading-snug">
-            M&amp;A advisory is the work we&apos;ve gone deepest on — origination,
-            buyer matching, valuation, and the cockpit to run a whole book toward
-            an exit.
+            Origination, buyer matching, valuation, and the cockpit to run a
+            whole book toward an exit — the clearest proof these systems hold up
+            in the real world.
           </p>
         </Reveal>
 

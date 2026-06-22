@@ -14,7 +14,7 @@ export const metadata = {
 const principles = [
   { title: "Build, don't just brief.", body: "Every engagement ends with working systems your team uses every day. That's the bar." },
   { title: "Own the outcome.", body: "We stay with you through launch, optimization, and the next iteration. Growth is compounding work." },
-  { title: "One partner. One accountability line.", body: "Strategy, design, and the AI build. All from a small team that knows your business deeply." },
+  { title: "One partner. One accountability line.", body: "Strategy, design, and the AI build — all from one person who stays close to your business, start to finish." },
 ];
 
 export default function Page() {
@@ -26,7 +26,7 @@ export default function Page() {
           <div className="mx-auto max-w-5xl px-6 py-24">
             <div className="flex justify-center mb-6">
               <Image
-                src="/logo.png?v=2"
+                src="/logo.png?v=3"
                 alt="Fidelis Strategy Crest"
                 width={160}
                 height={160}

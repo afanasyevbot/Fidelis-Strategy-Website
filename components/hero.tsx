@@ -1,32 +1,65 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import Image from "next/image";
 import { CtaButton } from "./cta-button";
+
+// Shared color grade — pushes the bright golden/blue footage into the
+// forest-floor palette. Applied to BOTH the static poster and the video so
+// they look identical (sepia adds warmth; the small hue-rotate keeps it olive).
+const GRADE =
+  "brightness(0.52) sepia(0.35) hue-rotate(22deg) saturate(1.15) contrast(1.08)";
 
 /**
  * Full-viewport video hero.
  *
- * Video source: /public/hero-video.mp4
- * Overlays darken the bright sky/field so white text is always readable.
- * Text fades in after the video has played for ~4 seconds.
+ * A graded still (hero-poster.jpg, ~64KB) paints instantly on every device.
+ * The ~5MB background video (hero-video.mp4) mounts ONLY on desktop, after
+ * hydration — mobile never downloads it. Both carry the same CSS grade.
+ * Text fades in shortly after load (see .hero-delay-* in globals.css).
  */
 export function Hero() {
+  const [showVideo, setShowVideo] = useState(false);
+
+  useEffect(() => {
+    // Only desktop viewports get the heavy autoplay video.
+    const mq = window.matchMedia("(min-width: 768px)");
+    const update = () => setShowVideo(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
+
   return (
     <section className="relative h-screen overflow-hidden bg-forest-floor text-bone flex flex-col justify-end">
 
-      {/* ── Background video ── */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-        style={{
-          objectPosition: "center center",
-          // CSS color grade — pushes bright golden/blue video into forest-floor palette
-          // warm olive grade — sepia adds warmth, small hue-rotate keeps it olive not pure green
-          filter: "brightness(0.52) sepia(0.35) hue-rotate(22deg) saturate(1.15) contrast(1.08)",
-        }}
-      >
-        <source src="/hero-video.mp4" type="video/mp4" />
-      </video>
+      {/* ── Background: static graded poster — instant paint, all devices ── */}
+      <Image
+        src="/hero-poster.jpg"
+        alt=""
+        aria-hidden
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover pointer-events-none"
+        style={{ objectPosition: "center center", filter: GRADE }}
+      />
+
+      {/* ── Background video — desktop only, layered over the poster ── */}
+      {showVideo && (
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster="/hero-poster.jpg"
+          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+          style={{ objectPosition: "center center", filter: GRADE }}
+        >
+          <source src="/hero-video.mp4" type="video/mp4" />
+        </video>
+      )}
 
       {/* ── Overlays — tame the bright sky, anchor text ── */}
       {/* Bottom gradient — makes text readable */}
