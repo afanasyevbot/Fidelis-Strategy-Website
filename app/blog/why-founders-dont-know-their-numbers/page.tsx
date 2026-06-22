@@ -292,7 +292,7 @@ export default function Post() {
               <ul className="mt-4 space-y-2 font-sans text-[15px]">
                 <li>
                   <a href="/blog/what-supplier-conversations-taught-me" className="text-deep-olive hover:text-moss-olive underline decoration-moss-olive/30 underline-offset-2">
-                    → What 1,000 supplier conversations taught me about growing a business
+                    → What thousands of supplier conversations taught me about growing a business
                   </a>
                 </li>
                 <li>

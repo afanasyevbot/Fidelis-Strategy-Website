@@ -26,7 +26,7 @@ const posts = [
   },
   {
     slug: "what-supplier-conversations-taught-me",
-    title: "What 1,000 supplier conversations taught me about growing a business",
+    title: "What thousands of supplier conversations taught me about growing a business",
     dek: "Four patterns that keep showing up in owner-operated businesses that hit a wall — and what the ones who break through actually do differently.",
     date: "2026-04-27",
   },

@@ -8,7 +8,7 @@ import { blogPostSchema, breadcrumbSchema } from "@/lib/seo";
 
 const POST = {
   slug: "what-supplier-conversations-taught-me",
-  title: "What 1,000 supplier conversations taught me about growing a business",
+  title: "What thousands of supplier conversations taught me about growing a business",
   description:
     "Four patterns that keep showing up in owner-operated businesses that hit a wall — and what the ones who break through actually do differently.",
   datePublished: "2026-04-27",
@@ -54,7 +54,7 @@ export default function Post() {
           <div className="mx-auto max-w-4xl px-6 py-24">
             <Eyebrow size="lg">FIELD NOTES</Eyebrow>
             <h1 className="font-display font-bold text-4xl md:text-[52px] mt-8 tracking-tight leading-[1.05] max-w-3xl">
-              What 1,000 supplier conversations taught me about growing a business
+              What thousands of supplier conversations taught me about growing a business
             </h1>
             <p className="font-display font-light text-xl md:text-2xl text-linen mt-5 max-w-2xl tracking-tight">
               Four patterns that keep showing up — and what separates the owner-operated businesses that break through from the ones that stay stuck.
