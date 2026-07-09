@@ -37,9 +37,9 @@ const builds: Build[] = [
     status: "Live",
   },
   {
-    type: "Website, Giving & Email Migration",
+    type: "Volunteer & Member Portal",
     client: "Grace Evangelical Church · pro bono",
-    body: "Rebuilt the website, integrated online giving, and moved the whole staff onto a nonprofit Microsoft 365 tenant. A volunteer portal is in design now.",
+    body: "A volunteer-coordination and member-care system for a small, bilingual church: no-login shift sign-up with one-tap confirm, double-booking-safe scheduling, automatic email and SMS reminders, and attendance and follow-up tracking so no one slips through the cracks. Builds on the website, online giving, and Microsoft 365 migration we did for them first.",
     status: "Live",
   },
   {

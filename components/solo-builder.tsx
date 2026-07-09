@@ -20,7 +20,7 @@ export function SoloBuilder() {
             <p>
               Most growth work breaks at the seams — strategy lives in one place,
               the build in another, and the person who actually understood your
-              business isn&apos;t the one who ships it. Here, it&apos;s the same hands
+              business isn&apos;t the one who builds it. Here, it&apos;s the same hands
               the whole way through.
             </p>
             <p>
