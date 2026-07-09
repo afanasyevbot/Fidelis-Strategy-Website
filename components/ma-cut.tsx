@@ -15,19 +15,24 @@ export function MaCut() {
     <section className="bg-forest-floor text-bone">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 py-16 md:py-24">
         <Reveal className="max-w-4xl">
-          <Eyebrow size="lg">WHERE I&apos;VE GONE DEEPEST</Eyebrow>
+          <Eyebrow size="lg">PROOF IT&apos;S REAL</Eyebrow>
           <h2 className="font-display font-bold text-3xl md:text-[48px] mt-8 tracking-tight leading-[1.05]">
-            M&amp;A advisory is where I&apos;ve built the most.
+            The deepest work isn&apos;t a deck. It&apos;s live software.
           </h2>
           <p className="font-display font-light text-lg md:text-2xl text-linen mt-5 max-w-3xl leading-snug">
-            Origination, buyer matching, valuation, and the cockpit to run a
-            whole book toward an exit — the clearest proof these systems hold up
-            in the real world.
+            Every system finds, scores, and acts — live in real businesses, not
+            in a slide. Two products grew out of the work: Fidelis Pulse, one
+            health score for any owner, and Fidelis Advisor, the deal cockpit for
+            M&amp;A firms.
           </p>
         </Reveal>
 
         <div className="grid md:grid-cols-2 gap-12 mt-12 items-start">
           <Reveal stagger>
+            <p className="font-sans text-[15px] text-linen/80 leading-relaxed mb-5">
+              The hardest of them runs an M&amp;A firm&apos;s entire book —
+              origination through exit:
+            </p>
             <ul className="space-y-4">
               {builds.map((b) => (
                 <li
@@ -41,13 +46,12 @@ export function MaCut() {
               ))}
             </ul>
             <p className="font-sans text-[15px] text-linen/75 leading-relaxed mt-6">
-              Deep, hands-on work — origination through exit, built around how your
-              firm actually runs.
+              Deep, hands-on work — built around how the business actually runs.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <CtaButton href="/pulse">See Fidelis Advisor →</CtaButton>
+              <CtaButton href="/pulse">See Fidelis Pulse &amp; Advisor →</CtaButton>
               <CtaButton href="/contact" variant="secondary">
-                Talk about your firm
+                Talk about your business
               </CtaButton>
             </div>
           </Reveal>
@@ -56,7 +60,7 @@ export function MaCut() {
             <a
               href="/pulse"
               className="block opacity-95 hover:opacity-100 transition-all duration-500 hover:scale-[1.015]"
-              aria-label="See Fidelis Advisor — the multi-client cockpit for M&A firms"
+              aria-label="See Fidelis Pulse and Advisor — real software running live"
             >
               <AdvisorHeroMocks />
             </a>
