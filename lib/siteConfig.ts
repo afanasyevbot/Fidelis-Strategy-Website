@@ -27,9 +27,9 @@ export const siteConfig = {
   nav: [
     { label: "Process",        href: "/process" },
     { label: "What We Build", href: "/what-we-build" },
+    { label: "Pulse",         href: "/pulse" },
     { label: "About",         href: "/about" },
     { label: "Case Studies",  href: "/case-studies" },
-    { label: "Blog",          href: "/blog" },
     { label: "Contact",       href: "/contact" },
   ] as Array<{ label: string; href: string; external?: boolean }>,
 };

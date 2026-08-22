@@ -8,7 +8,7 @@ export function FinalCta({
   headline = "You've built something real. Let's take it further.",
   sub = "A 30-minute call. We'll talk about where the business is, where you want it, and how to grow the top line. No pitch deck — just a real conversation.",
   primaryHref,
-  primaryLabel = "Book a Discovery Call →",
+  primaryLabel = "Book a Call →",
 }: {
   eyebrow?: string;
   headline?: string;

@@ -1,7 +1,6 @@
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { Eyebrow } from "@/components/eyebrow";
-import { FinalCta } from "@/components/final-cta";
 import { ContactForm } from "@/components/contact-form";
 import { CtaButton } from "@/components/cta-button";
 import { siteConfig } from "@/lib/siteConfig";
@@ -56,13 +55,13 @@ export default function Page() {
                 Grab a time.
               </h2>
               <p className="font-sans text-[16px] text-ink/80 leading-relaxed mt-4">
-                A 30-minute Growth Audit. We&apos;ll talk about what you&apos;re
+                A 30-minute call. We&apos;ll talk about what you&apos;re
                 trying to build and whether we&apos;re the right partner.
                 No pitch deck, no sales script. Just a real conversation.
               </p>
               <div className="mt-8">
                 <CtaButton href={siteConfig.bookingUrl} external>
-                  Book your 30-min Growth Audit →
+                  Book a Call →
                 </CtaButton>
               </div>
               <div className="mt-5 space-y-2 font-sans text-[14px]">
@@ -87,8 +86,6 @@ export default function Page() {
             </div>
           </div>
         </section>
-
-        <FinalCta />
       </main>
       <Footer />
     </>

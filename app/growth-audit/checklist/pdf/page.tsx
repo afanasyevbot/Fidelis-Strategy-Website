@@ -176,12 +176,12 @@ export default function ChecklistPdf() {
             <h3>Two or three answers stinging is normal.</h3>
             <p>
               That&apos;s usually where the highest-leverage work is. If you want a
-              second pair of eyes on the gaps, we offer a 30-minute Growth Audit —
+              second pair of eyes on the gaps, we offer a 30-minute call —
               no pitch deck, no sales script, just a real conversation about what
               you&apos;re trying to build.
             </p>
             <a className="cta-link" href={siteConfig.bookingUrl}>
-              Book your 30-min Growth Audit →
+              Book a Call →
             </a>
             <div className="cta-meta">
               <strong>Matthew Afanasiev</strong> · Founder, Fidelis Strategy

@@ -9,7 +9,6 @@ import { ProofSection } from "@/components/proof-section";
 import { AboutTeaser } from "@/components/about-teaser";
 import { AuditCta } from "@/components/audit-cta";
 import { RecentBuilds } from "@/components/recent-builds";
-import { MaCut } from "@/components/ma-cut";
 import { FinalCta } from "@/components/final-cta";
 import { organizationSchema } from "@/lib/seo";
 
@@ -29,12 +28,12 @@ export default function HomePage() {
         <WhatWeBuildHome />
         <RecentBuilds />
         <ProofSection />
-        <MaCut />
         <AuditCta />
         <AboutTeaser />
         <FinalCta
           eyebrow="READY WHEN YOU ARE"
           headline="You've built something real. Let's build the systems to run it."
+          primaryLabel="Book a Call →"
         />
       </main>
       <Footer />

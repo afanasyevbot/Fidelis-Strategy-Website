@@ -43,6 +43,10 @@ export function ProofSection() {
           ))}
         </Reveal>
 
+        <p className="font-sans text-[13px] text-bone/55 mt-5 max-w-2xl">
+          Paul&apos;s projection for the year ahead — not a closed-year result. The system is live.
+        </p>
+
         <Reveal delay={120}>
           <blockquote className="mt-10 relative">
             <div className="font-display text-[120px] md:text-[160px] leading-none text-linen/25 select-none absolute -top-8 -left-2 md:-left-6">

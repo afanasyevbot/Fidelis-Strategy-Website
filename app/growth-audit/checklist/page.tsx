@@ -76,12 +76,12 @@ export default function Page() {
             <p className="font-sans text-[17px] text-ink/80 leading-relaxed mt-5 max-w-2xl mx-auto">
               That&apos;s usually where the highest-leverage work is. If you
               want a second pair of eyes on the gaps, we offer a 30-minute
-              Growth Audit — no pitch deck, no sales script, just a real
+              call — no pitch deck, no sales script, just a real
               conversation about what you&apos;re trying to build.
             </p>
             <div className="mt-10 flex flex-wrap gap-3 justify-center">
               <CtaButton href={siteConfig.bookingUrl} external>
-                Book your 30-min Growth Audit →
+                Book a Call →
               </CtaButton>
               <CtaButton href="/contact" variant="secondary">
                 Send a note instead

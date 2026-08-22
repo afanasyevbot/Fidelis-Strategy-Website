@@ -5,6 +5,7 @@ import { siteConfig } from "@/lib/siteConfig";
 const navLinks = [
   { label: "What We Build", href: "/what-we-build" },
   { label: "Process",       href: "/process" },
+  { label: "Pulse",         href: "/pulse" },
   { label: "Case Studies",  href: "/case-studies" },
   { label: "Blog",          href: "/blog" },
   { label: "About",         href: "/about" },
