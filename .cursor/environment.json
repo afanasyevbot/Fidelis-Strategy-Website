@@ -1,0 +1,17 @@
+{
+  "name": "Fidelis Strategy Website",
+  "install": "npm ci",
+  "terminals": [
+    {
+      "name": "next-dev",
+      "command": "npm run dev",
+      "description": "Next.js dev server for the Fidelis Strategy marketing site (http://localhost:3000)."
+    }
+  ],
+  "ports": [
+    {
+      "name": "web",
+      "port": 3000
+    }
+  ]
+}
