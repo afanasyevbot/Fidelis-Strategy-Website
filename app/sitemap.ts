@@ -11,11 +11,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/what-we-build",
     "/pulse",
     "/process",
+    "/case-studies",
     "/case-studies/paradise-capital",
     "/teardowns/ai-lead-engine",
     "/about",
     "/contact",
     "/growth-audit",
+    "/growth-audit/checklist",
+    "/privacy",
+    "/terms",
     "/blog",
     "/blog/why-off-the-shelf-software-is-dead",
     "/blog/why-strategies-dont-get-implemented",
@@ -30,7 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const priorityFor = (path: string): number => {
     if (path === "") return 1.0;
     if (["/process", "/what-we-build", "/about", "/growth-audit"].includes(path)) return 0.9;
-    if (path === "/pulse" || path.startsWith("/case-studies/") || path.startsWith("/teardowns/") || (path.startsWith("/blog/") && path !== "/blog")) return 0.8;
+    if (path === "/pulse" || path === "/case-studies" || path.startsWith("/case-studies/") || path.startsWith("/teardowns/") || (path.startsWith("/blog/") && path !== "/blog") || path === "/growth-audit/checklist") return 0.8;
     if (path === "/blog") return 0.7;
     return 0.6; // /contact and similar
   };
@@ -41,7 +45,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     return "yearly";
   };
   return routes.map((path) => ({
-    url: `${base}${path}`,
+    // trailingSlash: true in next.config — sitemap locs must match the live URLs
+    // or Googlebot spends crawl budget on 301s.
+    url: path === "" ? `${base}/` : `${base}${path}/`,
     lastModified: now,
     changeFrequency: changeFreqFor(path),
     priority: priorityFor(path),

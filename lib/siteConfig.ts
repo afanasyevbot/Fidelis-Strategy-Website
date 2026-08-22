@@ -3,8 +3,8 @@ export const siteConfig = {
   tagline: "Faithful. Loyal. Trustworthy.",
   url: "https://fidelisstrategy.net",
 
-  // Contact — TODO: confirm with Matthew
-  email: "Mafanasiev@fidelisstrategy.net",
+  // Contact
+  email: "mafanasiev@fidelisstrategy.net",
   phone: "651-468-1408",
   linkedinUrl: "https://www.linkedin.com/in/matthewafanasiev/",
   bookingUrl: "https://calendly.com/mafanasiev-fidelisstrategy/30min",
@@ -27,9 +27,9 @@ export const siteConfig = {
   nav: [
     { label: "Process",        href: "/process" },
     { label: "What We Build", href: "/what-we-build" },
+    { label: "Pulse",         href: "/pulse" },
     { label: "About",         href: "/about" },
-    { label: "Case Study",    href: "/case-studies/paradise-capital" },
-    { label: "Blog",          href: "/blog" },
+    { label: "Case Studies",  href: "/case-studies" },
     { label: "Contact",       href: "/contact" },
   ] as Array<{ label: string; href: string; external?: boolean }>,
 };

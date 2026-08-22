@@ -166,7 +166,7 @@ export default function Page() {
                           "font-sans text-[12px]",
                           lightSection ? "text-ink/40" : "text-bone/40"
                         )}>
-                          14-day free window · no card required
+                          30-day free window · no card required
                         </span>
                       </div>
                     </div>

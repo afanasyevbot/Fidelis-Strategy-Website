@@ -5,7 +5,8 @@ import { siteConfig } from "@/lib/siteConfig";
 const navLinks = [
   { label: "What We Build", href: "/what-we-build" },
   { label: "Process",       href: "/process" },
-  { label: "Case Studies",  href: "/case-studies/paradise-capital" },
+  { label: "Pulse",         href: "/pulse" },
+  { label: "Case Studies",  href: "/case-studies" },
   { label: "Blog",          href: "/blog" },
   { label: "About",         href: "/about" },
 ];
@@ -101,6 +102,20 @@ export function Footer() {
           <p className="font-sans text-[12px] text-bone/35">
             © {new Date().getFullYear()} Fidelis Strategy LLC. All rights reserved.
           </p>
+          <div className="flex gap-4">
+            <Link
+              href="/privacy/"
+              className="font-sans text-[12px] text-bone/45 hover:text-linen transition-colors"
+            >
+              Privacy
+            </Link>
+            <Link
+              href="/terms/"
+              className="font-sans text-[12px] text-bone/45 hover:text-linen transition-colors"
+            >
+              Terms
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

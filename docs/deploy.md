@@ -1,87 +1,88 @@
 # Deploy — Hostinger
 
-## Prerequisites
+Production is a static export (`next build` → `out/`) on Hostinger shared hosting.
+**The live path is GitHub Actions**, not a zip upload. Pushing `main` runs
+`.github/workflows/deploy.yml`: build, then `rsync` into
+`~/domains/fidelisstrategy.net/public_html/`.
 
-Before first deploy, fill in real values in `lib/siteConfig.ts`:
-- `email` — real contact email
-- `bookingUrl` — real Cal.com or Calendly link
-- `formspreeId` — real Formspree form endpoint ID
-- `gaId` — real GA4 measurement ID (or leave placeholder with "X"s to keep GA disabled)
+Merging a PR to `main` is a production deploy.
 
-Also replace `public/logo.svg` with the real Fidelis logo SVG.
+## What is actually live vs what is broken
 
-Then rebuild: `npm run build`.
+`https://fidelisstrategy.net` works. That is the site. A visual review of that URL
+will look operational — it is.
 
-## First deploy
+`www` DNS was pointed at the same LiteSpeed IPs as the apex on 22 Aug 2026
+(Website Builder `CNAME connect.hostinger.com` removed). Public resolvers already
+see `www` A `5.183.10.226`. HTTP `www` hits LiteSpeed and 301s toward HTTPS.
 
-1. Log in to Hostinger → hPanel → File Manager → `public_html/`.
-2. Back up and delete any existing files in `public_html/`.
-3. From project root: `npm run build`.
-4. Zip the *contents* of `out/` (not the folder itself):
-   ```bash
-   cd out && zip -r ../site.zip . && cd ..
-   ```
-5. Upload `site.zip` to `public_html/` via File Manager.
-6. Right-click the zip → Extract. Delete the zip after extraction.
-7. Visit https://fidelisstrategy.net — should load the new home.
+HTTPS `www` still fails: the Let's Encrypt cert SAN is only
+`DNS:fidelisstrategy.net` (expires **24 Sep 2026**). Browsers never reach the
+`.htaccess` www → apex rewrite. The rewrite itself already works if you skip
+certificate verification (`curl -k`).
 
-## Subsequent deploys
+Hostinger's public API cannot issue SSL. `www` is a reserved name — it cannot be
+added as a parked domain or a subdomain. Reinstall Lifetime SSL in hPanel.
 
-Same as above. Hostinger's File Manager overwrite-on-extract makes redeploys a one-click update once the workflow is familiar.
+Mail is mixed: MX is Microsoft 365 (`*.mail.protection.outlook.com`) but
+`autodiscover` still points at Hostinger mail. Apex TXT/SPF/DMARC were empty from
+public resolvers. Inbound Outlook can still work; spoofing protection and some
+clients will not. A leftover `@ ALIAS connect.hostinger.com` still exists in the
+zone; public A/AAAA already serve the real site — do not wipe the zone to remove
+it.
 
-## .htaccess for pretty URLs on Apache
+## Fix `www` SSL (hPanel click — API cannot do this)
 
-Create `public_html/.htaccess`:
+1. hPanel → Websites → `fidelisstrategy.net` → Dashboard → Security → SSL.
+2. If a certificate is already **Active**, ⋮ → **Uninstall**.
+3. **Install SSL**. Wait until **Active** (usually a few minutes).
+4. Confirm the certificate lists both `fidelisstrategy.net` and
+   `www.fidelisstrategy.net`.
+5. Confirm:
+   - `curl -sI https://www.fidelisstrategy.net` → `301` to `https://fidelisstrategy.net/`
+   - `curl -sI https://fidelisstrategy.net` still `200`
 
-```
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^([^\.]+)$ $1.html [NC,L]
-ErrorDocument 404 /404.html
-```
+Do not enable Hostinger Website Builder or CDN on `www`. That is what created
+the parking CNAME.
 
-Because `trailingSlash: true` is set in `next.config.mjs`, Next.js emits directory-style paths (`/about/index.html`) that Apache serves by default without rewrites. The rule above is a belt-and-braces fallback for bare URLs.
+### DNS API (already applied; script kept for replay)
 
-## Post-deploy smoke test
+`scripts/hostinger-www-dns.py` must send a browser User-Agent or Cloudflare
+returns Error 1010.
 
-Visit each in an incognito window:
-- [ ] https://fidelisstrategy.net — home loads, hero renders, fonts applied
-- [ ] /what-we-build — 6 system sections render
-- [ ] /about — founder story visible
-- [ ] /case-studies/paradise-capital — case study renders
-- [ ] /contact — form visible; submit a test entry and confirm Formspree delivers it
-- [ ] /nope — 404 page renders
-- [ ] Open DevTools → Network: fonts load, no 404s for assets
-- [ ] GA4 real-time: your own session shows up (if gaId is set)
-
-## Swapping the animated hero
-
-The hero section in `components/hero.tsx` has a reserved slot:
-
-```tsx
-<div id="hero-animation-slot" aria-hidden className="absolute inset-0 opacity-0 pointer-events-none" />
+```bash
+python3 scripts/hostinger-www-dns.py          # dry run, prints the zone
+python3 scripts/hostinger-www-dns.py --apply  # delete www CNAME, set A/AAAA
 ```
 
-To swap in a Claude-designed animation:
+Then still do the SSL click in hPanel.
 
-1. Drop the animation (SVG, Lottie JSON, or raw HTML/canvas) into this div.
-2. Remove the `opacity-0` and `pointer-events-none` classes so it becomes visible and interactive.
-3. If the animation should sit behind copy, keep `absolute inset-0` + `z-0` and give the copy wrapper `relative z-10`.
-4. If the animation is interactive (clickable, hover-responsive), remove `aria-hidden`.
-5. Rebuild (`npm run build`) and redeploy.
+## Mail (Microsoft 365)
 
-No other files need to change.
+If the mailbox is Exchange Online (MX already says it is):
 
-## Lighthouse targets
+- TXT `@`: `v=spf1 include:spf.protection.outlook.com -all`
+- CNAME `autodiscover` → `autodiscover.outlook.com` (replace Hostinger autodiscover)
+- Add the two DKIM CNAMEs from Microsoft 365 Admin → Settings → Domains
+- TXT `_dmarc`: `v=DMARC1; p=none; rua=mailto:mafanasiev@fidelisstrategy.net`
 
-Run Chrome DevTools → Lighthouse → Mobile after deploy:
-- Performance ≥ 90
-- Accessibility ≥ 95
-- Best Practices ≥ 95
-- SEO ≥ 95
+Do this in Microsoft 365’s DNS wizard so the selectors match the tenant. Do not
+guess DKIM hostnames.
 
-Common fixes if scores are low:
-- **Images without dimensions:** all `<Image>` components already set width/height.
-- **Color contrast:** only Linen-on-Moss and Sage-on-Deep pairings are candidates; both pass WCAG AA at the font sizes used.
-- **Font preload:** already handled by `next/font` with `display: "swap"`.
+## First-time GitHub Actions secrets
+
+Already used by `.github/workflows/deploy.yml`:
+
+- `SSH_HOST` — Hostinger SSH hostname
+- `SSH_PORT` — usually `65002` (or `22`)
+- `SSH_USERNAME` — hosting username
+- `SSH_PASSWORD` — hosting password
+
+hPanel → Advanced → SSH Access.
+
+## Manual zip deploy (fallback only)
+
+1. `npm ci && npm run build`
+2. Zip the *contents* of `out/`
+3. hPanel → File Manager → `domains/fidelisstrategy.net/public_html/` → extract
+4. Confirm `.htaccess` from `out/` overwrote the live one

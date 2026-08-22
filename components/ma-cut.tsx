@@ -61,9 +61,12 @@ export function MaCut() {
             <a
               href="/pulse"
               className="block opacity-95 hover:opacity-100 transition-all duration-500 hover:scale-[1.015]"
-              aria-label="See Fidelis Pulse and Advisor — real software running live"
+              aria-label="See Fidelis Pulse and Advisor product tour"
             >
               <AdvisorHeroMocks />
+              <p className="font-sans text-[11px] uppercase tracking-button text-linen/55 mt-3 text-center md:text-left">
+                Sample data — product demo, not a client dashboard
+              </p>
             </a>
           </Reveal>
         </div>

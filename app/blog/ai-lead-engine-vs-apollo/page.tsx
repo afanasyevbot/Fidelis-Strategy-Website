@@ -280,7 +280,7 @@ export default function Post() {
               card.
             </div>
             <CtaButton href={siteConfig.bookingUrl} external>
-              Book your 30-min Growth Audit →
+              Book a Call →
             </CtaButton>
             <p className="font-sans text-[13px] text-ink/60 mt-4">
               Not ready to talk?{" "}

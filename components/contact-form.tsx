@@ -82,21 +82,35 @@ export function ContactForm() {
 
   const input =
     "w-full bg-transparent border border-moss-olive/40 px-4 py-3 font-sans text-[15px] text-ink placeholder:text-ink/45 transition-colors duration-200 hover:border-moss-olive focus:outline-none focus:border-deep-olive focus:ring-2 focus:ring-deep-olive/15";
+  const label = "block font-sans text-[12px] uppercase tracking-button text-moss-olive font-semibold mb-2";
 
   return (
     <form onSubmit={onSubmit} className="space-y-4">
-      <input name="name" required placeholder="Your name" className={input} />
-      <input type="email" name="email" required placeholder="Email" className={input} />
-      <input name="company" placeholder="Company (optional)" className={input} />
-      <textarea
-        name="message"
-        required
-        rows={5}
-        placeholder="What are you trying to build, fix, or grow? A sentence or two is fine."
-        className={input}
-      />
+      <div>
+        <label htmlFor="contact-name" className={label}>Name</label>
+        <input id="contact-name" name="name" autoComplete="name" required placeholder="Your name" className={input} />
+      </div>
+      <div>
+        <label htmlFor="contact-email" className={label}>Email</label>
+        <input id="contact-email" type="email" name="email" autoComplete="email" required placeholder="you@company.com" className={input} />
+      </div>
+      <div>
+        <label htmlFor="contact-company" className={label}>Company <span className="font-normal normal-case tracking-normal text-ink/45">(optional)</span></label>
+        <input id="contact-company" name="company" autoComplete="organization" placeholder="Company" className={input} />
+      </div>
+      <div>
+        <label htmlFor="contact-message" className={label}>What are you working on?</label>
+        <textarea
+          id="contact-message"
+          name="message"
+          required
+          rows={5}
+          placeholder="What are you trying to build, fix, or grow? A sentence or two is fine."
+          className={input}
+        />
+      </div>
       {/* Honeypot — bots fill this, humans don't. Web3Forms drops these. */}
-      <input type="checkbox" name="botcheck" tabIndex={-1} className="hidden" aria-hidden />
+      <input type="checkbox" name="botcheck" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden />
       <button
         type="submit"
         disabled={status === "submitting"}
@@ -111,6 +125,10 @@ export function ContactForm() {
           <a href={`mailto:${siteConfig.email}`} className="link-underline">{siteConfig.email}</a>.
         </p>
       )}
+      <p className="font-sans text-[12px] text-ink/55 leading-relaxed">
+        Used only to reply — no list, no sequence.{" "}
+        <a href="/privacy/" className="link-underline text-deep-olive hover:text-moss-olive">Privacy</a>.
+      </p>
     </form>
   );
 }

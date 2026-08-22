@@ -61,7 +61,7 @@ export function Nav() {
           </Link>
 
           {/* Desktop nav */}
-          <ul className="hidden md:flex items-center gap-8 text-bone/80 text-[13px] font-sans">
+          <ul className="hidden lg:flex items-center gap-7 text-bone/80 text-[13px] font-sans">
             {siteConfig.nav.map((i) => {
               const isActive = !i.external && (
                 i.href === "/" ? pathname === "/" : pathname.startsWith(i.href)
@@ -96,7 +96,7 @@ export function Nav() {
           <CtaButton
             href={siteConfig.bookingUrl}
             external
-            className="hidden md:inline-flex text-[10px] py-2 px-4"
+            className="hidden lg:inline-flex text-[10px] py-2 px-4"
             onClick={() => trackEvent("book_call_click", { location: "nav_desktop" })}
           >
             Book a Call →
@@ -105,7 +105,7 @@ export function Nav() {
           {/* Mobile: hamburger */}
           <button
             onClick={() => setOpen((v) => !v)}
-            className="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-[5px] text-bone"
+            className="lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-[5px] text-bone"
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
           >
@@ -128,7 +128,7 @@ export function Nav() {
       {/* Mobile drawer */}
       <div
         className={cn(
-          "fixed inset-0 z-40 md:hidden transition-all duration-300",
+          "fixed inset-0 z-40 lg:hidden transition-all duration-300",
           open ? "pointer-events-auto" : "pointer-events-none"
         )}
       >

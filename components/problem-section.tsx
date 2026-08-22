@@ -111,9 +111,7 @@ export function ProblemSection() {
         </Reveal>
         <Reveal delay={120}>
           <p className="font-sans text-[15px] text-bone/70 leading-relaxed mt-8 max-w-2xl">
-            Either way, you work with one partner — for owner-operated businesses
-            like services, brokerages, and agencies, from the first conversation
-            through the systems going live.
+            Either way: one partner, owner-operated businesses, start to finish.
           </p>
         </Reveal>
       </div>

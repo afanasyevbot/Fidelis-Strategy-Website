@@ -272,7 +272,7 @@ export default function Post() {
                 Try Fidelis Pulse
               </div>
               <p className="font-sans text-[16px] text-ink/80 leading-relaxed mb-8">
-                14-day free window for owners — no card required. Connect QuickBooks
+                30-day free window for owners — no card required. Connect QuickBooks
                 and see your first pulse before you decide if it&apos;s worth paying for.
               </p>
               <div className="flex flex-wrap gap-3">

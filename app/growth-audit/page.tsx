@@ -46,19 +46,19 @@ export default function Page() {
               <ul className="mt-8 space-y-3 font-sans text-[15px] text-ink/85 leading-relaxed">
                 <li className="flex gap-3">
                   <span className="text-moss-olive font-semibold">→</span>
-                  <span><strong className="text-deep-olive">Discover</strong> — ICP clarity, win patterns, signal sources</span>
+                  <span><strong className="text-deep-olive">Your customer</strong> — who you sell to, win patterns, and the situation that makes them buy</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-moss-olive font-semibold">→</span>
-                  <span><strong className="text-deep-olive">Design</strong> — offer architecture, pricing posture, channel mix</span>
+                  <span><strong className="text-deep-olive">Your offer</strong> — how you explain it, price it, and why they pick you</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-moss-olive font-semibold">→</span>
-                  <span><strong className="text-deep-olive">Deploy</strong> — systems, automation, the actual build</span>
+                  <span><strong className="text-deep-olive">Your systems</strong> — whether the process lives in a tool, a spreadsheet, or your head</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-moss-olive font-semibold">→</span>
-                  <span><strong className="text-deep-olive">Drive</strong> — measurement, iteration, what to kill</span>
+                  <span><strong className="text-deep-olive">Your results</strong> — the numbers you trust, what you&apos;d kill, and what would break at 50% more volume</span>
                 </li>
               </ul>
               <p className="font-sans text-[14px] text-ink/65 leading-relaxed mt-8">

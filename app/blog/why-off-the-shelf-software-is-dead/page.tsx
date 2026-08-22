@@ -126,7 +126,7 @@ export default function Post() {
               <p>
                 I see this from both sides, because I build these systems for a
                 living. In the past year I&apos;ve built a custom lead engine and a
-                buyer-matching database for an M&amp;A advisory firm, a wellness app
+                buyer-matching database for Paradise Capital, a wellness app
                 shaped to one founder&apos;s exact routine, and client portals that
                 replaced years of email threads. None of these would have penciled
                 out in 2022. All of them pencil out now.

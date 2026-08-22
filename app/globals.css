@@ -40,50 +40,12 @@
 }
 
 /* ---------- Scroll reveal ----------
-   Wrap content with <Reveal /> to fade in on scroll. */
-.reveal {
-  opacity: 0;
-  transform: translateY(18px);
-  transition:
-    opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-  will-change: opacity, transform;
-}
-.reveal[data-reveal="fade"] { transform: none; }
-.reveal[data-reveal="right"] { transform: translateX(-18px); }
-.reveal[data-revealed="true"] {
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
-}
-
-/* Stagger children — apply data-reveal-child to direct children of a Reveal
-   with stagger=true and they fade in one after another. */
+   Content stays visible on first paint. A new firm cannot afford
+   a blank hero or half-gone sections while JS catches up. */
+.reveal,
 .reveal[data-stagger="true"] [data-reveal-child] {
-  opacity: 0;
-  transform: translateY(14px);
-  transition:
-    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
-}
-.reveal[data-stagger="true"][data-revealed="true"] [data-reveal-child] {
   opacity: 1;
-  transform: translate3d(0, 0, 0);
-}
-.reveal[data-stagger="true"][data-revealed="true"] [data-reveal-child]:nth-child(1) { transition-delay: 0ms; }
-.reveal[data-stagger="true"][data-revealed="true"] [data-reveal-child]:nth-child(2) { transition-delay: 90ms; }
-.reveal[data-stagger="true"][data-revealed="true"] [data-reveal-child]:nth-child(3) { transition-delay: 180ms; }
-.reveal[data-stagger="true"][data-revealed="true"] [data-reveal-child]:nth-child(4) { transition-delay: 270ms; }
-.reveal[data-stagger="true"][data-revealed="true"] [data-reveal-child]:nth-child(5) { transition-delay: 360ms; }
-.reveal[data-stagger="true"][data-revealed="true"] [data-reveal-child]:nth-child(6) { transition-delay: 450ms; }
-.reveal[data-stagger="true"][data-revealed="true"] [data-reveal-child]:nth-child(7) { transition-delay: 540ms; }
-
-@media (prefers-reduced-motion: reduce) {
-  .reveal,
-  .reveal[data-stagger="true"] [data-reveal-child] {
-    opacity: 1 !important;
-    transform: none !important;
-    transition: none !important;
-  }
+  transform: none;
 }
 
 /* ---------- Card hover lift ----------
@@ -157,27 +119,4 @@
   .scroll-cue-line { animation: none; }
 }
 
-/* ---------- Hero text entrance ----------
-   Text elements start hidden and fade up in sequence after the
-   video has played for a moment.
-   Swap delays here to re-time the reveal. */
-@keyframes hero-fade-up {
-  from { opacity: 0; transform: translateY(16px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-.hero-text {
-  opacity: 0;
-  animation: hero-fade-up 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-}
-
-/* Staggered delays */
-.hero-delay-1 { animation-delay: 0.1s; }   /* eyebrow */
-.hero-delay-2 { animation-delay: 0.25s; }  /* h1 — LCP element, kept fast */
-.hero-delay-3 { animation-delay: 0.5s; }   /* subheading */
-.hero-delay-4 { animation-delay: 0.7s; }   /* body copy */
-.hero-delay-5 { animation-delay: 0.95s; }  /* CTAs + footnote */
-
-@media (prefers-reduced-motion: reduce) {
-  .hero-text { opacity: 1; animation: none; }
-}
+/* Hero copy paints with the poster. No entrance hide. */

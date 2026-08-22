@@ -123,7 +123,7 @@ export default function ProcessPage() {
 
             <div className="mt-10">
               <CtaButton href={siteConfig.bookingUrl} external>
-                Book your 30-min Growth Audit →
+                Book a Call →
               </CtaButton>
             </div>
           </div>
@@ -249,7 +249,7 @@ export default function ProcessPage() {
                   name: "What does a Fidelis engagement cost?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Pricing is scoped per engagement. After the 30-minute Growth Audit, we send a fixed-price proposal with a defined scope and timeline. No retainers, no hourly billing, no surprises.",
+                    text: "Pricing is scoped per engagement. After a 30-minute call, we send a fixed-price proposal with a defined scope and timeline. No retainers, no hourly billing, no surprises.",
                   },
                 },
                 {
