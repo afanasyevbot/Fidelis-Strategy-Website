@@ -19,6 +19,7 @@ const commercial: Array<{
   body: string;
   href?: string;
   cta?: string;
+  external?: boolean;
 }> = [
   {
     type: "AI Pipeline Engine",
@@ -31,6 +32,22 @@ const commercial: Array<{
     type: "Lead Generation Platform",
     client: "SaaS company serving real-estate teams",
     body: "Discovers teams, brokerages, and franchises; enriches each from their website and LinkedIn; scores them against the ideal customer profile; drafts the outreach.",
+  },
+  {
+    type: "Glow Routine",
+    client: "Linked by Lexi · live consumer app",
+    body: "A wellness app someone can actually open and use: daily checklists, reminders, streaks, and an AI advisor in her pocket — built around how Lexi operates, not a generic tracker.",
+    href: "https://glow-routine-seven.vercel.app",
+    cta: "Open Glow Routine",
+    external: true,
+  },
+  {
+    type: "Volunteer & Member Portal",
+    client: "Grace Evangelical Church · pro bono",
+    body: "Shift sign-up, scheduling, reminders, and member care for a small bilingual church. Builds on the website, online giving, and Microsoft 365 migration we did for them first.",
+    href: "https://eagangrace.com",
+    cta: "Visit eagangrace.com",
+    external: true,
   },
 ];
 
@@ -51,7 +68,7 @@ export function RecentBuilds() {
           Real systems, running in real businesses.
         </h2>
         <p className="font-display font-light text-lg md:text-xl text-moss-olive mt-3 max-w-2xl">
-          Client systems stay private — no screenshots. The work is named where we&apos;re allowed, described where we&apos;re not.
+          Named when we&apos;re allowed. Private when we&apos;re not. Glow Routine is a live app — you can open it.
         </p>
 
         <div className="card-lift mt-12 p-8 md:p-10 border border-moss-olive/40 bg-bone">
@@ -113,6 +130,20 @@ export function RecentBuilds() {
               "p-6 md:p-8 border border-moss-olive/30 bg-bone h-full flex flex-col" +
               (b.href ? " hover:border-moss-olive card-lift" : "");
 
+            if (b.href && b.external) {
+              return (
+                <a
+                  key={b.type}
+                  href={b.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={className}
+                >
+                  {inner}
+                </a>
+              );
+            }
+
             return b.href ? (
               <Link key={b.type} href={b.href} className={className}>
                 {inner}
@@ -124,20 +155,6 @@ export function RecentBuilds() {
             );
           })}
         </div>
-
-        <p className="font-sans text-[15px] text-ink/70 leading-relaxed mt-10 max-w-3xl">
-          Also shipped:{" "}
-          <span className="text-ink/85">Glow Routine</span> for Linked by Lexi, and a{" "}
-          <a
-            href="https://eagangrace.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-deep-olive link-underline"
-          >
-            volunteer portal for Grace Evangelical Church
-          </a>
-          . Different rooms. Same standard — something people actually use.
-        </p>
       </div>
     </section>
   );
