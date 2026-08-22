@@ -48,7 +48,25 @@ export default function Page() {
               </p>
             </Link>
             <p className="font-sans text-[14px] text-ink/60 leading-relaxed mt-8 max-w-2xl">
-              Other recent builds — a real-estate-team lead platform and internal products — stay unnamed or described without screenshots. If you want to talk about a similar problem,{" "}
+              Named and live, without a full write-up:{" "}
+              <a
+                href="https://glow-routine-seven.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-deep-olive underline decoration-moss-olive/40 underline-offset-2"
+              >
+                Glow Routine
+              </a>{" "}
+              for Linked by Lexi, and the{" "}
+              <a
+                href="https://eagangrace.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-deep-olive underline decoration-moss-olive/40 underline-offset-2"
+              >
+                volunteer portal at eagangrace.com
+              </a>
+              . A real-estate-team lead platform stays unnamed. If you want to talk about a similar problem,{" "}
               <Link href="/contact/" className="text-deep-olive underline decoration-moss-olive/40 underline-offset-2">
                 send a note
               </Link>

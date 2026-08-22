@@ -108,6 +108,12 @@ export function ProofSection() {
           </blockquote>
         </Reveal>
 
+        <Reveal delay={160} className="mt-8">
+          <CtaButton href="https://glow-routine-seven.vercel.app" external>
+            Open Glow Routine →
+          </CtaButton>
+        </Reveal>
+
         {/* Grace Evangelical Church */}
         <Reveal delay={60}>
           <div className="mt-16 pt-10 border-t border-linen/20">

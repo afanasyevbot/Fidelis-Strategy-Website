@@ -105,8 +105,9 @@ export default function Page() {
                 <a href="https://fidelispulse.com" target="_blank" rel="noopener noreferrer" className="text-deep-olive underline decoration-moss-olive/40 underline-offset-2 hover:text-moss-olive">Fidelis Pulse</a>,
                 a dashboard that gives you a pulse on your business so you can see
                 where everything stands and make the right calls,
-                and Glow Routine, a consumer wellness app I built for the
-                founder of Linked by Lexi.
+                and{" "}
+                <a href="https://glow-routine-seven.vercel.app" target="_blank" rel="noopener noreferrer" className="text-deep-olive underline decoration-moss-olive/40 underline-offset-2 hover:text-moss-olive">Glow Routine</a>,
+                a live consumer wellness app I built for the founder of Linked by Lexi.
                 That&apos;s what Fidelis is built on: growth strategy and
                 AI-powered systems that actually move the business forward.
               </p>
