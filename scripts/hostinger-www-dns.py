@@ -1,13 +1,19 @@
 #!/usr/bin/env python3
 """Point www.fidelisstrategy.net at the same host as the apex.
 
-Live today:
-  apex  A     5.183.10.226          → the real site (works)
-  www   CNAME connect.hostinger.com → Hostinger parked-domain / Website Builder CDN
-                                      HTTPS handshake fails; HTTP is a parking page
+Applied 22 Aug 2026:
+  apex  A/AAAA  5.183.10.226 / 2a02:4780:1:2327:0:348e:e49a:3  → real site
+  www   A/AAAA  same IPs (Website Builder CNAME removed)
 
-This script deletes the www CNAME and adds A/AAAA matching the apex.
-It does not touch MX, TXT, or other records (overwrite=false).
+Remaining: hPanel → Security → SSL → uninstall + Install SSL so the
+certificate SAN includes www. Hostinger's public API cannot issue SSL,
+and www is a reserved name (cannot be a parked domain or subdomain).
+
+Cloudflare on developers.hostinger.com returns Error 1010 unless the
+request sends a browser User-Agent.
+
+This script deletes a www CNAME (if present) and adds A/AAAA matching
+the apex. It does not touch MX, TXT, or other records (overwrite=false).
 
 Usage:
   HOSTINGER_API_TOKEN=... python3 scripts/hostinger-www-dns.py          # dry run
@@ -26,6 +32,11 @@ DOMAIN = "fidelisstrategy.net"
 APEX_A = "5.183.10.226"
 APEX_AAAA = "2a02:4780:1:2327:0:348e:e49a:3"
 BASE = "https://developers.hostinger.com"
+# Cloudflare Error 1010 without a browser UA.
+USER_AGENT = (
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+)
 
 
 def req(method: str, path: str, token: str, body: dict | None = None) -> tuple[int, object]:
@@ -38,6 +49,7 @@ def req(method: str, path: str, token: str, body: dict | None = None) -> tuple[i
             "Authorization": f"Bearer {token}",
             "Content-Type": "application/json",
             "Accept": "application/json",
+            "User-Agent": USER_AGENT,
         },
     )
     try:

@@ -12,50 +12,50 @@ Merging a PR to `main` is a production deploy.
 `https://fidelisstrategy.net` works. That is the site. A visual review of that URL
 will look operational — it is.
 
-`www` does **not** point at the site. It is a Hostinger parked / Website Builder
-record (`CNAME` → `connect.hostinger.com` / `connect.hstgr.net`):
+`www` DNS was pointed at the same LiteSpeed IPs as the apex on 22 Aug 2026
+(Website Builder `CNAME connect.hostinger.com` removed). Public resolvers already
+see `www` A `5.183.10.226`. HTTP `www` hits LiteSpeed and 301s toward HTTPS.
 
-| Host | Record | Where it goes |
-|---|---|---|
-| apex (`fidelisstrategy.net`) | A `5.183.10.226` | Real LiteSpeed account. HTTPS 200. |
-| `www` | CNAME `connect.hostinger.com` | Parking page. HTTPS handshake fails. HTTP title: “Parked Domain name on Hostinger DNS system”. |
+HTTPS `www` still fails: the Let's Encrypt cert SAN is only
+`DNS:fidelisstrategy.net` (expires **24 Sep 2026**). Browsers never reach the
+`.htaccess` www → apex rewrite. The rewrite itself already works if you skip
+certificate verification (`curl -k`).
+
+Hostinger's public API cannot issue SSL. `www` is a reserved name — it cannot be
+added as a parked domain or a subdomain. Reinstall Lifetime SSL in hPanel.
 
 Mail is mixed: MX is Microsoft 365 (`*.mail.protection.outlook.com`) but
 `autodiscover` still points at Hostinger mail. Apex TXT/SPF/DMARC were empty from
 public resolvers. Inbound Outlook can still work; spoofing protection and some
-clients will not.
+clients will not. A leftover `@ ALIAS connect.hostinger.com` still exists in the
+zone; public A/AAAA already serve the real site — do not wipe the zone to remove
+it.
 
-Let's Encrypt on the apex expires **24 Sep 2026**. Confirm auto-renew in hPanel
-→ SSL.
+## Fix `www` SSL (hPanel click — API cannot do this)
 
-## Fix `www` (needs hPanel or a Hostinger API token)
-
-Goal: `www` A/AAAA match the apex, then SSL covers `www`, then `.htaccess`
-redirects `www` → apex.
-
-### In hPanel ( Domains → DNS / DNS Zone Editor )
-
-1. Delete the `www` **CNAME** (`connect.hostinger.com` / `connect.hstgr.net`).
-2. Add:
-   - `www` **A** → `5.183.10.226` (same as `@`)
-   - `www` **AAAA** → same IPv6 as `@` (currently `2a02:4780:1:2327:0:348e:e49a:3`)
-3. SSL → manage certificates for `fidelisstrategy.net` → install / renew so the
-   SAN includes `www.fidelisstrategy.net`. Wait for issuance (often a few minutes).
-4. Confirm:
+1. hPanel → Websites → `fidelisstrategy.net` → Dashboard → Security → SSL.
+2. If a certificate is already **Active**, ⋮ → **Uninstall**.
+3. **Install SSL**. Wait until **Active** (usually a few minutes).
+4. Confirm the certificate lists both `fidelisstrategy.net` and
+   `www.fidelisstrategy.net`.
+5. Confirm:
    - `curl -sI https://www.fidelisstrategy.net` → `301` to `https://fidelisstrategy.net/`
    - `curl -sI https://fidelisstrategy.net` still `200`
 
 Do not enable Hostinger Website Builder or CDN on `www`. That is what created
 the parking CNAME.
 
-### API (if `HOSTINGER_API_TOKEN` is set)
+### DNS API (already applied; script kept for replay)
+
+`scripts/hostinger-www-dns.py` must send a browser User-Agent or Cloudflare
+returns Error 1010.
 
 ```bash
 python3 scripts/hostinger-www-dns.py          # dry run, prints the zone
 python3 scripts/hostinger-www-dns.py --apply  # delete www CNAME, set A/AAAA
 ```
 
-Then still do the SSL click in hPanel — the DNS API does not issue certificates.
+Then still do the SSL click in hPanel.
 
 ## Mail (Microsoft 365)
 

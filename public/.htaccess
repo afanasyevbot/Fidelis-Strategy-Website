@@ -18,11 +18,9 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [L,R=301]
 # -------------------------------------------------------
 
 # Non-www (recommended for fidelisstrategy.net).
-# This rewrite only runs AFTER TLS succeeds. www currently CNAMEs to
-# Hostinger parking (connect.hstgr.net) with a cert that does not include
-# www.fidelisstrategy.net — browsers fail the handshake before this rule.
-# Point www at the same host as apex and add www to the Let's Encrypt SAN,
-# then this redirect will work.
+# This rewrite only runs AFTER TLS succeeds. www DNS already matches the
+# apex, but the Let's Encrypt cert SAN is still apex-only until SSL is
+# reinstalled in hPanel. Browsers fail the handshake before this rule.
 RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
 RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
 
