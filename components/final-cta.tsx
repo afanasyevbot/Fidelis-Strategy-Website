@@ -1,3 +1,6 @@
+"use client";
+
+import { trackEvent } from "@/lib/analytics";
 import { siteConfig } from "@/lib/siteConfig";
 import { Eyebrow } from "./eyebrow";
 import { CtaButton } from "./cta-button";
@@ -17,7 +20,17 @@ export function FinalCta({
   primaryHref?: string;
   primaryLabel?: string;
 }) {
-  const isInternal = primaryHref && primaryHref.startsWith("/");
+  const href = primaryHref ?? siteConfig.bookingUrl;
+  const isInternal = href.startsWith("/");
+
+  function handlePrimaryClick() {
+    if (isInternal) {
+      trackEvent("cta_click", { location: "final_cta", target: href });
+      return;
+    }
+    trackEvent("book_call_click", { location: "final_cta" });
+  }
+
   return (
     <section className="relative bg-moss-olive text-bone overflow-hidden">
       {/* Subtle radial glow accent */}
@@ -42,8 +55,9 @@ export function FinalCta({
         <Reveal delay={120}>
           <div className="mt-10">
             <CtaButton
-              href={primaryHref ?? siteConfig.bookingUrl}
+              href={href}
               external={!isInternal}
+              onClick={handlePrimaryClick}
             >
               {primaryLabel}
             </CtaButton>
