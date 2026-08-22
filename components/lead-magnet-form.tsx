@@ -85,20 +85,37 @@ export function LeadMagnetForm() {
 
   const input =
     "w-full bg-transparent border border-moss-olive/40 px-4 py-3 font-sans text-[15px] text-ink placeholder:text-ink/45 transition-colors duration-200 hover:border-moss-olive focus:outline-none focus:border-deep-olive focus:ring-2 focus:ring-deep-olive/15";
+  const label = "block font-sans text-[12px] uppercase tracking-button text-moss-olive font-semibold mb-2";
 
   return (
     <form onSubmit={onSubmit} className="space-y-4">
-      <input name="name" required placeholder="Your name" className={input} />
-      <input type="email" name="email" required placeholder="Work email" className={input} />
-      <input name="company" placeholder="Company (optional)" className={input} />
+      <p className="font-sans text-[13px] text-ink/65 leading-relaxed">
+        Want it without waiting?{" "}
+        <a href="/growth-audit/checklist/" className="link-underline text-deep-olive hover:text-moss-olive">
+          Read the checklist online
+        </a>
+        {" "}— no email required.
+      </p>
+      <div>
+        <label htmlFor="audit-name" className={label}>Name</label>
+        <input id="audit-name" name="name" autoComplete="name" required placeholder="Your name" className={input} />
+      </div>
+      <div>
+        <label htmlFor="audit-email" className={label}>Work email</label>
+        <input id="audit-email" type="email" name="email" autoComplete="email" required placeholder="you@company.com" className={input} />
+      </div>
+      <div>
+        <label htmlFor="audit-company" className={label}>Company <span className="font-normal normal-case tracking-normal text-ink/45">(optional)</span></label>
+        <input id="audit-company" name="company" autoComplete="organization" placeholder="Company" className={input} />
+      </div>
       {/* Honeypot — bots fill this, humans don't. Web3Forms drops these. */}
-      <input type="checkbox" name="botcheck" tabIndex={-1} className="hidden" aria-hidden />
+      <input type="checkbox" name="botcheck" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden />
       <button
         type="submit"
         disabled={status === "submitting"}
         className="btn-press arrow-nudge inline-flex items-center justify-center font-sans text-[11px] font-semibold uppercase tracking-button px-6 py-3 bg-moss-olive text-bone hover:bg-deep-olive disabled:opacity-60 disabled:cursor-not-allowed"
       >
-        {status === "submitting" ? "Sending…" : "Send me the checklist"}
+        {status === "submitting" ? "Sending…" : "Email me the checklist"}
         <span data-arrow className="ml-2">→</span>
       </button>
       {status === "error" && (
@@ -108,7 +125,8 @@ export function LeadMagnetForm() {
         </p>
       )}
       <p className="font-sans text-[12px] text-ink/55 leading-relaxed">
-        We&apos;ll reply within one business day. No sequence, no drip. Just the checklist.
+        One email with the checklist. No sequence.{" "}
+        <a href="/privacy/" className="link-underline text-deep-olive hover:text-moss-olive">Privacy</a>.
       </p>
     </form>
   );

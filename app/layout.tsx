@@ -71,33 +71,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const hasRealGaId = siteConfig.gaId && !siteConfig.gaId.includes("X");
 
-  const orgSchema = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "@id": `${siteConfig.url}/#organization`,
-    name: siteConfig.name,
-    url: siteConfig.url,
-    logo: `${siteConfig.url}/og-image.png`,
-    email: siteConfig.email,
-    telephone: siteConfig.phone,
-    sameAs: [siteConfig.linkedinUrl],
-    description:
-      "Growth strategy + AI execution for owner-operated businesses. We design growth plans and build the AI-powered systems that drive revenue.",
-    founder: {
-      "@type": "Person",
-      name: "Matthew Afanasiev",
-      jobTitle: "Founder",
-      url: `${siteConfig.url}/about`,
-      sameAs: [siteConfig.linkedinUrl],
-    },
-  };
-
   const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Matthew Afanasiev",
     jobTitle: "Founder, Fidelis Strategy",
-    url: `${siteConfig.url}/about`,
+    url: `${siteConfig.url}/about/`,
     email: siteConfig.email,
     telephone: siteConfig.phone,
     sameAs: [siteConfig.linkedinUrl],
@@ -113,10 +92,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable} ${cinzel.variable}`}>
       <body className="bg-bone text-ink font-sans antialiased">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}

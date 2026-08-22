@@ -45,7 +45,7 @@ export default function Page() {
                       <span className="font-display font-bold text-deep-olive text-xl shrink-0 w-8">
                         {stageIdx * 6 + i + 1}.
                       </span>
-                      <span dangerouslySetInnerHTML={{ __html: q }} />
+                      <span>{q}</span>
                     </li>
                   ))}
                 </ol>

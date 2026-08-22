@@ -38,10 +38,13 @@ export default function Page() {
               <h2 className="font-display font-bold text-3xl md:text-4xl text-deep-olive mt-6 tracking-tight">
                 Just send a note.
               </h2>
-              <p className="font-sans text-[16px] text-ink/80 leading-relaxed mt-4">
+                <p className="font-sans text-[16px] text-ink/80 leading-relaxed mt-4">
                 Tell us what you&apos;re working on, even if it&apos;s rough.
                 No call required, no commitment. We&apos;ll read it and reply
                 with thoughts, questions, or whether it makes sense to talk.
+              </p>
+              <p className="font-sans text-[14px] text-ink/60 leading-relaxed mt-3">
+                Best fit: owner-operated services, brokerages, and agencies that need a growth plan <em>and</em> the systems to run it — not a deck, and not another SaaS seat.
               </p>
               <div className="mt-8">
                 <ContactForm />

@@ -23,7 +23,7 @@ export function blogPostSchema({
   dateModified,
   image = "/opengraph-image",
 }: BlogPostSchemaArgs) {
-  const url = `${baseUrl}/blog/${slug}`;
+  const url = `${baseUrl}/blog/${slug}/`;
   const imageUrl = image.startsWith("http") ? image : `${baseUrl}${image}`;
   return {
     "@context": "https://schema.org",
@@ -38,7 +38,7 @@ export function blogPostSchema({
     author: {
       "@type": "Person",
       name: "Matthew Afanasiev",
-      url: `${baseUrl}/about`,
+      url: `${baseUrl}/about/`,
     },
     publisher: {
       "@type": "Organization",
@@ -65,15 +65,21 @@ export function organizationSchema() {
     name: siteConfig.name,
     url: baseUrl,
     image: `${baseUrl}/opengraph-image`,
-    logo: `${baseUrl}/opengraph-image`,
+    logo: `${baseUrl}/logo.png`,
     description:
       "Fidelis Strategy designs growth strategy and builds custom AI systems for owner-operated businesses — lead engines, operator dashboards, workflow apps, and custom CRMs shaped to how each team actually works.",
     email: siteConfig.email,
     telephone: siteConfig.phone,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Saint Paul",
+      addressRegion: "MN",
+      addressCountry: "US",
+    },
     founder: {
       "@type": "Person",
       name: "Matthew Afanasiev",
-      url: `${baseUrl}/about`,
+      url: `${baseUrl}/about/`,
       sameAs: [siteConfig.linkedinUrl],
     },
     sameAs: [siteConfig.linkedinUrl],

@@ -17,7 +17,12 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [L,R=301]
 # To enforce www: uncomment the www block, comment non-www
 # -------------------------------------------------------
 
-# Non-www (recommended for fidelisstrategy.net)
+# Non-www (recommended for fidelisstrategy.net).
+# This rewrite only runs AFTER TLS succeeds. www currently CNAMEs to
+# Hostinger parking (connect.hstgr.net) with a cert that does not include
+# www.fidelisstrategy.net — browsers fail the handshake before this rule.
+# Point www at the same host as apex and add www to the Let's Encrypt SAN,
+# then this redirect will work.
 RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
 RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
 
@@ -41,7 +46,15 @@ DirectoryIndex index.html
   Header set X-Frame-Options "SAMEORIGIN"
   Header set X-XSS-Protection "1; mode=block"
   Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+  # Apex only — do not includeSubDomains until www has a valid cert.
+  Header always set Strict-Transport-Security "max-age=31536000"
 </IfModule>
+
+# AVIF is served as text/plain on LiteSpeed without this; nosniff then blocks the image.
+AddType image/avif .avif
+
+Options -Indexes
 
 # -------------------------------------------------------
 # Cache static assets aggressively, HTML never
@@ -54,6 +67,7 @@ DirectoryIndex index.html
   ExpiresByType image/webp                "access plus 1 year"
   ExpiresByType image/jpeg                "access plus 1 year"
   ExpiresByType image/png                 "access plus 1 year"
+  ExpiresByType image/avif                "access plus 1 year"
   ExpiresByType image/svg+xml             "access plus 1 year"
   ExpiresByType font/woff2                "access plus 1 year"
 </IfModule>
