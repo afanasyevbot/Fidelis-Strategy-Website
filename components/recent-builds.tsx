@@ -2,18 +2,24 @@ import Link from "next/link";
 import { Eyebrow } from "./eyebrow";
 
 const featured = {
-  type: "AI Pipeline Engine",
+  type: "Buyer Database & Matching Engine",
   client: "Paradise Capital · M&A advisory",
-  body: "Finds and fit-scores owner-operated businesses from multiple sources, then drafts first-touch outreach in the partner's voice. Nothing sends without human approval.",
-  href: "/case-studies/paradise-capital",
-  cta: "Read the case study",
+  body: "A living buyer database with AI matching: every sell-side deal scored against enriched buyer profiles, so the right buyers surface in minutes instead of weeks.",
 };
 
-const commercial = [
+const commercial: Array<{
+  type: string;
+  client: string;
+  body: string;
+  href?: string;
+  cta?: string;
+}> = [
   {
-    type: "Buyer Database & Matching Engine",
-    client: "M&A advisory firm",
-    body: "A living buyer database with AI matching: every sell-side deal scored against enriched buyer profiles, so the right buyers surface in minutes instead of weeks.",
+    type: "AI Pipeline Engine",
+    client: "Paradise Capital · M&A advisory",
+    body: "Finds and fit-scores owner-operated businesses from multiple sources, then drafts first-touch outreach in the partner's voice. Nothing sends without human approval.",
+    href: "/case-studies/paradise-capital",
+    cta: "Read the case study",
   },
   {
     type: "Lead Generation Platform",
@@ -42,10 +48,7 @@ export function RecentBuilds() {
           Client systems stay private — no screenshots. The work is named where we&apos;re allowed, described where we&apos;re not.
         </p>
 
-        <Link
-          href={featured.href}
-          className="card-lift mt-12 block p-8 md:p-10 border border-moss-olive/40 hover:border-moss-olive bg-bone"
-        >
+        <div className="card-lift mt-12 p-8 md:p-10 border border-moss-olive/40 bg-bone">
           <div className="flex items-start justify-between gap-3">
             <div className="font-sans text-[12px] uppercase tracking-button text-moss-olive font-semibold">
               Flagship · named
@@ -61,31 +64,46 @@ export function RecentBuilds() {
           <p className="font-sans text-[16px] text-ink/75 leading-relaxed mt-4 max-w-3xl">
             {featured.body}
           </p>
-          <span className="font-sans text-[12px] uppercase tracking-button text-deep-olive font-semibold mt-6 inline-flex items-center gap-2">
-            {featured.cta} <span aria-hidden>→</span>
-          </span>
-        </Link>
+        </div>
 
         <div className="grid md:grid-cols-2 gap-5 mt-5">
-          {commercial.map((b) => (
-            <div
-              key={b.type}
-              className="p-6 md:p-8 border border-moss-olive/30 bg-bone h-full flex flex-col"
-            >
-              <div className="flex items-start justify-between gap-3">
-                <h3 className="font-display font-bold text-[19px] md:text-[22px] text-deep-olive tracking-tight leading-snug">
-                  {b.type}
-                </h3>
-                <LiveMark />
+          {commercial.map((b) => {
+            const inner = (
+              <>
+                <div className="flex items-start justify-between gap-3">
+                  <h3 className="font-display font-bold text-[19px] md:text-[22px] text-deep-olive tracking-tight leading-snug">
+                    {b.type}
+                  </h3>
+                  <LiveMark />
+                </div>
+                <div className="font-sans text-[12px] uppercase tracking-button text-moss-olive font-semibold mt-2">
+                  {b.client}
+                </div>
+                <p className="font-sans text-[15px] text-ink/75 leading-relaxed mt-3">
+                  {b.body}
+                </p>
+                {b.cta && (
+                  <span className="font-sans text-[12px] uppercase tracking-button text-deep-olive font-semibold mt-auto pt-4 inline-flex items-center gap-2">
+                    {b.cta} <span aria-hidden>→</span>
+                  </span>
+                )}
+              </>
+            );
+
+            const className =
+              "p-6 md:p-8 border border-moss-olive/30 bg-bone h-full flex flex-col" +
+              (b.href ? " hover:border-moss-olive card-lift" : "");
+
+            return b.href ? (
+              <Link key={b.type} href={b.href} className={className}>
+                {inner}
+              </Link>
+            ) : (
+              <div key={b.type} className={className}>
+                {inner}
               </div>
-              <div className="font-sans text-[12px] uppercase tracking-button text-moss-olive font-semibold mt-2">
-                {b.client}
-              </div>
-              <p className="font-sans text-[15px] text-ink/75 leading-relaxed mt-3">
-                {b.body}
-              </p>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         <p className="font-sans text-[15px] text-ink/70 leading-relaxed mt-10 max-w-3xl">

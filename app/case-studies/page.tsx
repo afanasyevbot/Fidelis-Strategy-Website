@@ -7,7 +7,7 @@ import { FinalCta } from "@/components/final-cta";
 export const metadata = {
   title: "Case Studies",
   description:
-    "Public Fidelis Strategy case studies. Most client systems stay private; Paradise Capital is the flagship we can name.",
+    "Public Fidelis Strategy case studies. Paradise Capital is the named account; the buyer matching engine is the current flagship. The public write-up is the deal-sourcing system that started the engagement.",
   alternates: { canonical: "/case-studies/" },
 };
 
@@ -35,20 +35,20 @@ export default function Page() {
               className="block p-8 border border-moss-olive/30 hover:border-moss-olive bg-bone transition-colors"
             >
               <div className="font-sans text-[12px] uppercase tracking-button text-moss-olive font-semibold">
-                M&amp;A advisory · 2025 – ongoing
+                M&amp;A advisory · 2025 – ongoing · public write-up
               </div>
               <h2 className="font-display font-bold text-3xl md:text-4xl text-deep-olive mt-3 tracking-tight">
                 Paradise Capital
               </h2>
               <p className="font-sans text-[16px] text-ink/80 leading-relaxed mt-4 max-w-2xl">
-                Weekly deal-sourcing intel engine: multi-source prospecting, AI fit-scoring against their criteria, first-touch outreach in the partner&apos;s voice, human approval on every send.
+                The current flagship in this engagement is a buyer database and matching engine — every sell-side deal scored against enriched buyer profiles. The public write-up below is the deal-sourcing system that started the work: multi-source prospecting, AI fit-scoring, first-touch outreach in the partner&apos;s voice, human approval on every send.
               </p>
               <p className="font-sans text-[14px] text-deep-olive mt-6 font-semibold">
-                Read the case study →
+                Read the sourcing case study →
               </p>
             </Link>
             <p className="font-sans text-[14px] text-ink/60 leading-relaxed mt-8 max-w-2xl">
-              Other recent builds — buyer matching, a real-estate-team lead platform, and internal products — stay unnamed or described without screenshots. If you want to talk about a similar problem,{" "}
+              Other recent builds — a real-estate-team lead platform and internal products — stay unnamed or described without screenshots. If you want to talk about a similar problem,{" "}
               <Link href="/contact/" className="text-deep-olive underline decoration-moss-olive/40 underline-offset-2">
                 send a note
               </Link>
