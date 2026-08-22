@@ -7,7 +7,7 @@ import { FinalCta } from "@/components/final-cta";
 export const metadata = {
   title: "Case Studies",
   description:
-    "Public Fidelis Strategy case studies. Paradise Capital is the named account; the buyer matching engine is the current flagship. The public write-up is the deal-sourcing system that started the engagement.",
+    "Public Fidelis Strategy case studies. Paradise Capital is the named account; Buyer Engine is the current flagship. The public write-up is the deal-sourcing system that started the engagement.",
   alternates: { canonical: "/case-studies/" },
 };
 
@@ -41,7 +41,7 @@ export default function Page() {
                 Paradise Capital
               </h2>
               <p className="font-sans text-[16px] text-ink/80 leading-relaxed mt-4 max-w-2xl">
-                The current flagship in this engagement is a buyer database and matching engine — every sell-side deal scored against enriched buyer profiles. The public write-up below is the deal-sourcing system that started the work: multi-source prospecting, AI fit-scoring, first-touch outreach in the partner&apos;s voice, human approval on every send.
+                The current flagship in this engagement is Buyer Engine — it builds the buyer list, finds strategic acquirers, matches financial buyers, and tracks progress on live sell-side mandates. The public write-up below is the deal-sourcing system that started the work: multi-source prospecting, AI fit-scoring, first-touch outreach in the partner&apos;s voice, human approval on every send.
               </p>
               <p className="font-sans text-[14px] text-deep-olive mt-6 font-semibold">
                 Read the sourcing case study →

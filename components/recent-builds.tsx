@@ -2,9 +2,15 @@ import Link from "next/link";
 import { Eyebrow } from "./eyebrow";
 
 const featured = {
-  type: "Buyer Database & Matching Engine",
+  type: "Buyer Engine",
   client: "Paradise Capital · M&A advisory",
-  body: "A living buyer database with AI matching: every sell-side deal scored against enriched buyer profiles, so the right buyers surface in minutes instead of weeks.",
+  body: "Not a static list. When a sell-side mandate is live, the system builds the buyer book, finds strategic acquirers, matches financial buyers, and tracks progress so the work does not live in a spreadsheet.",
+  capabilities: [
+    "Build the buyer list from the deal",
+    "Find strategic buyers",
+    "Match financial buyers",
+    "Track outreach and progress",
+  ],
 };
 
 const commercial: Array<{
@@ -64,6 +70,19 @@ export function RecentBuilds() {
           <p className="font-sans text-[16px] text-ink/75 leading-relaxed mt-4 max-w-3xl">
             {featured.body}
           </p>
+          <ul className="mt-6 grid sm:grid-cols-2 gap-x-8 gap-y-2 max-w-3xl">
+            {featured.capabilities.map((item) => (
+              <li
+                key={item}
+                className="font-sans text-[15px] text-ink/80 leading-snug flex gap-2"
+              >
+                <span className="text-moss-olive shrink-0" aria-hidden>
+                  ◇
+                </span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
         </div>
 
         <div className="grid md:grid-cols-2 gap-5 mt-5">
