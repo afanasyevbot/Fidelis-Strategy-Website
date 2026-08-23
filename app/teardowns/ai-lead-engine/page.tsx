@@ -9,11 +9,11 @@ import { breadcrumbSchema } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "Teardown: Anatomy of an AI Lead Engine (Sanitized)",
   description:
-    "A deep, sanitized teardown of a working AI lead engine — the actual signal sources, scoring rubric, enrichment layer, and delivery mechanics. Names removed, architecture intact.",
+    "A deep, sanitized teardown of a working AI lead engine, the actual signal sources, scoring rubric, enrichment layer, and delivery mechanics. Names removed, architecture intact.",
   alternates: { canonical: "/teardowns/ai-lead-engine" },
   openGraph: {
     type: "article",
-    title: "Anatomy of an AI Lead Engine — Sanitized Teardown",
+    title: "Anatomy of an AI Lead Engine | Sanitized Teardown",
     description:
       "The actual architecture of a working AI lead engine: signals, scoring, enrichment, delivery. Sanitized for a public read.",
     url: "/teardowns/ai-lead-engine",
@@ -55,7 +55,7 @@ export default function Page() {
             <p>
               Most posts about AI lead engines are abstract. This one
               isn&apos;t. What follows is a real engine running in
-              production for a Fidelis client — sanitized so the client
+              production for a Fidelis client, sanitized so the client
               and the dataset stay anonymous, but accurate enough that a
               capable team could rebuild it.
             </p>
@@ -70,10 +70,10 @@ export default function Page() {
             <h2 className="font-display font-bold text-2xl text-deep-olive mt-12">The four layers</h2>
             <p>Every working lead engine has the same four layers:</p>
             <ol className="list-decimal pl-6 space-y-3 marker:text-moss-olive marker:font-semibold">
-              <li><strong>Signal layer</strong> — what we watch</li>
-              <li><strong>Scoring layer</strong> — what we keep</li>
-              <li><strong>Enrichment layer</strong> — what we add</li>
-              <li><strong>Delivery layer</strong> — where it lands</li>
+              <li><strong>Signal layer</strong>: what we watch</li>
+              <li><strong>Scoring layer</strong>: what we keep</li>
+              <li><strong>Enrichment layer</strong>: what we add</li>
+              <li><strong>Delivery layer</strong>: where it lands</li>
             </ol>
             <p>
               The mistake most teams make is starting with the delivery
@@ -83,56 +83,55 @@ export default function Page() {
               engine is worth running at all.
             </p>
 
-            <h2 className="font-display font-bold text-2xl text-deep-olive mt-12">Layer 1 — Signal</h2>
+            <h2 className="font-display font-bold text-2xl text-deep-olive mt-12">Layer 1, Signal</h2>
             <p>
               For this client, six signal sources, weighted unequally:
             </p>
             <ul className="list-disc pl-6 space-y-2 marker:text-moss-olive">
               <li>
-                <strong>Recent funding events</strong> — capital raised in
+                <strong>Recent funding events</strong>: capital raised in
                 the last 60 days. Source: Crunchbase + press release scrape.
                 <em> Highest weight.</em> Capital + a 60-day window is the
                 strongest in-market signal we have for this ICP.
               </li>
               <li>
-                <strong>New senior hires in target roles</strong> — VP-level
+                <strong>New senior hires in target roles</strong>: VP-level
                 or above, sales/ops/marketing functions, started within 90
                 days. Source: LinkedIn change tracking. <em>High weight.</em>
                 New leaders re-evaluate stack. The 90-day window matters.
               </li>
               <li>
-                <strong>Competitive customer churn signal</strong> —
-                companies dropping a known competitor. Source: BuiltWith
+                <strong>Competitive customer churn signal</strong>:                 companies dropping a known competitor. Source: BuiltWith
                 + Wappalyzer delta detection. <em>High weight.</em>
               </li>
               <li>
-                <strong>Founder content publishing</strong> — founders
+                <strong>Founder content publishing</strong>: founders
                 personally publishing about a problem we solve. Source:
                 LinkedIn + podcast transcript scrape. <em>Medium weight.</em>
                 Strong intent proxy, but requires more validation downstream.
               </li>
               <li>
-                <strong>Hiring of specific roles</strong> — companies
+                <strong>Hiring of specific roles</strong>: companies
                 opening reqs that imply the problem we solve. Source: job
                 board scrapers. <em>Medium weight.</em>
               </li>
               <li>
                 <strong>Industry-specific regulatory or market triggers</strong>
-                {" "}— niche to the client. <em>Variable weight, set per quarter.</em>
+                {" "}, niche to the client. <em>Variable weight, set per quarter.</em>
               </li>
             </ul>
             <p>
               <strong>What we deliberately don&apos;t use:</strong> generic
               firmographic filters as the primary signal. They go in
               scoring, not signal. A lead engine that starts from
-              firmographics is just Apollo with extra steps — the{" "}
+              firmographics is just Apollo with extra steps, the{" "}
               <a href="/blog/ai-lead-engine-vs-apollo" className="underline decoration-moss-olive/40 underline-offset-2 hover:text-moss-olive">
                 long version of why
               </a>{" "}
               is worth the read.
             </p>
 
-            <h2 className="font-display font-bold text-2xl text-deep-olive mt-12">Layer 2 — Scoring</h2>
+            <h2 className="font-display font-bold text-2xl text-deep-olive mt-12">Layer 2, Scoring</h2>
             <p>
               Every surfaced account gets scored across three vectors,
               normalized to 100:
@@ -146,7 +145,7 @@ export default function Page() {
               <li>
                 <strong>Signal density (40 pts).</strong> How many of the
                 six signal sources fired in the same 90-day window.
-                Multiple-signal accounts score disproportionately — overlap
+                Multiple-signal accounts score disproportionately, overlap
                 is what separates a hot account from an interesting one.
               </li>
               <li>
@@ -171,14 +170,14 @@ export default function Page() {
               That feedback loop is the real product.
             </p>
 
-            <h2 className="font-display font-bold text-2xl text-deep-olive mt-12">Layer 3 — Enrichment</h2>
+            <h2 className="font-display font-bold text-2xl text-deep-olive mt-12">Layer 3, Enrichment</h2>
             <p>
               Once an account scores 75+, an enrichment job runs that pulls
               the context the team needs to reach out intelligently:
             </p>
             <ul className="list-disc pl-6 space-y-2 marker:text-moss-olive">
               <li>
-                Top three decision-makers — name, title, LinkedIn URL,
+                Top three decision-makers, name, title, LinkedIn URL,
                 tenure, recent activity
               </li>
               <li>
@@ -211,7 +210,7 @@ export default function Page() {
               engine&apos;s value.
             </p>
 
-            <h2 className="font-display font-bold text-2xl text-deep-olive mt-12">Layer 4 — Delivery</h2>
+            <h2 className="font-display font-bold text-2xl text-deep-olive mt-12">Layer 4, Delivery</h2>
             <p>
               Three surfaces, in priority order:
             </p>
@@ -225,7 +224,7 @@ export default function Page() {
               <li>
                 <strong>CRM sync.</strong> Every 75+ account is created in
                 the client&apos;s CRM with the full enrichment payload
-                attached. The team works inside the CRM, not the digest —
+                attached. The team works inside the CRM, not the digest,
                 the digest is just the alert.
               </li>
               <li>
@@ -247,7 +246,7 @@ export default function Page() {
               <li>
                 <strong>Too many signals, too little weight.</strong>{" "}
                 The first version of the engine watched ten signal
-                sources. Most fired noise. We dropped to six — and the
+                sources. Most fired noise. We dropped to six, and the
                 quality of surfacing went up, not down.
               </li>
               <li>
@@ -306,14 +305,14 @@ export default function Page() {
               <a href="/growth-audit" className="underline decoration-moss-olive/40 underline-offset-2 hover:text-moss-olive">
                 Growth Audit checklist
               </a>{" "}
-              — same email goes on the teardown notification list.
+              same email goes on the teardown notification list.
             </p>
           </div>
 
           <div className="mt-16 pt-10 border-t border-moss-olive/20">
             <div className="font-sans text-[14px] text-ink/70 mb-4">
-              If you want one of these built for your business — sized to
-              your ICP, not bolted onto a SaaS — that&apos;s the
+              If you want one of these built for your business, sized to
+              your ICP, not bolted onto a SaaS, that&apos;s the
               conversation worth having.
             </div>
             <CtaButton href={siteConfig.bookingUrl} external>
@@ -324,7 +323,7 @@ export default function Page() {
               <a href="/growth-audit" className="underline hover:text-moss-olive">
                 Grab the free 4D Growth Audit
               </a>{" "}
-              — 24 questions, one page, no call required.
+              24 questions, one page, no call required.
             </p>
           </div>
 

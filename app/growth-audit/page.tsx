@@ -5,9 +5,9 @@ import { Eyebrow } from "@/components/eyebrow";
 import { LeadMagnetForm } from "@/components/lead-magnet-form";
 
 export const metadata: Metadata = {
-  title: "The 4D Growth Audit — 24 questions to know if your growth system is working",
+  title: "The 4D Growth Audit | 24 questions to know if your growth system is working",
   description:
-    "A free, one-page diagnostic for owner-operated businesses. 24 honest questions across Discover, Design, Deploy, and Drive. No call required, no sequence — just the checklist.",
+    "A free, one-page diagnostic for owner-operated businesses. 24 honest questions across Discover, Design, Deploy, and Drive. No call required, no sequence, just the checklist.",
   alternates: { canonical: "/growth-audit" },
 };
 
@@ -24,7 +24,7 @@ export default function Page() {
             </h1>
             <p className="font-display text-2xl md:text-[26px] leading-tight mt-5 text-linen max-w-3xl tracking-[-0.01em]">
               24 honest questions to know whether your growth system is actually
-              working — or quietly leaking revenue.
+              working, or quietly leaking revenue.
             </p>
           </div>
         </section>
@@ -37,7 +37,7 @@ export default function Page() {
                 The same diagnostic we run on Day 1 of a paid engagement.
               </h2>
               <p className="font-sans text-[16px] text-ink/80 leading-relaxed mt-4">
-                Six questions per stage of the 4D Growth Engine — Discover,
+                Six questions per stage of the 4D Growth Engine, Discover,
                 Design, Deploy, Drive. Each one is a real diagnostic we use
                 with paying clients. If you can answer all 24 cleanly,
                 you don&apos;t need us. If you can&apos;t, the gaps will tell
@@ -46,19 +46,19 @@ export default function Page() {
               <ul className="mt-8 space-y-3 font-sans text-[15px] text-ink/85 leading-relaxed">
                 <li className="flex gap-3">
                   <span className="text-moss-olive font-semibold">→</span>
-                  <span><strong className="text-deep-olive">Your customer</strong> — who you sell to, win patterns, and the situation that makes them buy</span>
+                  <span><strong className="text-deep-olive">Your customer</strong>: who you sell to, win patterns, and the situation that makes them buy</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-moss-olive font-semibold">→</span>
-                  <span><strong className="text-deep-olive">Your offer</strong> — how you explain it, price it, and why they pick you</span>
+                  <span><strong className="text-deep-olive">Your offer</strong>: how you explain it, price it, and why they pick you</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-moss-olive font-semibold">→</span>
-                  <span><strong className="text-deep-olive">Your systems</strong> — whether the process lives in a tool, a spreadsheet, or your head</span>
+                  <span><strong className="text-deep-olive">Your systems</strong>: whether the process lives in a tool, a spreadsheet, or your head</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-moss-olive font-semibold">→</span>
-                  <span><strong className="text-deep-olive">Your results</strong> — the numbers you trust, what you&apos;d kill, and what would break at 50% more volume</span>
+                  <span><strong className="text-deep-olive">Your results</strong>: the numbers you trust, what you&apos;d kill, and what would break at 50% more volume</span>
                 </li>
               </ul>
               <p className="font-sans text-[14px] text-ink/65 leading-relaxed mt-8">
@@ -86,7 +86,7 @@ export default function Page() {
           <div className="mx-auto max-w-4xl px-6 py-20 text-center">
             <Eyebrow size="lg">AFTER YOU READ IT</Eyebrow>
             <p className="font-display font-light text-2xl md:text-3xl text-linen mt-6 leading-snug max-w-3xl mx-auto">
-              If two or three answers sting — that&apos;s the conversation
+              If two or three answers sting, that&apos;s the conversation
               worth having. <span className="text-bone font-semibold">Send a note or book a call. No pressure either way.</span>
             </p>
           </div>

@@ -68,7 +68,7 @@ export function RecentBuilds() {
           Real systems, running in real businesses.
         </h2>
         <p className="font-display font-light text-lg md:text-xl text-moss-olive mt-3 max-w-2xl">
-          Named when we&apos;re allowed. Private when we&apos;re not. Glow Routine is a live app — you can open it.
+          Named when we&apos;re allowed. Private when we&apos;re not. Glow Routine is a live app, you can open it.
         </p>
 
         <div className="card-lift mt-12 p-8 md:p-10 border border-moss-olive/40 bg-bone">

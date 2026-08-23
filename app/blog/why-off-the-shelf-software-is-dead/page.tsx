@@ -85,7 +85,7 @@ export default function Post() {
                 it again. And again.
               </p>
               <p>
-                That was the right call — back when it was the only call.
+                That was the right call, back when it was the only call.
               </p>
 
               <h2 className="font-display font-bold text-2xl text-deep-olive mt-12">
@@ -101,7 +101,7 @@ export default function Post() {
               </p>
               <p>
                 Every off-the-shelf tool is built for a business that doesn&apos;t
-                exist — the average one. Your business isn&apos;t average. The way you
+                exist, the average one. Your business isn&apos;t average. The way you
                 qualify a lead, run a deal, onboard a client, or decide who to call
                 on Monday morning is specific to you. In most cases it&apos;s
                 precisely <em>why</em>{" "}you win. And it&apos;s exactly the part the
@@ -109,7 +109,7 @@ export default function Post() {
                 notes, and one employee&apos;s memory.
               </p>
               <p>
-                That&apos;s the hidden tax of generic software. Not the subscription —
+                That&apos;s the hidden tax of generic software. Not the subscription,
                 the bending.
               </p>
 
@@ -117,7 +117,7 @@ export default function Post() {
                 What changed
               </h2>
               <p>
-                AI changed the economics of building software — not by a little, by
+                AI changed the economics of building software, not by a little, by
                 an order of magnitude. Work that used to take a development team
                 months now takes a small, experienced team weeks. Which means the
                 category of software that was never worth building for a business
@@ -145,15 +145,15 @@ export default function Post() {
               <p>
                 It doesn&apos;t mean custom-build everything. Some needs are the same
                 in every business on earth: accounting, email, payroll, documents.
-                Those are solved problems — buy them, and buy boring. You will never
+                Those are solved problems, buy them, and buy boring. You will never
                 out-build QuickBooks, and you shouldn&apos;t try.
               </p>
               <p>
                 The line is simple: <strong>buy what&apos;s universal, build
                 what&apos;s yours.</strong>{" "}Where your business works like every
                 other business, rent the standard tool. Where your business is
-                different — how you find customers, how you move deals, how you
-                deliver — that&apos;s where generic software costs you the most and
+                different, how you find customers, how you move deals, how you
+                deliver, that&apos;s where generic software costs you the most and
                 custom pays back the fastest.
               </p>
 
@@ -194,7 +194,7 @@ export default function Post() {
                 Want to know where your business is bending?
               </h3>
               <p className="font-sans text-[15px] text-bone/85 leading-relaxed mt-3 max-w-xl">
-                The free 4D Growth Audit is 24 questions — the same diagnostic we run
+                The free 4D Growth Audit is 24 questions, the same diagnostic we run
                 on day one of a paid engagement. The gaps will show you exactly where
                 the workarounds are costing you.
               </p>

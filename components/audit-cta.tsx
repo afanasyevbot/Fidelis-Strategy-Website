@@ -14,7 +14,7 @@ export function AuditCta() {
           <p className="font-sans text-[16px] text-ink/80 leading-relaxed mt-4 max-w-xl">
             The same diagnostic we run on Day 1 of a paid engagement. If you
             can answer all 24 cleanly, you don&apos;t need us. If you
-            can&apos;t — the gaps will tell you exactly where to start.
+            can&apos;t, the gaps will tell you exactly where to start.
           </p>
         </Reveal>
         <Reveal delay={120} className="md:text-right">

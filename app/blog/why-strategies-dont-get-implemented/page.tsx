@@ -10,7 +10,7 @@ const POST = {
   slug: "why-strategies-dont-get-implemented",
   title: "The Execution Gap: Why Growth Strategies Stall Before They Deploy",
   description:
-    "Most growth strategies stall in the gap between recommendation and working system. Here's why AI implementations fail for owner-operated businesses — and what actually closes it.",
+    "Most growth strategies stall in the gap between recommendation and working system. Here's why AI implementations fail for owner-operated businesses, and what actually closes it.",
   datePublished: "2026-04-24",
 };
 
@@ -83,7 +83,7 @@ export default function Post() {
             <h2 className="font-display font-bold text-2xl text-deep-olive mt-12">Why AI integrations fail</h2>
             <p>
               Gartner found that the majority of AI projects never make it
-              past the pilot stage. The failure rate is striking — but the
+              past the pilot stage. The failure rate is striking, but the
               reasons aren&apos;t surprising once you look at how most
               implementations actually go.
             </p>
@@ -91,7 +91,7 @@ export default function Post() {
               The typical pattern: a consultant or agency delivers a strategy.
               It&apos;s solid. The recommendations are correct. There&apos;s a
               roadmap, a slide deck, maybe a pilot demo. Then the engagement
-              ends and the document gets handed over — and the owner is left
+              ends and the document gets handed over, and the owner is left
               holding a plan with no one to build it.
             </p>
             <p>
@@ -102,12 +102,12 @@ export default function Post() {
                 <strong>No internal champion.</strong>{" "}Owner-operated businesses
                 don&apos;t have a dedicated ops or technology team. The owner
                 is already doing four jobs. There&apos;s no one whose job it is
-                to implement — so it becomes no one&apos;s job.
+                to implement, so it becomes no one&apos;s job.
               </li>
               <li>
                 <strong>The technical gap is real.</strong>{" "}Connecting AI tools
-                to existing systems — CRM, email, accounting software, outreach
-                platforms — requires configuration, API work, and iteration. It
+                to existing systems, CRM, email, accounting software, outreach
+                platforms, requires configuration, API work, and iteration. It
                 is not plug-and-play. Without someone who can actually build,
                 the strategy sits.
               </li>
@@ -119,7 +119,7 @@ export default function Post() {
               </li>
             </ul>
             <p>
-              This is why AI fails in practice — not because the technology
+              This is why AI fails in practice, not because the technology
               doesn&apos;t work, but because the implementation model assumes
               a capacity that owner-operated businesses simply don&apos;t have.
             </p>
@@ -127,26 +127,26 @@ export default function Post() {
             <h2 className="font-display font-bold text-2xl text-deep-olive mt-12">What Fidelis does differently</h2>
             <p>
               The fix isn&apos;t a better document. It&apos;s ending the
-              engagement somewhere different — at &ldquo;the systems are
+              engagement somewhere different, at &ldquo;the systems are
               running&rdquo; instead of at &ldquo;here&apos;s the plan.&rdquo;
             </p>
             <p>
               AI-powered systems have collapsed the cost of execution. The work
-              that used to require a five-person ops team — research,
-              enrichment, drafting, monitoring, reporting — now runs on systems
+              that used to require a five-person ops team, research,
+              enrichment, drafting, monitoring, reporting, now runs on systems
               a single operator can build in weeks. That changes the math.
               You no longer have to choose between buying the strategy and
               buying the team to execute it.
             </p>
             <p>
-              <a href="/process" className="underline decoration-moss-olive/40 underline-offset-2 hover:text-moss-olive">The 4D Growth Engine</a>{" "}—
-              Discover, Design, Deploy, Drive — is structured so that more
+              <a href="/process" className="underline decoration-moss-olive/40 underline-offset-2 hover:text-moss-olive">The 4D Growth Engine</a>{" "},
+              Discover, Design, Deploy, Drive, is structured so that more
               than half of the engagement is spent building, not slide-making.
               We don&apos;t hand off a roadmap. We build the system, wire it
               into your existing tools, and stay until it&apos;s running.
             </p>
             <p>
-              When the engagement ends, the systems keep running — in your
+              When the engagement ends, the systems keep running, in your
               environment, on tools you already use, owned by you. If you
               ever stop working with us, nothing breaks. That&apos;s the test
               we set for every engagement.
@@ -155,7 +155,7 @@ export default function Post() {
             <h2 className="font-display font-bold text-2xl text-deep-olive mt-12">The drawer test</h2>
             <p>
               Two years from now, what&apos;s in your drawer? If it&apos;s
-              another document, the engagement failed — no matter how good
+              another document, the engagement failed, no matter how good
               the recommendations were. If it&apos;s a dashboard you check
               every morning and a pipeline you trust, the engagement worked.
             </p>
@@ -196,7 +196,7 @@ export default function Post() {
               <a href="/growth-audit" className="underline hover:text-moss-olive">
                 Grab the free 4D Growth Audit
               </a>{" "}
-              — 24 questions, one page, no call required.
+              24 questions, one page, no call required.
             </p>
           </div>
         </div>

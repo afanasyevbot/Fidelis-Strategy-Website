@@ -20,7 +20,7 @@ export function ContactForm() {
     // No key configured yet → fall back to the visitor's mail client so the
     // form still works. Remove once siteConfig.web3formsKey is set.
     if (!siteConfig.web3formsKey) {
-      const subject = encodeURIComponent(`Fidelis inquiry — ${name}${company ? ` · ${company}` : ""}`);
+      const subject = encodeURIComponent(`Fidelis inquiry: ${name}${company ? ` · ${company}` : ""}`);
       const body = encodeURIComponent(
         `Name: ${name}\nEmail: ${email}${company ? `\nCompany: ${company}` : ""}\n\n${message}`
       );
@@ -36,12 +36,12 @@ export function ContactForm() {
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
           access_key: siteConfig.web3formsKey,
-          subject: `Fidelis inquiry — ${name}${company ? ` · ${company}` : ""}`,
-          from_name: "Fidelis Strategy — Contact",
+          subject: `Fidelis inquiry: ${name}${company ? ` · ${company}` : ""}`,
+          from_name: "Fidelis Strategy Contact",
           replyto: email, // hitting Reply goes straight to the lead
           name,
           email,
-          company: company || "—",
+          company: company || "n/a",
           message,
         }),
       });
@@ -68,7 +68,7 @@ export function ContactForm() {
         <div className="flex items-center gap-2 font-sans text-[12px] uppercase tracking-button text-deep-olive font-semibold">
           <span aria-hidden>✓</span> Sent
         </div>
-        <p className="font-display font-bold text-2xl text-deep-olive mt-2">Thanks — got your note.</p>
+        <p className="font-display font-bold text-2xl text-deep-olive mt-2">Thanks. Got your note.</p>
         <p className="font-sans text-[15px] text-ink/70 mt-2">
           We reply within one business day. Need us sooner?{" "}
           <a href={`mailto:${siteConfig.email}`} className="link-underline text-deep-olive hover:text-moss-olive">
@@ -126,7 +126,7 @@ export function ContactForm() {
         </p>
       )}
       <p className="font-sans text-[12px] text-ink/55 leading-relaxed">
-        Used only to reply — no list, no sequence.{" "}
+        Used only to reply, no list, no sequence.{" "}
         <a href="/privacy/" className="link-underline text-deep-olive hover:text-moss-olive">Privacy</a>.
       </p>
     </form>

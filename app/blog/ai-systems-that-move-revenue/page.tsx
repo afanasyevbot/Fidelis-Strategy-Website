@@ -10,7 +10,7 @@ const POST = {
   slug: "ai-systems-that-move-revenue",
   title: "The 4 AI Systems That Actually Move Revenue for SMB Founders",
   description:
-    "Most AI tools don't move revenue. Four systems do. Here's what works for owner-operated businesses in 2026 — what each is, what it costs, and when to build it.",
+    "Most AI tools don't move revenue. Four systems do. Here's what works for owner-operated businesses in 2026, what each is, what it costs, and when to build it.",
   datePublished: "2026-04-26",
 };
 
@@ -73,15 +73,15 @@ export default function Post() {
               Let&apos;s address the elephant in the room: AI is a buzzword.
               Every software vendor slapped it on their product in 2024.
               Every pitch deck has a slide about it. Most of what gets called
-              &ldquo;AI-powered&rdquo; is a feature — a slightly smarter
+              &ldquo;AI-powered&rdquo; is a feature, a slightly smarter
               filter, an auto-generated summary, a chatbot bolted onto
               something that existed before.
             </p>
             <p>
               That noise has made it easy to dismiss. And that&apos;s exactly
               where the opportunity is. Because when AI is actually used right
-              — built into the workflow, pointed at a real business problem,
-              running continuously in the background — it isn&apos;t a feature.
+              built into the workflow, pointed at a real business problem,
+              running continuously in the background, it isn&apos;t a feature.
               It&apos;s a structural advantage. The businesses that figure this
               out are widening the gap on the ones that don&apos;t.
             </p>
@@ -90,22 +90,22 @@ export default function Post() {
               of them are features dressed up as products. A handful of system{" "}
               <em>patterns</em>, though, consistently move revenue for
               owner-operated businesses. Four, by my count. This isn&apos;t
-              a tools list — it&apos;s a system list. The underlying patterns
+              a tools list, it&apos;s a system list. The underlying patterns
               that work, regardless of which model or vendor you wire in.
             </p>
 
             <h2 className="font-display font-bold text-2xl text-deep-olive mt-12">1. The AI lead engine</h2>
             <p>
               <strong>What it does:</strong> Watches the open web for the
-              specific signals that mean an account is becoming a buyer —
+              specific signals that mean an account is becoming a buyer,
               recent funding, new VP-level hires, leadership changes,
-              relevant content, regulatory triggers — then enriches, scores,
+              relevant content, regulatory triggers, then enriches, scores,
               and surfaces them to your team where you already work.
             </p>
             <p>
               <strong>Why it moves revenue:</strong>{" "}Most owner-operated businesses are reactive.
               They prospect when the pipeline gets thin. A working lead
-              engine flips the polarity — the right accounts surface to you
+              engine flips the polarity, the right accounts surface to you
               the moment they&apos;re actually in market. You stop spending
               time finding the leads and start spending time talking to
               them.
@@ -122,7 +122,7 @@ export default function Post() {
             <h2 className="font-display font-bold text-2xl text-deep-olive mt-12">2. The outreach agent</h2>
             <p>
               <strong>What it does:</strong> Drafts personalized outbound
-              messages — email, LinkedIn, follow-ups — using real context
+              messages, email, LinkedIn, follow-ups, using real context
               from each account (recent news, mutual connections, role
               changes, content they&apos;ve published). Drafts go to a
               human for one-click approval, not to autopilot.
@@ -130,7 +130,7 @@ export default function Post() {
             <p>
               <strong>Why it moves revenue:</strong> The bottleneck for
               most business owner teams isn&apos;t &ldquo;we don&apos;t know
-              who to reach&rdquo; — it&apos;s &ldquo;we don&apos;t have time
+              who to reach&rdquo;, it&apos;s &ldquo;we don&apos;t have time
               to write 40 personalized notes a week.&rdquo; An outreach
               agent collapses the time cost of personalization to near zero,
               while keeping a human in the loop so you don&apos;t blow up
@@ -156,10 +156,10 @@ export default function Post() {
               <strong>Why it moves revenue:</strong> Most owners are
               flying blind on Tuesday because the data they need lives
               across five tabs. A working operator dashboard turns that
-              into one screen — or one paragraph in your inbox. Decisions
+              into one screen, or one paragraph in your inbox. Decisions
               get faster. Things stop slipping through the cracks. The
               ROI shows up as &ldquo;we caught it before it became a
-              problem&rdquo; — which is invisible in a P&amp;L but
+              problem&rdquo;, which is invisible in a P&amp;L but
               compounds enormously.
             </p>
             <p>
@@ -173,8 +173,8 @@ export default function Post() {
             <h2 className="font-display font-bold text-2xl text-deep-olive mt-12">4. The internal knowledge agent</h2>
             <p>
               <strong>What it does:</strong> Sits on top of your
-              company&apos;s knowledge — SOPs, contracts, historical
-              proposals, sales call transcripts, slack threads — and
+              company&apos;s knowledge, SOPs, contracts, historical
+              proposals, sales call transcripts, slack threads, and
               answers questions for the team in plain English. &ldquo;What
               did we quote the last time a deal looked like this?&rdquo;
               &ldquo;What&apos;s the SOP for onboarding a brokerage
@@ -204,7 +204,7 @@ export default function Post() {
             <ul className="list-disc pl-6 space-y-2 marker:text-moss-olive">
               <li>
                 <strong>Chatbots on the website.</strong> Most are vanity.
-                A small number do real work for high-volume B2C — but for
+                A small number do real work for high-volume B2C, but for
                 owner-operated B2B, they rarely move the needle vs. a
                 well-written page.
               </li>
@@ -227,21 +227,21 @@ export default function Post() {
             </p>
             <ol className="list-decimal pl-6 space-y-3 marker:text-moss-olive marker:font-semibold">
               <li>
-                <strong>Lead engine first</strong> — because nothing else
+                <strong>Lead engine first</strong>: because nothing else
                 matters if the wrong accounts are entering the funnel.
               </li>
               <li>
-                <strong>Outreach agent second</strong> — once #1 is
+                <strong>Outreach agent second</strong>: once #1 is
                 surfacing real fits, scaling personalized contact is the
                 obvious next bottleneck.
               </li>
               <li>
-                <strong>Operator dashboard third</strong> — when you&apos;re
+                <strong>Operator dashboard third</strong>: when you&apos;re
                 running enough activity that flying blind is starting to
                 cost you.
               </li>
               <li>
-                <strong>Knowledge agent fourth</strong> — when the team is
+                <strong>Knowledge agent fourth</strong>: when the team is
                 big enough that institutional knowledge is the constraint.
               </li>
             </ol>
@@ -249,7 +249,7 @@ export default function Post() {
               That order isn&apos;t universal. A team with great pipeline
               but poor close rate might invert it. An owner doing
               everything personally might start with the dashboard. The
-              sequencing question is the actual strategic question — which
+              sequencing question is the actual strategic question, which
               is why the{" "}
               <a href="/process" className="underline decoration-moss-olive/40 underline-offset-2 hover:text-moss-olive">
                 4D Growth Engine
@@ -273,14 +273,14 @@ export default function Post() {
               <a href="/case-studies/paradise-capital" className="underline decoration-moss-olive/40 underline-offset-2 hover:text-moss-olive">
                 Paradise Capital build
               </a>
-              {" "}was systems #1 and #3 running together — +30% pipeline
+              {" "}was systems #1 and #3 running together, +30% pipeline
               lift without adding headcount.
             </p>
           </div>
 
           <div className="mt-16 pt-10 border-t border-moss-olive/20">
             <div className="font-sans text-[14px] text-ink/70 mb-4">
-              We design and build all four systems — sized to your business,
+              We design and build all four systems, sized to your business,
               sequenced to what moves your revenue first.
             </div>
             <CtaButton href={siteConfig.bookingUrl} external>
@@ -291,7 +291,7 @@ export default function Post() {
               <a href="/growth-audit" className="underline hover:text-moss-olive">
                 Grab the free 4D Growth Audit
               </a>{" "}
-              — 24 questions, one page, no call required.
+              24 questions, one page, no call required.
             </p>
           </div>
 

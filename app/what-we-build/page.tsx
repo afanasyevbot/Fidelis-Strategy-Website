@@ -8,7 +8,7 @@ import { systems } from "@/content/systems";
 import { cn } from "@/lib/cn";
 
 export const metadata = {
-  title: "What We Build — AI Pipeline Systems, Operator Dashboards, Workflow Apps",
+  title: "What We Build | AI Pipeline Systems, Operator Dashboards, Workflow Apps",
   description:
     "The AI-powered growth systems Fidelis builds for owner-operated businesses: AI pipeline systems, operator dashboards, workflow apps, and custom CRMs. Every build is custom to your business.",
   alternates: { canonical: "/what-we-build" },
@@ -33,7 +33,7 @@ export default function Page() {
               <a href="/contact" className="text-linen/80 underline underline-offset-2 hover:text-linen transition-colors">
                 Tell us what you&apos;re trying to solve
               </a>
-              {" "}— we build to the problem, not the category.
+              {" "}, we build to the problem, not the category.
             </p>
           </div>
         </section>
@@ -117,7 +117,7 @@ export default function Page() {
                         "font-sans text-[15px] leading-relaxed mt-3 max-w-2xl",
                         lightSection ? "text-ink/75" : "text-bone/80"
                       )}>
-                        Fidelis Pulse is a real SaaS product we built and operate — the same stack we
+                        Fidelis Pulse is a real SaaS product we built and operate, the same stack we
                         deploy when we build your custom dashboard. It ships in two versions today.
                       </p>
                       <ul className={cn(
@@ -127,7 +127,7 @@ export default function Page() {
                         <li className="flex gap-3">
                           <span className={cn("shrink-0 mt-1", lightSection ? "text-deep-olive" : "text-linen")} aria-hidden>◇</span>
                           <span>
-                            <strong className={cn("font-semibold", lightSection ? "text-deep-olive" : "text-bone")}>For owners</strong> — a live single-business dashboard
+                            <strong className={cn("font-semibold", lightSection ? "text-deep-olive" : "text-bone")}>For owners</strong>: a live single-business dashboard
                             synced from QuickBooks, Xero, Stripe, and Plaid. One Pulse score, cash and margin
                             health, AR aging, anomaly alerts, AI commentary in plain English, and a 60-day
                             action plan.
@@ -136,7 +136,7 @@ export default function Page() {
                         <li className="flex gap-3">
                           <span className={cn("shrink-0 mt-1", lightSection ? "text-deep-olive" : "text-linen")} aria-hidden>◇</span>
                           <span>
-                            <strong className={cn("font-semibold", lightSection ? "text-deep-olive" : "text-bone")}>For M&amp;A advisors</strong> — a multi-client cockpit
+                            <strong className={cn("font-semibold", lightSection ? "text-deep-olive" : "text-bone")}>For M&amp;A advisors</strong>: a multi-client cockpit
                             for firms running owner-operated businesses toward an exit. Buyer Readiness scoring,
                             stage-aware alerts, white-labeled share-outs, and pipeline value at a glance
                             <em className="not-italic"> (shown below)</em>.
@@ -147,7 +147,7 @@ export default function Page() {
                         "font-sans text-[15px] leading-relaxed mt-4 max-w-2xl",
                         lightSection ? "text-ink/75" : "text-bone/80"
                       )}>
-                        When we build your dashboard, this is the proof we&apos;ve already done it — for a real
+                        When we build your dashboard, this is the proof we&apos;ve already done it, for a real
                         product, with real users, on a real P&amp;L.
                       </p>
                       <div className="flex flex-wrap items-center gap-4 mt-5">
@@ -179,7 +179,7 @@ export default function Page() {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="block opacity-90 hover:opacity-100 transition-opacity"
-                        aria-label="See Fidelis Pulse — advisor cockpit showing client KPIs and multi-client console"
+                        aria-label="See Fidelis Pulse, advisor cockpit showing client KPIs and multi-client console"
                       >
                         <AdvisorHeroMocks />
                       </a>

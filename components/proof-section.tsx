@@ -44,7 +44,7 @@ export function ProofSection() {
         </Reveal>
 
         <p className="font-sans text-[13px] text-bone/55 mt-5 max-w-2xl">
-          Paul&apos;s projection for the year ahead — not a closed-year result. The system is live.
+          Paul&apos;s projection for the year ahead, not a closed-year result. The system is live.
         </p>
 
         <Reveal delay={120}>

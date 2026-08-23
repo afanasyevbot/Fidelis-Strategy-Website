@@ -30,7 +30,7 @@ export function AboutTeaser() {
             <div className="group relative h-44 w-44 rounded-full overflow-hidden border-2 border-moss-olive transition-all duration-500 hover:border-deep-olive hover:shadow-[0_18px_38px_-18px_rgba(26,42,28,0.4)]">
               <Image
                 src="/matthew.jpg"
-                alt="Matthew Afanasiev — Founder, Fidelis Strategy"
+                alt="Matthew Afanasiev, Founder, Fidelis Strategy"
                 fill
                 className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
                 sizes="176px"

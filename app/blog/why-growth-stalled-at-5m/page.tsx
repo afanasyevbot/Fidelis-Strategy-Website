@@ -8,9 +8,9 @@ import { blogPostSchema, breadcrumbSchema } from "@/lib/seo";
 
 const POST = {
   slug: "why-growth-stalled-at-5m",
-  title: "Why Your Growth Stalled at $5M — and What Changed in 2026",
+  title: "Why Your Growth Stalled at $5M | and What Changed in 2026",
   description:
-    "The $5M plateau is real and structural. Hiring used to be the answer; in 2026 it isn't. Here's why owner-operated businesses get stuck — and what moves them past it.",
+    "The $5M plateau is real and structural. Hiring used to be the answer; in 2026 it isn't. Here's why owner-operated businesses get stuck, and what moves them past it.",
   datePublished: "2026-04-26",
 };
 
@@ -54,7 +54,7 @@ export default function Post() {
           <div className="mx-auto max-w-4xl px-6 py-24">
             <Eyebrow size="lg">FIELD NOTES</Eyebrow>
             <h1 className="font-display font-bold text-4xl md:text-[52px] mt-8 tracking-tight leading-[1.05] max-w-3xl">
-              Why your growth stalled at $5M — and what changed in 2026.
+              Why your growth stalled at $5M, and what changed in 2026.
             </h1>
             <p className="font-display font-light text-xl md:text-2xl text-linen mt-5 max-w-2xl tracking-tight">
               The plateau isn&apos;t in your head. It&apos;s structural. And the way past it is different now than it was three years ago.
@@ -89,12 +89,12 @@ export default function Post() {
               personal leverage. The founder is the ICP filter, the sales
               engine, the relationship manager, and the QC layer. That
               works because there&apos;s only so much business they can
-              generate by hand — and every dollar of it is high quality
+              generate by hand, and every dollar of it is high quality
               because they&apos;re the one filtering.
             </p>
             <p>
               Past that point, the business needs <em>operating</em>{" "}
-              leverage — systems and processes that work without the
+              leverage, systems and processes that work without the
               founder personally driving each one. That&apos;s where it
               stalls. Three things break at the same time:
             </p>
@@ -103,12 +103,12 @@ export default function Post() {
                 <strong>Pipeline dries up at the source.</strong> The
                 founder&apos;s personal network has a finite size. Once
                 you&apos;ve worked through it, growth stops being inbound
-                and has to become outbound — and outbound is a discipline
+                and has to become outbound, and outbound is a discipline
                 most business owners never had to learn.
               </li>
               <li>
                 <strong>The first sales hire underperforms.</strong> Not
-                because they&apos;re bad — because they don&apos;t have
+                because they&apos;re bad, because they don&apos;t have
                 the founder&apos;s ICP filter, the founder&apos;s
                 relationships, or the founder&apos;s context. They were
                 hired to be a force multiplier on a system that
@@ -124,7 +124,7 @@ export default function Post() {
             </ul>
             <p>
               Each one of these is solvable. The trap is trying to solve
-              all three by hiring — which is what almost everyone tries
+              all three by hiring, which is what almost everyone tries
               first.
             </p>
 
@@ -155,8 +155,8 @@ export default function Post() {
               </li>
             </ul>
             <p>
-              The result: business owners are doing the right things — investing
-              in growth, hiring people — and getting worse outcomes than
+              The result: business owners are doing the right things, investing
+              in growth, hiring people, and getting worse outcomes than
               they used to.
             </p>
 
@@ -177,8 +177,8 @@ export default function Post() {
               </li>
               <li>
                 <strong>Outreach</strong>{" "}that used to be the bottleneck
-                — &ldquo;we don&apos;t have time to write personalized
-                notes&rdquo; — collapses to one-click approvals on AI
+                &ldquo;we don&apos;t have time to write personalized
+                notes&rdquo;, collapses to one-click approvals on AI
                 drafts that pull real context.
               </li>
               <li>
@@ -196,15 +196,15 @@ export default function Post() {
               That isn&apos;t a productivity bump. It&apos;s a different
               economic structure. A $5M business in 2023 needed to hire
               its way to $10M. A $5M business in 2026 can build its way
-              there — with the same team, plus systems.
+              there, with the same team, plus systems.
             </p>
 
             <h2 className="font-display font-bold text-2xl text-deep-olive mt-12">What this looks like in practice</h2>
             <p>
               The businesses that are making this work don&apos;t replace
               people with AI. They replace <em>missing roles</em>{" "}with AI.
-              The hire they were going to make next quarter — the SDR, the
-              analyst, the ops associate — gets built as a system instead.
+              The hire they were going to make next quarter, the SDR, the
+              analyst, the ops associate, gets built as a system instead.
               The seat isn&apos;t paid for monthly. The capability is owned.
             </p>
             <p>
@@ -212,18 +212,18 @@ export default function Post() {
               <a href="/case-studies/paradise-capital" className="underline decoration-moss-olive/40 underline-offset-2 hover:text-moss-olive">
                 a lead engine plus a morning operator brief
               </a>
-              {" "}— +30% pipeline lift and roughly $2M of projected revenue
+              {" "}, +30% pipeline lift and roughly $2M of projected revenue
               they couldn&apos;t reach with the prior team. The company
               didn&apos;t grow by adding headcount. It grew by adding
-              systems that did the work the headcount would have done —
+              systems that did the work the headcount would have done,
               without the ramp-time tax.
             </p>
 
             <h2 className="font-display font-bold text-2xl text-deep-olive mt-12">The honest framing</h2>
             <p>
               The $5M plateau is real. But the reason it&apos;s persisted
-              this long is that the only known answer — hire your way out
-              — got progressively harder while the cost of the alternative
+              this long is that the only known answer, hire your way out
+              got progressively harder while the cost of the alternative
               was still high. In 2026 the alternative got cheap enough,
               and good enough, that the math finally inverts.
             </p>
@@ -232,7 +232,7 @@ export default function Post() {
               won&apos;t be the ones who hire the most. They&apos;ll be
               the ones who build the right four or five systems, in the
               right order, around the team they already have. That&apos;s
-              the bet Fidelis is built around — and{" "}
+              the bet Fidelis is built around, and{" "}
               <a href="/process" className="underline decoration-moss-olive/40 underline-offset-2 hover:text-moss-olive">
                 the 4D Growth Engine
               </a>
@@ -253,7 +253,7 @@ export default function Post() {
               <a href="/growth-audit" className="underline hover:text-moss-olive">
                 Grab the free 4D Growth Audit
               </a>{" "}
-              — 24 questions, one page, no call required.
+              24 questions, one page, no call required.
             </p>
           </div>
 

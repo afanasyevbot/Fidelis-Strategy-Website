@@ -14,17 +14,17 @@ const stages = [
     promise: "We learn your business deeply enough to bet on it.",
     timeframe: "~2 weeks",
     activities: [
-      "A structured business review — we walk through a detailed questionnaire covering your operations, sales process, and how revenue actually moves through the business",
-      "Go-to-market review — who you're selling to, how you're reaching them, where deals stall, and where the real opportunity is",
-      "Tools review — what you're currently using, what's working, and what's creating friction",
-      "Competitive landscape — where the whitespace is in your market and how to position against it",
+      "A structured business review, we walk through a detailed questionnaire covering your operations, sales process, and how revenue actually moves through the business",
+      "Go-to-market review, who you're selling to, how you're reaching them, where deals stall, and where the real opportunity is",
+      "Tools review, what you're currently using, what's working, and what's creating friction",
+      "Competitive landscape, where the whitespace is in your market and how to position against it",
     ],
     output: "A written audit of where your growth motion is leaking revenue today, and an honest read on which moves will compound.",
   },
   {
     n: "02",
     label: "DESIGN",
-    promise: "We write your 4D Growth Plan — strategy and systems, built for your business.",
+    promise: "We write your 4D Growth Plan, strategy and systems, built for your business.",
     timeframe: "~2 weeks",
     activities: [
       "The growth strategy: which channels, which customers, which offers, in what order",
@@ -33,7 +33,7 @@ const stages = [
       "The success metrics: what we measure, when, and how we'll know it's working",
       "Your review and sign-off before anything gets built",
     ],
-    output: "The 4D Growth Plan — strategy, systems blueprint, and execution roadmap in one document, all custom to your business.",
+    output: "The 4D Growth Plan, strategy, systems blueprint, and execution roadmap in one document, all custom to your business.",
   },
   {
     n: "03",
@@ -41,11 +41,11 @@ const stages = [
     promise: "Where most engagements end, ours starts. We build what the plan called for.",
     timeframe: "4–8 weeks · scope-dependent",
     activities: [
-      "AI lead engines, outreach tools, operator dashboards, internal workflow apps — whatever the plan called for, built and running",
-      "Connected to the tools you already use — your CRM, inbox, dashboards. No new logins for your team",
+      "AI lead engines, outreach tools, operator dashboards, internal workflow apps, whatever the plan called for, built and running",
+      "Connected to the tools you already use, your CRM, inbox, dashboards. No new logins for your team",
       "Clear documentation for every system: what it does, how to use it, how to extend it",
       "Hands-on walkthrough with your team so everyone knows how to use what we built",
-      "Phased rollout — we go live in stages, tune as we go, and confirm everything is working before moving on",
+      "Phased rollout, we go live in stages, tune as we go, and confirm everything is working before moving on",
     ],
     output: "Working AI systems running in your business every day. Owned by you. Documented. Your team knows how to use them.",
     emphasized: true,
@@ -58,7 +58,7 @@ const stages = [
     activities: [
       "Quarterly tune-ups: every system reviewed against current performance and adjusted",
       "Live dashboards that surface what's working, what's slipping, what's next",
-      "New system layers as the business grows — when a phase-1 build needs a phase-2 expansion",
+      "New system layers as the business grows, when a phase-1 build needs a phase-2 expansion",
       "Direct line: questions answered, edge cases handled, the operator on call",
       "Optional roadmap refresh each year as the business and the tools evolve",
     ],
@@ -67,7 +67,7 @@ const stages = [
 ];
 
 export const metadata: Metadata = {
-  title: "The 4D Growth Engine — Fidelis Strategy",
+  title: "The 4D Growth Engine | Fidelis Strategy",
   description:
     "Discover, Design, Deploy, Drive. The four-stage process Fidelis uses to turn strategy into working AI-powered systems for owner-operated businesses.",
   alternates: { canonical: "/process" },
@@ -85,12 +85,12 @@ export default function ProcessPage() {
               The 4D Growth Engine.
             </h1>
             <p className="font-display font-light text-xl md:text-2xl text-linen mt-5 max-w-3xl tracking-tight">
-              The same four-stage process behind every Fidelis engagement —
+              The same four-stage process behind every Fidelis engagement,
               from first conversation to systems that compound.
             </p>
             <div className="mt-6 space-y-3 max-w-2xl font-sans text-[16px] text-bone/80 leading-relaxed">
               <p>
-                Before we build anything, we take the time to learn your business — how you
+                Before we build anything, we take the time to learn your business, how you
                 operate, how you go to market, how deals move through your sales process, and
                 what technology you&apos;re already running on. We analyze all of it to find
                 where growth is hiding and where it&apos;s being left on the table.
@@ -98,7 +98,7 @@ export default function ProcessPage() {
               <p>
                 The result is your <strong className="text-linen font-semibold">4D Growth Plan</strong>:
                 a strategic roadmap built around your specific business, your market, and your
-                goals — not a generic framework with your logo on it. Then we build it.
+                goals, not a generic framework with your logo on it. Then we build it.
               </p>
             </div>
 
@@ -106,9 +106,9 @@ export default function ProcessPage() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-12">
               {[
                 { n: "01", label: "DISCOVER", body: "We audit your operations, GTM, and tech to find where growth is leaking." },
-                { n: "02", label: "DESIGN",   body: "We write your custom 4D Growth Plan — strategy, systems, 90-day roadmap." },
+                { n: "02", label: "DESIGN",   body: "We write your custom 4D Growth Plan, strategy, systems, 90-day roadmap." },
                 { n: "03", label: "DEPLOY",   body: "We build and ship the AI systems the plan calls for. You own everything.", highlight: true },
-                { n: "04", label: "DRIVE",    body: "We stay engaged — quarterly tune-ups, dashboards, compounding results." },
+                { n: "04", label: "DRIVE",    body: "We stay engaged, quarterly tune-ups, dashboards, compounding results." },
               ].map((step) => (
                 <div key={step.n} className={cn(
                   "p-5 border",
@@ -206,7 +206,7 @@ export default function ProcessPage() {
               <div>
                 <h3 className="font-display font-bold text-xl text-deep-olive">Built in your environment.</h3>
                 <p className="font-sans text-[15px] text-ink/80 leading-relaxed mt-2">
-                  Every system runs on tools you already use — your CRM, inbox, dashboards.
+                  Every system runs on tools you already use, your CRM, inbox, dashboards.
                   No new logins for your team. No vendor lock-in.
                 </p>
               </div>
@@ -231,7 +231,7 @@ export default function ProcessPage() {
         <FinalCta
           eyebrow="READY"
           headline="Let's build your 4D Growth Plan."
-          sub="A 30-minute call. We'll walk you through how Discover would unfold for your business — what we'd look at, what we'd ask, what you'd walk away with."
+          sub="A 30-minute call. We'll walk you through how Discover would unfold for your business, what we'd look at, what we'd ask, what you'd walk away with."
         />
 
         {/* JSON-LD FAQPage schema — preserves SEO rich-result eligibility
@@ -265,7 +265,7 @@ export default function ProcessPage() {
                   name: "Do I need a tech team to use what you build?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "No. Every system runs on tools you already use — your CRM, inbox, dashboards. No new logins, no vendor lock-in. We document everything and train your team.",
+                    text: "No. Every system runs on tools you already use, your CRM, inbox, dashboards. No new logins, no vendor lock-in. We document everything and train your team.",
                   },
                 },
                 {

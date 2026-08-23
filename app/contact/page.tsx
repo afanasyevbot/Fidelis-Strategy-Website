@@ -43,7 +43,7 @@ export default function Page() {
                 with thoughts, questions, or whether it makes sense to talk.
               </p>
               <p className="font-sans text-[14px] text-ink/60 leading-relaxed mt-3">
-                Best fit: owner-operated services, brokerages, and agencies that need a growth plan <em>and</em> the systems to run it — not a deck, and not another SaaS seat.
+                Best fit: owner-operated services, brokerages, and agencies that need a growth plan <em>and</em> the systems to run it, not a deck, and not another SaaS seat.
               </p>
               <div className="mt-8">
                 <ContactForm />
@@ -80,7 +80,7 @@ export default function Page() {
                 <p className="font-sans text-[14px] text-ink/75 leading-relaxed mt-2">
                   Every conversation is confidential. Every engagement runs under NDA.
                   We never name a client in a case study or marketing material without
-                  written permission — most of our work stays anonymous by design.
+                  written permission, most of our work stays anonymous by design.
                 </p>
               </div>
             </div>

@@ -6,9 +6,9 @@ import { FinalCta } from "@/components/final-cta";
 import { breadcrumbSchema } from "@/lib/seo";
 
 export const metadata = {
-  title: "Case Study: Paradise Capital — +30% Pipeline with AI Deal Sourcing",
+  title: "Case Study: Paradise Capital | +30% Pipeline with AI Deal Sourcing",
   description:
-    "How Fidelis built a weekly AI-powered deal-sourcing intel engine for Paradise Capital — +30% pipeline lift and $2M projected revenue.",
+    "How Fidelis built a weekly AI-powered deal-sourcing intel engine for Paradise Capital, +30% pipeline lift and $2M projected revenue.",
   alternates: { canonical: "/case-studies/paradise-capital" },
   openGraph: {
     type: "article",
@@ -20,9 +20,9 @@ export const metadata = {
 };
 
 const built = [
-  { title: "Automated prospecting", body: "The top of the funnel is built to run on its own — new targets identified and surfaced on a regular cadence, without the team doing the legwork." },
+  { title: "Automated prospecting", body: "The top of the funnel is built to run on its own | new targets identified and surfaced on a regular cadence, without the team doing the legwork." },
   { title: "AI-powered fit scoring", body: "Every candidate is scored against Paradise Capital's deal criteria automatically, so the team can focus on the opportunities worth their time." },
-  { title: "Consistent outreach", body: "Shortlisted targets get first-touch outreach drafted in a single, consistent voice — ready to send, no drafting from scratch." },
+  { title: "Consistent outreach", body: "Shortlisted targets get first-touch outreach drafted in a single, consistent voice | ready to send, no drafting from scratch." },
   { title: "Automated team updates", body: "The system compiles a ranked summary of what it finds and delivers it where the team already works." },
   { title: "Connected to their workflow", body: "Approved targets move straight into follow-up. No copy-paste, no manual hand-off between tools." },
 ];
@@ -96,7 +96,7 @@ export default function Page() {
               Paradise Capital is exceptional at what they do. When a deal lands in front of them, they evaluate it thoroughly, structure it well, and close it. That edge is real and hard-earned.
             </p>
             <p className="font-sans text-[17px] text-ink/80 leading-relaxed mt-4">
-              The gap was at the top of the funnel. There was no repeatable system for finding new acquisition targets — no consistent sourcing cadence, no criteria-based filtering. The team's time and talent went to the deals already in front of them. The ones they hadn't found yet weren't getting found.
+              The gap was at the top of the funnel. There was no repeatable system for finding new acquisition targets, no consistent sourcing cadence, no criteria-based filtering. The team's time and talent went to the deals already in front of them. The ones they hadn't found yet weren't getting found.
             </p>
           </div>
         </section>
@@ -128,14 +128,14 @@ export default function Page() {
             <Eyebrow size="lg">OUTCOME</Eyebrow>
             <h2 className="font-display font-bold text-4xl md:text-[48px] mt-8 tracking-tight">A sourcing system built around how Paradise evaluates a deal.</h2>
             <p className="font-sans text-[17px] text-bone/85 leading-relaxed mt-6 max-w-2xl">
-              We designed and built the engine end to end — multi-source
+              We designed and built the engine end to end, multi-source
               prospecting, AI fit-scoring against Paradise Capital&apos;s deal
               criteria, and first-touch outreach drafted in the partner&apos;s
               voice, with a human approving every send.
             </p>
             <p className="font-sans text-[17px] text-bone/85 leading-relaxed mt-4 max-w-2xl">
               Where there&apos;d been no repeatable way to source acquisition
-              targets, Paradise now has a system built around their criteria —
+              targets, Paradise now has a system built around their criteria,
               designed to run lean, without adding headcount.
             </p>
           </div>
@@ -154,7 +154,7 @@ export default function Page() {
               </li>
               <li>
                 <a href="/process" className="text-deep-olive hover:text-moss-olive underline decoration-moss-olive/30 underline-offset-2">
-                  → The 4D Growth Engine — how this engagement was structured
+                  → The 4D Growth Engine, how this engagement was structured
                 </a>
               </li>
               <li>

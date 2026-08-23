@@ -10,7 +10,7 @@ const POST = {
   slug: "what-supplier-conversations-taught-me",
   title: "What thousands of supplier conversations taught me about growing a business",
   description:
-    "Four patterns that keep showing up in owner-operated businesses that hit a wall — and what the ones who break through actually do differently.",
+    "Four patterns that keep showing up in owner-operated businesses that hit a wall, and what the ones who break through actually do differently.",
   datePublished: "2026-04-27",
 };
 
@@ -57,7 +57,7 @@ export default function Post() {
               What thousands of supplier conversations taught me about growing a business
             </h1>
             <p className="font-display font-light text-xl md:text-2xl text-linen mt-5 max-w-2xl tracking-tight">
-              Four patterns that keep showing up — and what separates the owner-operated businesses that break through from the ones that stay stuck.
+              Four patterns that keep showing up, and what separates the owner-operated businesses that break through from the ones that stay stuck.
             </p>
             <div className="flex items-center gap-4 mt-8 font-sans text-[13px] text-linen/70 uppercase tracking-button">
               <span>Matthew Afanasiev</span>
@@ -88,7 +88,7 @@ export default function Post() {
               </p>
 
               <p>
-                I wasn&apos;t selling growth strategy. I was selling software —
+                I wasn&apos;t selling growth strategy. I was selling software,
                 order management, EDI integration, supply chain tooling. But what
                 I was actually doing, in almost every conversation, was learning
                 how businesses actually work. How revenue moves. Where it leaks.
@@ -97,7 +97,7 @@ export default function Post() {
 
               <p>
                 That pattern library is what Fidelis runs on. These are the five
-                that show up most consistently — and what the ones who break
+                that show up most consistently, and what the ones who break
                 through actually do about them.
               </p>
 
@@ -110,7 +110,7 @@ export default function Post() {
               <p>
                 This one is universal. Every deal either runs through the
                 owner or traces back to them. Their relationships, their
-                judgment, their instincts. It&apos;s not a flaw — it&apos;s how
+                judgment, their instincts. It&apos;s not a flaw, it&apos;s how
                 owner-operated businesses get off the ground. Relationships are
                 the engine.
               </p>
@@ -125,7 +125,7 @@ export default function Post() {
 
               <p>
                 The owners who break through build systems that can run
-                without them in the room. Not by delegating and hoping — by
+                without them in the room. Not by delegating and hoping, by
                 actually documenting and automating the judgment calls that
                 only they were making before. Lead scoring. Qualification.
                 First-touch sequencing. Reporting. None of this requires the
@@ -153,7 +153,7 @@ export default function Post() {
 
               <p>
                 The businesses that move past this don&apos;t abandon referrals.
-                They add a parallel track — a system that generates
+                They add a parallel track, a system that generates
                 opportunities on a predictable cadence, independent of whether
                 anyone is thinking of them that week. An AI lead engine. A
                 content-driven inbound system. Outreach that runs on a
@@ -170,14 +170,14 @@ export default function Post() {
                 software to suppliers: &ldquo;We already log into seven
                 different portals. We don&apos;t want to add another one.&rdquo;
                 Every retailer they worked with had their own system. Every
-                platform had its own login. The tools existed — they just
+                platform had its own login. The tools existed, they just
                 didn&apos;t talk to each other, and the team was the glue
                 holding it all together.
               </p>
 
               <p>
                 That&apos;s where I first understood consolidation as a real
-                value proposition. Not fewer tools for the sake of it — but
+                value proposition. Not fewer tools for the sake of it, but
                 systems that actually speak to each other, so the data moves
                 automatically and the team stops being the connector. That
                 lesson has applied to every business I&apos;ve worked with since.
@@ -187,7 +187,7 @@ export default function Post() {
                 The pattern in owner-operated businesses looks the same: the
                 &ldquo;system&rdquo; is four disconnected tools, a spreadsheet
                 someone maintains manually, and a shared inbox. Not because
-                the team is disorganized — because the software isn&apos;t
+                the team is disorganized, because the software isn&apos;t
                 connected and nobody has time to fix it.
               </p>
 
@@ -202,7 +202,7 @@ export default function Post() {
               <p>
                 The businesses that break through don&apos;t necessarily have
                 more tools. They have fewer tools that actually talk to each
-                other — and automations that handle the handoffs that were
+                other, and automations that handle the handoffs that were
                 previously eating everyone&apos;s time.
               </p>
 
@@ -215,7 +215,7 @@ export default function Post() {
                 to handle data entry. Or an ops person to manage reporting.
                 Or an admin to keep things from falling through the cracks.
                 Sometimes it was the right answer. More often, the constraint
-                wasn&apos;t the number of people — it was that the existing
+                wasn&apos;t the number of people, it was that the existing
                 people were spending their time on things that shouldn&apos;t
                 require humans at all. Prospecting. Data entry. Report
                 generation. Status updates. Qualification calls that could
@@ -225,14 +225,14 @@ export default function Post() {
               <p>
                 Headcount solves a bandwidth problem. Systems solve a process
                 problem. The businesses that plateau often have both, and they
-                keep solving the process problem with more headcount — which
+                keep solving the process problem with more headcount, which
                 works until the margin pressure catches up.
               </p>
 
               <p>
                 The ones who break through ask: what in this workflow doesn&apos;t
                 need a person? What am I paying someone to do that a well-built
-                system could handle? And then they build the system first —
+                system could handle? And then they build the system first,
                 and hire into the roles that actually require judgment.
               </p>
 
@@ -244,8 +244,8 @@ export default function Post() {
 
               <p>
                 After all those conversations, the pattern is clear. The
-                businesses that move from $5M to $15M — or from $10M to $30M
-                — aren&apos;t necessarily smarter, better-funded, or in better
+                businesses that move from $5M to $15M, or from $10M to $30M
+                aren&apos;t necessarily smarter, better-funded, or in better
                 markets than the ones that plateau. They&apos;re the ones
                 willing to build the infrastructure before they&apos;re
                 desperate for it.
@@ -261,13 +261,13 @@ export default function Post() {
               <p>
                 It&apos;s not that they have all the answers. It&apos;s that
                 they build the systems that let them find the answers faster
-                — and keep finding them, without the owner having to be in
+                and keep finding them, without the owner having to be in
                 every room.
               </p>
 
               <p>
                 That&apos;s what Fidelis is built to help with. Not a deck.
-                Not a framework. The actual systems — strategy first, then the
+                Not a framework. The actual systems, strategy first, then the
                 build, then we stay through the outcome.
               </p>
 
@@ -279,7 +279,7 @@ export default function Post() {
               </div>
               <p className="font-sans text-[16px] text-ink/80 leading-relaxed mb-8">
                 The 4D Growth Audit is the same diagnostic we run on Day 1 of a
-                paid engagement — 24 questions across Discover, Design, Deploy,
+                paid engagement, 24 questions across Discover, Design, Deploy,
                 and Drive. If you want to know where your gaps are before you
                 talk to anyone, start there.
               </p>
@@ -300,7 +300,7 @@ export default function Post() {
               <ul className="mt-4 space-y-2 font-sans text-[15px]">
                 <li>
                   <a href="/blog/why-growth-stalled-at-5m" className="text-deep-olive hover:text-moss-olive underline decoration-moss-olive/30 underline-offset-2">
-                    → Why your growth stalled at $5M — and what changed in 2026
+                    → Why your growth stalled at $5M, and what changed in 2026
                   </a>
                 </li>
                 <li>

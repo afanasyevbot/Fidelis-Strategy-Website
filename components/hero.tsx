@@ -134,7 +134,7 @@ export function Hero() {
         </div>
 
         <p className="font-sans text-[13px] text-linen/70 mt-5">
-          24 questions, one page — no call required.
+          24 questions, one page, no call required.
         </p>
       </div>
 

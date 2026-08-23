@@ -9,7 +9,7 @@ import { Reveal } from "./reveal";
 export function FinalCta({
   eyebrow = "START YOUR GROWTH JOURNEY",
   headline = "You've built something real. Let's take it further.",
-  sub = "A 30-minute call. We'll talk about where the business is, where you want it, and how to grow the top line. No pitch deck — just a real conversation.",
+  sub = "A 30-minute call. We'll talk about where the business is, where you want it, and how to grow the top line. No pitch deck, just a real conversation.",
   primaryHref,
   primaryLabel = "Book a Call →",
 }: {
@@ -63,7 +63,7 @@ export function FinalCta({
             </CtaButton>
           </div>
           <p className="font-sans text-[13px] text-linen/80 mt-5">
-            Not ready to talk? <a href="/contact" className="link-underline hover:text-bone">Send a note instead</a> — no call required.
+            Not ready to talk? <a href="/contact" className="link-underline hover:text-bone">Send a note instead</a>, no call required.
           </p>
         </Reveal>
       </div>

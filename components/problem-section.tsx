@@ -4,7 +4,7 @@ import { Reveal } from "./reveal";
 const paths = [
   {
     title: "Running on spreadsheets, memory, and hustle?",
-    body: "You've built something real without real systems. We start with the growth strategy, then build your first ones — shaped to how you already work, not a template you have to learn.",
+    body: "You've built something real without real systems. We start with the growth strategy, then build your first ones, shaped to how you already work, not a template you have to learn.",
   },
   {
     title: "Drowning in tools your team works around?",
@@ -19,7 +19,7 @@ const points = [
   },
   {
     title: "The deal that went quiet.",
-    body: "It slipped because the follow-up lived in someone's head instead of a system. You'll never know exactly what it cost — which is the problem.",
+    body: "It slipped because the follow-up lived in someone's head instead of a system. You'll never know exactly what it cost, which is the problem.",
   },
   {
     title: "A pipeline number nobody trusts.",
@@ -37,7 +37,7 @@ export function ProblemSection() {
             The most expensive line item isn&apos;t on the invoice.
           </h2>
           <p className="font-display font-light text-lg md:text-2xl text-linen mt-4 max-w-2xl tracking-tight">
-            The bending adds up — quietly, every week.
+            The bending adds up, quietly, every week.
           </p>
         </Reveal>
         <Reveal stagger className="grid md:grid-cols-3 gap-6 mt-12">
@@ -65,7 +65,7 @@ export function ProblemSection() {
         </Reveal>
         <Reveal delay={120}>
           <p className="font-sans text-[15px] md:text-[16px] text-linen/70 leading-relaxed mt-8 max-w-2xl">
-            None of it shows up on an invoice — which is exactly why it never gets fixed.
+            None of it shows up on an invoice, which is exactly why it never gets fixed.
           </p>
         </Reveal>
 
@@ -76,12 +76,12 @@ export function ProblemSection() {
           </h3>
           <p className="font-sans text-[16px] text-bone/85 leading-relaxed mt-5">
             Every copy-paste and workaround is your team paying that gap by hand. The
-            fix isn&apos;t more discipline — it&apos;s software shaped to how you
+            fix isn&apos;t more discipline, it&apos;s software shaped to how you
             already work.
           </p>
           <p className="font-display text-lg md:text-2xl text-linen mt-6 tracking-tight">
-            Buy what&apos;s universal — accounting, email, payroll.{" "}
-            <span className="text-bone">Build what&apos;s yours</span> — how you find
+            Buy what&apos;s universal, accounting, email, payroll.{" "}
+            <span className="text-bone">Build what&apos;s yours</span>, how you find
             customers, move deals, and deliver.
           </p>
         </Reveal>
