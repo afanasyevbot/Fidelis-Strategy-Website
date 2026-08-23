@@ -7,7 +7,7 @@ import { FinalCta } from "@/components/final-cta";
 export const metadata = {
   title: "Case Studies",
   description:
-    "Public Fidelis Strategy case studies. Paradise Capital: a weekly deal-sourcing intel engine for an M&A advisory firm.",
+    "Public Fidelis Strategy case studies. Paradise Capital: Buyer Engine for sell-side M&A mandates.",
   alternates: { canonical: "/case-studies/" },
 };
 
@@ -35,16 +35,16 @@ export default function Page() {
               className="block p-8 border border-moss-olive/30 hover:border-moss-olive bg-bone transition-colors"
             >
               <div className="font-sans text-[12px] uppercase tracking-button text-moss-olive font-semibold">
-                M&amp;A advisory · 2025 – ongoing · public write-up
+                Sell-side M&amp;A advisory · 2025 – ongoing · public write-up
               </div>
               <h2 className="font-display font-bold text-3xl md:text-4xl text-deep-olive mt-3 tracking-tight">
                 Paradise Capital
               </h2>
               <p className="font-sans text-[16px] text-ink/80 leading-relaxed mt-4 max-w-2xl">
-                Weekly deal-sourcing intel for an M&amp;A advisory firm.
-                Multi-source prospecting, AI fit-scoring against their deal
-                criteria, and first-touch outreach in the partner&apos;s voice.
-                Human approval on every send.
+                Buyer Engine for sell-side mandates. Builds the buyer book from
+                the deal, finds strategic and financial buyers, drafts first-touch
+                outreach in the partner&apos;s voice, and tracks progress on live
+                mandates. Human approval on every send.
               </p>
               <p className="font-sans text-[14px] text-deep-olive mt-6 font-semibold">
                 Read the case study →
