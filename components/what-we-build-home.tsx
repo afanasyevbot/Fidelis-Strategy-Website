@@ -16,7 +16,8 @@ export function WhatWeBuildHome() {
             AI systems that grow the top line.
           </h2>
           <p className="font-display font-light text-lg md:text-xl text-moss-olive mt-3 max-w-2xl">
-            Custom systems that find, score, and act on your best opportunities — shaped to how you already work.
+            Pipeline tools, operator dashboards, workflow apps, and the systems in
+            between — each built around how you work.
           </p>
         </Reveal>
         <Reveal stagger className="grid md:grid-cols-2 gap-4 mt-12">
