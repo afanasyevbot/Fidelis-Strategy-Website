@@ -45,7 +45,7 @@ export function AboutTeaser() {
           </p>
           <div className="mt-10">
             <CtaButton href="/about" variant="secondary" className="border-deep-olive text-deep-olive hover:bg-deep-olive hover:text-bone">
-              Read our story
+              Read my story
             </CtaButton>
           </div>
         </Reveal>

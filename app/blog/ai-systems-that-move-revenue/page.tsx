@@ -290,7 +290,7 @@ export default function Post() {
               Not ready to talk?{" "}
               <a href="/growth-audit" className="underline hover:text-moss-olive">
                 Grab the free 4D Growth Audit
-              </a>{" "}
+              </a>.
               24 questions, one page, no call required.
             </p>
           </div>

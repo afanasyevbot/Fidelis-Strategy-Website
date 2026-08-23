@@ -8,7 +8,7 @@ import { blogPostSchema, breadcrumbSchema } from "@/lib/seo";
 
 const POST = {
   slug: "why-growth-stalled-at-5m",
-  title: "Why Your Growth Stalled at $5M | and What Changed in 2026",
+  title: "Why Your Growth Stalled at $5M: and What Changed in 2026",
   description:
     "The $5M plateau is real and structural. Hiring used to be the answer; in 2026 it isn't. Here's why owner-operated businesses get stuck, and what moves them past it.",
   datePublished: "2026-04-26",
@@ -212,7 +212,7 @@ export default function Post() {
               <a href="/case-studies/paradise-capital" className="underline decoration-moss-olive/40 underline-offset-2 hover:text-moss-olive">
                 a lead engine plus a morning operator brief
               </a>
-              {" "}, +30% pipeline lift and roughly $2M of projected revenue
+              . +30% pipeline lift and roughly $2M of projected revenue
               they couldn&apos;t reach with the prior team. The company
               didn&apos;t grow by adding headcount. It grew by adding
               systems that did the work the headcount would have done,
@@ -252,7 +252,7 @@ export default function Post() {
               Not ready to talk?{" "}
               <a href="/growth-audit" className="underline hover:text-moss-olive">
                 Grab the free 4D Growth Audit
-              </a>{" "}
+              </a>.
               24 questions, one page, no call required.
             </p>
           </div>

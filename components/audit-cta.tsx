@@ -18,7 +18,7 @@ export function AuditCta() {
           </p>
         </Reveal>
         <Reveal delay={120} className="md:text-right">
-          <CtaButton href="/growth-audit">Get the checklist →</CtaButton>
+          <CtaButton href="/growth-audit">Get the 4D Growth Audit →</CtaButton>
           <p className="font-sans text-[13px] text-ink/60 mt-3">
             Email it to me. No call, no sequence.
           </p>

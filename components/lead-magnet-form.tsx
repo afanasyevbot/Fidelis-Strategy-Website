@@ -76,7 +76,7 @@ export function LeadMagnetForm() {
           Want it now?{" "}
           <a href="/growth-audit/checklist" className="link-underline text-deep-olive hover:text-moss-olive">
             Read it online here
-          </a>{" "}
+          </a>.
           no waiting.
         </p>
       </div>
@@ -94,7 +94,7 @@ export function LeadMagnetForm() {
         <a href="/growth-audit/checklist/" className="link-underline text-deep-olive hover:text-moss-olive">
           Read the checklist online
         </a>
-        {" "}, no email required.
+        . No email required.
       </p>
       <div>
         <label htmlFor="audit-name" className={label}>Name</label>

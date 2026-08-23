@@ -7,7 +7,7 @@ import { FinalCta } from "@/components/final-cta";
 export const metadata = {
   title: "Case Studies",
   description:
-    "Public Fidelis Strategy case studies. Paradise Capital: weekly AI deal-sourcing for an M&A advisory firm.",
+    "Public Fidelis Strategy case studies. Paradise Capital: a weekly deal-sourcing intel engine for an M&A advisory firm.",
   alternates: { canonical: "/case-studies/" },
 };
 

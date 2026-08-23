@@ -80,7 +80,7 @@ export default function Page() {
                 <p className="font-sans text-[14px] text-ink/75 leading-relaxed mt-2">
                   Every conversation is confidential. Every engagement runs under NDA.
                   We never name a client in a case study or marketing material without
-                  written permission, most of our work stays anonymous by design.
+                  written permission. Most of our work stays anonymous by design.
                 </p>
               </div>
             </div>

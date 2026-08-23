@@ -116,18 +116,18 @@ export default function Page() {
                 board scrapers. <em>Medium weight.</em>
               </li>
               <li>
-                <strong>Industry-specific regulatory or market triggers</strong>
-                {" "}, niche to the client. <em>Variable weight, set per quarter.</em>
+                <strong>Industry-specific regulatory or market triggers</strong>:
+                niche to the client. <em>Variable weight, set per quarter.</em>
               </li>
             </ul>
             <p>
               <strong>What we deliberately don&apos;t use:</strong> generic
               firmographic filters as the primary signal. They go in
               scoring, not signal. A lead engine that starts from
-              firmographics is just Apollo with extra steps, the{" "}
+              firmographics is just Apollo with extra steps. The{" "}
               <a href="/blog/ai-lead-engine-vs-apollo" className="underline decoration-moss-olive/40 underline-offset-2 hover:text-moss-olive">
                 long version of why
-              </a>{" "}
+              </a>.
               is worth the read.
             </p>
 
@@ -304,7 +304,7 @@ export default function Page() {
               does, the soft path is the{" "}
               <a href="/growth-audit" className="underline decoration-moss-olive/40 underline-offset-2 hover:text-moss-olive">
                 Growth Audit checklist
-              </a>{" "}
+              </a>.
               same email goes on the teardown notification list.
             </p>
           </div>
@@ -322,7 +322,7 @@ export default function Page() {
               Not ready to talk?{" "}
               <a href="/growth-audit" className="underline hover:text-moss-olive">
                 Grab the free 4D Growth Audit
-              </a>{" "}
+              </a>.
               24 questions, one page, no call required.
             </p>
           </div>

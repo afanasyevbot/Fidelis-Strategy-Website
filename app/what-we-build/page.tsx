@@ -33,7 +33,7 @@ export default function Page() {
               <a href="/contact" className="text-linen/80 underline underline-offset-2 hover:text-linen transition-colors">
                 Tell us what you&apos;re trying to solve
               </a>
-              {" "}, we build to the problem, not the category.
+              . We build to the problem, not the category.
             </p>
           </div>
         </section>
@@ -117,7 +117,7 @@ export default function Page() {
                         "font-sans text-[15px] leading-relaxed mt-3 max-w-2xl",
                         lightSection ? "text-ink/75" : "text-bone/80"
                       )}>
-                        Fidelis Pulse is a real SaaS product we built and operate, the same stack we
+                        Fidelis Pulse is a real SaaS product we built and operate. It&apos;s the same stack we
                         deploy when we build your custom dashboard. It ships in two versions today.
                       </p>
                       <ul className={cn(
@@ -147,7 +147,7 @@ export default function Page() {
                         "font-sans text-[15px] leading-relaxed mt-4 max-w-2xl",
                         lightSection ? "text-ink/75" : "text-bone/80"
                       )}>
-                        When we build your dashboard, this is the proof we&apos;ve already done it, for a real
+                        When we build your dashboard, this is the proof we&apos;ve already done it: a real
                         product, with real users, on a real P&amp;L.
                       </p>
                       <div className="flex flex-wrap items-center gap-4 mt-5">
@@ -166,7 +166,7 @@ export default function Page() {
                           "font-sans text-[12px]",
                           lightSection ? "text-ink/40" : "text-bone/40"
                         )}>
-                          30-day free window · no card required
+                          30-day free trial · no card required
                         </span>
                       </div>
                     </div>

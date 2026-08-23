@@ -106,8 +106,8 @@ export default function Post() {
               </li>
               <li>
                 <strong>The technical gap is real.</strong>{" "}Connecting AI tools
-                to existing systems, CRM, email, accounting software, outreach
-                platforms, requires configuration, API work, and iteration. It
+                to existing systems: CRM, email, accounting software, outreach
+                platforms. Requires configuration, API work, and iteration. It
                 is not plug-and-play. Without someone who can actually build,
                 the strategy sits.
               </li>
@@ -139,7 +139,7 @@ export default function Post() {
               buying the team to execute it.
             </p>
             <p>
-              <a href="/process" className="underline decoration-moss-olive/40 underline-offset-2 hover:text-moss-olive">The 4D Growth Engine</a>{" "},
+              <a href="/process" className="underline decoration-moss-olive/40 underline-offset-2 hover:text-moss-olive">The 4D Growth Engine</a>.,
               Discover, Design, Deploy, Drive, is structured so that more
               than half of the engagement is spent building, not slide-making.
               We don&apos;t hand off a roadmap. We build the system, wire it
@@ -195,7 +195,7 @@ export default function Post() {
               Not ready to talk?{" "}
               <a href="/growth-audit" className="underline hover:text-moss-olive">
                 Grab the free 4D Growth Audit
-              </a>{" "}
+              </a>.
               24 questions, one page, no call required.
             </p>
           </div>

@@ -14,12 +14,12 @@ export const metadata = {
 };
 
 const ownerFeatures = [
-  "A single Business Pulse score, one number that rolls up cash, margin, growth, and AR health, so you know where you stand at a glance",
-  "Live sync from QuickBooks, Xero, Plaid, and Stripe, your numbers update on their own, no spreadsheets",
-  "One weekly priority card, the single thing worth doing this week, with the data behind it",
-  "AI commentary in plain English, what changed, why it matters, and what to do about it",
-  "60-day action plan with status, Started, Planned, On Track, so progress is always visible",
-  "Anomaly alerts when cash, margin, or AR moves outside normal, catch problems before they compound",
+  "A single Pulse score: one number that rolls up cash, margin, growth, and AR health so you know where you stand at a glance",
+  "Live sync from QuickBooks, Xero, Plaid, and Stripe. Your numbers update on their own, no spreadsheets",
+  "One weekly priority card: the single thing worth doing this week, with the data behind it",
+  "AI commentary in plain English: what changed, why it matters, and what to do about it",
+  "60-day action plan with status (Started, Planned, On Track) so progress is always visible",
+  "Anomaly alerts when cash, margin, or AR moves outside normal. Catch problems before they compound",
   "One-click quarterly snapshot PDF for your leadership meeting, board, or banker",
 ];
 
@@ -79,7 +79,7 @@ export default function Page() {
                     See Fidelis Pulse →
                   </CtaButton>
                   <CtaButton href="https://fidelispulse.com/#pricing" external variant="secondary">
-                    Start free, 30-day owner window
+                    Start free: 30-day trial · no card required
                   </CtaButton>
                 </div>
               </Reveal>
@@ -135,9 +135,9 @@ export default function Page() {
                 Pulse handles what every business needs. We build what only yours does.
               </h2>
               <p className="font-sans text-[16px] text-ink/80 leading-relaxed mt-4 max-w-xl">
-                Seeing your cash, margin, and AR clearly is universal, that&apos;s Pulse,
-                ready today. Generating pipeline, running your workflows, connecting your
-                tools, that&apos;s where every business is different, and that&apos;s what
+                Seeing your cash, margin, and AR clearly is universal. That&apos;s Pulse,
+                ready today. Generating pipeline, running your workflows, and connecting your
+                tools: that&apos;s where every business is different, and that&apos;s what
                 we design and build with you. Most clients run both.
               </p>
             </Reveal>

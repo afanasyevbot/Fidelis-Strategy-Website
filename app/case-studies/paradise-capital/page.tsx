@@ -6,13 +6,13 @@ import { FinalCta } from "@/components/final-cta";
 import { breadcrumbSchema } from "@/lib/seo";
 
 export const metadata = {
-  title: "Case Study: Paradise Capital | +30% Pipeline with AI Deal Sourcing",
+  title: "Case Study: Paradise Capital | +30% Referral Pipeline with AI Deal Sourcing",
   description:
-    "How Fidelis built a weekly AI-powered deal-sourcing intel engine for Paradise Capital, +30% pipeline lift and $2M projected revenue.",
+    "How Fidelis built a weekly AI-powered deal-sourcing intel engine for Paradise Capital: +30% referral pipeline lift and $2M projected revenue.",
   alternates: { canonical: "/case-studies/paradise-capital" },
   openGraph: {
     type: "article",
-    title: "Paradise Capital: +30% Pipeline with AI Deal Sourcing",
+    title: "Paradise Capital: +30% Referral Pipeline with AI Deal Sourcing",
     description:
       "How Fidelis built a weekly AI-powered deal-sourcing intel engine for Paradise Capital.",
     url: "/case-studies/paradise-capital",
@@ -36,7 +36,7 @@ export default function Page() {
           __html: JSON.stringify(
             breadcrumbSchema([
               { name: "Home", url: "/" },
-              { name: "Case Studies", url: "/case-studies/paradise-capital" },
+              { name: "Case Studies", url: "/case-studies" },
               { name: "Paradise Capital", url: "/case-studies/paradise-capital" },
             ])
           ),
@@ -154,7 +154,7 @@ export default function Page() {
               </li>
               <li>
                 <a href="/process" className="text-deep-olive hover:text-moss-olive underline decoration-moss-olive/30 underline-offset-2">
-                  → The 4D Growth Engine, how this engagement was structured
+                  → The 4D Growth Engine: how this engagement was structured
                 </a>
               </li>
               <li>

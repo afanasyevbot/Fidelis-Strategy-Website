@@ -88,7 +88,7 @@ export default function Post() {
               </p>
 
               <p>
-                I wasn&apos;t selling growth strategy. I was selling software,
+                I wasn&apos;t selling growth strategy. I was selling software.
                 order management, EDI integration, supply chain tooling. But what
                 I was actually doing, in almost every conversation, was learning
                 how businesses actually work. How revenue moves. Where it leaks.

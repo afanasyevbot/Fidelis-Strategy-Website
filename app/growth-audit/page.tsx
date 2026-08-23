@@ -7,7 +7,7 @@ import { LeadMagnetForm } from "@/components/lead-magnet-form";
 export const metadata: Metadata = {
   title: "The 4D Growth Audit | 24 questions to know if your growth system is working",
   description:
-    "A free, one-page diagnostic for owner-operated businesses. 24 honest questions across Discover, Design, Deploy, and Drive. No call required, no sequence, just the checklist.",
+    "A free, one-page diagnostic for owner-operated businesses. 24 honest questions across your customer, offer, systems, and results. No call required, no sequence, just the checklist.",
   alternates: { canonical: "/growth-audit" },
 };
 
@@ -37,8 +37,8 @@ export default function Page() {
                 The same diagnostic we run on Day 1 of a paid engagement.
               </h2>
               <p className="font-sans text-[16px] text-ink/80 leading-relaxed mt-4">
-                Six questions per stage of the 4D Growth Engine, Discover,
-                Design, Deploy, Drive. Each one is a real diagnostic we use
+                Six questions per section: your customer, your offer, your systems,
+                and your results. Each one is a real diagnostic we use
                 with paying clients. If you can answer all 24 cleanly,
                 you don&apos;t need us. If you can&apos;t, the gaps will tell
                 you exactly where to start.

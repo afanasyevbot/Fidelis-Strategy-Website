@@ -14,7 +14,7 @@ export const metadata = {
 const principles = [
   { title: "Build, don't just brief.", body: "Every engagement ends with working systems your team uses every day. That's the bar." },
   { title: "Own the outcome.", body: "We stay with you through launch, optimization, and the next iteration. Growth is compounding work." },
-  { title: "One partner. One accountability line.", body: "Strategy, design, and the AI build | all from one person who stays close to your business, start to finish." },
+  { title: "One partner. One accountability line.", body: "Strategy, design, and the AI build: all from one person who stays close to your business, start to finish." },
 ];
 
 export default function Page() {

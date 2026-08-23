@@ -140,7 +140,7 @@ export function Hero() {
 
       {/* Scroll cue */}
       <a
-        href="#what-we-build"
+        href="#recent-builds"
         aria-label="Scroll to content"
         className="hidden md:flex absolute bottom-6 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-linen/50 hover:text-linen transition-colors z-10"
       >

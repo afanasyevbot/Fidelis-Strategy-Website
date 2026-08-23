@@ -163,7 +163,7 @@ export default function Post() {
 
             <h2 className="font-display font-bold text-2xl text-deep-olive mt-12">What an AI lead engine does differently</h2>
             <p>
-              An <a href="/what-we-build" className="underline decoration-moss-olive/40 underline-offset-2 hover:text-moss-olive">AI lead engine</a>{" "}isn&apos;t a database. It&apos;s a system,
+              An <a href="/what-we-build" className="underline decoration-moss-olive/40 underline-offset-2 hover:text-moss-olive">AI lead engine</a>.isn&apos;t a database. It&apos;s a system,
               custom-built, that does the work a junior SDR plus a research
               analyst plus a CRM admin would normally do, but on autopilot
               and at a fraction of the cost.
@@ -286,7 +286,7 @@ export default function Post() {
               Not ready to talk?{" "}
               <a href="/growth-audit" className="underline hover:text-moss-olive">
                 Grab the free 4D Growth Audit
-              </a>{" "}
+              </a>.
               24 questions, one page, no call required.
             </p>
           </div>

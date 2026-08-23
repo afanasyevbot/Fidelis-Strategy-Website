@@ -109,15 +109,15 @@ export default function Post() {
                 notes, and one employee&apos;s memory.
               </p>
               <p>
-                That&apos;s the hidden tax of generic software. Not the subscription,
-                the bending.
+                That&apos;s the hidden tax of generic software. Not the subscription.
+                The bending.
               </p>
 
               <h2 className="font-display font-bold text-2xl text-deep-olive mt-12">
                 What changed
               </h2>
               <p>
-                AI changed the economics of building software, not by a little, by
+                AI changed the economics of building software. Not by a little. By
                 an order of magnitude. Work that used to take a development team
                 months now takes a small, experienced team weeks. Which means the
                 category of software that was never worth building for a business

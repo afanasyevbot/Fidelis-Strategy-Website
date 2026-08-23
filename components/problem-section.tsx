@@ -4,7 +4,7 @@ import { Reveal } from "./reveal";
 const paths = [
   {
     title: "Running on spreadsheets, memory, and hustle?",
-    body: "You've built something real without real systems. We start with the growth strategy, then build your first ones, shaped to how you already work, not a template you have to learn.",
+    body: "You've built something real without real systems. We start with the growth strategy, then build your first ones around how you already work, not a template you have to learn.",
   },
   {
     title: "Drowning in tools your team works around?",
@@ -37,7 +37,7 @@ export function ProblemSection() {
             The most expensive line item isn&apos;t on the invoice.
           </h2>
           <p className="font-display font-light text-lg md:text-2xl text-linen mt-4 max-w-2xl tracking-tight">
-            The bending adds up, quietly, every week.
+            The bleeding adds up, quietly, every week.
           </p>
         </Reveal>
         <Reveal stagger className="grid md:grid-cols-3 gap-6 mt-12">
@@ -69,24 +69,22 @@ export function ProblemSection() {
           </p>
         </Reveal>
 
-        {/* The reframe — absolve the reader, name the villain, plant the stance */}
         <Reveal delay={80} className="mt-16 pt-12 border-t border-linen/20 max-w-3xl">
           <h3 className="font-display font-bold text-2xl md:text-[34px] text-linen tracking-tight leading-[1.1]">
             You didn&apos;t get sloppy. You bought software built for the average business.
           </h3>
           <p className="font-sans text-[16px] text-bone/85 leading-relaxed mt-5">
             Every copy-paste and workaround is your team paying that gap by hand. The
-            fix isn&apos;t more discipline, it&apos;s software shaped to how you
+            fix isn&apos;t more discipline. It&apos;s software shaped to how you
             already work.
           </p>
           <p className="font-display text-lg md:text-2xl text-linen mt-6 tracking-tight">
-            Buy what&apos;s universal, accounting, email, payroll.{" "}
-            <span className="text-bone">Build what&apos;s yours</span>, how you find
+            Buy what&apos;s universal: accounting, email, payroll.{" "}
+            <span className="text-bone">Build what&apos;s yours:</span> how you find
             customers, move deals, and deliver.
           </p>
         </Reveal>
 
-        {/* Two starting points */}
         <Reveal delay={80} className="mt-16 pt-12 border-t border-linen/20">
           <h3 className="font-display font-bold text-2xl md:text-[32px] text-linen tracking-tight">
             Which sounds like you?
@@ -111,7 +109,7 @@ export function ProblemSection() {
         </Reveal>
         <Reveal delay={120}>
           <p className="font-sans text-[15px] text-bone/70 leading-relaxed mt-8 max-w-2xl">
-            Either way: one partner, owner-operated businesses, start to finish.
+            Either way: one partner for owner-operated businesses, start to finish.
           </p>
         </Reveal>
       </div>

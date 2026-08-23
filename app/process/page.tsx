@@ -14,17 +14,17 @@ const stages = [
     promise: "We learn your business deeply enough to bet on it.",
     timeframe: "~2 weeks",
     activities: [
-      "A structured business review, we walk through a detailed questionnaire covering your operations, sales process, and how revenue actually moves through the business",
-      "Go-to-market review, who you're selling to, how you're reaching them, where deals stall, and where the real opportunity is",
-      "Tools review, what you're currently using, what's working, and what's creating friction",
-      "Competitive landscape, where the whitespace is in your market and how to position against it",
+      "A structured business review: we walk through a detailed questionnaire covering your operations, sales process, and how revenue actually moves through the business",
+      "Go-to-market review: who you're selling to, how you're reaching them, where deals stall, and where the real opportunity is",
+      "Tools review: what you're currently using, what's working, and what's creating friction",
+      "Competitive landscape: where the whitespace is in your market and how to position against it",
     ],
     output: "A written audit of where your growth motion is leaking revenue today, and an honest read on which moves will compound.",
   },
   {
     n: "02",
     label: "DESIGN",
-    promise: "We write your 4D Growth Plan, strategy and systems, built for your business.",
+    promise: "We write your 4D Growth Plan: strategy and systems, built for your business.",
     timeframe: "~2 weeks",
     activities: [
       "The growth strategy: which channels, which customers, which offers, in what order",
@@ -33,7 +33,7 @@ const stages = [
       "The success metrics: what we measure, when, and how we'll know it's working",
       "Your review and sign-off before anything gets built",
     ],
-    output: "The 4D Growth Plan, strategy, systems blueprint, and execution roadmap in one document, all custom to your business.",
+    output: "The 4D Growth Plan: strategy, systems blueprint, and execution roadmap in one document, all custom to your business.",
   },
   {
     n: "03",
@@ -41,11 +41,11 @@ const stages = [
     promise: "Where most engagements end, ours starts. We build what the plan called for.",
     timeframe: "4–8 weeks · scope-dependent",
     activities: [
-      "AI lead engines, outreach tools, operator dashboards, internal workflow apps, whatever the plan called for, built and running",
-      "Connected to the tools you already use, your CRM, inbox, dashboards. No new logins for your team",
+      "AI pipeline systems, outreach tools, operator dashboards, and internal workflow apps: whatever the plan called for, built and running",
+      "Connected to the tools you already use: your CRM, inbox, dashboards. No new logins for your team",
       "Clear documentation for every system: what it does, how to use it, how to extend it",
       "Hands-on walkthrough with your team so everyone knows how to use what we built",
-      "Phased rollout, we go live in stages, tune as we go, and confirm everything is working before moving on",
+      "Phased rollout: we go live in stages, tune as we go, and confirm everything is working before moving on",
     ],
     output: "Working AI systems running in your business every day. Owned by you. Documented. Your team knows how to use them.",
     emphasized: true,
@@ -257,7 +257,7 @@ export default function ProcessPage() {
                   name: "How long until I see results?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "First working systems land inside 30 days. Full plan execution typically wraps in 60–90 days.",
+                    text: "First working systems typically land in the first 4 to 6 weeks of an engagement. Full plan execution usually wraps in 60 to 90 days.",
                   },
                 },
                 {

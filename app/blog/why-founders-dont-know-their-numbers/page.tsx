@@ -238,7 +238,7 @@ export default function Post() {
                 >
                   Fidelis Pulse
                 </a>
-                {" "}, a weekly business pulse built for owners who don&apos;t
+                . A weekly business pulse built for owners who don&apos;t
                 have time to go dig for their own numbers.
               </p>
 

@@ -72,7 +72,7 @@ export function ProofSection() {
 
         <Reveal delay={160} className="mt-8">
           <CtaButton href="/case-studies/paradise-capital">
-            Read the full case study →
+            Read the case study →
           </CtaButton>
         </Reveal>
 
@@ -133,7 +133,7 @@ export function ProofSection() {
                 Fidelis Strategy gave their time pro bono to help our small church.
                 Matthew rebuilt our website, moved our staff onto proper email through a nonprofit
                 Microsoft 365 tenant, and built online giving right into the site. Then he built a{" "}
-                <span className="text-linen">volunteer and member portal</span>{" "}&mdash; one
+                <span className="text-linen">volunteer and member portal:</span> one
                 place to schedule our teams, keep track of our members, send reminders when we need
                 volunteers for an event, and just keep our whole church connected.
               </p>

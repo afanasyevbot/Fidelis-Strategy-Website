@@ -16,7 +16,7 @@ export const stages: Stage[] = [
     questions: [
       "Can you name your 5 best customers and the specific situation each was in when they decided to buy?",
       "Do you know the 2-3 signs that tend to show up before a good-fit customer is ready to buy?",
-      "Could you describe your ideal customer beyond their size or industry, the actual situation that makes them need you?",
+      "Could you describe your ideal customer beyond their size or industry: the actual situation that makes them need you?",
       "Have you talked to a customer in the last 90 days just to ask why they chose you?",
       "Do you know which 20% of customers drive 80% of your revenue, and what they have in common?",
       "If a new inquiry came in tomorrow, could you tell within 30 seconds whether they're a good fit?",
@@ -40,7 +40,7 @@ export const stages: Stage[] = [
     questions: [
       "Is there a written, step-by-step process from first contact to paid customer that someone other than you could follow?",
       "How much of your follow-up with leads and customers happens on its own, versus only when you remember to do it by hand?",
-      "Whether you run on software, spreadsheets, or paper, do your tools actually fit how you work, or are you constantly working around them and entering things twice?",
+      "Whether you run on software, spreadsheets, or paper: do your tools actually fit how you work, or are you constantly working around them and entering things twice?",
       "Is AI built into how you actually work and doing real work in your business, or is it still occasional and off to the side?",
       "Is there one place that shows the real status of every customer and job, or is it scattered across your inbox, spreadsheets, sticky notes, and your head?",
       "Do you have a steady, predictable flow of new customers coming in, or are you starting from scratch every week?",
@@ -65,11 +65,11 @@ export type ScoringBand = { label: string; body: string };
 export const scoringBands: ScoringBand[] = [
   {
     label: "20–24 yes",
-    body: "Your engine is in great shape. You probably don't need outside help, keep iterating.",
+    body: "Your engine is in great shape. You probably don't need outside help. Keep iterating.",
   },
   {
     label: "14–19 yes",
-    body: "You have most of it. The gaps are usually in Deploy or Drive, execution and measurement. That's where most of our work lives.",
+    body: "You have most of it. The gaps are usually in your systems or results: execution and measurement. That's where most of our work lives.",
   },
   {
     label: "8–13 yes",
