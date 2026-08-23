@@ -36,7 +36,7 @@ const commercial: Array<{
   {
     type: "Glow Routine",
     client: "Linked by Lexi · live consumer app",
-    body: "A wellness app someone can actually open and use: daily checklists, reminders, streaks, and an AI advisor in her pocket — built around how Lexi operates, not a generic tracker.",
+    body: "A wellness app someone can actually open and use: daily checklists, reminders, streaks, and an AI advisor in her pocket.",
     href: "https://glow-routine-seven.vercel.app",
     cta: "Open Glow Routine",
     external: true,
