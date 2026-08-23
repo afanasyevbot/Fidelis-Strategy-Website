@@ -20,9 +20,9 @@ export const metadata = {
 };
 
 const built = [
-  { title: "Automated prospecting", body: "The top of the funnel is built to run on its own | new targets identified and surfaced on a regular cadence, without the team doing the legwork." },
+  { title: "Automated prospecting", body: "The top of the funnel is built to run on its own. New targets identified and surfaced on a regular cadence, without the team doing the legwork." },
   { title: "AI-powered fit scoring", body: "Every candidate is scored against Paradise Capital's deal criteria automatically, so the team can focus on the opportunities worth their time." },
-  { title: "Consistent outreach", body: "Shortlisted targets get first-touch outreach drafted in a single, consistent voice | ready to send, no drafting from scratch." },
+  { title: "Consistent outreach", body: "Shortlisted targets get first-touch outreach drafted in a single, consistent voice. Ready to send, no drafting from scratch." },
   { title: "Automated team updates", body: "The system compiles a ranked summary of what it finds and delivers it where the team already works." },
   { title: "Connected to their workflow", body: "Approved targets move straight into follow-up. No copy-paste, no manual hand-off between tools." },
 ];
