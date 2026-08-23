@@ -14,9 +14,8 @@ export function SoloBuilder() {
         </h2>
         <div className="mt-6 max-w-2xl font-sans text-[17px] text-ink/80 leading-relaxed space-y-4">
           <p>
-            Most growth work breaks at the seams. Strategy in one place, the
-            build in another. Here, it&apos;s the same person from plan through
-            launch.
+            Most growth work breaks between strategy and build. Here,
+            it&apos;s the same person from plan through launch.
           </p>
           <p>
             I take a limited number of engagements. Everything I build is
