@@ -109,10 +109,10 @@ export function Hero() {
           And the <em className="not-italic text-linen">systems</em>{" "}built to run&nbsp;it.
         </h1>
 
-        <p className="font-sans text-[15px] md:text-[17px] leading-[1.65] mt-6 text-linen/70 max-w-[640px]">
-          Whether you&apos;re running on spreadsheets and memory — or software that
-          doesn&apos;t fit — Fidelis builds it around how you actually work. The
-          person who writes the plan is the person who builds the systems.
+        <p className="font-display text-lg md:text-[24px] leading-snug mt-6 text-linen/80 tracking-[-0.01em] max-w-[640px]">
+          We design your growth strategy{" "}
+          <em className="not-italic font-semibold text-linen">and</em>{" "}
+          build the custom AI systems that run it.
         </p>
 
         <div className="flex flex-wrap justify-center gap-3 mt-10">
