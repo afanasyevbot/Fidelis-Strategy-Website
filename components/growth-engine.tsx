@@ -3,7 +3,7 @@ import { Reveal } from "./reveal";
 
 const steps = [
   { n: "01", label: "DISCOVER", body: "We study your operations, go-to-market, sales process, and tools.", deliverable: "Operations + GTM audit" },
-  { n: "02", label: "DESIGN",   body: "We write your 4D Growth Plan — the roadmap built around your business.", deliverable: "Your 4D Growth Plan" },
+  { n: "02", label: "DESIGN",   body: "We write your 4D Growth Plan: the roadmap built around your business.", deliverable: "Your 4D Growth Plan" },
   { n: "03", label: "DEPLOY",   body: "We build the AI systems, apps, and workflows the plan calls for.", deliverable: "Working AI systems in your environment" },
   { n: "04", label: "DRIVE",    body: "We track results, tune the systems, and keep growth compounding.", deliverable: "Quarterly tune-ups + dashboards" },
 ];
@@ -38,7 +38,7 @@ export function GrowthEngine({ tone = "bone" }: { tone?: "bone" | "dark" }) {
             generic framework with your logo on it. Then we build it.
           </p>
           <p>
-            The free <strong className="text-linen font-semibold">4D Growth Audit</strong> is Day 1, Discover — started for free.
+            The free <strong className="text-linen font-semibold">4D Growth Audit</strong> is where Discover starts. Free, no call required.
           </p>
         </div>
         </Reveal>

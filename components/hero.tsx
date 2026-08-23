@@ -134,13 +134,13 @@ export function Hero() {
         </div>
 
         <p className="font-sans text-[13px] text-linen/70 mt-5">
-          24 questions, one page — no call required.
+          24 questions, one page, no call required.
         </p>
       </div>
 
       {/* Scroll cue */}
       <a
-        href="#what-we-build"
+        href="#recent-builds"
         aria-label="Scroll to content"
         className="hidden md:flex absolute bottom-6 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-linen/50 hover:text-linen transition-colors z-10"
       >

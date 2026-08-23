@@ -5,7 +5,7 @@ import { Eyebrow } from "@/components/eyebrow";
 import { FinalCta } from "@/components/final-cta";
 
 export const metadata = {
-  title: "About — Matthew Afanasiev, Growth Strategy + AI Consultant",
+  title: "About | Matthew Afanasiev, Growth Strategy + AI Consultant",
   description:
     "Matthew Afanasiev founded Fidelis Strategy after nearly five years in SaaS sales working with thousands of suppliers and retailers. We design growth plans and build the AI-powered systems that run them.",
   alternates: { canonical: "/about" },
@@ -14,7 +14,7 @@ export const metadata = {
 const principles = [
   { title: "Build, don't just brief.", body: "Every engagement ends with working systems your team uses every day. That's the bar." },
   { title: "Own the outcome.", body: "We stay with you through launch, optimization, and the next iteration. Growth is compounding work." },
-  { title: "One partner. One accountability line.", body: "Strategy, design, and the AI build — all from one person who stays close to your business, start to finish." },
+  { title: "One partner. One accountability line.", body: "Strategy, design, and the AI build: all from one person who stays close to your business, start to finish." },
 ];
 
 export default function Page() {
@@ -52,7 +52,7 @@ export default function Page() {
               <div className="relative h-20 w-20 rounded-full overflow-hidden border-2 border-moss-olive shrink-0">
                 <Image
                   src="/matthew.jpg"
-                  alt="Matthew Afanasiev — Founder, Fidelis Strategy"
+                  alt="Matthew Afanasiev, Founder, Fidelis Strategy"
                   fill
                   className="object-cover object-top"
                   sizes="80px"

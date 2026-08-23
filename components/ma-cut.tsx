@@ -24,7 +24,7 @@ export function MaCut() {
             The deepest work isn&apos;t a deck. It&apos;s live software.
           </h2>
           <p className="font-display font-light text-lg md:text-2xl text-linen mt-5 max-w-3xl leading-snug">
-            Two products of my own, built and live — here&apos;s what each one
+            Two products of my own, built and live, here&apos;s what each one
             does.
           </p>
         </Reveal>
@@ -41,13 +41,13 @@ export function MaCut() {
                   <span className="text-linen font-semibold shrink-0 mt-0.5">◇</span>
                   <span>
                     <span className="font-semibold text-linen">{p.name}</span>{" "}
-                    — {p.body}
+                    {p.body}
                   </span>
                 </li>
               ))}
             </ul>
             <p className="font-sans text-[15px] text-linen/75 leading-relaxed mt-8">
-              Both built and operated by me — end to end.
+              Both built and operated by me, end to end.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <CtaButton href="/pulse">See Fidelis Pulse &amp; Advisor →</CtaButton>
@@ -65,7 +65,7 @@ export function MaCut() {
             >
               <AdvisorHeroMocks />
               <p className="font-sans text-[11px] uppercase tracking-button text-linen/55 mt-3 text-center md:text-left">
-                Sample data — product demo, not a client dashboard
+                Sample data, product demo, not a client dashboard
               </p>
             </a>
           </Reveal>

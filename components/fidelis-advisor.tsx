@@ -3,11 +3,11 @@ import { CtaButton } from "./cta-button";
 import { AdvisorConsoleMock } from "./pulse-mocks";
 
 const features = [
-  "One console for every client — see who needs attention, who's on track, and who's about to close, all on one screen",
-  "Buyer Readiness scoring per client — the same Pulse health score, rolled up across your book so you can prioritize",
-  "Stage-aware alerts — stale deals, missed diligence requests, and watch items surface before clients have to ask",
-  "White-labeled client share-outs — branded snapshot PDFs and live read-only links your owners can send to lenders or buyers",
-  "Pipeline value at a glance — estimated success fees and deals at LOI, so forecasting takes minutes, not days",
+  "One console for every client: see who needs attention, who's on track, and who's about to close, all on one screen",
+  "Buyer Readiness scoring per client: the same Pulse score, rolled up across your book so you can prioritize",
+  "Stage-aware alerts: stale deals, missed diligence requests, and watch items surface before clients have to ask",
+  "White-labeled client share-outs: branded snapshot PDFs and live read-only links your owners can send to lenders or buyers",
+  "Pipeline value at a glance: estimated success fees and deals at LOI, so forecasting takes minutes, not days",
 ];
 
 export function FidelisAdvisor() {
@@ -21,7 +21,7 @@ export function FidelisAdvisor() {
           </h2>
           <p className="font-display font-light text-lg md:text-2xl text-forest-floor/80 mt-5 max-w-3xl leading-snug">
             Built for the firms running owner-operated businesses toward an exit. See every
-            engagement, who needs you this week, and what each deal is worth — without
+            engagement, who needs you this week, and what each deal is worth, without
             chasing spreadsheets.
           </p>
         </div>

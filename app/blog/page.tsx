@@ -5,7 +5,7 @@ import { Footer } from "@/components/footer";
 import { Eyebrow } from "@/components/eyebrow";
 
 export const metadata: Metadata = {
-  title: "Field Notes — Growth Strategy + AI for SMB Founders",
+  title: "Field Notes | Growth Strategy + AI for SMB Founders",
   description:
     "Operator essays on growth strategy, AI systems, and what actually moves revenue for owner-operated businesses. Hard-won lessons from real builds.",
   alternates: { canonical: "/blog" },
@@ -15,19 +15,19 @@ const posts = [
   {
     slug: "why-off-the-shelf-software-is-dead",
     title: "Off-the-shelf software is dead. Here’s what’s replacing it.",
-    dek: "For decades, bending your business around generic software was the only affordable option. AI broke that math — and the spreadsheet your team keeps next to the CRM is the proof.",
+    dek: "For decades, bending your business around generic software was the only affordable option. AI broke that math, and the spreadsheet your team keeps next to the CRM is the proof.",
     date: "2026-06-09",
   },
   {
     slug: "why-founders-dont-know-their-numbers",
     title: "When you\u2019re running the business, the numbers can get away from you",
-    dek: "Owner-operated businesses run on one person\u2019s energy. That same person is usually the last one with a clear view of the financials — and why that gap is more expensive than most realize.",
+    dek: "Owner-operated businesses run on one person\u2019s energy. That same person is usually the last one with a clear view of the financials, and why that gap is more expensive than most realize.",
     date: "2026-04-28",
   },
   {
     slug: "what-supplier-conversations-taught-me",
     title: "What thousands of supplier conversations taught me about growing a business",
-    dek: "Four patterns that keep showing up in owner-operated businesses that hit a wall — and what the ones who break through actually do differently.",
+    dek: "Four patterns that keep showing up in owner-operated businesses that hit a wall, and what the ones who break through actually do differently.",
     date: "2026-04-27",
   },
   {
@@ -51,7 +51,7 @@ const posts = [
   {
     slug: "why-strategies-dont-get-implemented",
     title: "The execution gap: why strategies stall before they deploy",
-    dek: "Why AI integrations fail for owner-operated businesses — and what actually closes the gap.",
+    dek: "Why AI integrations fail for owner-operated businesses, and what actually closes the gap.",
     date: "2026-04-24",
   },
 ];

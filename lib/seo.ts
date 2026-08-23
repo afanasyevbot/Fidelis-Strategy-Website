@@ -67,7 +67,7 @@ export function organizationSchema() {
     image: `${baseUrl}/opengraph-image`,
     logo: `${baseUrl}/logo.png`,
     description:
-      "Fidelis Strategy designs growth strategy and builds custom AI systems for owner-operated businesses — lead engines, operator dashboards, workflow apps, and custom CRMs shaped to how each team actually works.",
+      "Fidelis Strategy designs growth strategy and builds custom AI systems for owner-operated businesses: AI pipeline systems, operator dashboards, workflow apps, and custom CRMs shaped to how each team actually works.",
     email: siteConfig.email,
     telephone: siteConfig.phone,
     address: {

@@ -89,7 +89,7 @@ export function Footer() {
                 href="/contact"
                 className="font-sans text-[13px] text-linen/60 hover:text-linen underline underline-offset-2 transition-colors"
               >
-                Not ready to call? Send a note instead.
+                Not ready to talk? Send a note instead.
               </Link>
             </div>
           </div>

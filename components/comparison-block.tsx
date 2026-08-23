@@ -14,7 +14,7 @@ const cols = [
     label: "BUILD ONLY",
     headline: "Hands on the tools.",
     body:
-      "Agencies, freelancers, dev shops. They'll build whatever you spec, but the strategy is your job — and so is the integration.",
+      "Agencies, freelancers, dev shops. They'll build whatever you spec, but the strategy is your job, and so is the integration.",
     fitFor: "When the strategy is clear and you just need execution capacity.",
     tone: "muted" as const,
   },
@@ -23,7 +23,7 @@ const cols = [
     headline: "One partner. Plan through launch.",
     body:
       "We design the growth plan and build the AI-powered systems that run it. The same person on the strategy call is on the build. Nothing gets lost in handoff.",
-    fitFor: "When you don&apos;t have time for the handoff tax — and the work needs to actually ship.",
+    fitFor: "When you don&apos;t have time for the handoff tax, and the work needs to actually ship.",
     tone: "primary" as const,
   },
 ];

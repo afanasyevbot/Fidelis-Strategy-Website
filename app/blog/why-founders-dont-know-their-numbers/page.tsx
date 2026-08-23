@@ -10,7 +10,7 @@ const POST = {
   slug: "why-founders-dont-know-their-numbers",
   title: "When you're running the business, the numbers can get away from you",
   description:
-    "Owner-operated businesses run on one person's energy. That same person is usually the last one with a clear view of the financials. Here's why the visibility gap happens — and what to do about it.",
+    "Owner-operated businesses run on one person's energy. That same person is usually the last one with a clear view of the financials. Here's why the visibility gap happens, and what to do about it.",
   datePublished: "2026-04-28",
 };
 
@@ -77,7 +77,7 @@ export default function Post() {
                 the salesperson, the relationship manager, the decision-maker,
                 and the one putting out fires before anyone else knows there&apos;s
                 smoke. When you&apos;re leading the charge, your attention is out
-                front — on clients, on revenue, on the next deal.
+                front, on clients, on revenue, on the next deal.
               </p>
 
               <p>
@@ -88,7 +88,7 @@ export default function Post() {
                 The financials live in QuickBooks. The AR aging is in a
                 spreadsheet someone updates monthly. The margin picture requires
                 a report you haven&apos;t had time to pull. None of this is
-                carelessness — it&apos;s the nature of running a lean business
+                carelessness, it&apos;s the nature of running a lean business
                 where your energy is the engine. But the numbers don&apos;t
                 pause while you&apos;re busy leading.
               </p>
@@ -124,7 +124,7 @@ export default function Post() {
                     <strong className="text-deep-olive">Cash runway.</strong>{" "}
                     How many months can the business run at current burn if revenue
                     stopped tomorrow? Most business owners genuinely don&apos;t know this
-                    number. The ones who do tend to make better decisions — about
+                    number. The ones who do tend to make better decisions, about
                     hiring, about spending, about when to push and when to hold.
                   </span>
                 </li>
@@ -132,7 +132,7 @@ export default function Post() {
                   <span className="text-moss-olive font-semibold shrink-0">→</span>
                   <span>
                     <strong className="text-deep-olive">Gross margin trend.</strong>{" "}
-                    Not the snapshot — the direction. A margin that&apos;s been
+                    Not the snapshot, the direction. A margin that&apos;s been
                     compressing for three quarters is a problem you want to catch in
                     quarter one, not quarter four. By the time it shows up in annual
                     revenue, the damage is done.
@@ -153,7 +153,7 @@ export default function Post() {
               <p>
                 None of these are exotic metrics. Any CFO will tell you the same
                 three. The problem is that most owner-operated businesses
-                don&apos;t have a CFO — and the owner doesn&apos;t have a
+                don&apos;t have a CFO, and the owner doesn&apos;t have a
                 clean, current view of these numbers without going to dig for them.
               </p>
 
@@ -172,7 +172,7 @@ export default function Post() {
 
               <p>
                 So most business owners check their numbers when something goes
-                wrong — when a vendor payment bounces, when a client is
+                wrong, when a vendor payment bounces, when a client is
                 unexpectedly late, when the quarter closes and the accountant
                 sends the summary. Reactive, not proactive.
               </p>
@@ -180,13 +180,13 @@ export default function Post() {
               <p>
                 The answer isn&apos;t more data. Owner-operated businesses
                 already have more data than they have time to look at. The
-                answer is <em>clear</em> data — the right numbers, in one
+                answer is <em>clear</em> data, the right numbers, in one
                 place, without having to go find them.
               </p>
 
               <p>
                 The best-run owner-operated businesses build a different habit.
-                A standing check-in — pull up one view, see whether last week
+                A standing check-in, pull up one view, see whether last week
                 was healthy or quietly going sideways. Not a deep dive. Not a
                 reporting session. Monday morning works well. Five minutes,
                 and you know where you stand before the week starts.
@@ -210,7 +210,7 @@ export default function Post() {
               <p>
                 A buyer or investor doesn&apos;t just want to see last
                 year&apos;s numbers. They want to see a business that tracks
-                its own health — clean books, consistent reporting, documented
+                its own health, clean books, consistent reporting, documented
                 processes. A business that knows its numbers is worth more
                 than one that doesn&apos;t, even if the underlying financials
                 are the same. The buyer is pricing the risk of finding
@@ -220,7 +220,7 @@ export default function Post() {
               <p>
                 The owners who get the best exits are the ones who started
                 running the business like a buyer would see it two or three
-                years before they sold it — not six months before.
+                years before they sold it, not six months before.
               </p>
 
               <h2 className="font-display font-bold text-2xl md:text-[28px] text-deep-olive tracking-tight mt-12">
@@ -238,7 +238,7 @@ export default function Post() {
                 >
                   Fidelis Pulse
                 </a>
-                {" "} — a weekly business pulse built for owners who don&apos;t
+                . A weekly business pulse built for owners who don&apos;t
                 have time to go dig for their own numbers.
               </p>
 
@@ -253,14 +253,14 @@ export default function Post() {
 
               <p>
                 If an exit is on the horizon, there&apos;s a Buyer-Ready layer
-                — a structured framework for getting the business to the bar
+                a structured framework for getting the business to the bar
                 a buyer would expect, with quarterly re-scoring so you know
                 where you stand and what to fix before you go to market.
               </p>
 
               <p>
                 It&apos;s not a replacement for a CFO or an accountant. It&apos;s
-                the thing that makes you a better client for both of them —
+                the thing that makes you a better client for both of them,
                 because you arrive at every conversation already knowing where
                 the numbers stand.
               </p>
@@ -272,7 +272,7 @@ export default function Post() {
                 Try Fidelis Pulse
               </div>
               <p className="font-sans text-[16px] text-ink/80 leading-relaxed mb-8">
-                30-day free window for owners — no card required. Connect QuickBooks
+                30-day free window for owners, no card required. Connect QuickBooks
                 and see your first pulse before you decide if it&apos;s worth paying for.
               </p>
               <div className="flex flex-wrap gap-3">
@@ -297,12 +297,12 @@ export default function Post() {
                 </li>
                 <li>
                   <a href="/blog/why-growth-stalled-at-5m" className="text-deep-olive hover:text-moss-olive underline decoration-moss-olive/30 underline-offset-2">
-                    → Why your growth stalled at $5M — and what changed in 2026
+                    → Why your growth stalled at $5M, and what changed in 2026
                   </a>
                 </li>
                 <li>
                   <a href="/growth-audit/checklist" className="text-deep-olive hover:text-moss-olive underline decoration-moss-olive/30 underline-offset-2">
-                    → The 4D Growth Audit — 24 questions to score your growth system
+                    → The 4D Growth Audit, 24 questions to score your growth system
                   </a>
                 </li>
               </ul>

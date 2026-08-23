@@ -7,7 +7,7 @@ import { siteConfig } from "@/lib/siteConfig";
 import { stages, scoringBands } from "@/content/checklist";
 
 export const metadata: Metadata = {
-  title: "The 4D Growth Audit — Checklist",
+  title: "The 4D Growth Audit | Checklist",
   description: "The 24-question diagnostic. Score yourself across Discover, Design, Deploy, Drive.",
   robots: { index: true, follow: true },
   alternates: { canonical: "/growth-audit/checklist" },
@@ -76,7 +76,7 @@ export default function Page() {
             <p className="font-sans text-[17px] text-ink/80 leading-relaxed mt-5 max-w-2xl mx-auto">
               That&apos;s usually where the highest-leverage work is. If you
               want a second pair of eyes on the gaps, we offer a 30-minute
-              call — no pitch deck, no sales script, just a real
+              call, no pitch deck, no sales script, just a real
               conversation about what you&apos;re trying to build.
             </p>
             <div className="mt-10 flex flex-wrap gap-3 justify-center">

@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/siteConfig";
 // Print-only layout. Rendered to public/marketing/4d-growth-audit-checklist.pdf
 // via Chrome headless (see scripts/build-checklist-pdf.sh). Not linked in nav.
 export const metadata: Metadata = {
-  title: "The 4D Growth Audit — Printable Checklist",
+  title: "The 4D Growth Audit | Printable Checklist",
   robots: { index: false, follow: false },
 };
 
@@ -107,7 +107,7 @@ export default function ChecklistPdf() {
             <div className="rule" />
             <div className="cover-sub">
               {checklistMeta.totalQuestions} questions to know whether your growth
-              system is actually working — the same diagnostic we run on day one of
+              system is actually working, the same diagnostic we run on day one of
               a paid engagement.
             </div>
           </div>
@@ -176,7 +176,7 @@ export default function ChecklistPdf() {
             <h3>Two or three answers stinging is normal.</h3>
             <p>
               That&apos;s usually where the highest-leverage work is. If you want a
-              second pair of eyes on the gaps, we offer a 30-minute call —
+              second pair of eyes on the gaps, we offer a 30-minute call,
               no pitch deck, no sales script, just a real conversation about what
               you&apos;re trying to build.
             </p>

@@ -27,7 +27,7 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: {
-    default: "Fidelis Strategy — Growth strategy. And the systems built to run it.",
+    default: "Fidelis Strategy | Growth strategy. And the systems built to run it.",
     template: "%s · Fidelis Strategy",
   },
   description:
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: "Fidelis Strategy",
-    title: "Fidelis Strategy — Growth strategy. And the systems built to run it.",
+    title: "Fidelis Strategy | Growth strategy. And the systems built to run it.",
     description:
       "Growth strategy + custom AI systems for owner-operated businesses. One partner, strategy through launch.",
     url: siteConfig.url,
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fidelis Strategy — Growth strategy. And the systems built to run it.",
+    title: "Fidelis Strategy | Growth strategy. And the systems built to run it.",
     description:
       "Growth strategy + custom AI systems for owner-operated businesses. One partner, strategy through launch.",
     // Twitter image is generated at build time by app/twitter-image.tsx — Next auto-attaches it.

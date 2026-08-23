@@ -22,8 +22,8 @@ const commercial: Array<{
   external?: boolean;
 }> = [
   {
-    type: "AI Pipeline Engine",
-    client: "Paradise Capital · M&A advisory",
+    type: "AI Pipeline System",
+    client: "Paradise Capital · buy-side · case study",
     body: "Finds and fit-scores owner-operated businesses from multiple sources, then drafts first-touch outreach in the partner's voice. Nothing sends without human approval.",
     href: "/case-studies/paradise-capital",
     cta: "Read the case study",
@@ -68,13 +68,15 @@ export function RecentBuilds() {
           Real systems, running in real businesses.
         </h2>
         <p className="font-display font-light text-lg md:text-xl text-moss-olive mt-3 max-w-2xl">
-          Named when we&apos;re allowed. Private when we&apos;re not. Glow Routine is a live app — you can open it.
+          Named when we&apos;re allowed. Private when we&apos;re not. Paradise
+          Capital runs two live systems; the public write-up covers buy-side deal
+          sourcing. Glow Routine is a live app you can open.
         </p>
 
         <div className="card-lift mt-12 p-8 md:p-10 border border-moss-olive/40 bg-bone">
           <div className="flex items-start justify-between gap-3">
             <div className="font-sans text-[12px] uppercase tracking-button text-moss-olive font-semibold">
-              Flagship · named
+              Sell-side · live
             </div>
             <LiveMark />
           </div>

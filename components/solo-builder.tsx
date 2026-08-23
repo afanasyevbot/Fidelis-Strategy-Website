@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Eyebrow } from "./eyebrow";
 
 /**
@@ -13,32 +12,18 @@ export function SoloBuilder() {
         <h2 className="font-display font-bold text-3xl md:text-[48px] text-deep-olive mt-8 tracking-tight leading-[1.05] max-w-3xl">
           The person who plans it builds it. That person is me.
         </h2>
-        <div className="mt-6 space-y-5 max-w-2xl font-sans text-[17px] text-ink/80 leading-relaxed">
+        <div className="mt-6 max-w-2xl font-sans text-[17px] text-ink/80 leading-relaxed space-y-4">
           <p>
-            Most growth work breaks at the seams — strategy lives in one place,
-            the build in another, and the person who actually understood your
-            business isn&apos;t the one who builds it. Here, it&apos;s the same hands
-            the whole way through.
+            Most growth work breaks between strategy and build. Here,
+            it&apos;s the same person from plan through launch.
           </p>
           <p>
-            I map your growth strategy, then I build the AI systems that run it.{" "}
-            <strong className="text-deep-olive font-semibold">And everything I
-            build is documented and yours,</strong>{" "}
-            running in your own environment, so it keeps running no matter what.
-          </p>
-          <p>
-            Because every build is mine end to end, I take on a limited number
-            of engagements at a time.
-          </p>
-          <p>
-            <Link href="/pulse" className="text-deep-olive font-semibold link-underline">
-              Pulse is live, running on real books.
-            </Link>{" "}
-            That is the standard I build to.
+            I take a limited number of engagements. Everything I build is
+            documented, runs in your environment, and stays yours.
           </p>
         </div>
         <div className="mt-8 font-sans text-[13px] uppercase tracking-button text-moss-olive font-semibold">
-          — Matthew Afanasiev · Founder, Fidelis Strategy
+          Matthew Afanasiev · Founder, Fidelis Strategy
         </div>
       </div>
     </section>

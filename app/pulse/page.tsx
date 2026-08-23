@@ -7,19 +7,19 @@ import { FidelisAdvisor } from "@/components/fidelis-advisor";
 import { PulseHeroMocks } from "@/components/pulse-mocks";
 
 export const metadata = {
-  title: "Fidelis Pulse — The SaaS Product We Built and Operate",
+  title: "Fidelis Pulse | The SaaS Product We Built and Operate",
   description:
     "Fidelis Pulse is a live business-health dashboard built and operated by Fidelis Strategy. One Pulse score from your books for owners; a multi-client cockpit for M&A advisors.",
   alternates: { canonical: "/pulse" },
 };
 
 const ownerFeatures = [
-  "A single Business Pulse score — one number that rolls up cash, margin, growth, and AR health, so you know where you stand at a glance",
-  "Live sync from QuickBooks, Xero, Plaid, and Stripe — your numbers update on their own, no spreadsheets",
-  "One weekly priority card — the single thing worth doing this week, with the data behind it",
-  "AI commentary in plain English — what changed, why it matters, and what to do about it",
-  "60-day action plan with status — Started, Planned, On Track — so progress is always visible",
-  "Anomaly alerts when cash, margin, or AR moves outside normal — catch problems before they compound",
+  "A single Pulse score: one number that rolls up cash, margin, growth, and AR health so you know where you stand at a glance",
+  "Live sync from QuickBooks, Xero, Plaid, and Stripe. Your numbers update on their own, no spreadsheets",
+  "One weekly priority card: the single thing worth doing this week, with the data behind it",
+  "AI commentary in plain English: what changed, why it matters, and what to do about it",
+  "60-day action plan with status (Started, Planned, On Track) so progress is always visible",
+  "Anomaly alerts when cash, margin, or AR moves outside normal. Catch problems before they compound",
   "One-click quarterly snapshot PDF for your leadership meeting, board, or banker",
 ];
 
@@ -40,7 +40,7 @@ export default function Page() {
               </h1>
               <p className="font-display font-light text-lg md:text-2xl text-linen mt-5 max-w-3xl leading-snug">
                 A single source of truth for cash, margin, and everything moving inside
-                your business — and the proof that when Fidelis builds software, it ships.
+                your business, and the proof that when Fidelis builds software, it ships.
               </p>
             </Reveal>
           </div>
@@ -79,7 +79,7 @@ export default function Page() {
                     See Fidelis Pulse →
                   </CtaButton>
                   <CtaButton href="https://fidelispulse.com/#pricing" external variant="secondary">
-                    Start free — 30-day owner window
+                    Start free: 30-day trial · no card required
                   </CtaButton>
                 </div>
               </Reveal>
@@ -112,13 +112,13 @@ export default function Page() {
               <div className="mt-6 space-y-4 max-w-3xl font-sans text-[17px] text-bone/85 leading-relaxed">
                 <p>
                   Pulse is the productized core of the custom operator dashboards we build
-                  for clients — designed, built, and operated by Fidelis, for a real product,
+                  for clients, designed, built, and operated by Fidelis, for a real product,
                   with real users, on a real P&amp;L.
                 </p>
                 <p>
                   We built it because every owner we work with has the same first
                   problem: they can&apos;t see their own numbers without a fight. Pulse
-                  solves that one universally — and it&apos;s proof that when we build
+                  solves that one universally, and it&apos;s proof that when we build
                   your custom systems, we&apos;ve already shipped at this standard.
                 </p>
               </div>
@@ -135,9 +135,9 @@ export default function Page() {
                 Pulse handles what every business needs. We build what only yours does.
               </h2>
               <p className="font-sans text-[16px] text-ink/80 leading-relaxed mt-4 max-w-xl">
-                Seeing your cash, margin, and AR clearly is universal — that&apos;s Pulse,
-                ready today. Generating pipeline, running your workflows, connecting your
-                tools — that&apos;s where every business is different, and that&apos;s what
+                Seeing your cash, margin, and AR clearly is universal. That&apos;s Pulse,
+                ready today. Generating pipeline, running your workflows, and connecting your
+                tools: that&apos;s where every business is different, and that&apos;s what
                 we design and build with you. Most clients run both.
               </p>
             </Reveal>

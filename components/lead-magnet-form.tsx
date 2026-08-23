@@ -36,11 +36,11 @@ export function LeadMagnetForm() {
         body: JSON.stringify({
           access_key: siteConfig.web3formsKey,
           subject: "New 4D Growth Audit checklist request",
-          from_name: "Fidelis Strategy — Checklist",
+          from_name: "Fidelis Strategy Checklist",
           replyto: email, // hitting Reply goes straight to the lead
           name,
           email,
-          company: company || "—",
+          company: company || "n/a",
         }),
       });
       const json = await res.json();
@@ -76,8 +76,8 @@ export function LeadMagnetForm() {
           Want it now?{" "}
           <a href="/growth-audit/checklist" className="link-underline text-deep-olive hover:text-moss-olive">
             Read it online here
-          </a>{" "}
-          — no waiting.
+          </a>.
+          no waiting.
         </p>
       </div>
     );
@@ -94,7 +94,7 @@ export function LeadMagnetForm() {
         <a href="/growth-audit/checklist/" className="link-underline text-deep-olive hover:text-moss-olive">
           Read the checklist online
         </a>
-        {" "}— no email required.
+        . No email required.
       </p>
       <div>
         <label htmlFor="audit-name" className={label}>Name</label>
