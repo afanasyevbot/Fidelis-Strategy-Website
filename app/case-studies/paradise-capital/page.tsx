@@ -6,25 +6,40 @@ import { FinalCta } from "@/components/final-cta";
 import { breadcrumbSchema } from "@/lib/seo";
 
 export const metadata = {
-  title: "Case Study: Paradise Capital | +30% Referral Pipeline with AI Deal Sourcing",
+  title: "Case Study: Paradise Capital | +30% Referral Pipeline with Buyer Engine",
   description:
-    "How Fidelis built a weekly AI-powered deal-sourcing intel engine for Paradise Capital: +30% referral pipeline lift and $2M projected revenue.",
+    "How Fidelis built Buyer Engine for Paradise Capital: a sell-side buyer-sourcing system with +30% projected referral pipeline lift and $2M projected revenue.",
   alternates: { canonical: "/case-studies/paradise-capital" },
   openGraph: {
     type: "article",
-    title: "Paradise Capital: +30% Referral Pipeline with AI Deal Sourcing",
+    title: "Paradise Capital: +30% Referral Pipeline with Buyer Engine",
     description:
-      "How Fidelis built a weekly AI-powered deal-sourcing intel engine for Paradise Capital.",
+      "How Fidelis built Buyer Engine, a sell-side buyer-sourcing system for Paradise Capital.",
     url: "/case-studies/paradise-capital",
   },
 };
 
 const built = [
-  { title: "Automated prospecting", body: "The top of the funnel is built to run on its own. New targets identified and surfaced on a regular cadence, without the team doing the legwork." },
-  { title: "AI-powered fit scoring", body: "Every candidate is scored against Paradise Capital's deal criteria automatically, so the team can focus on the opportunities worth their time." },
-  { title: "Consistent outreach", body: "Shortlisted targets get first-touch outreach drafted in a single, consistent voice. Ready to send, no drafting from scratch." },
-  { title: "Automated team updates", body: "The system compiles a ranked summary of what it finds and delivers it where the team already works." },
-  { title: "Connected to their workflow", body: "Approved targets move straight into follow-up. No copy-paste, no manual hand-off between tools." },
+  {
+    title: "Buyer book from the deal",
+    body: "When a sell-side mandate goes live, the system builds the initial buyer list from the deal profile instead of starting from a blank spreadsheet.",
+  },
+  {
+    title: "Strategic buyer matching",
+    body: "Every candidate is scored against Paradise Capital's mandate criteria automatically, so the team focuses on buyers worth pursuing.",
+  },
+  {
+    title: "Financial buyer matching",
+    body: "PE firms, family offices, and other financial buyers are surfaced and ranked against the same fit criteria.",
+  },
+  {
+    title: "Consistent outreach",
+    body: "Shortlisted buyers get first-touch outreach drafted in a single, consistent voice. Ready to send, no drafting from scratch.",
+  },
+  {
+    title: "Progress tracking",
+    body: "Outreach, follow-up, and mandate progress stay in one place instead of scattered across tabs and memory.",
+  },
 ];
 
 export default function Page() {
@@ -60,16 +75,14 @@ export default function Page() {
               Paradise Capital
             </h1>
             <p className="font-display text-2xl md:text-[26px] leading-tight mt-5 text-linen max-w-3xl tracking-[-0.01em]">
-              Weekly deal-sourcing intel engine. 2025 – ongoing.
+              Buyer Engine for sell-side mandates. 2025 – ongoing.
             </p>
           </div>
         </section>
 
-        {/* Paul's quote — premium treatment */}
         <section className="bg-bone">
           <div className="mx-auto max-w-4xl px-6 py-20">
             <blockquote className="relative">
-              {/* Decorative quotation mark */}
               <span className="block font-display text-[96px] leading-none text-moss-olive/15 select-none -mb-6 -ml-2" aria-hidden="true">&ldquo;</span>
               <p className="font-display font-light text-[26px] md:text-[32px] text-deep-olive leading-[1.35] tracking-[-0.01em]">
                 Fidelis Strategy took the time to truly understand our business
@@ -91,12 +104,12 @@ export default function Page() {
         <section className="bg-bone border-t border-moss-olive/15">
           <div className="mx-auto max-w-4xl px-6 pb-24 pt-16">
             <Eyebrow size="lg" tone="moss">THE PROBLEM</Eyebrow>
-            <h2 className="font-display font-bold text-4xl md:text-[48px] text-deep-olive mt-8 tracking-tight">Best-in-class at closing. No automated system for finding what to close.</h2>
+            <h2 className="font-display font-bold text-4xl md:text-[48px] text-deep-olive mt-8 tracking-tight">Best-in-class at closing. No system for building the buyer book.</h2>
             <p className="font-sans text-[17px] text-ink/80 leading-relaxed mt-6">
-              Paradise Capital is exceptional at what they do. When a deal lands in front of them, they evaluate it thoroughly, structure it well, and close it. That edge is real and hard-earned.
+              Paradise Capital is exceptional at what they do on sell-side mandates. When the right buyers are in front of them, they evaluate thoroughly, structure well, and close. That edge is real and hard-earned.
             </p>
             <p className="font-sans text-[17px] text-ink/80 leading-relaxed mt-4">
-              The gap was at the top of the funnel. There was no repeatable system for finding new acquisition targets, no consistent sourcing cadence, no criteria-based filtering. The team's time and talent went to the deals already in front of them. The ones they hadn't found yet weren't getting found.
+              The gap was earlier in the process. When a mandate went live, building the buyer book meant manual research, scattered lists, and outreach tracked by hand. Strategic buyers, financial buyers, and follow-up progress did not live in one repeatable system.
             </p>
           </div>
         </section>
@@ -104,8 +117,7 @@ export default function Page() {
         <section className="bg-moss-olive text-bone">
           <div className="mx-auto max-w-6xl px-6 py-24">
             <Eyebrow size="lg">WHAT WE BUILT</Eyebrow>
-            <h2 className="font-display font-bold text-4xl md:text-[48px] mt-8 tracking-tight">A weekly intel engine.</h2>
-            {/* First card full-width, remaining 4 in 2x2 */}
+            <h2 className="font-display font-bold text-4xl md:text-[48px] mt-8 tracking-tight">Buyer Engine.</h2>
             <div className="mt-12 space-y-4">
               <div className="p-8 bg-moss-olive border border-linen/25">
                 <h3 className="font-display font-bold text-2xl md:text-[26px] text-linen">{built[0].title}</h3>
@@ -126,17 +138,17 @@ export default function Page() {
         <section className="bg-moss-olive text-bone border-t border-linen/15">
           <div className="mx-auto max-w-4xl px-6 py-24">
             <Eyebrow size="lg">OUTCOME</Eyebrow>
-            <h2 className="font-display font-bold text-4xl md:text-[48px] mt-8 tracking-tight">A sourcing system built around how Paradise evaluates a deal.</h2>
+            <h2 className="font-display font-bold text-4xl md:text-[48px] mt-8 tracking-tight">A sell-side buyer system built around how Paradise runs a mandate.</h2>
             <p className="font-sans text-[17px] text-bone/85 leading-relaxed mt-6 max-w-2xl">
-              We designed and built the engine end to end, multi-source
-              prospecting, AI fit-scoring against Paradise Capital&apos;s deal
-              criteria, and first-touch outreach drafted in the partner&apos;s
-              voice, with a human approving every send.
+              We designed and built Buyer Engine end to end: buyer identification,
+              fit-scoring against Paradise Capital&apos;s mandate criteria, and
+              first-touch outreach drafted in the partner&apos;s voice, with a human
+              approving every send.
             </p>
             <p className="font-sans text-[17px] text-bone/85 leading-relaxed mt-4 max-w-2xl">
-              Where there&apos;d been no repeatable way to source acquisition
-              targets, Paradise now has a system built around their criteria,
-              designed to run lean, without adding headcount.
+              Where buyer-book work had lived in spreadsheets and memory, Paradise
+              now has a system built for sell-side mandates: designed to run lean,
+              without adding headcount.
             </p>
           </div>
         </section>

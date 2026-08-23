@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { Eyebrow } from "./eyebrow";
+import { CtaButton } from "./cta-button";
 
 const featured = {
   type: "Buyer Engine",
-  client: "Paradise Capital · M&A advisory",
+  client: "Paradise Capital · sell-side M&A advisory",
   body: "Not a static list. When a sell-side mandate is live, the system builds the buyer book, finds strategic acquirers, matches financial buyers, and tracks progress so the work does not live in a spreadsheet.",
   capabilities: [
     "Build the buyer list from the deal",
@@ -11,6 +12,8 @@ const featured = {
     "Match financial buyers",
     "Track outreach and progress",
   ],
+  href: "/case-studies/paradise-capital",
+  cta: "Read the case study",
 };
 
 const commercial: Array<{
@@ -21,13 +24,6 @@ const commercial: Array<{
   cta?: string;
   external?: boolean;
 }> = [
-  {
-    type: "AI Pipeline System",
-    client: "Paradise Capital · buy-side · case study",
-    body: "Finds and fit-scores owner-operated businesses from multiple sources, then drafts first-touch outreach in the partner's voice. Nothing sends without human approval.",
-    href: "/case-studies/paradise-capital",
-    cta: "Read the case study",
-  },
   {
     type: "Lead Generation Platform",
     client: "SaaS company serving real-estate teams",
@@ -68,15 +64,16 @@ export function RecentBuilds() {
           Real systems, running in real businesses.
         </h2>
         <p className="font-display font-light text-lg md:text-xl text-moss-olive mt-3 max-w-2xl">
-          Named when we&apos;re allowed. Private when we&apos;re not. Paradise
-          Capital runs two live systems; the public write-up covers buy-side deal
-          sourcing. Glow Routine is a live app you can open.
+          Named when we&apos;re allowed. Private when we&apos;re not. Glow Routine is a live app you can open.
         </p>
 
-        <div className="card-lift mt-12 p-8 md:p-10 border border-moss-olive/40 bg-bone">
+        <Link
+          href={featured.href}
+          className="card-lift mt-12 block p-8 md:p-10 border border-moss-olive/40 bg-bone hover:border-moss-olive"
+        >
           <div className="flex items-start justify-between gap-3">
             <div className="font-sans text-[12px] uppercase tracking-button text-moss-olive font-semibold">
-              Sell-side · live
+              Flagship · sell-side
             </div>
             <LiveMark />
           </div>
@@ -102,7 +99,10 @@ export function RecentBuilds() {
               </li>
             ))}
           </ul>
-        </div>
+          <span className="font-sans text-[12px] uppercase tracking-button text-deep-olive font-semibold mt-6 inline-flex items-center gap-2">
+            {featured.cta} <span aria-hidden>→</span>
+          </span>
+        </Link>
 
         <div className="grid md:grid-cols-2 gap-5 mt-5">
           {commercial.map((b) => {
@@ -112,7 +112,7 @@ export function RecentBuilds() {
                   <h3 className="font-display font-bold text-[19px] md:text-[22px] text-deep-olive tracking-tight leading-snug">
                     {b.type}
                   </h3>
-                  <LiveMark />
+                  {b.href && <LiveMark />}
                 </div>
                 <div className="font-sans text-[12px] uppercase tracking-button text-moss-olive font-semibold mt-2">
                   {b.client}
