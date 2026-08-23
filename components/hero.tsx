@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { trackEvent } from "@/lib/analytics";
 import { CtaButton } from "./cta-button";
 
 // Shared color grade — pushes the bright golden/blue footage into the
@@ -16,7 +17,7 @@ const GRADE =
  * A graded still (hero-poster.jpg, ~64KB) paints instantly on every device.
  * The ~5MB background video (hero-video.mp4) mounts ONLY on desktop, after
  * hydration — mobile never downloads it. Both carry the same CSS grade.
- * Text fades in shortly after load (see .hero-delay-* in globals.css).
+ * Headline and CTAs paint immediately with the poster (no entrance delay).
  */
 export function Hero() {
   const [showVideo, setShowVideo] = useState(false);
@@ -114,17 +115,20 @@ export function Hero() {
           build the custom AI systems that run it.
         </p>
 
-        <p className="font-sans text-[15px] md:text-[17px] leading-[1.65] mt-5 text-linen/70 max-w-[640px]">
-          Whether you&apos;re running on spreadsheets and memory — or software that
-          doesn&apos;t fit — Fidelis builds it around how you actually work. The
-          person who writes the plan is the person who builds the systems.
-        </p>
-
         <div className="flex flex-wrap justify-center gap-3 mt-10">
-          <CtaButton href="/growth-audit">
+          <CtaButton
+            href="/growth-audit"
+            onClick={() => trackEvent("audit_start", { location: "hero" })}
+          >
             Get the 4D Growth Audit →
           </CtaButton>
-          <CtaButton href="#recent-builds" variant="secondary">
+          <CtaButton
+            href="#recent-builds"
+            variant="secondary"
+            onClick={() =>
+              trackEvent("cta_click", { location: "hero", target: "recent_builds" })
+            }
+          >
             See the work
           </CtaButton>
         </div>
