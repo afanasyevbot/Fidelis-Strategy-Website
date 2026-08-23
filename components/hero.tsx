@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Image from "next/image";
 import { trackEvent } from "@/lib/analytics";
 import { CtaButton } from "./cta-button";
@@ -14,23 +13,12 @@ const GRADE =
 /**
  * Full-viewport video hero.
  *
- * A graded still (hero-poster.jpg, ~64KB) paints instantly on every device.
- * The ~5MB background video (hero-video.mp4) mounts ONLY on desktop, after
- * hydration — mobile never downloads it. Both carry the same CSS grade.
- * Headline and CTAs paint immediately with the poster (no entrance delay).
+ * A graded still (hero-poster.jpg, ~64KB) paints instantly on every device
+ * and stays underneath as the video's poster frame while it loads. The
+ * ~5MB background video (hero-video.mp4) plays on all devices, including
+ * mobile. Both carry the same CSS grade.
  */
 export function Hero() {
-  const [showVideo, setShowVideo] = useState(false);
-
-  useEffect(() => {
-    // Only desktop viewports get the heavy autoplay video.
-    const mq = window.matchMedia("(min-width: 768px)");
-    const update = () => setShowVideo(mq.matches);
-    update();
-    mq.addEventListener("change", update);
-    return () => mq.removeEventListener("change", update);
-  }, []);
-
   return (
     <section className="relative h-screen overflow-hidden bg-forest-floor text-bone flex flex-col justify-end">
 
@@ -46,21 +34,19 @@ export function Hero() {
         style={{ objectPosition: "center center", filter: GRADE }}
       />
 
-      {/* ── Background video — desktop only, layered over the poster ── */}
-      {showVideo && (
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          poster="/hero-poster.jpg"
-          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-          style={{ objectPosition: "center center", filter: GRADE }}
-        >
-          <source src="/hero-video.mp4" type="video/mp4" />
-        </video>
-      )}
+      {/* ── Background video — layered over the poster, all devices ── */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        poster="/hero-poster.jpg"
+        className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+        style={{ objectPosition: "center center", filter: GRADE }}
+      >
+        <source src="/hero-video.mp4" type="video/mp4" />
+      </video>
 
       {/* ── Overlays — tame the bright sky, anchor text ── */}
       {/* Bottom gradient — makes text readable */}
