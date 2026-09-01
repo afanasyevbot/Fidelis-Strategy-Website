@@ -69,6 +69,31 @@ If the mailbox is Exchange Online (MX already says it is):
 Do this in Microsoft 365’s DNS wizard so the selectors match the tenant. Do not
 guess DKIM hostnames.
 
+## Deploy from Cursor Cloud Agent
+
+The agent can deploy directly (without merging to `main`) when the Cloud
+environment has the same SSH secrets as GitHub Actions:
+
+- `SSH_HOST`, `SSH_PORT`, `SSH_USERNAME`, `SSH_PASSWORD`
+
+Add them in the Cursor environment dashboard for this repo. Then:
+
+```bash
+npm run deploy:hostinger
+```
+
+That builds `out/` and rsyncs to Hostinger — same path as the GitHub Action.
+Use this for preview deploys from a branch; keep `main` → GitHub Actions as
+the normal production path unless you intentionally want agent-only deploys.
+
+### Optional: Hostinger API MCP
+
+Hostinger also ships an official API MCP server with `hosting_deployStaticWebsite`
+(zip of pre-built `out/`). That works, but SSH/rsync is a better fit here
+because it is already proven in CI, does incremental sync, and does not require
+a second integration. Consider the MCP if you want agent-native deploys across
+many Hostinger sites from one token (`HOSTINGER_API_TOKEN`).
+
 ## First-time GitHub Actions secrets
 
 Already used by `.github/workflows/deploy.yml`:
