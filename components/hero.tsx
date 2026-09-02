@@ -8,7 +8,7 @@ const GRADE =
  */
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-forest-floor text-bone min-h-[72vh] flex flex-col justify-end">
+    <section className="relative overflow-hidden bg-forest-floor text-bone min-h-[85vh] flex flex-col justify-end">
       <Image
         src="/hero-poster.jpg"
         alt=""
