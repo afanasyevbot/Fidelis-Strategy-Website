@@ -33,7 +33,8 @@ export default function HomePage() {
         <FinalCta
           eyebrow="READY WHEN YOU ARE"
           headline="You've built something real. Let's build the systems to run it."
-          primaryLabel="Book a Call →"
+          primaryHref="/brief/"
+          primaryLabel="Get the Brief →"
         />
       </main>
       <Footer />

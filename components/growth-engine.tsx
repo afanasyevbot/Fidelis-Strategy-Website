@@ -38,7 +38,7 @@ export function GrowthEngine({ tone = "bone" }: { tone?: "bone" | "dark" }) {
             generic framework with your logo on it. Then we build it.
           </p>
           <p>
-            The free <strong className="text-linen font-semibold">4D Growth Audit</strong> is where Discover starts. Free, no call required.
+            The free <strong className="text-linen font-semibold">First System Brief</strong> is where Discover starts. Free, no call required.
           </p>
         </div>
         </Reveal>

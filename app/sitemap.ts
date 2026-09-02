@@ -16,8 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/teardowns/ai-lead-engine",
     "/about",
     "/contact",
-    "/growth-audit",
-    "/growth-audit/checklist",
+    "/brief",
     "/privacy",
     "/terms",
     "/blog",
@@ -33,13 +32,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // utility pages (0.6). changeFrequency: blog/audit refresh monthly, others quarterly.
   const priorityFor = (path: string): number => {
     if (path === "") return 1.0;
-    if (["/process", "/what-we-build", "/about", "/growth-audit"].includes(path)) return 0.9;
-    if (path === "/pulse" || path === "/case-studies" || path.startsWith("/case-studies/") || path.startsWith("/teardowns/") || (path.startsWith("/blog/") && path !== "/blog") || path === "/growth-audit/checklist") return 0.8;
+    if (["/process", "/what-we-build", "/about", "/brief"].includes(path)) return 0.9;
+    if (path === "/pulse" || path === "/case-studies" || path.startsWith("/case-studies/") || path.startsWith("/teardowns/") || (path.startsWith("/blog/") && path !== "/blog")) return 0.8;
     if (path === "/blog") return 0.7;
     return 0.6; // /contact and similar
   };
   const changeFreqFor = (path: string): "monthly" | "yearly" => {
-    if (path === "" || path === "/blog" || path.startsWith("/blog/") || path === "/growth-audit") {
+    if (path === "" || path === "/blog" || path.startsWith("/blog/") || path === "/brief") {
       return "monthly";
     }
     return "yearly";

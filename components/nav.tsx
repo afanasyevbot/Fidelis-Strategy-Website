@@ -94,7 +94,7 @@ export function Nav() {
 
           {/* Desktop CTA — door is the Brief, not Calendly */}
           <CtaButton
-            href="/#brief"
+            href="/brief/"
             className="hidden lg:inline-flex text-[10px] py-2 px-4"
             onClick={() => trackEvent("cta_click", { location: "nav_desktop", target: "brief" })}
           >
@@ -183,7 +183,7 @@ export function Nav() {
           {/* CTA inside drawer — same door as desktop */}
           <div className="px-6 pb-8 pt-2">
             <a
-              href="/#brief"
+              href="/brief/"
               className="btn-press block w-full text-center bg-linen text-deep-olive font-sans font-semibold text-[14px] py-3 px-6 tracking-button uppercase"
               onClick={() => {
                 trackEvent("cta_click", { location: "nav_mobile", target: "brief" });

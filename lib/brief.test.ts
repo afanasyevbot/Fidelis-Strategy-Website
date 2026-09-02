@@ -1,11 +1,18 @@
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
 import {
+  BRIEF_BUSINESS_FAIL,
   BRIEF_CHIPS,
+  BRIEF_EMAIL_FAIL,
   BRIEF_LEAK_FAIL,
-  applyChipLeak,
+  BRIEF_STEP1_LEAD,
+  NAMED_LEAK_ADVANCE_MS,
   buildBriefPayload,
+  canContinueLeak,
+  leakFromChoice,
+  namedLeakAutoAdvances,
   validateBrief,
+  validateBriefField,
 } from "./brief.ts";
 
 describe("validateBrief", () => {
@@ -23,7 +30,7 @@ describe("validateBrief", () => {
     }
   });
 
-  it("rejects an empty business note", () => {
+  it("rejects an empty business note with the hang-a-brief copy", () => {
     const result = validateBrief({
       leak: "Every Friday we rebuild the same report by hand.",
       business: "   ",
@@ -32,10 +39,12 @@ describe("validateBrief", () => {
     assert.equal(result.ok, false);
     if (!result.ok) {
       assert.equal(result.field, "business");
+      assert.equal(result.message, BRIEF_BUSINESS_FAIL);
+      assert.equal(result.message, "Give me anything I can hang a brief on.");
     }
   });
 
-  it("rejects a missing email", () => {
+  it("rejects a missing email with the receive-the-Brief copy", () => {
     const result = validateBrief({
       leak: "Every Friday we rebuild the same report by hand.",
       business: "Paradise Capital",
@@ -44,69 +53,65 @@ describe("validateBrief", () => {
     assert.equal(result.ok, false);
     if (!result.ok) {
       assert.equal(result.field, "email");
+      assert.equal(result.message, BRIEF_EMAIL_FAIL);
+      assert.equal(result.message, "I need an email that can receive the Brief.");
     }
   });
 
-  it("accepts trimmed leak, business, and email", () => {
+  it("accepts a custom leak that matches none of the named taps", () => {
+    const leak = "Quotes still live in three inboxes and nobody owns the follow-up.";
     const result = validateBrief({
-      leak: "  Every Friday we rebuild the same report by hand.  ",
-      business: "  Paradise Capital, sell-side  ",
-      email: "  paul@example.com  ",
+      leak,
+      business: "Owner-operated HVAC",
+      email: "pat@example.com",
     });
     assert.equal(result.ok, true);
-    if (result.ok) {
-      assert.equal(result.leak, "Every Friday we rebuild the same report by hand.");
-      assert.equal(result.business, "Paradise Capital, sell-side");
-      assert.equal(result.email, "paul@example.com");
-    }
+    assert.ok(BRIEF_CHIPS.every((chip) => chip.insert !== leak));
   });
 });
 
-describe("applyChipLeak", () => {
-  const friday = BRIEF_CHIPS[0];
-  const quiet = BRIEF_CHIPS[1];
-  const pipeline = BRIEF_CHIPS[2];
-
-  it("exposes the three tap-able examples with locked insert copy", () => {
+describe("wizard leak choices", () => {
+  it("exposes three leak-chrome taps, not a product catalog", () => {
+    assert.equal(BRIEF_STEP1_LEAD, "I'll send a one-pager on the custom AI system that takes it.");
     assert.equal(BRIEF_CHIPS.length, 3);
-    assert.equal(friday.label, "Friday report, by hand");
+    assert.equal(BRIEF_CHIPS[0].label, "Friday report, by hand");
+    assert.equal(BRIEF_CHIPS[0].summary, "An operator dashboard. The report builds itself.");
     assert.equal(
-      friday.insert,
+      BRIEF_CHIPS[0].insert,
       "Every Friday we rebuild the same report by hand. The numbers live in a few tools that don't talk to each other.",
     );
-    assert.equal(quiet.label, "A deal that went quiet");
+    assert.equal(BRIEF_CHIPS[1].label, "A deal that went quiet");
+    assert.equal(BRIEF_CHIPS[1].summary, "A follow-up system. It doesn't live in someone's head.");
+    assert.equal(BRIEF_CHIPS[2].label, "Pipeline nobody trusts");
+    assert.equal(BRIEF_CHIPS[2].summary, "One number, from the system, not a spreadsheet.");
+    const chrome = JSON.stringify(BRIEF_CHIPS);
+    assert.doesNotMatch(chrome, /workflow apps|custom CRM|custom CRMs|catalog/i);
+    assert.ok(!("sku" in BRIEF_CHIPS[0]));
+    assert.ok(!("product" in BRIEF_CHIPS[0]));
+  });
+
+  it("named leak tap fills the locked insert and auto-advances", () => {
+    const friday = BRIEF_CHIPS[0];
+    assert.equal(leakFromChoice(friday.id), friday.insert);
+    assert.equal(namedLeakAutoAdvances(friday.id), true);
+    assert.equal(NAMED_LEAK_ADVANCE_MS, 180);
+    assert.equal(canContinueLeak(friday.insert), true);
+  });
+
+  it("Something else does not auto-advance and needs a real sentence", () => {
+    assert.equal(namedLeakAutoAdvances("other"), false);
+    assert.equal(leakFromChoice("other"), "");
+    assert.equal(canContinueLeak("by hand"), false);
+    assert.equal(canContinueLeak("Quotes still live in three inboxes."), true);
     assert.equal(
-      quiet.insert,
-      "A deal went quiet because follow-up lived in someone's head, not a system.",
+      validateBriefField("leak", "by hand"),
+      "Name the actual work that's still by hand.",
     );
-    assert.equal(pipeline.label, "Pipeline nobody trusts");
-    assert.equal(
-      pipeline.insert,
-      "Nobody trusts the pipeline number. The CRM says one thing. The spreadsheet says another.",
-    );
-  });
-
-  it("replaces when the leak box is empty", () => {
-    const next = applyChipLeak("", friday.insert, null);
-    assert.equal(next, friday.insert);
-  });
-
-  it("replaces when the leak box still holds the previous chip insert", () => {
-    const next = applyChipLeak(friday.insert, quiet.insert, friday.insert);
-    assert.equal(next, quiet.insert);
-  });
-
-  it("appends a sentence when the founder already typed their own leak", () => {
-    const own = "We still price every deal in a spreadsheet";
-    const next = applyChipLeak(own, pipeline.insert, null);
-    assert.match(next, /We still price every deal in a spreadsheet/);
-    assert.match(next, /Nobody trusts the pipeline number/);
-    assert.notEqual(next, pipeline.insert);
   });
 });
 
 describe("buildBriefPayload", () => {
-  it("posts as brief, not as an audit", () => {
+  it("posts as brief with only leak, business, and email fields", () => {
     const payload = buildBriefPayload({
       leak: "Every Friday we rebuild the same report by hand.",
       business: "Paradise Capital",
@@ -125,5 +130,12 @@ describe("buildBriefPayload", () => {
     assert.equal("phone" in payload, false);
     assert.equal("company" in payload, false);
     assert.equal("website" in payload, false);
+    assert.equal("sku" in payload, false);
+    assert.equal("product" in payload, false);
+    assert.equal("system_type" in payload, false);
+    const leadKeys = Object.keys(payload).filter((k) =>
+      ["leak", "business", "email", "name", "phone", "company", "website", "what_to_buy"].includes(k),
+    );
+    assert.deepEqual(leadKeys.sort(), ["business", "email", "leak"]);
   });
 });

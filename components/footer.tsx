@@ -85,6 +85,16 @@ export function Footer() {
               </a>
             </div>
             <div className="pt-4">
+              <a
+                href={siteConfig.bookingUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-sans text-[14px] text-linen hover:text-bone transition-colors link-underline"
+              >
+                Book a Call →
+              </a>
+            </div>
+            <div className="pt-2">
               <Link
                 href="/contact"
                 className="font-sans text-[13px] text-linen/60 hover:text-linen underline underline-offset-2 transition-colors"
