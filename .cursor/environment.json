@@ -1,6 +1,6 @@
 {
   "name": "Fidelis Strategy Website",
-  "install": "npm ci",
+  "install": "npm ci && (command -v sshpass >/dev/null || (sudo apt-get update && sudo apt-get install -y --no-install-recommends sshpass))",
   "terminals": [
     {
       "name": "next-dev",
