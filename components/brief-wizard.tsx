@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useSearchParams } from "next/navigation";
 import { siteConfig } from "@/lib/siteConfig";
 import { trackEvent } from "@/lib/analytics";
 import {
@@ -13,6 +14,7 @@ import {
   canContinueLeak,
   leakFromChoice,
   namedLeakAutoAdvances,
+  parseLeakQuery,
   validateBrief,
   validateBriefField,
   type LeakChoice,
@@ -45,7 +47,9 @@ export function BriefWizard() {
   const [error, setError] = useState<string | null>(null);
   const [status, setStatus] = useState<Status>("idle");
   const reducedMotion = usePrefersReducedMotion();
+  const searchParams = useSearchParams();
   const advanceTimer = useRef<number | null>(null);
+  const bootedQuery = useRef(false);
 
   useEffect(() => {
     return () => {
@@ -82,6 +86,20 @@ export function BriefWizard() {
     setLeak("");
     setError(null);
   }
+
+  useEffect(() => {
+    if (bootedQuery.current) return;
+    const incoming = parseLeakQuery(searchParams.get("leak"));
+    if (!incoming) return;
+    bootedQuery.current = true;
+    if (incoming === "other") {
+      pickOther();
+      return;
+    }
+    pickNamed(incoming);
+    // Named homepage tap: land selected on step 1, then the same auto-advance.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchParams]);
 
   function continueFromLeak() {
     const message = validateBriefField("leak", leak);
@@ -268,7 +286,7 @@ export function BriefWizard() {
             )}
 
             <p className="font-sans text-[13px] text-sage-dust leading-relaxed mt-8">
-              Buyer Engine at Paradise Capital is live. Paul&apos;s +30% / +$2M are projections.
+              <strong className="font-semibold text-linen/80">Buyer Engine</strong> at Paradise Capital is live. Paul&apos;s +30% and +$2M are projections.
             </p>
           </section>
         )}
@@ -403,7 +421,7 @@ export function BriefWizard() {
               If I need a fact I don&apos;t have, I&apos;ll ask. No sequence.
             </p>
             <Link
-              href="/#recent-builds"
+              href="/case-studies/paradise-capital/"
               className="btn-press mt-8 w-full min-h-11 inline-flex items-center justify-center font-sans text-[12px] font-semibold uppercase tracking-button px-6 py-3 bg-linen text-ink hover:bg-[#c6b48a]"
             >
               See the work

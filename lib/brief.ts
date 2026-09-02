@@ -3,13 +3,16 @@ export const BRIEF_BUSINESS_FAIL = "Give me anything I can hang a brief on.";
 export const BRIEF_EMAIL_FAIL = "I need an email that can receive the Brief.";
 export const NAMED_LEAK_ADVANCE_MS = 180;
 export const BRIEF_STEP1_LEAD =
-  "I'll send a one-pager on the custom AI system that takes it.";
+  "I'll send a one-pager on the custom AI system that takes it. Tap one, or write your own.";
+
+export type LeakSlug = "friday" | "quiet" | "pipeline" | "other";
 
 // Named taps are leak chrome, not SKUs / product cards.
-// Something else is an open box. Fulfillment may map to any system type.
+// Chrome (summary) is wizard-only. Homepage renders titles only.
 export const BRIEF_CHIPS = [
   {
     id: "friday-report",
+    slug: "friday" as const,
     label: "Friday report, by hand",
     summary: "An operator dashboard. The report builds itself.",
     insert:
@@ -17,6 +20,7 @@ export const BRIEF_CHIPS = [
   },
   {
     id: "quiet-deal",
+    slug: "quiet" as const,
     label: "A deal that went quiet",
     summary: "A follow-up system. It doesn't live in someone's head.",
     insert:
@@ -24,6 +28,7 @@ export const BRIEF_CHIPS = [
   },
   {
     id: "untrusted-pipeline",
+    slug: "pipeline" as const,
     label: "Pipeline nobody trusts",
     summary: "One number, from the system, not a spreadsheet.",
     insert:
@@ -47,9 +52,34 @@ export type BriefValidation =
 const EMAIL_RE = /^\S+@\S+\.\S+$/;
 const MIN_LEAK_CHARS = 20;
 
+function normalizeLeak(value: string): string {
+  return value
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+/** Chatbot / deck / strategy as the whole ask is an offer, not a leak. */
+export function isOfferOnlyAsk(value: string): boolean {
+  const n = normalizeLeak(value);
+  const offer =
+    /\b(chat\s*bots?|chatbots?|gpts?)\b/.test(n) ||
+    /\b(pitch\s*decks?|slide\s*decks?|decks?|powerpoints?|slides?)\b/.test(n) ||
+    /\b(growth\s*strateg(?:y|ies)|strateg(?:y|ies)|strategic plans?)\b/.test(n);
+  if (!offer) return false;
+  const leakSignal =
+    /\b(by hand|someone s head|someones head|spreadsheet|rebuild|follow ?up|pipeline|inbox|manual|every friday|tools that|living in)\b/.test(
+      n,
+    );
+  return !leakSignal;
+}
+
 export function isRealLeak(value: string): boolean {
   const leak = value.trim();
-  return leak.length >= MIN_LEAK_CHARS && /\s/.test(leak);
+  if (leak.length < MIN_LEAK_CHARS || !/\s/.test(leak)) return false;
+  if (isOfferOnlyAsk(leak)) return false;
+  return true;
 }
 
 export function canContinueLeak(value: string): boolean {
@@ -63,6 +93,19 @@ export function namedLeakAutoAdvances(choice: LeakChoice): boolean {
 export function leakFromChoice(choice: LeakChoice): string {
   if (choice === "other") return "";
   return BRIEF_CHIPS.find((chip) => chip.id === choice)?.insert ?? "";
+}
+
+export function parseLeakQuery(raw: string | null | undefined): LeakChoice | null {
+  const key = (raw ?? "").trim().toLowerCase();
+  if (key === "friday") return "friday-report";
+  if (key === "quiet") return "quiet-deal";
+  if (key === "pipeline") return "untrusted-pipeline";
+  if (key === "other") return "other";
+  return null;
+}
+
+export function briefHrefForSlug(slug: LeakSlug): string {
+  return `/brief/?leak=${slug}`;
 }
 
 export function validateBriefField(

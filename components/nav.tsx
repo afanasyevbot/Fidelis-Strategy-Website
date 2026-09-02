@@ -92,7 +92,7 @@ export function Nav() {
             })}
           </ul>
 
-          {/* Desktop CTA — door is the Brief, not Calendly */}
+          {/* Header CTA — door is the Brief, not Calendly */}
           <CtaButton
             href="/brief/"
             className="hidden lg:inline-flex text-[10px] py-2 px-4"
@@ -101,26 +101,36 @@ export function Nav() {
             Get the Brief →
           </CtaButton>
 
-          {/* Mobile: hamburger */}
-          <button
-            onClick={() => setOpen((v) => !v)}
-            className="lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-[5px] text-bone"
-            aria-label={open ? "Close menu" : "Open menu"}
-            aria-expanded={open}
-          >
-            <span className={cn(
-              "block w-6 h-[2px] bg-current rounded-full transition-all duration-200",
-              open && "translate-y-[7px] rotate-45"
-            )} />
-            <span className={cn(
-              "block w-6 h-[2px] bg-current rounded-full transition-all duration-200",
-              open && "opacity-0"
-            )} />
-            <span className={cn(
-              "block w-6 h-[2px] bg-current rounded-full transition-all duration-200",
-              open && "-translate-y-[7px] -rotate-45"
-            )} />
-          </button>
+          <div className="lg:hidden flex items-center gap-2">
+            <CtaButton
+              href="/brief/"
+              className="text-[10px] py-2 px-3"
+              onClick={() => trackEvent("cta_click", { location: "nav_mobile_header", target: "brief" })}
+            >
+              Get the Brief →
+            </CtaButton>
+            {pathname !== "/" && (
+              <button
+                onClick={() => setOpen((v) => !v)}
+                className="flex flex-col justify-center items-center w-10 h-10 gap-[5px] text-bone"
+                aria-label={open ? "Close menu" : "Open menu"}
+                aria-expanded={open}
+              >
+                <span className={cn(
+                  "block w-6 h-[2px] bg-current rounded-full transition-all duration-200",
+                  open && "translate-y-[7px] rotate-45"
+                )} />
+                <span className={cn(
+                  "block w-6 h-[2px] bg-current rounded-full transition-all duration-200",
+                  open && "opacity-0"
+                )} />
+                <span className={cn(
+                  "block w-6 h-[2px] bg-current rounded-full transition-all duration-200",
+                  open && "-translate-y-[7px] -rotate-45"
+                )} />
+              </button>
+            )}
+          </div>
         </nav>
       </header>
 

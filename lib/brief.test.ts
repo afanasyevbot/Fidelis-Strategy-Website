@@ -11,6 +11,8 @@ import {
   canContinueLeak,
   leakFromChoice,
   namedLeakAutoAdvances,
+  parseLeakQuery,
+  briefHrefForSlug,
   validateBrief,
   validateBriefField,
 } from "./brief.ts";
@@ -68,11 +70,45 @@ describe("validateBrief", () => {
     assert.equal(result.ok, true);
     assert.ok(BRIEF_CHIPS.every((chip) => chip.insert !== leak));
   });
+
+  it("rejects chatbot-only, deck-only, or strategy-only as a leak", () => {
+    const rejects = [
+      "build me a chatbot",
+      "Write us a strategy",
+      "just a deck",
+      "We need a pitch deck for the raise",
+      "Can you write our growth strategy",
+    ];
+    for (const leak of rejects) {
+      const result = validateBrief({
+        leak,
+        business: "Paradise Capital",
+        email: "paul@example.com",
+      });
+      assert.equal(result.ok, false, leak);
+      if (!result.ok) {
+        assert.equal(result.field, "leak", leak);
+        assert.equal(result.message, BRIEF_LEAK_FAIL, leak);
+      }
+    }
+  });
+
+  it("still accepts a real leak that mentions a chatbot or strategy", () => {
+    const result = validateBrief({
+      leak: "Follow-up lives in someone's head and we keep asking for a chatbot instead of a system.",
+      business: "Owner-operated HVAC",
+      email: "pat@example.com",
+    });
+    assert.equal(result.ok, true);
+  });
 });
 
 describe("wizard leak choices", () => {
   it("exposes three leak-chrome taps, not a product catalog", () => {
-    assert.equal(BRIEF_STEP1_LEAD, "I'll send a one-pager on the custom AI system that takes it.");
+    assert.equal(
+      BRIEF_STEP1_LEAD,
+      "I'll send a one-pager on the custom AI system that takes it. Tap one, or write your own.",
+    );
     assert.equal(BRIEF_CHIPS.length, 3);
     assert.equal(BRIEF_CHIPS[0].label, "Friday report, by hand");
     assert.equal(BRIEF_CHIPS[0].summary, "An operator dashboard. The report builds itself.");
@@ -96,6 +132,17 @@ describe("wizard leak choices", () => {
     assert.equal(namedLeakAutoAdvances(friday.id), true);
     assert.equal(NAMED_LEAK_ADVANCE_MS, 180);
     assert.equal(canContinueLeak(friday.insert), true);
+  });
+
+  it("maps homepage leak slugs to wizard choices", () => {
+    assert.equal(parseLeakQuery("friday"), "friday-report");
+    assert.equal(parseLeakQuery("quiet"), "quiet-deal");
+    assert.equal(parseLeakQuery("pipeline"), "untrusted-pipeline");
+    assert.equal(parseLeakQuery("other"), "other");
+    assert.equal(parseLeakQuery("nope"), null);
+    assert.equal(briefHrefForSlug("friday"), "/brief/?leak=friday");
+    assert.equal(briefHrefForSlug("quiet"), "/brief/?leak=quiet");
+    assert.equal(briefHrefForSlug("pipeline"), "/brief/?leak=pipeline");
   });
 
   it("Something else does not auto-advance and needs a real sentence", () => {

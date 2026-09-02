@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { BriefWizard } from "@/components/brief-wizard";
 
 export const metadata: Metadata = {
@@ -9,5 +10,9 @@ export const metadata: Metadata = {
 };
 
 export default function BriefPage() {
-  return <BriefWizard />;
+  return (
+    <Suspense fallback={<div className="min-h-dvh bg-forest-floor" />}>
+      <BriefWizard />
+    </Suspense>
+  );
 }
