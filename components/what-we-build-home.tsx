@@ -1,12 +1,12 @@
 import Link from "next/link";
-import { systems } from "@/content/systems";
 import { Eyebrow } from "./eyebrow";
-import { SystemCard } from "./system-card";
 import { Reveal } from "./reveal";
 
+/**
+ * Homepage "what we build" beat: outcome-led, not a four-SKU menu.
+ * Proof of range lives in Recent Builds. Catalog page stays at /what-we-build.
+ */
 export function WhatWeBuildHome() {
-  // Show 4 highest-impact categories on home; full set lives at /what-we-build
-  const featured = systems.slice(0, 4);
   return (
     <section id="what-we-build" className="bg-bone">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 py-16 md:py-24">
@@ -16,23 +16,21 @@ export function WhatWeBuildHome() {
             AI systems that grow the top line.
           </h2>
           <p className="font-display font-light text-lg md:text-xl text-moss-olive mt-3 max-w-2xl">
-            Pipeline tools, operator dashboards, workflow apps, and the systems in
-            between. Each built around how you work.
+            Not a product list. Whatever is leaking: a workflow, a process, a data gap, a bottleneck.
           </p>
         </Reveal>
-        <Reveal stagger className="grid md:grid-cols-2 gap-4 mt-12">
-          {featured.map((s) => (
-            <div key={s.slug} data-reveal-child className="h-full">
-              <SystemCard entry={s} />
-            </div>
-          ))}
+        <Reveal delay={80} className="mt-8 max-w-2xl space-y-4 font-sans text-[17px] text-ink/80 leading-relaxed">
+          <p>
+            Every engagement is custom. We look at how you already work, find where growth is getting
+            stuck, and build the system that unblocks it. Same person who spots the leak builds the fix.
+          </p>
         </Reveal>
         <Reveal delay={120} className="mt-10">
           <Link
-            href="/what-we-build"
+            href="#recent-builds"
             className="arrow-nudge inline-flex items-center gap-2 text-[12px] uppercase tracking-button text-deep-olive hover:text-moss-olive font-semibold link-underline"
           >
-            See every system we start with <span data-arrow>→</span>
+            See what that looks like in real businesses <span data-arrow>→</span>
           </Link>
         </Reveal>
       </div>
