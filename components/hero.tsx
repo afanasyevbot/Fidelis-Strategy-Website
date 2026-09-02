@@ -76,7 +76,8 @@ export function Hero() {
           </p>
 
           <p className="mt-5 text-center font-sans text-[13px] leading-relaxed text-linen/55">
-            Name the leak. One-pager in ~24h. No call.
+            Name what&apos;s still manual. I&apos;ll send a one-pager on how a custom system
+            could take it. No call.
           </p>
         </div>
 

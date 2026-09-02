@@ -1,8 +1,10 @@
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { Hero } from "@/components/hero";
+import { TheShift } from "@/components/the-shift";
 import { WhatWeBuildHome } from "@/components/what-we-build-home";
 import { ProblemSection } from "@/components/problem-section";
+import { ProofBeforeAfter } from "@/components/proof-before-after";
 import { SoloBuilder } from "@/components/solo-builder";
 import { GrowthEngine } from "@/components/growth-engine";
 import { ProofSection } from "@/components/proof-section";
@@ -22,7 +24,9 @@ export default function HomePage() {
       <Nav />
       <main>
         <Hero />
+        <TheShift />
         <ProblemSection />
+        <ProofBeforeAfter />
         <SoloBuilder />
         <GrowthEngine tone="bone" />
         <WhatWeBuildHome />
