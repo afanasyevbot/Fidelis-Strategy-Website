@@ -5,7 +5,7 @@ export const NAMED_LEAK_ADVANCE_MS = 180;
 export const BRIEF_STEP1_LEAD =
   "I'll send a one-pager on how we could solve it. Tap one, or write your own.";
 
-export type LeakSlug = "fragmented" | "followups" | "bus-factor" | "cold" | "other";
+export type LeakSlug = "fragmented" | "followups" | "bus-factor" | "cold" | "misfit" | "other";
 
 // Named taps align with homepage pain cards. Chrome (summary) is wizard-only.
 export const BRIEF_CHIPS = [
@@ -40,6 +40,14 @@ export const BRIEF_CHIPS = [
     summary: "Follow-up in a system, not when someone finally has time.",
     insert:
       "Deals go cold while we're busy elsewhere. Follow-up wasn't in a system. By the time we got back, they'd already moved on.",
+  },
+  {
+    id: "software-misfit",
+    slug: "misfit" as const,
+    label: "Bending your process around software that doesn't fit",
+    summary: "Systems shaped to how you work, not the other way around.",
+    insert:
+      "We keep bending our process around software that wasn't built for how we work. The workarounds eat more time than the tool saves.",
   },
 ] as const;
 
@@ -108,6 +116,7 @@ export function parseLeakQuery(raw: string | null | undefined): LeakChoice | nul
   if (key === "followups" || key === "quiet") return "followups-in-head";
   if (key === "bus-factor" || key === "pipeline") return "single-owner-process";
   if (key === "cold") return "cold-deals";
+  if (key === "misfit" || key === "workaround") return "software-misfit";
   if (key === "other") return "other";
   return null;
 }

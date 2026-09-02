@@ -101,16 +101,17 @@ describe("validateBrief", () => {
 });
 
 describe("wizard leak choices", () => {
-  it("exposes four pain-aligned taps, not a product catalog", () => {
+  it("exposes pain-aligned taps, not a product catalog", () => {
     assert.equal(
       BRIEF_STEP1_LEAD,
       "I'll send a one-pager on how we could solve it. Tap one, or write your own.",
     );
-    assert.equal(BRIEF_CHIPS.length, 4);
+    assert.equal(BRIEF_CHIPS.length, 5);
     assert.equal(BRIEF_CHIPS[0].label, "Nothing talks to anything");
     assert.equal(BRIEF_CHIPS[1].label, "Follow-ups depend on who remembers");
     assert.equal(BRIEF_CHIPS[2].label, "Only one person knows how it works");
     assert.equal(BRIEF_CHIPS[3].label, "Deals that go cold while you're busy elsewhere");
+    assert.equal(BRIEF_CHIPS[4].label, "Bending your process around software that doesn't fit");
     const chrome = JSON.stringify(BRIEF_CHIPS);
     assert.doesNotMatch(chrome, /workflow apps|custom CRM|custom CRMs|catalog/i);
     assert.ok(!("sku" in BRIEF_CHIPS[0]));
@@ -130,6 +131,8 @@ describe("wizard leak choices", () => {
     assert.equal(parseLeakQuery("followups"), "followups-in-head");
     assert.equal(parseLeakQuery("bus-factor"), "single-owner-process");
     assert.equal(parseLeakQuery("cold"), "cold-deals");
+    assert.equal(parseLeakQuery("misfit"), "software-misfit");
+    assert.equal(parseLeakQuery("workaround"), "software-misfit");
     assert.equal(parseLeakQuery("other"), "other");
     assert.equal(parseLeakQuery("nope"), null);
     assert.equal(briefHrefForSlug("fragmented"), "/brief/?leak=fragmented");

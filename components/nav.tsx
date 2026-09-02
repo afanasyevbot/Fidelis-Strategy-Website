@@ -13,6 +13,67 @@ export function Nav() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const primaryNav = siteConfig.nav.filter((i) => !i.secondary);
+  const secondaryNav = siteConfig.nav.filter((i) => i.secondary);
+
+  function navLinkClass(isActive: boolean, secondary = false) {
+    return cn(
+      "relative inline-flex items-center transition-colors duration-200",
+      secondary
+        ? "text-bone/45 text-[12px] hover:text-bone/70"
+        : "text-bone/80 text-[13px] hover:text-linen",
+      !secondary &&
+        "after:absolute after:left-0 after:right-0 after:-bottom-1 after:h-[2px] after:bg-linen after:origin-left after:transition-transform after:duration-300",
+      secondary
+        ? isActive
+          ? "text-bone/65 font-medium"
+          : ""
+        : isActive
+          ? "text-linen font-semibold after:scale-x-100"
+          : "after:scale-x-0 hover:after:scale-x-100",
+    );
+  }
+
+  function renderNavItem(
+    i: (typeof siteConfig.nav)[number],
+    options?: { onNavigate?: () => void; mobile?: boolean },
+  ) {
+    const isActive = !i.external && (
+      i.href === "/" ? pathname === "/" : pathname.startsWith(i.href)
+    );
+    const className = options?.mobile
+      ? cn(
+          "flex items-center py-3 text-[16px] border-b border-white/5 transition-colors",
+          i.secondary
+            ? isActive
+              ? "text-bone/55 font-medium"
+              : "text-bone/45"
+            : isActive
+              ? "text-linen font-semibold"
+              : "text-bone/70",
+        )
+      : navLinkClass(isActive, i.secondary);
+
+    if (i.external) {
+      return (
+        <a
+          href={i.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={className}
+          onClick={options?.onNavigate}
+        >
+          {i.label}
+        </a>
+      );
+    }
+
+    return (
+      <Link href={i.href} className={className} onClick={options?.onNavigate}>
+        {i.label}
+      </Link>
+    );
+  }
 
   // Close menu on route change
   useEffect(() => {
@@ -61,45 +122,29 @@ export function Nav() {
           </Link>
 
           {/* Desktop nav */}
-          <ul className="hidden lg:flex items-center gap-7 text-bone/80 text-[13px] font-sans">
-            {siteConfig.nav.map((i) => {
-              const isActive = !i.external && (
-                i.href === "/" ? pathname === "/" : pathname.startsWith(i.href)
-              );
-              const baseLink = cn(
-                "relative inline-flex items-center transition-colors duration-200 hover:text-linen",
-                "after:absolute after:left-0 after:right-0 after:-bottom-1 after:h-[2px] after:bg-linen after:origin-left after:transition-transform after:duration-300",
-                isActive ? "text-linen font-semibold after:scale-x-100" : "text-bone/80 after:scale-x-0 hover:after:scale-x-100",
-              );
-              return (
-                <li key={i.href}>
-                  {i.external ? (
-                    <a
-                      href={i.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={baseLink}
-                    >
-                      {i.label}
-                    </a>
-                  ) : (
-                    <Link href={i.href} className={baseLink}>
-                      {i.label}
-                    </Link>
-                  )}
-                </li>
-              );
-            })}
+          <ul className="hidden lg:flex items-center gap-7 font-sans">
+            {primaryNav.map((i) => (
+              <li key={i.href}>{renderNavItem(i)}</li>
+            ))}
           </ul>
 
-          {/* Header CTA — door is the Brief, not Calendly */}
-          <CtaButton
-            href="/brief/"
-            className="hidden lg:inline-flex"
-            onClick={() => trackEvent("cta_click", { location: "nav_desktop", target: "brief" })}
-          >
-            Get the Brief →
-          </CtaButton>
+          <div className="hidden lg:flex items-center gap-5">
+            {secondaryNav.length > 0 && (
+              <ul className="flex items-center gap-4 font-sans border-l border-linen/15 pl-5">
+                {secondaryNav.map((i) => (
+                  <li key={i.href}>{renderNavItem(i)}</li>
+                ))}
+              </ul>
+            )}
+
+            {/* Header CTA — door is the Brief, not Calendly */}
+            <CtaButton
+              href="/brief/"
+              onClick={() => trackEvent("cta_click", { location: "nav_desktop", target: "brief" })}
+            >
+              Get the Brief →
+            </CtaButton>
+          </div>
 
           <div className="lg:hidden flex items-center gap-2">
             <CtaButton
@@ -156,36 +201,21 @@ export function Nav() {
           )}
         >
           <ul className="px-6 py-6 space-y-1 font-sans">
-            {siteConfig.nav.map((i) => {
-              const isActive = !i.external && (
-                i.href === "/" ? pathname === "/" : pathname.startsWith(i.href)
-              );
-              return (
-                <li key={i.href}>
-                  {i.external ? (
-                    <a
-                      href={i.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center py-3 text-[16px] text-bone/70 border-b border-white/5"
-                      onClick={() => setOpen(false)}
-                    >
-                      {i.label}
-                    </a>
-                  ) : (
-                    <Link
-                      href={i.href}
-                      className={cn(
-                        "flex items-center py-3 text-[16px] border-b border-white/5 transition-colors",
-                        isActive ? "text-linen font-semibold" : "text-bone/70"
-                      )}
-                    >
-                      {i.label}
-                    </Link>
-                  )}
+            {primaryNav.map((i) => (
+              <li key={i.href}>{renderNavItem(i, { mobile: true, onNavigate: () => setOpen(false) })}</li>
+            ))}
+            {secondaryNav.length > 0 && (
+              <>
+                <li aria-hidden className="pt-3 pb-1">
+                  <span className="font-sans text-[11px] uppercase tracking-[0.18em] text-bone/35">
+                    Product
+                  </span>
                 </li>
-              );
-            })}
+                {secondaryNav.map((i) => (
+                  <li key={i.href}>{renderNavItem(i, { mobile: true, onNavigate: () => setOpen(false) })}</li>
+                ))}
+              </>
+            )}
           </ul>
 
           {/* CTA inside drawer — same door as desktop */}

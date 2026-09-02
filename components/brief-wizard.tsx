@@ -197,12 +197,12 @@ export function BriefWizard() {
       <main className="flex-1 w-full max-w-[480px] mx-auto px-5 pb-8">
         {step === 1 && (
           <section>
-            <p className="font-sans text-[12px] font-bold uppercase tracking-[0.22em] text-linen/80 mt-5 text-center">
+            <p className="font-sans text-[12px] font-bold uppercase tracking-[0.22em] text-linen/80 mt-10 text-center">
               <span aria-hidden>◇</span>
               <span className="mx-3">First System Brief</span>
               <span aria-hidden>◇</span>
             </p>
-            <h1 className="font-display font-bold text-[32px] leading-[1.08] tracking-[-0.03em] text-bone mt-5">
+            <h1 className="font-display font-bold text-[32px] leading-[1.08] tracking-[-0.03em] text-bone mt-8">
               What&apos;s still manual, or causing a bottleneck?
             </h1>
             <p className="font-sans text-[16px] text-linen/80 leading-relaxed mt-3">
@@ -284,10 +284,6 @@ export function BriefWizard() {
             {error && (
               <p role="alert" className="font-sans text-[14px] text-[#f3d2c2] mt-3">{error}</p>
             )}
-
-            <p className="font-sans text-[13px] text-sage-dust leading-relaxed mt-8">
-              <strong className="font-semibold text-linen/80">Buyer Engine</strong> at Paradise Capital is live. Paul&apos;s +30% and +$2M are projections.
-            </p>
           </section>
         )}
 
@@ -302,7 +298,7 @@ export function BriefWizard() {
               Anything about the business.
             </h1>
             <p className="font-sans text-[16px] text-linen/80 leading-relaxed mt-3">
-              Company, what you sell, a URL, a sentence. Whatever you&apos;ll give.
+              Company, what you sell, a URL, or a sentence.
             </p>
             <div className="mt-6">
               <label htmlFor="brief-business" className="block font-sans text-[13px] font-semibold text-linen mb-2">
@@ -354,7 +350,7 @@ export function BriefWizard() {
               Where should I send it?
             </h1>
             <p className="font-sans text-[16px] text-linen/80 leading-relaxed mt-3">
-              High-level one-pager. I read it. I send it. No call to start.
+              High-level one-pager. I read it. I send it. If it resonates, we can talk then.
             </p>
             <div className="mt-6">
               <label htmlFor="brief-email" className="block font-sans text-[13px] font-semibold text-linen mb-2">
@@ -402,7 +398,7 @@ export function BriefWizard() {
               ← Back
             </button>
             <p className="font-sans text-[13px] text-sage-dust leading-relaxed mt-6">
-              Not generated on submit. No sequence. No call required.
+              Written by hand. Not generated on submit.
             </p>
           </section>
         )}
@@ -418,8 +414,7 @@ export function BriefWizard() {
               I&apos;ll send the Brief soon.
             </h1>
             <p className="font-sans text-[16px] text-linen/80 leading-relaxed mt-4">
-              If I need a fact I don&apos;t have, I&apos;ll ask. No sequence. If it resonates, we can
-              talk then.
+              If I need a fact I don&apos;t have, I&apos;ll ask. If it resonates, we can talk then.
             </p>
             <Link
               href="/case-studies/paradise-capital/"
