@@ -93,6 +93,10 @@ Fidelis GTM hunt is HELD. Do not start Founders.
 - **Anti-bolt-on:** Not another tool on the pile. Not “add ChatGPT to your workflow.” **Integrated into how you already work** — your tools, your rhythm, your team’s actual process. Custom system shaped to today’s workflow, not a template they have to learn.
 - **Matthew’s role:** Trusted guide who explains what’s possible, then **ships** the system (plans it / builds it). Educator + builder, same person.
 
+**Differentiator — small operator language (not “deck”):** They don’t fear Bain; they fear **another thing that doesn’t stick**. Frame against: tools that don’t fit, projects that never ship, work still by hand. *The person who plans it builds it* — same accountable principal, no handoff, system that runs in their environment.
+
+**Retire from homepage/marketing:** “Most consultants hand you a deck,” “we build what consultants can’t,” anti-big-consultancy framing. Keep **deck/strategy-only** only as Brief wizard *validation* (not a leak), not as brand positioning.
+
 **Draft framing (not locked):**
 
 | Beat | Direction |

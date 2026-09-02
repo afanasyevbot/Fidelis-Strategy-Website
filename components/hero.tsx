@@ -4,9 +4,8 @@ const GRADE =
   "brightness(0.52) sepia(0.35) hue-rotate(22deg) saturate(1.15) contrast(1.08)";
 
 /**
- * Homepage leak block is a question. Example taps are on hold —
- * Friday / quiet / pipeline are killed. Wait for replacement titles.
- * Door is header Get the Brief → /brief/. SKU chrome stays on /brief/.
+ * Homepage hero: growth strategy + custom AI systems. Brief question below.
+ * Solo / "built by me" lives in THE SHIFT + solo-builder — not repeated here.
  */
 export function Hero() {
   return (
@@ -47,41 +46,35 @@ export function Hero() {
         style={{ background: "rgba(13,26,14,0.32)" }}
       />
 
-      <div className="relative z-10 mx-auto flex max-w-3xl flex-col items-center px-5 pb-12 pt-10 text-center sm:px-6 md:pb-20 md:pt-16">
-        <p className="mb-4 font-sans text-[11px] font-bold uppercase tracking-[0.25em] text-linen/70">
-          Custom AI systems · owner-operated
+      <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 pb-12 pt-10 text-center md:pb-20 md:pt-16">
+        <p className="mb-5 font-sans text-[11px] font-bold uppercase tracking-[0.25em] text-linen/70">
+          Growth strategy · custom AI systems
         </p>
 
-        <h1 className="max-w-[16ch] font-display text-[34px] font-bold leading-[1.06] tracking-[-0.03em] sm:text-5xl md:text-[56px]">
-          Custom AI systems for how you{" "}
-          <em
-            className="font-normal italic text-linen"
-            style={{ fontFamily: "var(--font-cinzel), Georgia, serif" }}
-          >
-            actually
-          </em>{" "}
-          grow.
+        <h1 className="mx-auto max-w-[22ch] font-display text-[32px] font-bold leading-[1.06] tracking-[-0.03em] text-bone sm:text-[42px] md:text-[56px] md:leading-[1.04]">
+          Growth strategy and custom AI systems, built for how you{" "}
+          <em className="font-bold italic text-linen">actually grow</em>.
         </h1>
 
-        <p className="mt-4 max-w-[28ch] font-display text-[18px] leading-snug text-linen/85 md:text-[22px]">
-          I design the strategy. I build them. Same person.
+        <p className="mx-auto mt-5 max-w-[34ch] font-display text-[18px] font-light leading-snug tracking-[-0.01em] text-linen/85 md:text-[22px]">
+          Shaped to your actual processes — not off-the-shelf software, not a bolt-on.
         </p>
 
-        <div className="mt-10 w-full max-w-[28rem] md:mt-12">
-          <p className="text-center font-display text-[22px] font-bold leading-snug tracking-[-0.02em] text-bone md:text-[26px]">
+        <div className="mx-auto mt-10 w-full max-w-[28rem] md:mt-12">
+          <p className="font-display text-[22px] font-bold leading-snug tracking-[-0.02em] text-bone md:text-[26px]">
             What&apos;s still getting done by hand?
           </p>
-          <p className="mt-2 text-center font-sans text-[15px] leading-relaxed text-linen/65">
-            Or living in someone&apos;s head. These are examples.
+          <p className="mt-2 font-sans text-[15px] leading-relaxed text-linen/65">
+            Or living in someone&apos;s head. Start with one.
           </p>
 
-          <p className="mt-5 text-center font-sans text-[13px] leading-relaxed text-linen/55">
-            Name what&apos;s still manual. I&apos;ll send a one-pager on how a custom system
-            could take it. No call.
+          <p className="mt-5 font-sans text-[13px] leading-relaxed text-linen/55">
+            Name what&apos;s still manual. A one-pager on how a custom system could take
+            it. No call.
           </p>
         </div>
 
-        <p className="mt-10 max-w-[40ch] text-center font-sans text-[13px] leading-relaxed text-linen/50 md:mt-12">
+        <p className="mx-auto mt-10 max-w-[40ch] font-sans text-[13px] leading-relaxed text-linen/50 md:mt-12">
           <strong className="font-semibold text-linen/75">Buyer Engine</strong>{" "}
           at Paradise Capital is live. Paul&apos;s +30% and +$2M are projections.
         </p>
