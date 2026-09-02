@@ -55,7 +55,7 @@ Homepage scroll order (`app/page.tsx`):
 
 1. **Add a “why now” beat early** — before or right after pain, not buried under What We Build. One beat: urgency + solvable today + gap widens every quarter.
 
-2. **Elevate differentiator + production proof** — combine “plans it / builds it” with **live systems** (Pulse SaaS, Buyer Engine at Paradise). Closer to hero or immediately after pain. Not Glow/church as primary proof (Brief door packet: See the work → Paradise).
+2. **Elevate differentiator + production proof** — combine “plans it / builds it” with **live systems across verticals** (Paradise Buyer Engine, Grace church portal, Pulse, Glow). Closer to hero or immediately after pain. **Church is strong proof** (fragmented ops → one portal + follow-up routines) — do not undersell. Brief wizard success CTA can still default to Paradise case study; homepage proof should show **breadth**, not one niche.
 
 3. **Money/time lines, not feature labels** — reuse existing pain language (“three hours → six minutes”) and name **AI as how**, not “fit scoring” / “AI commentary” as the lead.
 
@@ -68,7 +68,8 @@ Homepage scroll order (`app/page.tsx`):
 ## Open questions for Matthew
 
 - Does “why now” get its own section or fold into hero sub / post-pain bridge?
-- Is Pulse named on homepage proof row, or only Paradise for M&A-adjacent buyers?
+- Proof row: Paradise + church + Pulse + Glow — how many on homepage vs Recent Builds?
+- Church copy: reframe `recent-builds.tsx` body around fragmentation → consolidation → routines (Matthew’s framing).
 - After example tap titles lock, does problem-section copy (Friday / quiet / pipeline) also get replaced to match the new pain framing?
 
 ---
