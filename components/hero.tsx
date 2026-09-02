@@ -48,7 +48,7 @@ export function Hero() {
 
       <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 pb-12 pt-10 text-center md:pb-20 md:pt-16">
         <p className="mb-5 font-sans text-[11px] font-bold uppercase tracking-[0.25em] text-linen/70">
-          Growth strategy · custom AI systems
+          For owner-operated businesses
         </p>
 
         <h1 className="mx-auto max-w-[24ch] font-display text-[32px] font-bold leading-[1.08] tracking-[-0.03em] text-bone sm:text-[40px] md:text-[52px] md:leading-[1.06]">
@@ -57,15 +57,15 @@ export function Hero() {
         </h1>
 
         <p className="mx-auto mt-5 max-w-[34ch] font-display text-[18px] font-light leading-snug tracking-[-0.01em] text-linen/85 md:text-[22px]">
-          Shaped to your actual processes. Not off-the-shelf software. Not a bolt-on.
+          Not off-the-shelf software. Not a bolt-on. Built into the process you already run.
         </p>
 
         <div className="mx-auto mt-10 w-full max-w-[28rem] md:mt-12">
           <p className="font-display text-[22px] font-bold leading-snug tracking-[-0.02em] text-bone md:text-[26px]">
             What&apos;s still manual, or causing a bottleneck?
           </p>
-          <p className="mt-2 font-sans text-[15px] leading-relaxed text-linen/65">
-            Or living in someone&apos;s head. Start with one.
+          <p className="mt-2 font-sans text-[15px] leading-relaxed text-linen/70">
+            Or living in someone&apos;s head. Name one. That&apos;s enough to start.
           </p>
 
           <p className="mt-5 font-sans text-[14px] leading-relaxed text-linen/80">

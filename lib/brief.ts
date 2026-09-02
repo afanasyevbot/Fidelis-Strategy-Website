@@ -1,38 +1,45 @@
-export const BRIEF_LEAK_FAIL = "Name the actual work that's still by hand.";
+export const BRIEF_LEAK_FAIL = "Name the actual work that's still manual or causing a bottleneck.";
 export const BRIEF_BUSINESS_FAIL = "Give me anything I can hang a brief on.";
 export const BRIEF_EMAIL_FAIL = "I need an email that can receive the Brief.";
 export const NAMED_LEAK_ADVANCE_MS = 180;
 export const BRIEF_STEP1_LEAD =
-  "I'll send a one-pager on the custom AI system that takes it. Tap one, or write your own.";
+  "I'll send a one-pager on how we could solve it. Tap one, or write your own.";
 
-export type LeakSlug = "friday" | "quiet" | "pipeline" | "other";
+export type LeakSlug = "fragmented" | "followups" | "bus-factor" | "cold" | "other";
 
-// Named taps are leak chrome, not SKUs / product cards.
-// Chrome (summary) is wizard-only. Homepage renders titles only.
+// Named taps align with homepage pain cards. Chrome (summary) is wizard-only.
 export const BRIEF_CHIPS = [
   {
-    id: "friday-report",
-    slug: "friday" as const,
-    label: "Friday report, by hand",
-    summary: "An operator dashboard. The report builds itself.",
+    id: "fragmented-tools",
+    slug: "fragmented" as const,
+    label: "Nothing talks to anything",
+    summary: "One system connects the numbers. No more copy-paste between tabs.",
     insert:
-      "Every Friday we rebuild the same report by hand. The numbers live in a few tools that don't talk to each other.",
+      "The numbers live in four tools that don't connect. The same work gets rebuilt by hand every week.",
   },
   {
-    id: "quiet-deal",
-    slug: "quiet" as const,
-    label: "A deal that went quiet",
+    id: "followups-in-head",
+    slug: "followups" as const,
+    label: "Follow-ups depend on who remembers",
     summary: "A follow-up system. It doesn't live in someone's head.",
     insert:
-      "A deal went quiet because follow-up lived in someone's head, not a system.",
+      "Follow-ups depend on who remembers. When they're busy, it doesn't happen, and we never know what it cost.",
   },
   {
-    id: "untrusted-pipeline",
-    slug: "pipeline" as const,
-    label: "Pipeline nobody trusts",
-    summary: "One number, from the system, not a spreadsheet.",
+    id: "single-owner-process",
+    slug: "bus-factor" as const,
+    label: "Only one person knows how it works",
+    summary: "The process lives in the system, not one person's head.",
     insert:
-      "Nobody trusts the pipeline number. The CRM says one thing. The spreadsheet says another.",
+      "Only one person knows how it works. When they're out, busy, or gone, the work stalls or gets done wrong.",
+  },
+  {
+    id: "cold-deals",
+    slug: "cold" as const,
+    label: "Deals that go cold while you're busy elsewhere",
+    summary: "Follow-up in a system, not when someone finally has time.",
+    insert:
+      "Deals go cold while we're busy elsewhere. Follow-up wasn't in a system. By the time we got back, they'd already moved on.",
   },
 ] as const;
 
@@ -69,7 +76,7 @@ export function isOfferOnlyAsk(value: string): boolean {
     /\b(growth\s*strateg(?:y|ies)|strateg(?:y|ies)|strategic plans?)\b/.test(n);
   if (!offer) return false;
   const leakSignal =
-    /\b(by hand|someone s head|someones head|spreadsheet|rebuild|follow ?up|pipeline|inbox|manual|every friday|tools that|living in)\b/.test(
+    /\b(by hand|someone s head|someones head|spreadsheet|rebuild|follow ?up|pipeline|inbox|manual|every friday|tools that|living in|bottleneck|don t connect|go cold)\b/.test(
       n,
     );
   return !leakSignal;
@@ -97,9 +104,10 @@ export function leakFromChoice(choice: LeakChoice): string {
 
 export function parseLeakQuery(raw: string | null | undefined): LeakChoice | null {
   const key = (raw ?? "").trim().toLowerCase();
-  if (key === "friday") return "friday-report";
-  if (key === "quiet") return "quiet-deal";
-  if (key === "pipeline") return "untrusted-pipeline";
+  if (key === "fragmented" || key === "friday") return "fragmented-tools";
+  if (key === "followups" || key === "quiet") return "followups-in-head";
+  if (key === "bus-factor" || key === "pipeline") return "single-owner-process";
+  if (key === "cold") return "cold-deals";
   if (key === "other") return "other";
   return null;
 }

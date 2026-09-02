@@ -203,7 +203,7 @@ export function BriefWizard() {
               <span aria-hidden>◇</span>
             </p>
             <h1 className="font-display font-bold text-[32px] leading-[1.08] tracking-[-0.03em] text-bone mt-5">
-              What&apos;s still getting done by hand?
+              What&apos;s still manual, or causing a bottleneck?
             </h1>
             <p className="font-sans text-[16px] text-linen/80 leading-relaxed mt-3">
               {BRIEF_STEP1_LEAD}
@@ -212,7 +212,7 @@ export function BriefWizard() {
             <div
               className="mt-6 space-y-2"
               role="group"
-              aria-label="Examples. Tap a leak to start. You can ignore these and write your own."
+              aria-label="Examples. Tap a bottleneck to start. You can ignore these and write your own."
             >
               {BRIEF_CHIPS.map((chip) => {
                 const selected = choice === chip.id;
@@ -254,7 +254,7 @@ export function BriefWizard() {
             {choice === "other" && (
               <div className="mt-4">
                 <label htmlFor="brief-leak" className="block font-sans text-[13px] font-semibold text-linen mb-2">
-                  Name the leak
+                  Name the bottleneck
                 </label>
                 <textarea
                   id="brief-leak"
@@ -264,7 +264,7 @@ export function BriefWizard() {
                     setLeak(e.target.value);
                     setError(null);
                   }}
-                  placeholder="Name the leak. It doesn't have to be one of these."
+                  placeholder="Name the bottleneck. It doesn't have to be one of these."
                   className={fieldClass}
                 />
               </div>
@@ -354,7 +354,7 @@ export function BriefWizard() {
               Where should I send it?
             </h1>
             <p className="font-sans text-[16px] text-linen/80 leading-relaxed mt-3">
-              High-level one-pager. About 24 hours. I read it. I send it.
+              High-level one-pager. I read it. I send it. No call to start.
             </p>
             <div className="mt-6">
               <label htmlFor="brief-email" className="block font-sans text-[13px] font-semibold text-linen mb-2">
@@ -415,10 +415,11 @@ export function BriefWizard() {
               <span aria-hidden>◇</span>
             </p>
             <h1 className="font-display font-bold text-[32px] leading-[1.08] tracking-[-0.03em] text-bone mt-5">
-              I&apos;ll send the Brief within 24 hours.
+              I&apos;ll send the Brief soon.
             </h1>
             <p className="font-sans text-[16px] text-linen/80 leading-relaxed mt-4">
-              If I need a fact I don&apos;t have, I&apos;ll ask. No sequence.
+              If I need a fact I don&apos;t have, I&apos;ll ask. No sequence. If it resonates, we can
+              talk then.
             </p>
             <Link
               href="/case-studies/paradise-capital/"

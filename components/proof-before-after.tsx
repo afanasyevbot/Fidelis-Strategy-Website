@@ -11,6 +11,7 @@ type BuildProof = {
   cta?: string;
   external?: boolean;
   note?: string;
+  live?: boolean;
 };
 
 const builds: BuildProof[] = [
@@ -21,15 +22,17 @@ const builds: BuildProof[] = [
     after: "Living database of buyers, curated to every mandate",
     href: "/case-studies/paradise-capital",
     cta: "Read the case study",
+    live: true,
   },
   {
     name: "Volunteer & Member Portal",
     context: "Grace Evangelical Church · pro bono",
-    before: "Volunteering and sign-ups scattered, no one place for any of it",
-    after: "One portal. Automated reminders and communication.",
+    before: "Volunteering, sign-ups, and follow-up scattered. No one place for any of it.",
+    after: "One portal. Reminders and communication run themselves.",
     href: "https://eagangrace.com",
     cta: "Visit eagangrace.com",
     external: true,
+    live: true,
   },
   {
     name: "Fidelis Pulse",
@@ -39,15 +42,17 @@ const builds: BuildProof[] = [
     href: "/pulse",
     cta: "See Pulse",
     note: "Pulse is how owners see their numbers. Custom builds are how your unique workflow runs.",
+    live: true,
   },
   {
     name: "Glow Routine",
     context: "Linked by Lexi · live consumer app",
-    before: "Chaotic routine",
-    after: "App built around how you actually work",
+    before: "Routine living in notes, memory, and willpower",
+    after: "A live app. Checklists, reminders, and an advisor in her pocket.",
     href: "https://glow-routine-seven.vercel.app",
     cta: "Open Glow Routine",
     external: true,
+    live: true,
   },
 ];
 
@@ -55,10 +60,10 @@ function BeforeAfter({ before, after }: { before: string; after: string }) {
   return (
     <div className="mt-5 space-y-3">
       <div>
-        <p className="font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-bone/45">
+        <p className="font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-bone/70">
           Before
         </p>
-        <p className="font-display font-semibold text-[17px] md:text-[18px] text-bone/50 leading-snug mt-1 line-through decoration-bone/30">
+        <p className="font-display font-semibold text-[17px] md:text-[18px] text-bone/55 leading-snug mt-1 line-through decoration-bone/35">
           {before}
         </p>
       </div>
@@ -89,21 +94,28 @@ export function ProofBeforeAfter() {
         <Reveal stagger className="grid sm:grid-cols-2 gap-5 mt-12">
           {builds.map((b) => {
             const card = (
-              <div className="card-lift h-full flex flex-col p-6 md:p-8 border border-linen/25 bg-deep-olive/25 hover:border-linen/50">
-                <p className="font-sans text-[11px] font-bold uppercase tracking-[0.18em] text-linen/60">
-                  {b.context}
-                </p>
+              <div className="card-lift h-full flex flex-col p-6 md:p-8 border border-linen/35 bg-forest-floor hover:border-linen/55">
+                <div className="flex items-start justify-between gap-3">
+                  <p className="font-sans text-[11px] font-bold uppercase tracking-[0.18em] text-linen/70">
+                    {b.context}
+                  </p>
+                  {b.live && (
+                    <span className="shrink-0 font-sans text-[10px] font-bold uppercase tracking-[0.16em] text-forest-floor bg-linen px-2 py-0.5">
+                      Live
+                    </span>
+                  )}
+                </div>
                 <h3 className="font-display font-bold text-xl md:text-2xl text-bone mt-2 tracking-tight">
                   {b.name}
                 </h3>
                 <BeforeAfter before={b.before} after={b.after} />
                 {b.note && (
-                  <p className="font-sans text-[13px] text-bone/65 leading-relaxed mt-4 border-t border-linen/15 pt-4">
+                  <p className="font-sans text-[13px] text-bone/70 leading-relaxed mt-4 border-t border-linen/20 pt-4">
                     {b.note}
                   </p>
                 )}
                 {b.cta && (
-                  <span className="font-sans text-[11px] uppercase tracking-button text-linen font-semibold mt-auto pt-5 inline-flex items-center gap-2">
+                  <span className="font-sans text-[12px] uppercase tracking-button text-linen font-semibold mt-auto pt-5 inline-flex items-center gap-2 border-b border-linen/40 pb-0.5 w-fit">
                     {b.cta} <span aria-hidden>→</span>
                   </span>
                 )}

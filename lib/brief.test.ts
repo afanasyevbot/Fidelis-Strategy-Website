@@ -28,13 +28,12 @@ describe("validateBrief", () => {
     if (!result.ok) {
       assert.equal(result.field, "leak");
       assert.equal(result.message, BRIEF_LEAK_FAIL);
-      assert.equal(result.message, "Name the actual work that's still by hand.");
     }
   });
 
   it("rejects an empty business note with the hang-a-brief copy", () => {
     const result = validateBrief({
-      leak: "Every Friday we rebuild the same report by hand.",
+      leak: "The numbers live in four tools that don't connect. The same work gets rebuilt by hand every week.",
       business: "   ",
       email: "paul@example.com",
     });
@@ -42,13 +41,12 @@ describe("validateBrief", () => {
     if (!result.ok) {
       assert.equal(result.field, "business");
       assert.equal(result.message, BRIEF_BUSINESS_FAIL);
-      assert.equal(result.message, "Give me anything I can hang a brief on.");
     }
   });
 
   it("rejects a missing email with the receive-the-Brief copy", () => {
     const result = validateBrief({
-      leak: "Every Friday we rebuild the same report by hand.",
+      leak: "The numbers live in four tools that don't connect. The same work gets rebuilt by hand every week.",
       business: "Paradise Capital",
       email: "not-an-email",
     });
@@ -56,7 +54,6 @@ describe("validateBrief", () => {
     if (!result.ok) {
       assert.equal(result.field, "email");
       assert.equal(result.message, BRIEF_EMAIL_FAIL);
-      assert.equal(result.message, "I need an email that can receive the Brief.");
     }
   });
 
@@ -104,22 +101,16 @@ describe("validateBrief", () => {
 });
 
 describe("wizard leak choices", () => {
-  it("exposes three leak-chrome taps, not a product catalog", () => {
+  it("exposes four pain-aligned taps, not a product catalog", () => {
     assert.equal(
       BRIEF_STEP1_LEAD,
-      "I'll send a one-pager on the custom AI system that takes it. Tap one, or write your own.",
+      "I'll send a one-pager on how we could solve it. Tap one, or write your own.",
     );
-    assert.equal(BRIEF_CHIPS.length, 3);
-    assert.equal(BRIEF_CHIPS[0].label, "Friday report, by hand");
-    assert.equal(BRIEF_CHIPS[0].summary, "An operator dashboard. The report builds itself.");
-    assert.equal(
-      BRIEF_CHIPS[0].insert,
-      "Every Friday we rebuild the same report by hand. The numbers live in a few tools that don't talk to each other.",
-    );
-    assert.equal(BRIEF_CHIPS[1].label, "A deal that went quiet");
-    assert.equal(BRIEF_CHIPS[1].summary, "A follow-up system. It doesn't live in someone's head.");
-    assert.equal(BRIEF_CHIPS[2].label, "Pipeline nobody trusts");
-    assert.equal(BRIEF_CHIPS[2].summary, "One number, from the system, not a spreadsheet.");
+    assert.equal(BRIEF_CHIPS.length, 4);
+    assert.equal(BRIEF_CHIPS[0].label, "Nothing talks to anything");
+    assert.equal(BRIEF_CHIPS[1].label, "Follow-ups depend on who remembers");
+    assert.equal(BRIEF_CHIPS[2].label, "Only one person knows how it works");
+    assert.equal(BRIEF_CHIPS[3].label, "Deals that go cold while you're busy elsewhere");
     const chrome = JSON.stringify(BRIEF_CHIPS);
     assert.doesNotMatch(chrome, /workflow apps|custom CRM|custom CRMs|catalog/i);
     assert.ok(!("sku" in BRIEF_CHIPS[0]));
@@ -127,22 +118,26 @@ describe("wizard leak choices", () => {
   });
 
   it("named leak tap fills the locked insert and auto-advances", () => {
-    const friday = BRIEF_CHIPS[0];
-    assert.equal(leakFromChoice(friday.id), friday.insert);
-    assert.equal(namedLeakAutoAdvances(friday.id), true);
+    const fragmented = BRIEF_CHIPS[0];
+    assert.equal(leakFromChoice(fragmented.id), fragmented.insert);
+    assert.equal(namedLeakAutoAdvances(fragmented.id), true);
     assert.equal(NAMED_LEAK_ADVANCE_MS, 180);
-    assert.equal(canContinueLeak(friday.insert), true);
+    assert.equal(canContinueLeak(fragmented.insert), true);
   });
 
   it("maps homepage leak slugs to wizard choices", () => {
-    assert.equal(parseLeakQuery("friday"), "friday-report");
-    assert.equal(parseLeakQuery("quiet"), "quiet-deal");
-    assert.equal(parseLeakQuery("pipeline"), "untrusted-pipeline");
+    assert.equal(parseLeakQuery("fragmented"), "fragmented-tools");
+    assert.equal(parseLeakQuery("followups"), "followups-in-head");
+    assert.equal(parseLeakQuery("bus-factor"), "single-owner-process");
+    assert.equal(parseLeakQuery("cold"), "cold-deals");
     assert.equal(parseLeakQuery("other"), "other");
     assert.equal(parseLeakQuery("nope"), null);
-    assert.equal(briefHrefForSlug("friday"), "/brief/?leak=friday");
-    assert.equal(briefHrefForSlug("quiet"), "/brief/?leak=quiet");
-    assert.equal(briefHrefForSlug("pipeline"), "/brief/?leak=pipeline");
+    assert.equal(briefHrefForSlug("fragmented"), "/brief/?leak=fragmented");
+    assert.equal(briefHrefForSlug("cold"), "/brief/?leak=cold");
+    // Legacy slugs still resolve
+    assert.equal(parseLeakQuery("friday"), "fragmented-tools");
+    assert.equal(parseLeakQuery("quiet"), "followups-in-head");
+    assert.equal(parseLeakQuery("pipeline"), "single-owner-process");
   });
 
   it("Something else does not auto-advance and needs a real sentence", () => {
@@ -152,7 +147,7 @@ describe("wizard leak choices", () => {
     assert.equal(canContinueLeak("Quotes still live in three inboxes."), true);
     assert.equal(
       validateBriefField("leak", "by hand"),
-      "Name the actual work that's still by hand.",
+      BRIEF_LEAK_FAIL,
     );
   });
 });
@@ -160,7 +155,7 @@ describe("wizard leak choices", () => {
 describe("buildBriefPayload", () => {
   it("posts as brief with only leak, business, and email fields", () => {
     const payload = buildBriefPayload({
-      leak: "Every Friday we rebuild the same report by hand.",
+      leak: "The numbers live in four tools that don't connect. The same work gets rebuilt by hand every week.",
       business: "Paradise Capital",
       email: "paul@example.com",
     }, "test-key");
@@ -168,7 +163,7 @@ describe("buildBriefPayload", () => {
     assert.equal(payload.form, "brief");
     assert.equal(payload.access_key, "test-key");
     assert.equal(payload.email, "paul@example.com");
-    assert.equal(payload.leak, "Every Friday we rebuild the same report by hand.");
+    assert.equal(payload.leak, "The numbers live in four tools that don't connect. The same work gets rebuilt by hand every week.");
     assert.equal(payload.business, "Paradise Capital");
     assert.equal(payload.replyto, "paul@example.com");
     assert.match(String(payload.subject), /brief/i);

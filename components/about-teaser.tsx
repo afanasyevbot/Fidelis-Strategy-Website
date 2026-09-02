@@ -14,7 +14,7 @@ export function AboutTeaser() {
               alt="Fidelis Strategy Crest"
               width={140}
               height={140}
-              style={{ filter: "saturate(0.7) brightness(1.05)", mixBlendMode: "multiply" }}
+              style={{ filter: "saturate(0.7) brightness(1.05)" }}
             />
           </div>
           <Eyebrow size="lg" tone="moss">ABOUT</Eyebrow>

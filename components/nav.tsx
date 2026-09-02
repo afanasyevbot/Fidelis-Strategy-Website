@@ -39,8 +39,8 @@ export function Nav() {
         className={cn(
           "sticky top-0 z-50 bg-deep-olive/95 backdrop-blur border-b transition-all duration-300",
           scrolled
-            ? "border-linen/15 shadow-[0_4px_24px_-8px_rgba(13,26,14,0.6)]"
-            : "border-white/5",
+            ? "border-linen/20 shadow-[0_4px_24px_-8px_rgba(13,26,14,0.6)]"
+            : "border-linen/20",
         )}
       >
         <nav className="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
@@ -95,7 +95,7 @@ export function Nav() {
           {/* Header CTA — door is the Brief, not Calendly */}
           <CtaButton
             href="/brief/"
-            className="hidden lg:inline-flex text-[10px] py-2 px-4"
+            className="hidden lg:inline-flex"
             onClick={() => trackEvent("cta_click", { location: "nav_desktop", target: "brief" })}
           >
             Get the Brief →
@@ -104,18 +104,17 @@ export function Nav() {
           <div className="lg:hidden flex items-center gap-2">
             <CtaButton
               href="/brief/"
-              className="text-[10px] py-2 px-3"
+              className="text-[11px] py-2.5 px-3.5 whitespace-nowrap"
               onClick={() => trackEvent("cta_click", { location: "nav_mobile_header", target: "brief" })}
             >
-              Get the Brief →
+              Brief →
             </CtaButton>
-            {pathname !== "/" && (
-              <button
-                onClick={() => setOpen((v) => !v)}
-                className="flex flex-col justify-center items-center w-10 h-10 gap-[5px] text-bone"
-                aria-label={open ? "Close menu" : "Open menu"}
-                aria-expanded={open}
-              >
+            <button
+              onClick={() => setOpen((v) => !v)}
+              className="flex flex-col justify-center items-center w-10 h-10 gap-[5px] text-bone"
+              aria-label={open ? "Close menu" : "Open menu"}
+              aria-expanded={open}
+            >
                 <span className={cn(
                   "block w-6 h-[2px] bg-current rounded-full transition-all duration-200",
                   open && "translate-y-[7px] rotate-45"
@@ -128,8 +127,7 @@ export function Nav() {
                   "block w-6 h-[2px] bg-current rounded-full transition-all duration-200",
                   open && "-translate-y-[7px] -rotate-45"
                 )} />
-              </button>
-            )}
+            </button>
           </div>
         </nav>
       </header>

@@ -20,7 +20,7 @@ export function Footer() {
         <div>
           <div className="flex items-center gap-3 mb-3">
             <Image src="/logo.png?v=3" alt="Fidelis Strategy" width={72} height={72} style={{ filter: "saturate(0.7) brightness(1.05)" }} />
-            <div className="font-display font-bold text-xl text-bone">{siteConfig.name}</div>
+            <div className="font-display font-bold text-xl text-bone" style={{ fontFamily: "var(--font-cinzel), Georgia, serif" }}>{siteConfig.name}</div>
           </div>
           <div className="font-sans text-[13px] text-linen/70 tracking-wide uppercase mt-3">
             {siteConfig.tagline}
