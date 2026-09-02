@@ -1,8 +1,5 @@
-"use client";
-
 import Image from "next/image";
-import { trackEvent } from "@/lib/analytics";
-import { CtaButton } from "./cta-button";
+import { BriefForm } from "./brief-form";
 
 // Shared color grade — pushes the bright golden/blue footage into the
 // forest-floor palette. Applied to BOTH the static poster and the video so
@@ -11,16 +8,13 @@ const GRADE =
   "brightness(0.52) sepia(0.35) hue-rotate(22deg) saturate(1.15) contrast(1.08)";
 
 /**
- * Full-viewport video hero.
- *
- * A graded still (hero-poster.jpg, ~64KB) paints instantly on every device
- * and stays underneath as the video's poster frame while it loads. The
- * ~5MB background video (hero-video.mp4) plays on all devices, including
- * mobile. Both carry the same CSS grade.
+ * Split hero: copy on the left, First System Brief door on the right.
+ * Forest-floor video/poster stays. Height is content-driven, not a full
+ * viewport, so the form is on-screen at 1280×800.
  */
 export function Hero() {
   return (
-    <section className="relative h-screen overflow-hidden bg-forest-floor text-bone flex flex-col justify-end">
+    <section className="relative min-h-0 lg:min-h-[720px] overflow-hidden bg-forest-floor text-bone flex items-start lg:items-center">
 
       {/* ── Background: static graded poster — instant paint, all devices ── */}
       <Image
@@ -49,7 +43,6 @@ export function Hero() {
       </video>
 
       {/* ── Overlays — tame the bright sky, anchor text ── */}
-      {/* Bottom gradient — makes text readable */}
       <div
         aria-hidden
         className="absolute inset-0 pointer-events-none"
@@ -58,7 +51,6 @@ export function Hero() {
             "linear-gradient(to top, rgba(13,26,14,0.97) 0%, rgba(13,26,14,0.82) 22%, rgba(13,26,14,0.40) 50%, rgba(13,26,14,0.15) 75%, transparent 100%)",
         }}
       />
-      {/* Left vignette — headline readable against open field */}
       <div
         aria-hidden
         className="absolute inset-0 pointer-events-none"
@@ -67,7 +59,6 @@ export function Hero() {
             "linear-gradient(to right, rgba(13,26,14,0.70) 0%, rgba(13,26,14,0.25) 40%, transparent 65%)",
         }}
       />
-      {/* Top fade — blends behind nav */}
       <div
         aria-hidden
         className="absolute inset-x-0 top-0 h-32 pointer-events-none"
@@ -75,7 +66,6 @@ export function Hero() {
           background: "linear-gradient(to bottom, rgba(13,26,14,0.65) 0%, transparent 100%)",
         }}
       />
-      {/* Global tint — brings bright video into the brand palette */}
       <div
         aria-hidden
         className="absolute inset-0 pointer-events-none"
@@ -83,58 +73,54 @@ export function Hero() {
       />
 
       {/* ── Content ── */}
-      <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 w-full pb-16 md:pb-28 flex flex-col items-center text-center">
+      <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 w-full py-10 md:py-14">
+        <div className="grid lg:grid-cols-[12fr_10fr] gap-8 lg:gap-10 items-center">
+          <div>
+            <p className="font-sans text-[11px] font-bold uppercase tracking-[0.25em] text-linen/70 mb-5">
+              Custom AI systems · owner-operated
+            </p>
 
-        <p className="font-sans text-[11px] font-bold uppercase tracking-[0.25em] text-linen/70 mb-5">
-          Growth Strategy + Custom AI Systems
-        </p>
+            <h1 className="font-display font-bold text-4xl sm:text-[42px] md:text-[48px] lg:text-[52px] leading-[1.08] tracking-[-0.03em] max-w-[34ch]">
+              Custom AI systems for how you{" "}
+              <em className="italic text-linen">actually</em> grow.
+            </h1>
 
-        <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-[54px] lg:text-[64px] leading-[1.05] md:leading-[1.04] tracking-[-0.03em] max-w-[1080px]">
-          Growth strategy.{" "}
-          <br className="hidden md:block" />
-          And the <em className="not-italic text-linen">systems</em>{" "}built to run&nbsp;it.
-        </h1>
+            <p className="font-display text-lg md:text-[22px] leading-snug mt-5 text-linen/85 tracking-[-0.01em] max-w-[34ch]">
+              I design the strategy. I build them. Same person.
+            </p>
 
-        <p className="font-display text-lg md:text-[24px] leading-snug mt-6 text-linen/80 tracking-[-0.01em] max-w-[640px]">
-          We design your growth strategy{" "}
-          <em className="not-italic font-semibold text-linen">and</em>{" "}
-          build the custom AI systems that run it.
-        </p>
+            <p className="font-sans text-[14px] md:text-[15px] text-linen/70 leading-relaxed mt-5 max-w-[42ch]">
+              Buyer Engine at Paradise Capital is live. Paul&apos;s +30% referral
+              pipeline and +$2M are projections, not a closed year.
+            </p>
 
-        <div className="flex flex-wrap justify-center gap-3 mt-10">
-          <CtaButton
-            href="/growth-audit"
-            onClick={() => trackEvent("audit_start", { location: "hero" })}
+            <a
+              href="#recent-builds"
+              className="link-underline inline-block mt-6 font-sans text-[12px] font-semibold uppercase tracking-button text-linen hover:text-bone"
+            >
+              See the work ↓
+            </a>
+          </div>
+
+          <div
+            id="brief"
+            className="scroll-mt-24 bg-bone text-ink border border-linen/35 p-5 sm:p-6 md:p-7"
           >
-            Get the 4D Growth Audit →
-          </CtaButton>
-          <CtaButton
-            href="#recent-builds"
-            variant="secondary"
-            onClick={() =>
-              trackEvent("cta_click", { location: "hero", target: "recent_builds" })
-            }
-          >
-            See the work
-          </CtaButton>
+            <p className="font-sans text-[12px] font-bold uppercase tracking-[0.22em] text-deep-olive text-center">
+              <span aria-hidden>◇</span>
+              <span className="mx-3">Free · ~24 hours</span>
+              <span aria-hidden>◇</span>
+            </p>
+            <h2 className="font-display font-bold text-[28px] md:text-[32px] text-deep-olive mt-3 tracking-tight text-center">
+              First System Brief
+            </h2>
+            <p className="font-sans text-[14px] text-ink/75 leading-relaxed mt-2 mb-5 text-center">
+              A high-level one-pager. No call. No 24 questions.
+            </p>
+            <BriefForm />
+          </div>
         </div>
-
-        <p className="font-sans text-[13px] text-linen/70 mt-5">
-          24 questions, one page, no call required.
-        </p>
       </div>
-
-      {/* Scroll cue */}
-      <a
-        href="#recent-builds"
-        aria-label="Scroll to content"
-        className="hidden md:flex absolute bottom-6 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-linen/50 hover:text-linen transition-colors z-10"
-      >
-        <span className="font-sans text-[10px] uppercase tracking-[0.3em]">Scroll</span>
-        <span className="relative block w-[1px] h-10 bg-linen/30 overflow-hidden">
-          <span className="absolute inset-x-0 top-0 h-3 bg-linen scroll-cue-line" />
-        </span>
-      </a>
     </section>
   );
 }

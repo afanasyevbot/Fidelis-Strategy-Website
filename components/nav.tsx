@@ -92,14 +92,13 @@ export function Nav() {
             })}
           </ul>
 
-          {/* Desktop CTA */}
+          {/* Desktop CTA — door is the Brief, not Calendly */}
           <CtaButton
-            href={siteConfig.bookingUrl}
-            external
+            href="/#brief"
             className="hidden lg:inline-flex text-[10px] py-2 px-4"
-            onClick={() => trackEvent("book_call_click", { location: "nav_desktop" })}
+            onClick={() => trackEvent("cta_click", { location: "nav_desktop", target: "brief" })}
           >
-            Book a Call →
+            Get the Brief →
           </CtaButton>
 
           {/* Mobile: hamburger */}
@@ -181,19 +180,17 @@ export function Nav() {
             })}
           </ul>
 
-          {/* CTA inside drawer */}
+          {/* CTA inside drawer — same door as desktop */}
           <div className="px-6 pb-8 pt-2">
             <a
-              href={siteConfig.bookingUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-press block w-full text-center bg-linen text-deep-olive font-sans font-semibold text-[14px] py-3 px-6 rounded tracking-button uppercase"
+              href="/#brief"
+              className="btn-press block w-full text-center bg-linen text-deep-olive font-sans font-semibold text-[14px] py-3 px-6 tracking-button uppercase"
               onClick={() => {
-                trackEvent("book_call_click", { location: "nav_mobile" });
+                trackEvent("cta_click", { location: "nav_mobile", target: "brief" });
                 setOpen(false);
               }}
             >
-              Book a Call →
+              Get the Brief →
             </a>
           </div>
         </div>
