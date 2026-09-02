@@ -12,7 +12,8 @@ export function AuditCta() {
             Start with what&apos;s manual.
           </h2>
           <p className="font-sans text-[16px] text-ink/80 leading-relaxed mt-4 max-w-xl">
-            A one-pager on how we could solve the bottleneck. No call. No long form.
+            A one-pager on how we could solve the bottleneck. No call to start. If it resonates,
+            we can talk then. No long form.
           </p>
         </Reveal>
         <Reveal delay={120} className="md:text-right">

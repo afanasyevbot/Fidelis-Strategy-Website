@@ -61,15 +61,15 @@ export function Hero() {
 
         <div className="mx-auto mt-10 w-full max-w-[28rem] md:mt-12">
           <p className="font-display text-[22px] font-bold leading-snug tracking-[-0.02em] text-bone md:text-[26px]">
-            What&apos;s still getting done by hand?
+            What&apos;s still manual, or causing a bottleneck?
           </p>
           <p className="mt-2 font-sans text-[15px] leading-relaxed text-linen/65">
             Or living in someone&apos;s head. Start with one.
           </p>
 
           <p className="mt-5 font-sans text-[13px] leading-relaxed text-linen/55">
-            Tell me what&apos;s manual or causing a bottleneck. I&apos;ll send a one-pager on
-            how we could solve it. No call.
+            Tell me what&apos;s going on. I&apos;ll send a one-pager on how we could solve it.
+            No call to start. If it resonates, we can talk then.
           </p>
         </div>
       </div>

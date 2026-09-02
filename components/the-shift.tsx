@@ -30,8 +30,8 @@ export function TheShift() {
         </Reveal>
         <Reveal delay={120} className="mt-8 max-w-2xl mx-auto">
           <p className="font-display text-lg md:text-xl text-deep-olive tracking-tight leading-snug">
-            I translate AI into your Tuesday: what changes in your tools, with your team, on the
-            work you already run.
+            I translate AI into your everyday process: what changes in your tools, with your team,
+            in the work you already run.
           </p>
           <p className="font-sans text-[14px] text-ink/55 leading-relaxed mt-4">
             Not a magic button. Not ChatGPT pasted on top of your workflow.
