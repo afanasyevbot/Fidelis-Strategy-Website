@@ -1,17 +1,12 @@
 import Image from "next/image";
-import Link from "next/link";
 import { CtaButton } from "./cta-button";
-import { BRIEF_CHIPS, briefHrefForSlug } from "@/lib/brief";
 
 const GRADE =
   "brightness(0.52) sepia(0.35) hue-rotate(22deg) saturate(1.15) contrast(1.08)";
 
-const tapClass =
-  "block w-full min-h-11 text-left px-4 py-3 border border-linen text-linen font-sans text-[16px] font-semibold leading-snug hover:bg-linen/10";
-
 /**
- * Homepage first screen: systems H1 + title-only leak taps.
- * Chrome / SKU lines stay on /brief/. No form fields here.
+ * Drive-only hero. Leak taps are on hold until Layout’s next home-390
+ * (question lead above examples). Door is Get the Brief → /brief/.
  */
 export function Hero() {
   return (
@@ -66,26 +61,7 @@ export function Hero() {
         <div className="mt-6">
           <CtaButton href="/brief/">Get the Brief →</CtaButton>
         </div>
-
-        <div
-          className="mt-6 max-w-md space-y-2"
-          role="group"
-          aria-label="Name a leak. Opens the Brief. Titles only."
-        >
-          {BRIEF_CHIPS.map((chip) => (
-            <Link key={chip.slug} href={briefHrefForSlug(chip.slug)} className={tapClass}>
-              {chip.label}
-            </Link>
-          ))}
-          <Link
-            href={briefHrefForSlug("other")}
-            className={`${tapClass} border-dashed`}
-          >
-            Something else
-          </Link>
-        </div>
-
-        <p className="font-sans text-[13px] text-linen/55 leading-relaxed mt-6 max-w-[40ch]">
+        <p className="font-sans text-[13px] text-linen/55 leading-relaxed mt-5 max-w-[40ch]">
           Name the leak. One-pager in ~24h. No call.
         </p>
       </div>
