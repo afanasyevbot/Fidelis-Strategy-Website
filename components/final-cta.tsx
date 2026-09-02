@@ -63,7 +63,15 @@ export function FinalCta({
             </CtaButton>
           </div>
           <p className="font-sans text-[13px] text-linen/80 mt-5">
-            Not ready to talk? <a href="/contact" className="link-underline hover:text-bone">Send a note instead</a>. No call required.
+            Prefer to talk first?{" "}
+            <a href={siteConfig.bookingUrl} className="link-underline hover:text-bone">
+              Book a call
+            </a>
+            . Or{" "}
+            <a href="/contact" className="link-underline hover:text-bone">
+              send a note
+            </a>
+            .
           </p>
         </Reveal>
       </div>

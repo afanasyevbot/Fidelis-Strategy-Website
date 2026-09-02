@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { CtaButton } from "./cta-button";
 
 const GRADE =
   "brightness(0.52) sepia(0.35) hue-rotate(22deg) saturate(1.15) contrast(1.08)";
@@ -67,10 +68,14 @@ export function Hero() {
             Or living in someone&apos;s head. Start with one.
           </p>
 
-          <p className="mt-5 font-sans text-[13px] leading-relaxed text-linen/55">
+          <p className="mt-5 font-sans text-[14px] leading-relaxed text-linen/80">
             Tell me what&apos;s going on. I&apos;ll send a one-pager on how we could solve it.
             No call to start. If it resonates, we can talk then.
           </p>
+
+          <div className="mt-6 flex justify-center">
+            <CtaButton href="/brief/">Get the Brief →</CtaButton>
+          </div>
         </div>
       </div>
     </section>

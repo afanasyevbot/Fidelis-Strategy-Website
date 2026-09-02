@@ -37,6 +37,7 @@ export default function HomePage() {
         <FinalCta
           eyebrow="READY WHEN YOU ARE"
           headline="You've built something real. Let's build the systems to run it."
+          sub="I'll send a one-pager on the bottleneck. No call to start. If it resonates, we can talk then."
           primaryHref="/brief/"
           primaryLabel="Get the Brief →"
         />
