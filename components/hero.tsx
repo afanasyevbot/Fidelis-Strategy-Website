@@ -1,17 +1,12 @@
 import Image from "next/image";
-import Link from "next/link";
-
-import { BRIEF_CHIPS, briefHrefForSlug } from "@/lib/brief";
 
 const GRADE =
   "brightness(0.52) sepia(0.35) hue-rotate(22deg) saturate(1.15) contrast(1.08)";
 
-const tapClass =
-  "block w-full min-h-14 text-left px-5 py-4 border text-linen font-sans text-[16px] font-semibold leading-snug hover:bg-linen/10 hover:border-linen";
-
 /**
- * Homepage first screen: systems H1 + leak block as a question.
- * Taps are titles only — SKU chrome stays on /brief/. Header owns Get the Brief.
+ * Homepage leak block is a question. Example taps are on hold —
+ * Friday / quiet / pipeline are killed. Wait for replacement titles.
+ * Door is header Get the Brief → /brief/. SKU chrome stays on /brief/.
  */
 export function Hero() {
   return (
@@ -72,35 +67,13 @@ export function Hero() {
           I design the strategy. I build them. Same person.
         </p>
 
-        <div className="mt-10 w-full max-w-[28rem] text-left md:mt-12">
+        <div className="mt-10 w-full max-w-[28rem] md:mt-12">
           <p className="text-center font-display text-[22px] font-bold leading-snug tracking-[-0.02em] text-bone md:text-[26px]">
             What&apos;s still getting done by hand?
           </p>
           <p className="mt-2 text-center font-sans text-[15px] leading-relaxed text-linen/65">
             Or living in someone&apos;s head. These are examples.
           </p>
-
-          <div
-            className="mt-5 space-y-2"
-            role="group"
-            aria-label="Examples. Name a leak. Opens the Brief. Titles only."
-          >
-            {BRIEF_CHIPS.map((chip) => (
-              <Link
-                key={chip.slug}
-                href={briefHrefForSlug(chip.slug)}
-                className={`${tapClass} border-solid border-linen/55`}
-              >
-                {chip.label}
-              </Link>
-            ))}
-            <Link
-              href={briefHrefForSlug("other")}
-              className={`${tapClass} border-dashed border-linen/45`}
-            >
-              Something else
-            </Link>
-          </div>
 
           <p className="mt-5 text-center font-sans text-[13px] leading-relaxed text-linen/55">
             Name the leak. One-pager in ~24h. No call.
