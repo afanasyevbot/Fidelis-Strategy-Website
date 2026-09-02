@@ -64,6 +64,10 @@ If the PNGs land later, put them in `docs/brief-door-wires/`.
 
 Fidelis GTM hunt is HELD. Do not start Founders.
 
+## Rebrand (separate pass)
+
+See [`rebrand-review-notes.md`](./rebrand-review-notes.md). Summary: What We Build 4-card menu is fine as a page but should not carry “why AI / why now”; add early urgency beat, elevate “plans it builds it” + live proof (Pulse, Paradise), tie pain copy to AI-as-mechanism with time/money lines. Not part of the Brief door PR unless Matthew opens it.
+
 ## This branch (as of the dump)
 
 - `/` hero: question lead + micro + Paradise proof. Friday / quiet / pipeline / Something else taps are **held** on the homepage. Do not ship the dead three.
