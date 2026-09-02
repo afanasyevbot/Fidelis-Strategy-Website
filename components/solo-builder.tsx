@@ -18,8 +18,7 @@ export function SoloBuilder() {
             it&apos;s the same person from plan through launch.
           </p>
           <p>
-            I take a limited number of engagements. Everything I build is
-            documented, runs in your environment, and stays yours.
+            Everything I build is documented, runs in your environment, and stays yours.
           </p>
         </div>
         <div className="mt-8 font-sans text-[13px] uppercase tracking-button text-moss-olive font-semibold">

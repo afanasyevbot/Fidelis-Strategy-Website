@@ -1,8 +1,11 @@
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { Hero } from "@/components/hero";
+import { BriefDoor } from "@/components/brief-door";
+import { TheShift } from "@/components/the-shift";
 import { WhatWeBuildHome } from "@/components/what-we-build-home";
 import { ProblemSection } from "@/components/problem-section";
+import { ProofBeforeAfter } from "@/components/proof-before-after";
 import { SoloBuilder } from "@/components/solo-builder";
 import { GrowthEngine } from "@/components/growth-engine";
 import { ProofSection } from "@/components/proof-section";
@@ -22,7 +25,10 @@ export default function HomePage() {
       <Nav />
       <main>
         <Hero />
+        <BriefDoor />
+        <TheShift />
         <ProblemSection />
+        <ProofBeforeAfter />
         <SoloBuilder />
         <GrowthEngine tone="bone" />
         <WhatWeBuildHome />
@@ -33,7 +39,9 @@ export default function HomePage() {
         <FinalCta
           eyebrow="READY WHEN YOU ARE"
           headline="You've built something real. Let's build the systems to run it."
-          primaryLabel="Book a Call →"
+          sub="I'll send a one-pager on the bottleneck. No call to start. If it resonates, we can talk then."
+          primaryHref="/brief/"
+          primaryLabel="Get the Brief →"
         />
       </main>
       <Footer />

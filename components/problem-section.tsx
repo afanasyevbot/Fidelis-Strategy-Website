@@ -14,16 +14,20 @@ const paths = [
 
 const points = [
   {
-    title: "Three hours, every Friday.",
-    body: "Rebuilding the same report by hand because the numbers live in four tools that don't talk to each other. Work that should take minutes.",
+    title: "Nothing talks to anything.",
+    body: "The numbers live in four tools that don't connect. So the same work gets rebuilt by hand, work that should take minutes.",
   },
   {
-    title: "The deal that went quiet.",
-    body: "It slipped because the follow-up lived in someone's head instead of a system. You'll never know exactly what it cost, which is the problem.",
+    title: "Follow-ups depend on who remembers.",
+    body: "The next touch depends on who remembers. When they're busy, it doesn't happen, and you never know exactly what it cost.",
   },
   {
-    title: "A pipeline number nobody trusts.",
-    body: "The CRM has the official version. The real one lives in a spreadsheet beside it. So every forecast starts with a debate instead of a fact.",
+    title: "Only one person knows how it works.",
+    body: "The process lives in one person's head. When they're out, busy, or gone, the work stalls or gets done wrong.",
+  },
+  {
+    title: "Deals that go cold while you're busy elsewhere.",
+    body: "It didn't die on merit. Follow-up wasn't in a system. By the time you got back to it, they'd already moved on.",
   },
 ];
 
@@ -33,14 +37,14 @@ export function ProblemSection() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 py-16 md:py-24">
         <Reveal>
           <Eyebrow size="lg">WHAT IT&apos;S COSTING YOU</Eyebrow>
-          <h2 className="font-display font-bold text-3xl md:text-[48px] mt-8 tracking-tight break-words">
+          <h2 className="font-display font-bold text-3xl md:text-[48px] mt-8 tracking-tight break-words max-w-[20ch]">
             The most expensive line item isn&apos;t on the invoice.
           </h2>
           <p className="font-display font-light text-lg md:text-2xl text-linen mt-4 max-w-2xl tracking-tight">
             The bleeding adds up, quietly, every week.
           </p>
         </Reveal>
-        <Reveal stagger className="grid md:grid-cols-3 gap-6 mt-12">
+        <Reveal stagger className="grid sm:grid-cols-2 gap-6 mt-12">
           {points.map((p, i) => (
             <div
               key={p.title}
@@ -70,7 +74,7 @@ export function ProblemSection() {
         </Reveal>
 
         <Reveal delay={80} className="mt-16 pt-12 border-t border-linen/20 max-w-3xl">
-          <h3 className="font-display font-bold text-2xl md:text-[34px] text-linen tracking-tight leading-[1.1]">
+          <h3 className="font-display font-bold text-2xl md:text-[34px] text-linen tracking-tight leading-[1.1] max-w-3xl">
             You didn&apos;t get sloppy. You bought software built for the average business.
           </h3>
           <p className="font-sans text-[16px] text-bone/85 leading-relaxed mt-5">
@@ -95,7 +99,7 @@ export function ProblemSection() {
             <div
               key={p.title}
               data-reveal-child
-              className="card-lift group flex gap-4 p-6 border border-linen/20 bg-linen/[0.06] hover:bg-linen/10 hover:border-linen/45"
+              className="card-lift group flex gap-4 p-6 border border-linen/35 bg-linen/[0.10] hover:bg-linen/15 hover:border-linen/50"
             >
               <span className="text-linen font-bold text-lg shrink-0 mt-0.5 transition-transform duration-300 group-hover:translate-x-1">→</span>
               <div>

@@ -1,28 +1,14 @@
-"use client";
-
 import Image from "next/image";
-import { trackEvent } from "@/lib/analytics";
-import { CtaButton } from "./cta-button";
 
-// Shared color grade — pushes the bright golden/blue footage into the
-// forest-floor palette. Applied to BOTH the static poster and the video so
-// they look identical (sepia adds warmth; the small hue-rotate keeps it olive).
 const GRADE =
   "brightness(0.52) sepia(0.35) hue-rotate(22deg) saturate(1.15) contrast(1.08)";
 
 /**
- * Full-viewport video hero.
- *
- * A graded still (hero-poster.jpg, ~64KB) paints instantly on every device
- * and stays underneath as the video's poster frame while it loads. The
- * ~5MB background video (hero-video.mp4) plays on all devices, including
- * mobile. Both carry the same CSS grade.
+ * Homepage hero: positioning only. Brief door is in BriefDoor below.
  */
 export function Hero() {
   return (
-    <section className="relative h-screen overflow-hidden bg-forest-floor text-bone flex flex-col justify-end">
-
-      {/* ── Background: static graded poster — instant paint, all devices ── */}
+    <section className="relative overflow-hidden bg-forest-floor text-bone min-h-[72vh] flex flex-col justify-end">
       <Image
         src="/hero-poster.jpg"
         alt=""
@@ -33,8 +19,6 @@ export function Hero() {
         className="object-cover pointer-events-none"
         style={{ objectPosition: "center center", filter: GRADE }}
       />
-
-      {/* ── Background video — layered over the poster, all devices ── */}
       <video
         autoPlay
         muted
@@ -42,99 +26,39 @@ export function Hero() {
         playsInline
         preload="metadata"
         poster="/hero-poster.jpg"
-        className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+        className="absolute inset-0 h-full w-full object-cover pointer-events-none"
         style={{ objectPosition: "center center", filter: GRADE }}
       >
         <source src="/hero-video.mp4" type="video/mp4" />
       </video>
-
-      {/* ── Overlays — tame the bright sky, anchor text ── */}
-      {/* Bottom gradient — makes text readable */}
       <div
         aria-hidden
-        className="absolute inset-0 pointer-events-none"
+        className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "linear-gradient(to top, rgba(13,26,14,0.97) 0%, rgba(13,26,14,0.82) 22%, rgba(13,26,14,0.40) 50%, rgba(13,26,14,0.15) 75%, transparent 100%)",
+            "linear-gradient(to top, rgba(13,26,14,0.94) 0%, rgba(13,26,14,0.78) 45%, rgba(13,26,14,0.42) 72%, transparent 100%)",
         }}
       />
-      {/* Left vignette — headline readable against open field */}
       <div
         aria-hidden
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            "linear-gradient(to right, rgba(13,26,14,0.70) 0%, rgba(13,26,14,0.25) 40%, transparent 65%)",
-        }}
-      />
-      {/* Top fade — blends behind nav */}
-      <div
-        aria-hidden
-        className="absolute inset-x-0 top-0 h-32 pointer-events-none"
-        style={{
-          background: "linear-gradient(to bottom, rgba(13,26,14,0.65) 0%, transparent 100%)",
-        }}
-      />
-      {/* Global tint — brings bright video into the brand palette */}
-      <div
-        aria-hidden
-        className="absolute inset-0 pointer-events-none"
-        style={{ background: "rgba(13,26,14,0.25)" }}
+        className="pointer-events-none absolute inset-0"
+        style={{ background: "rgba(13,26,14,0.32)" }}
       />
 
-      {/* ── Content ── */}
-      <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 w-full pb-16 md:pb-28 flex flex-col items-center text-center">
-
-        <p className="font-sans text-[11px] font-bold uppercase tracking-[0.25em] text-linen/70 mb-5">
-          Growth Strategy + Custom AI Systems
+      <div className="relative z-10 mx-auto max-w-4xl w-full px-4 sm:px-6 pb-14 pt-24 text-center md:pb-20 md:pt-28">
+        <p className="mb-5 font-sans text-[11px] font-bold uppercase tracking-[0.25em] text-linen/70">
+          For owner-operated businesses
         </p>
 
-        <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-[54px] lg:text-[64px] leading-[1.05] md:leading-[1.04] tracking-[-0.03em] max-w-[1080px]">
-          Growth strategy.{" "}
-          <br className="hidden md:block" />
-          And the <em className="not-italic text-linen">systems</em>{" "}built to run&nbsp;it.
+        <h1 className="mx-auto max-w-[24ch] font-display text-[32px] font-bold leading-[1.08] tracking-[-0.03em] text-bone sm:text-[40px] md:text-[52px] md:leading-[1.06]">
+          Growth strategy. Custom AI systems. Built for how you{" "}
+          <em className="font-bold italic text-linen">actually work</em>.
         </h1>
 
-        <p className="font-display text-lg md:text-[24px] leading-snug mt-6 text-linen/80 tracking-[-0.01em] max-w-[640px]">
-          We design your growth strategy{" "}
-          <em className="not-italic font-semibold text-linen">and</em>{" "}
-          build the custom AI systems that run it.
-        </p>
-
-        <div className="flex flex-wrap justify-center gap-3 mt-10">
-          <CtaButton
-            href="/growth-audit"
-            onClick={() => trackEvent("audit_start", { location: "hero" })}
-          >
-            Get the 4D Growth Audit →
-          </CtaButton>
-          <CtaButton
-            href="#recent-builds"
-            variant="secondary"
-            onClick={() =>
-              trackEvent("cta_click", { location: "hero", target: "recent_builds" })
-            }
-          >
-            See the work
-          </CtaButton>
-        </div>
-
-        <p className="font-sans text-[13px] text-linen/70 mt-5">
-          24 questions, one page, no call required.
+        <p className="mx-auto mt-5 max-w-[34ch] font-display text-[18px] font-light leading-snug tracking-[-0.01em] text-linen/85 md:text-[22px]">
+          Not off-the-shelf software. Not a bolt-on. Built into the process you already run.
         </p>
       </div>
-
-      {/* Scroll cue */}
-      <a
-        href="#recent-builds"
-        aria-label="Scroll to content"
-        className="hidden md:flex absolute bottom-6 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-linen/50 hover:text-linen transition-colors z-10"
-      >
-        <span className="font-sans text-[10px] uppercase tracking-[0.3em]">Scroll</span>
-        <span className="relative block w-[1px] h-10 bg-linen/30 overflow-hidden">
-          <span className="absolute inset-x-0 top-0 h-3 bg-linen scroll-cue-line" />
-        </span>
-      </a>
     </section>
   );
 }

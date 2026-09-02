@@ -39,8 +39,8 @@ export function Nav() {
         className={cn(
           "sticky top-0 z-50 bg-deep-olive/95 backdrop-blur border-b transition-all duration-300",
           scrolled
-            ? "border-linen/15 shadow-[0_4px_24px_-8px_rgba(13,26,14,0.6)]"
-            : "border-white/5",
+            ? "border-linen/20 shadow-[0_4px_24px_-8px_rgba(13,26,14,0.6)]"
+            : "border-linen/20",
         )}
       >
         <nav className="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
@@ -92,36 +92,43 @@ export function Nav() {
             })}
           </ul>
 
-          {/* Desktop CTA */}
+          {/* Header CTA — door is the Brief, not Calendly */}
           <CtaButton
-            href={siteConfig.bookingUrl}
-            external
-            className="hidden lg:inline-flex text-[10px] py-2 px-4"
-            onClick={() => trackEvent("book_call_click", { location: "nav_desktop" })}
+            href="/brief/"
+            className="hidden lg:inline-flex"
+            onClick={() => trackEvent("cta_click", { location: "nav_desktop", target: "brief" })}
           >
-            Book a Call →
+            Get the Brief →
           </CtaButton>
 
-          {/* Mobile: hamburger */}
-          <button
-            onClick={() => setOpen((v) => !v)}
-            className="lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-[5px] text-bone"
-            aria-label={open ? "Close menu" : "Open menu"}
-            aria-expanded={open}
-          >
-            <span className={cn(
-              "block w-6 h-[2px] bg-current rounded-full transition-all duration-200",
-              open && "translate-y-[7px] rotate-45"
-            )} />
-            <span className={cn(
-              "block w-6 h-[2px] bg-current rounded-full transition-all duration-200",
-              open && "opacity-0"
-            )} />
-            <span className={cn(
-              "block w-6 h-[2px] bg-current rounded-full transition-all duration-200",
-              open && "-translate-y-[7px] -rotate-45"
-            )} />
-          </button>
+          <div className="lg:hidden flex items-center gap-2">
+            <CtaButton
+              href="/brief/"
+              className="text-[11px] py-2.5 px-3.5 whitespace-nowrap"
+              onClick={() => trackEvent("cta_click", { location: "nav_mobile_header", target: "brief" })}
+            >
+              Brief →
+            </CtaButton>
+            <button
+              onClick={() => setOpen((v) => !v)}
+              className="flex flex-col justify-center items-center w-10 h-10 gap-[5px] text-bone"
+              aria-label={open ? "Close menu" : "Open menu"}
+              aria-expanded={open}
+            >
+                <span className={cn(
+                  "block w-6 h-[2px] bg-current rounded-full transition-all duration-200",
+                  open && "translate-y-[7px] rotate-45"
+                )} />
+                <span className={cn(
+                  "block w-6 h-[2px] bg-current rounded-full transition-all duration-200",
+                  open && "opacity-0"
+                )} />
+                <span className={cn(
+                  "block w-6 h-[2px] bg-current rounded-full transition-all duration-200",
+                  open && "-translate-y-[7px] -rotate-45"
+                )} />
+            </button>
+          </div>
         </nav>
       </header>
 
@@ -181,19 +188,17 @@ export function Nav() {
             })}
           </ul>
 
-          {/* CTA inside drawer */}
+          {/* CTA inside drawer — same door as desktop */}
           <div className="px-6 pb-8 pt-2">
             <a
-              href={siteConfig.bookingUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-press block w-full text-center bg-linen text-deep-olive font-sans font-semibold text-[14px] py-3 px-6 rounded tracking-button uppercase"
+              href="/brief/"
+              className="btn-press block w-full text-center bg-linen text-deep-olive font-sans font-semibold text-[14px] py-3 px-6 tracking-button uppercase"
               onClick={() => {
-                trackEvent("book_call_click", { location: "nav_mobile" });
+                trackEvent("cta_click", { location: "nav_mobile", target: "brief" });
                 setOpen(false);
               }}
             >
-              Book a Call →
+              Get the Brief →
             </a>
           </div>
         </div>

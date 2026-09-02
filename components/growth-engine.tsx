@@ -23,7 +23,8 @@ export function GrowthEngine({ tone = "bone" }: { tone?: "bone" | "dark" }) {
           The 4D Growth Engine.
         </h2>
         <p className="font-display font-light text-lg md:text-xl mt-3 max-w-2xl text-linen">
-          The four-stage process behind every Fidelis engagement, from first conversation to systems that compound.
+          The four-stage process behind every Fidelis engagement, from the First System Brief to
+          systems that compound.
         </p>
         <div className="mt-6 space-y-3 max-w-3xl font-sans text-[16px] text-bone/80 leading-relaxed">
           <p>
@@ -38,7 +39,7 @@ export function GrowthEngine({ tone = "bone" }: { tone?: "bone" | "dark" }) {
             generic framework with your logo on it. Then we build it.
           </p>
           <p>
-            The free <strong className="text-linen font-semibold">4D Growth Audit</strong> is where Discover starts. Free, no call required.
+            The free <strong className="text-linen font-semibold">First System Brief</strong> is where Discover starts. Free, no call required.
           </p>
         </div>
         </Reveal>
@@ -47,7 +48,7 @@ export function GrowthEngine({ tone = "bone" }: { tone?: "bone" | "dark" }) {
             <div
               key={s.n}
               data-reveal-child
-              className="card-lift relative p-6 bg-moss-olive text-bone border border-linen/25 hover:border-linen/70 overflow-hidden"
+              className="card-lift relative p-6 bg-deep-olive/50 text-bone border border-linen/30 hover:border-linen/70 overflow-hidden"
             >
               <div className="font-display text-4xl text-linen leading-none">{s.n}</div>
               <div className="font-display text-[22px] font-bold text-linen mt-3 tracking-tight">

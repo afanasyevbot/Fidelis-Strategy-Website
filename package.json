@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "deploy:hostinger": "bash scripts/deploy-hostinger.sh"
+    "deploy:hostinger": "bash scripts/deploy-hostinger.sh",
+    "test": "node --experimental-strip-types --test lib/brief.test.ts"
   },
   "dependencies": {
     "@next/third-parties": "^16.3.2",
