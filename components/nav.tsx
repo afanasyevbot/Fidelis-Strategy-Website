@@ -121,21 +121,17 @@ export function Nav() {
             </span>
           </Link>
 
-          {/* Desktop nav */}
-          <ul className="hidden lg:flex items-center gap-7 font-sans">
-            {primaryNav.map((i) => (
-              <li key={i.href}>{renderNavItem(i)}</li>
-            ))}
-          </ul>
-
-          <div className="hidden lg:flex items-center gap-5">
-            {secondaryNav.length > 0 && (
-              <ul className="flex items-center gap-4 font-sans border-l border-linen/15 pl-5">
-                {secondaryNav.map((i) => (
-                  <li key={i.href}>{renderNavItem(i)}</li>
-                ))}
-              </ul>
-            )}
+          <div className="hidden lg:flex items-center gap-6">
+            <ul className="flex items-center gap-7 font-sans">
+              {primaryNav.map((i) => (
+                <li key={i.href}>{renderNavItem(i)}</li>
+              ))}
+              {secondaryNav.map((i) => (
+                <li key={i.href} className="border-l border-linen/15 pl-7 -ml-1">
+                  {renderNavItem(i)}
+                </li>
+              ))}
+            </ul>
 
             {/* Header CTA — door is the Brief, not Calendly */}
             <CtaButton
