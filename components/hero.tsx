@@ -1,15 +1,14 @@
 import Image from "next/image";
-import { CtaButton } from "./cta-button";
 
 const GRADE =
   "brightness(0.52) sepia(0.35) hue-rotate(22deg) saturate(1.15) contrast(1.08)";
 
 /**
- * Homepage hero: growth strategy + custom AI systems. Brief question below.
+ * Homepage hero: positioning only. Brief door is in BriefDoor below.
  */
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-forest-floor text-bone">
+    <section className="relative overflow-hidden bg-forest-floor text-bone min-h-[72vh] flex flex-col justify-end">
       <Image
         src="/hero-poster.jpg"
         alt=""
@@ -46,7 +45,7 @@ export function Hero() {
         style={{ background: "rgba(13,26,14,0.32)" }}
       />
 
-      <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 pb-12 pt-10 text-center md:pb-20 md:pt-16">
+      <div className="relative z-10 mx-auto max-w-4xl w-full px-4 sm:px-6 pb-14 pt-24 text-center md:pb-20 md:pt-28">
         <p className="mb-5 font-sans text-[11px] font-bold uppercase tracking-[0.25em] text-linen/70">
           For owner-operated businesses
         </p>
@@ -59,24 +58,6 @@ export function Hero() {
         <p className="mx-auto mt-5 max-w-[34ch] font-display text-[18px] font-light leading-snug tracking-[-0.01em] text-linen/85 md:text-[22px]">
           Not off-the-shelf software. Not a bolt-on. Built into the process you already run.
         </p>
-
-        <div className="mx-auto mt-10 w-full max-w-[28rem] md:mt-12">
-          <p className="font-display text-[22px] font-bold leading-snug tracking-[-0.02em] text-bone md:text-[26px]">
-            What&apos;s still manual, or causing a bottleneck?
-          </p>
-          <p className="mt-2 font-sans text-[15px] leading-relaxed text-linen/70">
-            Or living in someone&apos;s head. Name one. That&apos;s enough to start.
-          </p>
-
-          <p className="mt-5 font-sans text-[14px] leading-relaxed text-linen/80">
-            Tell me what&apos;s going on. I&apos;ll send a one-pager on how we could solve it.
-            No call to start. If it resonates, we can talk then.
-          </p>
-
-          <div className="mt-6 flex justify-center">
-            <CtaButton href="/brief/">Get the Brief →</CtaButton>
-          </div>
-        </div>
       </div>
     </section>
   );

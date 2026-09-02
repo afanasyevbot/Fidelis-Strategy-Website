@@ -1,6 +1,7 @@
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { Hero } from "@/components/hero";
+import { BriefDoor } from "@/components/brief-door";
 import { TheShift } from "@/components/the-shift";
 import { WhatWeBuildHome } from "@/components/what-we-build-home";
 import { ProblemSection } from "@/components/problem-section";
@@ -24,6 +25,7 @@ export default function HomePage() {
       <Nav />
       <main>
         <Hero />
+        <BriefDoor />
         <TheShift />
         <ProblemSection />
         <ProofBeforeAfter />
