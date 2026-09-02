@@ -2,7 +2,7 @@ import { Eyebrow } from "./eyebrow";
 import { Reveal } from "./reveal";
 
 /**
- * Locked copy (Matthew, 2026-09-02). Why now + educator + integrated-not-bolt-on.
+ * Why now + educator + integrated-not-bolt-on. No em dashes in user-facing copy.
  */
 export function TheShift() {
   return (
@@ -23,21 +23,18 @@ export function TheShift() {
             business?
           </p>
           <p>
-            You don&apos;t need another tool bolted onto a broken process. You need someone who
-            can explain what&apos;s possible — and build it into how you already work: your tools,
-            your team&apos;s rhythm, the process you actually run today.
-          </p>
-          <p>
-            That&apos;s what I do. I design the strategy. I build the system. Same person.
+            You don&apos;t need another tool bolted on. You need someone who can explain what&apos;s
+            possible and build it into how you already work: your tools, your team&apos;s rhythm,
+            the process you run today.
           </p>
         </Reveal>
         <Reveal delay={120} className="mt-8 max-w-2xl mx-auto">
           <p className="font-display text-lg md:text-xl text-deep-olive tracking-tight leading-snug">
-            I translate AI into your Tuesday — what changes in your tools, with your team, on
-            the work you already run.
+            I translate AI into your Tuesday: what changes in your tools, with your team, on the
+            work you already run.
           </p>
           <p className="font-sans text-[14px] text-ink/55 leading-relaxed mt-4">
-            Not a magic button. Not ChatGPT pasted on top of a broken process.
+            Not a magic button. Not ChatGPT pasted on top of your workflow.
           </p>
         </Reveal>
       </div>

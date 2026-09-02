@@ -5,7 +5,6 @@ const GRADE =
 
 /**
  * Homepage hero: growth strategy + custom AI systems. Brief question below.
- * Solo / "built by me" lives in THE SHIFT + solo-builder — not repeated here.
  */
 export function Hero() {
   return (
@@ -51,13 +50,13 @@ export function Hero() {
           Growth strategy · custom AI systems
         </p>
 
-        <h1 className="mx-auto max-w-[22ch] font-display text-[32px] font-bold leading-[1.06] tracking-[-0.03em] text-bone sm:text-[42px] md:text-[56px] md:leading-[1.04]">
-          Growth strategy and custom AI systems, built for how you{" "}
-          <em className="font-bold italic text-linen">actually grow</em>.
+        <h1 className="mx-auto max-w-[24ch] font-display text-[32px] font-bold leading-[1.08] tracking-[-0.03em] text-bone sm:text-[40px] md:text-[52px] md:leading-[1.06]">
+          Growth strategy. Custom AI systems. Built for how you{" "}
+          <em className="font-bold italic text-linen">actually work</em>.
         </h1>
 
         <p className="mx-auto mt-5 max-w-[34ch] font-display text-[18px] font-light leading-snug tracking-[-0.01em] text-linen/85 md:text-[22px]">
-          Shaped to your actual processes — not off-the-shelf software, not a bolt-on.
+          Shaped to your actual processes. Not off-the-shelf software. Not a bolt-on.
         </p>
 
         <div className="mx-auto mt-10 w-full max-w-[28rem] md:mt-12">
@@ -69,15 +68,10 @@ export function Hero() {
           </p>
 
           <p className="mt-5 font-sans text-[13px] leading-relaxed text-linen/55">
-            Name what&apos;s still manual. A one-pager on how a custom system could take
-            it. No call.
+            Tell me what&apos;s manual or causing a bottleneck. I&apos;ll send a one-pager on
+            how we could solve it. No call.
           </p>
         </div>
-
-        <p className="mx-auto mt-10 max-w-[40ch] font-sans text-[13px] leading-relaxed text-linen/50 md:mt-12">
-          <strong className="font-semibold text-linen/75">Buyer Engine</strong>{" "}
-          at Paradise Capital is live. Paul&apos;s +30% and +$2M are projections.
-        </p>
       </div>
     </section>
   );

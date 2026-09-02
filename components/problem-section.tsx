@@ -15,11 +15,11 @@ const paths = [
 const points = [
   {
     title: "Nothing talks to anything.",
-    body: "The numbers live in four tools that don't connect. So the same work gets rebuilt by hand — work that should take minutes.",
+    body: "The numbers live in four tools that don't connect. So the same work gets rebuilt by hand, work that should take minutes.",
   },
   {
     title: "Follow-ups live in someone's head.",
-    body: "The next touch depends on who remembers. When they're busy, it doesn't happen — and you never know exactly what it cost.",
+    body: "The next touch depends on who remembers. When they're busy, it doesn't happen, and you never know exactly what it cost.",
   },
   {
     title: "Only one person knows how it works.",
@@ -27,7 +27,7 @@ const points = [
   },
   {
     title: "Deals that go cold while you're busy elsewhere.",
-    body: "It didn't die on merit — follow-up wasn't in a system. By the time you got back to it, they'd already moved on.",
+    body: "It didn't die on merit. Follow-up wasn't in a system. By the time you got back to it, they'd already moved on.",
   },
 ];
 
