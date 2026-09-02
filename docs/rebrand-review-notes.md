@@ -14,15 +14,18 @@ The generic 4-category “menu” feel of **What We Build**. Pipeline system / d
 
 ### What to add
 
-**1. A “why now” beat, explicit and early**
+**1. A “why now” beat, explicit and early** *(Matthew: prioritize this — industry changing, stay ahead, competitors moving, educate owners on AI)*
 
 Name the stakes directly:
 
 - Competitors already using AI to move faster
 - Cost of waiting compounding quarter over quarter
 - Customers starting to expect it
+- Owners asking *How do I use AI? What even is it for my business?* — Fidelis as **educator + builder**, not hype vendor
 
 Right now the site describes pain (spreadsheets, quiet deals, untrusted pipeline numbers) but **never says this pain is solvable today** and the gap between you and the business that fixes it first only grows. **That’s the sentence that’s missing.**
+
+**Integrated, not bolt-on** *(Matthew emphasis):* Not another app on the stack. Not ChatGPT pasted into a broken process. AI woven into **how they already work** — current tools, current rhythm, current team habits. Custom workflow, not a template to learn.
 
 **2. A sharper version of the actual differentiator**
 
@@ -53,7 +56,7 @@ Homepage scroll order (`app/page.tsx`):
 
 ## Direction (structural, not copy-locked)
 
-1. **Add a “why now” beat early** — before or right after pain, not buried under What We Build. One beat: urgency + solvable today + gap widens every quarter.
+1. **Add a “why now” beat early** — before or right after pain. Urgency (competitors, compounding gap) + **demystify AI for owners** + **integrated into how you work today, not bolted on**. Matthew: be the person they come to to learn what AI means for *their* business, then get a system that fits.
 
 2. **Elevate differentiator + production proof** — combine “plans it / builds it” with **live systems across verticals** (Paradise Buyer Engine, Grace church portal, Pulse, Glow). Closer to hero or immediately after pain. **Church is strong proof** (fragmented ops → one portal + follow-up routines) — do not undersell. Brief wizard success CTA can still default to Paradise case study; homepage proof should show **breadth**, not one niche.
 
@@ -62,6 +65,26 @@ Homepage scroll order (`app/page.tsx`):
 4. **Demote What We Build on homepage job** — keep `/what-we-build` as the catalog page; stop asking the 4-card grid to carry positioning. It explains *what*, not *why now* or *why you*.
 
 5. **Align with Brief door** — homepage hero is the question + Brief CTA, not a SKU list. Rebrand should not reintroduce catalog on `/` (locked in brief-door-findings).
+
+---
+
+## Draft copy angles (Matthew review — not locked)
+
+**Why now (section eyebrow):** `THE SHIFT` or `WHY NOW`
+
+**Headline options:**
+- *The industry already moved. The question is whether you’re keeping up.*
+- *Your competitors are using AI to move faster. Every quarter you wait, the gap widens.*
+
+**Body beat — confusion → guide:**
+- *A lot of owners are asking the same thing: How do I even use AI? What does it mean for my business? You don’t need another tool bolted onto a broken process. You need someone who can explain what’s possible — and build it into how you already work.*
+
+**Integrated-not-bolt-on (one-liner):**
+- *Not AI slapped on top. A workflow built around how your team operates today.*
+- *Integrated into your process — not another login your people will ignore.*
+
+**Bridge to Brief:**
+- *Start with one leak. I’ll send a one-pager on how a custom system could take it — shaped to how you work, not a template off the shelf.*
 
 ---
 

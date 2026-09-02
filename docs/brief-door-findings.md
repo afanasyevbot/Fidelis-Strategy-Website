@@ -86,6 +86,24 @@ Fidelis GTM hunt is HELD. Do not start Founders.
 
 **More examples of stuff built = better.** Don’t trim the portfolio to one story. Reframe each around the pattern: **fragmentation → one system → consistent follow-up / routine**.
 
+**Why now + integrated AI (Matthew, 2026-09-02).** Emphasize early on the homepage — not buried under What We Build.
+
+- **Industry shift:** AI is changing how businesses operate. Competitors are already using it to move faster. The gap widens every quarter you wait.
+- **Owner confusion is real:** Many owners are asking *How do I even use AI? What is AI for my business?* Fidelis is who they come to for **education + build** — not hype, not a chatbot bolted onto broken process.
+- **Anti-bolt-on:** Not another tool on the pile. Not “add ChatGPT to your workflow.” **Integrated into how you already work** — your tools, your rhythm, your team’s actual process. Custom system shaped to today’s workflow, not a template they have to learn.
+- **Matthew’s role:** Trusted guide who explains what’s possible, then **ships** the system (plans it / builds it). Educator + builder, same person.
+
+**Draft framing (not locked):**
+
+| Beat | Direction |
+|------|-----------|
+| **Why now** | The industry moved. Competitors are already faster. Waiting compounds. |
+| **The question** | “How do I even use AI?” — you don’t have to figure that out alone. |
+| **The answer** | Not a bolt-on. A workflow built around **how you work today**. |
+| **The proof** | Live systems (Paradise, church, Pulse, Glow) — integrated, not slideware. |
+
+**Homepage section candidate:** “Why now” block sits **after hero or after pain**, before solo-builder / proof. Job: urgency + demystify AI + integrated-not-bolt-on. Pain section stays owner leaks; this section names **stakes + approach**.
+
 ## Rebrand (separate pass)
 
 See [`rebrand-review-notes.md`](./rebrand-review-notes.md). Summary: What We Build 4-card menu is fine as a page but should not carry “why AI / why now”; add early urgency beat, elevate “plans it builds it” + **breadth of live proof** (Paradise, church, Pulse, Glow), tie pain copy to AI-as-mechanism with time/money lines. Not part of the Brief door PR unless Matthew opens it.
