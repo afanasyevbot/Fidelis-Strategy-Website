@@ -63,9 +63,6 @@ export function RecentBuilds() {
         <h2 className="font-display font-bold text-3xl md:text-[48px] text-deep-olive mt-8 tracking-tight max-w-3xl">
           Real systems, running in real businesses.
         </h2>
-        <p className="font-display font-light text-lg md:text-xl text-moss-olive mt-3 max-w-2xl">
-          Named when we&apos;re allowed. Private when we&apos;re not. Glow Routine is a live app you can open.
-        </p>
 
         <Link
           href={featured.href}
