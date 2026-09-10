@@ -116,8 +116,11 @@ export function Nav() {
               style={{ filter: "saturate(0.7) brightness(1.05)" }}
               className="transition-transform duration-500 group-hover:rotate-[8deg]"
             />
-            <span className="text-lg tracking-wide" style={{ fontFamily: "var(--font-cinzel), Georgia, serif" }}>
-              Fidelis Strategy
+            <span
+              className="font-bold text-xl tracking-wide text-bone"
+              style={{ fontFamily: "var(--font-cinzel), Georgia, serif" }}
+            >
+              {siteConfig.name}
             </span>
           </Link>
 
