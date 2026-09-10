@@ -26,8 +26,8 @@ export default function HomePage() {
       <main>
         <Hero />
         <BriefDoor />
-        <ProofSection />
         <TheShift />
+        <ProofSection />
         <ProblemSection />
         <ProofBeforeAfter />
         <SoloBuilder />
