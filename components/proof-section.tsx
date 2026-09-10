@@ -24,9 +24,9 @@ export function ProofSection() {
 
         <Reveal stagger delay={80} className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {[
-            { stat: "+30%", label: "Projected referral pipeline" },
-            { stat: "+$2M", label: "Projected new revenue" },
-            { stat: "1", label: "Partner. Strategy through launch." },
+            { stat: "Weeks", accent: "→ minutes", label: "Buyer list for each mandate" },
+            { stat: "Living", accent: null, label: "Universe that refreshes itself" },
+            { stat: "Curated", accent: null, label: "One list per client, from universe plus search" },
           ].map((m) => (
             <div
               key={m.label}
@@ -36,16 +36,17 @@ export function ProofSection() {
               <div className="font-display font-bold text-4xl md:text-5xl text-linen leading-none tracking-tight">
                 {m.stat}
               </div>
+              {m.accent && (
+                <div className="font-display font-bold text-xl md:text-2xl text-linen/90 mt-2 tracking-tight">
+                  {m.accent}
+                </div>
+              )}
               <div className="font-sans text-[12px] uppercase tracking-button text-bone/70 mt-3">
                 {m.label}
               </div>
             </div>
           ))}
         </Reveal>
-
-        <p className="font-sans text-[13px] text-bone/55 mt-5 max-w-2xl">
-          Paul&apos;s projection for the year ahead, not a closed-year result. The system is live.
-        </p>
 
         <Reveal delay={120}>
           <blockquote className="mt-10 relative">
@@ -59,9 +60,11 @@ export function ProofSection() {
                 refreshes itself, continuously expands our buyer coverage, and most
                 importantly builds a curated buyer list for each client from that
                 universe plus targeted searches. Weeks of manual work compressed into{" "}
-                <span className="font-bold text-linen">minutes</span>. That lets us
-                scale the practice, put the strongest buyers in front of our clients,
-                and keep our attention on serving them.
+                <span className="font-black text-linen underline decoration-linen/70 underline-offset-4">
+                  minutes
+                </span>
+                . That lets us scale the practice, put the strongest buyers in
+                front of our clients, and keep our attention on serving them.
               </p>
               <footer className="mt-5 flex items-center gap-3">
                 <div className="w-8 h-[2px] bg-linen/50" />

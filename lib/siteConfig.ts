@@ -21,8 +21,8 @@ export const siteConfig = {
   // to preserve anchor flexibility per-deal. Do not surface in copy.
   pricingBand: "Engagements typically $25K – $150K · 30–90 day delivery",
 
-  // Proof line — promoted from case study, shown in hero/footer.
-  heroProof: "+30% referral pipeline. +$2M projected revenue. Built for Paradise Capital.",
+  // Proof line — promoted from case study.
+  heroProof: "Weeks of buyer-list work compressed into minutes. Built for Paradise Capital.",
 
   nav: [
     { label: "Process",        href: "/process" },

@@ -5,12 +5,12 @@ import { CtaButton } from "./cta-button";
 const featured = {
   type: "Buyer Engine",
   client: "Paradise Capital · sell-side M&A advisory",
-  body: "Not a static list. When a sell-side mandate is live, the system builds the buyer book, finds strategic acquirers, matches financial buyers, and tracks progress so the work does not live in a spreadsheet.",
+  body: "A living buyer universe that refreshes itself and expands coverage. When a mandate is live, it builds a curated buyer list from that universe plus targeted search. Weeks of list-building compressed into minutes.",
   capabilities: [
-    "Build the buyer list from the deal",
-    "Find strategic buyers",
-    "Match financial buyers",
-    "Track outreach and progress",
+    "Living buyer universe that refreshes",
+    "Coverage that keeps expanding",
+    "Curated list per client",
+    "Weeks of list-building compressed into minutes",
   ],
   href: "/case-studies/paradise-capital",
   cta: "Read the case study",

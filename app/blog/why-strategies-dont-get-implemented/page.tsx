@@ -163,7 +163,7 @@ export default function Post() {
               That&apos;s the only test that matters. For a worked example,
               see how we built the system behind{" "}
               <a href="/case-studies/paradise-capital" className="underline decoration-moss-olive/40 underline-offset-2 hover:text-moss-olive">
-                Paradise Capital&apos;s +30% pipeline lift
+                Paradise Capital&apos;s Buyer Engine
               </a>
               .
             </p>

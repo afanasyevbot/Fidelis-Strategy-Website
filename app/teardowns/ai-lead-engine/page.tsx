@@ -344,7 +344,7 @@ export default function Page() {
               </li>
               <li>
                 <a href="/case-studies/paradise-capital" className="text-deep-olive hover:text-moss-olive underline decoration-moss-olive/30 underline-offset-2">
-                  → Case study: Paradise Capital (+30% referral pipeline with Buyer Engine)
+                  → Case study: Paradise Capital (Buyer Engine: weeks into minutes)
                 </a>
               </li>
             </ul>

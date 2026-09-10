@@ -18,8 +18,8 @@ const builds: BuildProof[] = [
   {
     name: "Buyer Engine",
     context: "Paradise Capital · sell-side M&A",
-    before: "Buyer book in spreadsheets and memory",
-    after: "Living database of buyers, curated to every mandate",
+    before: "Buyer book in spreadsheets and memory. Weeks of work per mandate.",
+    after: "Living buyer universe. Curated list in minutes.",
     href: "/case-studies/paradise-capital",
     cta: "Read the case study",
     live: true,

@@ -26,6 +26,7 @@ export default function HomePage() {
       <main>
         <Hero />
         <BriefDoor />
+        <ProofSection />
         <TheShift />
         <ProblemSection />
         <ProofBeforeAfter />
@@ -33,7 +34,6 @@ export default function HomePage() {
         <GrowthEngine tone="bone" />
         <WhatWeBuildHome />
         <RecentBuilds />
-        <ProofSection />
         <AuditCta />
         <AboutTeaser />
         <FinalCta
