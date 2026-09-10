@@ -22,11 +22,8 @@ export function ProofSection() {
           </div>
         </Reveal>
 
-        <Reveal delay={80} className="space-y-4">
-          <div
-            data-reveal-child
-            className="card-lift p-6 md:p-8 border border-linen/25 hover:border-linen/60 bg-deep-olive/30"
-          >
+        <Reveal delay={80}>
+          <div className="card-lift p-6 md:p-8 border border-linen/25 hover:border-linen/60 bg-deep-olive/30">
             <p className="font-sans text-[12px] uppercase tracking-button text-bone/55">
               Weeks of list-building, compressed into
             </p>
@@ -39,31 +36,6 @@ export function ProofSection() {
             <p className="font-sans text-[15px] text-bone/75 leading-relaxed mt-4 max-w-xl">
               The buyer list for each mandate. Ready so they can stay on the work they are already great at.
             </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {[
-              {
-                name: "Buyer universe",
-                body: "Living. Refreshes itself. Coverage keeps expanding between deals, so the next mandate does not start from a blank page.",
-              },
-              {
-                name: "Named to this client",
-                body: "A custom-made list for this mandate, not a dump of every name they have. Drawn from the universe plus targeted search.",
-              },
-            ].map((m) => (
-              <div
-                key={m.name}
-                data-reveal-child
-                className="card-lift p-6 border border-linen/25 hover:border-linen/60 bg-deep-olive/30"
-              >
-                <p className="font-sans font-semibold text-xl text-bone tracking-tight">
-                  {m.name}
-                </p>
-                <p className="font-sans text-[15px] text-bone/75 leading-relaxed mt-3">
-                  {m.body}
-                </p>
-              </div>
-            ))}
           </div>
         </Reveal>
 
