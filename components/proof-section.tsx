@@ -54,11 +54,14 @@ export function ProofSection() {
             </div>
             <div className="border-l-4 border-linen pl-6 md:pl-10 relative z-10">
               <p className="font-display font-semibold text-xl md:text-2xl leading-relaxed text-bone">
-                Fidelis Strategy took the time to truly understand our business
-                and core values before delivering actionable strategies. We expect to
-                increase our referral pipeline by{" "}
-                <span className="text-linen">30%</span> and generate an additional{" "}
-                <span className="text-linen">$2 million in revenue</span> in the next year.
+                Before the Buyer Engine, building the buyer list for each mandate
+                was a manual process. Now we have a living buyer universe that
+                refreshes itself, continuously expands our buyer coverage, and most
+                importantly builds a curated buyer list for each client from that
+                universe plus targeted searches. Weeks of manual work compressed into{" "}
+                <span className="font-bold text-linen">minutes</span>. That lets us
+                scale the practice, put the strongest buyers in front of our clients,
+                and keep our attention on serving them.
               </p>
               <footer className="mt-5 flex items-center gap-3">
                 <div className="w-8 h-[2px] bg-linen/50" />
