@@ -21,20 +21,24 @@ export const metadata = {
 
 const built = [
   {
-    title: "Living buyer universe",
-    body: "Not a static spreadsheet. A buyer universe that refreshes itself and keeps expanding coverage, so the next mandate does not start from zero.",
+    title: "A living buyer universe",
+    body: "The buyer book is no longer a one-off spreadsheet. It is a universe that stays current: it refreshes itself, so the next mandate does not start from a blank page.",
   },
   {
-    title: "Curated list per client",
-    body: "When a mandate goes live, Buyer Engine builds a curated buyer list from that universe plus targeted searches, instead of weeks of manual research.",
+    title: "Coverage that compounds",
+    body: "Every refresh adds names they did not have last month. Coverage keeps expanding, so the practice is not limited to who someone remembered to research.",
   },
   {
-    title: "Strongest buyers first",
-    body: "The list is built so Paradise can put the strongest buyers in front of the client, and keep attention on serving them instead of assembling the book.",
+    title: "Search on top of the universe",
+    body: "When a deal needs a buyer the universe does not already hold, targeted searches go find them. Those names join the universe and can serve this mandate and the next.",
   },
   {
-    title: "Weeks compressed into minutes",
-    body: "The work that used to take weeks of list-building for each mandate now takes minutes. That is how the practice scales without adding headcount.",
+    title: "A curated list for this client",
+    body: "The output is not a dump of every buyer they have ever seen. It is a short, defensible list for this mandate, drawn from the universe plus those searches.",
+  },
+  {
+    title: "Minutes, not weeks",
+    body: "The list that used to take weeks of manual research is ready in minutes. The team spends the time on the buyers, not on assembling the book.",
   },
 ];
 
