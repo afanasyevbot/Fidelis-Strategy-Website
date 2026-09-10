@@ -273,8 +273,8 @@ export default function Post() {
               <a href="/case-studies/paradise-capital" className="underline decoration-moss-olive/40 underline-offset-2 hover:text-moss-olive">
                 Paradise Capital build
               </a>
-              {" "}was systems #1 and #3 running together, +30% pipeline
-              lift without adding headcount.
+              {" "}was systems #1 and #3 running together: a living buyer
+              universe and curated lists per mandate, without adding headcount.
             </p>
           </div>
 

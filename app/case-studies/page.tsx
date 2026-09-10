@@ -41,10 +41,9 @@ export default function Page() {
                 Paradise Capital
               </h2>
               <p className="font-sans text-[16px] text-ink/80 leading-relaxed mt-4 max-w-2xl">
-                Buyer Engine for sell-side mandates. Builds the buyer book from
-                the deal, finds strategic and financial buyers, drafts first-touch
-                outreach in the partner&apos;s voice, and tracks progress on live
-                mandates. Human approval on every send.
+                Buyer Engine for sell-side mandates. A living buyer universe that
+                refreshes itself, expands coverage, and builds a curated buyer list
+                for each client. Weeks of manual list-building compressed into minutes.
               </p>
               <p className="font-sans text-[14px] text-deep-olive mt-6 font-semibold">
                 Read the case study →

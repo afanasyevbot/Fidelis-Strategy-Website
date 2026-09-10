@@ -210,10 +210,10 @@ export default function Post() {
             <p>
               For one client, the unlock was{" "}
               <a href="/case-studies/paradise-capital" className="underline decoration-moss-olive/40 underline-offset-2 hover:text-moss-olive">
-                a lead engine plus a morning operator brief
+                a living buyer universe
               </a>
-              . +30% pipeline lift and roughly $2M of projected revenue
-              they couldn&apos;t reach with the prior team. The company
+              {" "}that compressed weeks of list-building into minutes.
+              They could not get that by hiring another researcher. The company
               didn&apos;t grow by adding headcount. It grew by adding
               systems that did the work the headcount would have done,
               without the ramp-time tax.

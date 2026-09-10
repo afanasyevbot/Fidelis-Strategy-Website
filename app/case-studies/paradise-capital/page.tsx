@@ -6,39 +6,39 @@ import { FinalCta } from "@/components/final-cta";
 import { breadcrumbSchema } from "@/lib/seo";
 
 export const metadata = {
-  title: "Case Study: Paradise Capital | +30% Referral Pipeline with Buyer Engine",
+  title: "Case Study: Paradise Capital | Weeks of Buyer Lists Compressed into Minutes",
   description:
-    "How Fidelis built Buyer Engine for Paradise Capital: a sell-side buyer-sourcing system with +30% projected referral pipeline lift and $2M projected revenue.",
+    "How Fidelis built Buyer Engine for Paradise Capital: a living buyer universe that refreshes itself and builds a curated buyer list for each mandate in minutes.",
   alternates: { canonical: "/case-studies/paradise-capital" },
   openGraph: {
     type: "article",
-    title: "Paradise Capital: +30% Referral Pipeline with Buyer Engine",
+    title: "Paradise Capital: Weeks of Buyer Lists Compressed into Minutes",
     description:
-      "How Fidelis built Buyer Engine, a sell-side buyer-sourcing system for Paradise Capital.",
+      "How Fidelis built Buyer Engine, a living buyer universe for Paradise Capital sell-side mandates.",
     url: "/case-studies/paradise-capital",
   },
 };
 
 const built = [
   {
-    title: "Buyer book from the deal",
-    body: "When a sell-side mandate goes live, the system builds the initial buyer list from the deal profile instead of starting from a blank spreadsheet.",
+    title: "A living buyer universe",
+    body: "The buyer book is no longer a one-off spreadsheet. It is a universe that stays current: it refreshes itself, so the next mandate does not start from a blank page.",
   },
   {
-    title: "Strategic buyer matching",
-    body: "Every candidate is scored against Paradise Capital's mandate criteria automatically, so the team focuses on buyers worth pursuing.",
+    title: "Coverage that compounds",
+    body: "Every refresh adds names they did not have last month. Coverage keeps expanding, so the practice is not limited to who someone remembered to research.",
   },
   {
-    title: "Financial buyer matching",
-    body: "PE firms, family offices, and other financial buyers are surfaced and ranked against the same fit criteria.",
+    title: "Search on top of the universe",
+    body: "When a deal needs a buyer the universe does not already hold, targeted searches go find them. Those names join the universe and can serve this mandate and the next.",
   },
   {
-    title: "Consistent outreach",
-    body: "Shortlisted buyers get first-touch outreach drafted in a single, consistent voice. Ready to send, no drafting from scratch.",
+    title: "A curated list for this client",
+    body: "The output is not a dump of every buyer they have ever seen. It is a short, defensible list for this mandate, drawn from the universe plus those searches.",
   },
   {
-    title: "Progress tracking",
-    body: "Outreach, follow-up, and mandate progress stay in one place instead of scattered across tabs and memory.",
+    title: "Minutes, not weeks",
+    body: "The list that used to take weeks of manual research is ready in minutes. The team spends the time on the buyers, not on assembling the book.",
   },
 ];
 
@@ -75,7 +75,7 @@ export default function Page() {
               Paradise Capital
             </h1>
             <p className="font-display text-2xl md:text-[26px] leading-tight mt-5 text-linen max-w-3xl tracking-[-0.01em]">
-              Buyer Engine for sell-side mandates. 2025 – ongoing.
+              Buyer Engine for sell-side mandates. Weeks of list-building compressed into minutes. 2025 – ongoing.
             </p>
           </div>
         </section>
@@ -90,7 +90,9 @@ export default function Page() {
                 refreshes itself, continuously expands our buyer coverage, and most
                 importantly builds a curated buyer list for each client from that
                 universe plus targeted searches. Weeks of manual work compressed into{" "}
-                <strong className="font-bold">minutes</strong>. That lets us scale
+                <strong className="font-bold underline decoration-deep-olive/50 underline-offset-4">
+                  minutes
+                </strong>. That lets us scale
                 the practice, put the strongest buyers in front of our clients, and
                 keep our attention on serving them.
               </p>
@@ -108,12 +110,12 @@ export default function Page() {
         <section className="bg-bone border-t border-moss-olive/15">
           <div className="mx-auto max-w-4xl px-6 pb-24 pt-16">
             <Eyebrow size="lg" tone="moss">THE PROBLEM</Eyebrow>
-            <h2 className="font-display font-bold text-4xl md:text-[48px] text-deep-olive mt-8 tracking-tight">Best-in-class at closing. No system for building the buyer book.</h2>
+            <h2 className="font-display font-bold text-4xl md:text-[48px] text-deep-olive mt-8 tracking-tight">Best-in-class at closing. Weeks of work to build each buyer list.</h2>
             <p className="font-sans text-[17px] text-ink/80 leading-relaxed mt-6">
               Paradise Capital is exceptional at what they do on sell-side mandates. When the right buyers are in front of them, they evaluate thoroughly, structure well, and close. That edge is real and hard-earned.
             </p>
             <p className="font-sans text-[17px] text-ink/80 leading-relaxed mt-4">
-              The gap was earlier in the process. When a mandate went live, building the buyer book meant manual research, scattered lists, and outreach tracked by hand. Strategic buyers, financial buyers, and follow-up progress did not live in one repeatable system.
+              The gap was earlier. Building the buyer list for each mandate was a manual process: research from scratch, scattered lists, coverage that did not grow between deals. The practice could not scale while the book still took weeks to assemble.
             </p>
           </div>
         </section>
@@ -142,17 +144,15 @@ export default function Page() {
         <section className="bg-moss-olive text-bone border-t border-linen/15">
           <div className="mx-auto max-w-4xl px-6 py-24">
             <Eyebrow size="lg">OUTCOME</Eyebrow>
-            <h2 className="font-display font-bold text-4xl md:text-[48px] mt-8 tracking-tight">A sell-side buyer system built around how Paradise runs a mandate.</h2>
+            <h2 className="font-display font-bold text-4xl md:text-[48px] mt-8 tracking-tight">Weeks of list-building, compressed into minutes.</h2>
             <p className="font-sans text-[17px] text-bone/85 leading-relaxed mt-6 max-w-2xl">
-              We designed and built Buyer Engine end to end: buyer identification,
-              fit-scoring against Paradise Capital&apos;s mandate criteria, and
-              first-touch outreach drafted in the partner&apos;s voice, with a human
-              approving every send.
+              Paradise now has a living buyer universe that refreshes itself and
+              continuously expands coverage. When a mandate is live, Buyer Engine
+              builds a curated buyer list from that universe plus targeted searches.
             </p>
             <p className="font-sans text-[17px] text-bone/85 leading-relaxed mt-4 max-w-2xl">
-              Where buyer-book work had lived in spreadsheets and memory, Paradise
-              now has a system built for sell-side mandates: designed to run lean,
-              without adding headcount.
+              That is what lets them scale the practice, put the strongest buyers in
+              front of their clients, and keep attention on serving them.
             </p>
           </div>
         </section>
