@@ -22,30 +22,49 @@ export function ProofSection() {
           </div>
         </Reveal>
 
-        <Reveal stagger delay={80} className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          {[
-            { stat: "Weeks", accent: "→ minutes", label: "Buyer list for each mandate" },
-            { stat: "Living", accent: null, label: "Universe that refreshes itself" },
-            { stat: "Curated", accent: null, label: "One list per client, from universe plus search" },
-          ].map((m) => (
-            <div
-              key={m.label}
-              data-reveal-child
-              className="card-lift p-5 border border-linen/25 hover:border-linen/60 bg-deep-olive/30"
+        <Reveal delay={80} className="space-y-4">
+          <div
+            data-reveal-child
+            className="card-lift p-6 md:p-8 border border-linen/25 hover:border-linen/60 bg-deep-olive/30"
+          >
+            <p className="font-sans text-[12px] uppercase tracking-button text-bone/55">
+              Weeks of list-building, compressed into
+            </p>
+            <p
+              className="mt-2 font-bold text-5xl md:text-7xl text-linen leading-none tracking-tight"
+              style={{ fontFamily: "var(--font-cinzel), Georgia, serif" }}
             >
-              <div className="font-display font-bold text-4xl md:text-5xl text-linen leading-none tracking-tight">
-                {m.stat}
+              minutes
+            </p>
+            <p className="font-sans text-[15px] text-bone/75 leading-relaxed mt-4 max-w-xl">
+              The buyer list for each mandate. Ready so they can stay on the work they are already great at.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {[
+              {
+                name: "Buyer universe",
+                body: "Living. Refreshes itself. Coverage keeps expanding between deals, so the next mandate does not start from a blank page.",
+              },
+              {
+                name: "Named to this client",
+                body: "A custom-made list for this mandate, not a dump of every name they have. Drawn from the universe plus targeted search.",
+              },
+            ].map((m) => (
+              <div
+                key={m.name}
+                data-reveal-child
+                className="card-lift p-6 border border-linen/25 hover:border-linen/60 bg-deep-olive/30"
+              >
+                <p className="font-sans font-semibold text-xl text-bone tracking-tight">
+                  {m.name}
+                </p>
+                <p className="font-sans text-[15px] text-bone/75 leading-relaxed mt-3">
+                  {m.body}
+                </p>
               </div>
-              {m.accent && (
-                <div className="font-display font-bold text-xl md:text-2xl text-linen/90 mt-2 tracking-tight">
-                  {m.accent}
-                </div>
-              )}
-              <div className="font-sans text-[12px] uppercase tracking-button text-bone/70 mt-3">
-                {m.label}
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </Reveal>
 
         <Reveal delay={120}>
