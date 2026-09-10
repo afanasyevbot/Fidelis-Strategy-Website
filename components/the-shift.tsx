@@ -28,6 +28,10 @@ export function TheShift() {
             possible and build it into how you already work: your tools, your team&apos;s rhythm,
             the process you run today.
           </p>
+          <p>
+            Buy what&apos;s universal: accounting, email, payroll. Build what&apos;s yours: how you
+            find customers, move deals, and deliver.
+          </p>
         </Reveal>
         <Reveal delay={120} className="mt-8 max-w-2xl mx-auto border-l-2 border-moss-olive/35 pl-5">
           <p className="font-sans text-[17px] md:text-[18px] text-deep-olive leading-relaxed">

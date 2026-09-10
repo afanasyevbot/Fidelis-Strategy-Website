@@ -1,11 +1,11 @@
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { Eyebrow } from "@/components/eyebrow";
-import { GrowthEngine } from "@/components/growth-engine";
 import { FinalCta } from "@/components/final-cta";
 import { AdvisorHeroMocks } from "@/components/pulse-mocks";
 import { systems } from "@/content/systems";
 import { cn } from "@/lib/cn";
+import Link from "next/link";
 
 export const metadata = {
   title: "What We Build | AI Pipeline Systems, Operator Dashboards, Workflow Apps",
@@ -35,6 +35,63 @@ export default function Page() {
               </a>
               . We build to the problem, not the category.
             </p>
+          </div>
+        </section>
+
+        <section className="bg-bone">
+          <div className="mx-auto max-w-6xl px-6 py-20">
+            <Eyebrow tone="moss">WHICH SOUNDS LIKE YOU?</Eyebrow>
+            <h2 className="font-display font-bold text-3xl md:text-[42px] text-deep-olive mt-8 tracking-tight max-w-3xl">
+              You didn&apos;t get sloppy. You bought software built for the average business.
+            </h2>
+            <p className="font-sans text-[17px] text-ink/80 leading-relaxed mt-5 max-w-2xl">
+              Buy what&apos;s universal: accounting, email, payroll. Build what&apos;s yours: how
+              you find customers, move deals, and deliver.
+            </p>
+            <div className="grid md:grid-cols-2 gap-5 mt-10">
+              {[
+                {
+                  title: "Running on spreadsheets, memory, and hustle?",
+                  body: "You've built something real without real systems. We start with the growth strategy, then build your first ones around how you already work.",
+                },
+                {
+                  title: "Drowning in tools your team works around?",
+                  body: "The software was supposed to help. Instead your team copies data between tabs. We replace the workarounds with systems shaped to how you actually operate.",
+                },
+              ].map((p) => (
+                <div key={p.title} className="p-6 border border-moss-olive/30 bg-bone">
+                  <h3 className="font-display font-bold text-xl text-deep-olive tracking-tight">
+                    {p.title}
+                  </h3>
+                  <p className="font-sans text-[15px] text-ink/80 leading-relaxed mt-2">{p.body}</p>
+                </div>
+              ))}
+            </div>
+            <div className="grid sm:grid-cols-2 gap-6 mt-12">
+              {[
+                {
+                  title: "Nothing talks to anything.",
+                  body: "The numbers live in four tools that don't connect. So the same work gets rebuilt by hand.",
+                },
+                {
+                  title: "Follow-ups depend on who remembers.",
+                  body: "When they're busy, it doesn't happen, and you never know exactly what it cost.",
+                },
+                {
+                  title: "Only one person knows how it works.",
+                  body: "The process lives in one person's head. When they're out, the work stalls.",
+                },
+                {
+                  title: "Deals that go cold while you're busy elsewhere.",
+                  body: "It didn't die on merit. Follow-up wasn't in a system.",
+                },
+              ].map((p) => (
+                <div key={p.title} className="pl-5 border-l border-moss-olive/30">
+                  <h3 className="font-display font-bold text-lg text-deep-olive">{p.title}</h3>
+                  <p className="font-sans text-[15px] text-ink/75 leading-relaxed mt-2">{p.body}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -225,7 +282,25 @@ export default function Page() {
           </div>
         </section>
 
-        <GrowthEngine tone="bone" />
+        <section className="bg-moss-olive text-bone">
+          <div className="mx-auto max-w-5xl px-6 py-20">
+            <Eyebrow>HOW WE WORK</Eyebrow>
+            <h2 className="font-display font-bold text-3xl md:text-[42px] mt-8 tracking-tight max-w-3xl">
+              Discover. Design. Deploy. Drive.
+            </h2>
+            <p className="font-sans text-[17px] text-bone/85 leading-relaxed mt-5 max-w-2xl">
+              Every engagement runs the same four stages, from first look at the business to
+              systems that compound. The full breakdown lives on Process.
+            </p>
+            <Link
+              href="/process"
+              className="mt-8 inline-flex items-center gap-2 font-sans text-[12px] uppercase tracking-button font-semibold text-linen hover:text-bone"
+            >
+              See the 4D Growth Engine →
+            </Link>
+          </div>
+        </section>
+
         <FinalCta eyebrow="READY" headline="Let's build your system." />
       </main>
       <Footer />

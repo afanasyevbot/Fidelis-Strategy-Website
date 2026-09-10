@@ -115,6 +115,24 @@ export default function Page() {
           </div>
         </section>
 
+        <section className="bg-bone border-t border-moss-olive/15">
+          <div className="mx-auto max-w-4xl px-6 py-24">
+            <Eyebrow size="lg" tone="moss">ONE PARTNER</Eyebrow>
+            <h2 className="font-display font-bold text-4xl md:text-[48px] text-deep-olive mt-8 tracking-tight leading-[1.05] max-w-3xl">
+              The person who plans it builds it. That person is me.
+            </h2>
+            <div className="font-sans text-[17px] text-ink/80 leading-relaxed space-y-4 mt-6 max-w-2xl">
+              <p>
+                Most growth work breaks between strategy and build. Here, it&apos;s the same
+                person from plan through launch.
+              </p>
+              <p>
+                Everything I build is documented, runs in your environment, and stays yours.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <section className="bg-moss-olive text-bone">
           <div className="mx-auto max-w-6xl px-6 py-24">
             <Eyebrow size="lg">PRINCIPLES</Eyebrow>

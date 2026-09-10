@@ -25,12 +25,18 @@ export function WhatWeBuildHome() {
             stuck, and build the system that unblocks it. Same person who spots the leak builds the fix.
           </p>
         </Reveal>
-        <Reveal delay={120} className="mt-10">
+        <Reveal delay={120} className="mt-10 flex flex-wrap gap-x-8 gap-y-3">
+          <Link
+            href="/what-we-build"
+            className="arrow-nudge inline-flex items-center gap-2 text-[12px] uppercase tracking-button text-deep-olive hover:text-moss-olive font-semibold link-underline"
+          >
+            See the systems <span data-arrow>→</span>
+          </Link>
           <Link
             href="#recent-builds"
             className="arrow-nudge inline-flex items-center gap-2 text-[12px] uppercase tracking-button text-deep-olive hover:text-moss-olive font-semibold link-underline"
           >
-            See what that looks like in real businesses <span data-arrow>→</span>
+            See it in real businesses <span data-arrow>→</span>
           </Link>
         </Reveal>
       </div>
