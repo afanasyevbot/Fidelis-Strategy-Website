@@ -171,16 +171,16 @@ export function RecentBuilds() {
             <EqualCard key={p.name} {...p} />
           ))}
 
-          <div className={cardClass}>
+          <div className={`${cardClass} md:col-span-2`}>
             <p className="font-sans text-[11px] uppercase tracking-button text-moss-olive font-semibold">
               Client builds · Lead gen
             </p>
             <h3 className="font-display font-bold text-xl md:text-[22px] text-deep-olive tracking-tight mt-6">
               Lead gen engines
             </h3>
-            <div className="mt-4 flex-1 divide-y divide-moss-olive/20">
+            <div className="mt-4 flex-1 grid md:grid-cols-2 md:gap-8 divide-y md:divide-y-0 md:divide-x divide-moss-olive/20">
               {leadGens.map((b) => (
-                <div key={b.name} className="py-4 first:pt-0 last:pb-0">
+                <div key={b.name} className="py-4 first:pt-0 last:pb-0 md:py-0 md:pr-8 md:first:pr-8 md:last:pr-0 md:last:pl-8">
                   <p className="font-sans text-[13px] font-semibold text-deep-olive">{b.name}</p>
                   <p className="font-sans text-[15px] text-ink/75 leading-relaxed mt-1">{b.body}</p>
                 </div>
