@@ -85,10 +85,14 @@ export default function Page() {
             <blockquote className="relative">
               <span className="block font-display text-[96px] leading-none text-moss-olive/15 select-none -mb-6 -ml-2" aria-hidden="true">&ldquo;</span>
               <p className="font-display font-light text-[26px] md:text-[32px] text-deep-olive leading-[1.35] tracking-[-0.01em]">
-                Fidelis Strategy took the time to truly understand our business
-                and core values before delivering actionable strategies. We expect to
-                increase our referral pipeline by 30% and generate an additional
-                $2 million in revenue in the next year.
+                Before the Buyer Engine, building the buyer list for each mandate
+                was a manual process. Now we have a living buyer universe that
+                refreshes itself, continuously expands our buyer coverage, and most
+                importantly builds a curated buyer list for each client from that
+                universe plus targeted searches. Weeks of manual work compressed into{" "}
+                <strong className="font-bold">minutes</strong>. That lets us scale
+                the practice, put the strongest buyers in front of our clients, and
+                keep our attention on serving them.
               </p>
               <footer className="mt-8 flex items-center gap-4">
                 <div className="h-px flex-1 max-w-[40px] bg-moss-olive/40" />
