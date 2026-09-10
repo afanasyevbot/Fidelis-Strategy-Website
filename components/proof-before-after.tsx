@@ -41,7 +41,7 @@ const builds: BuildProof[] = [
     after: "One screen that stays current",
     href: "/pulse",
     cta: "See Pulse",
-    note: "Pulse is how owners see their numbers. Custom builds are how your unique workflow runs.",
+    note: "I built Pulse for a pain I already knew. Custom builds are how a unique workflow runs.",
     live: true,
   },
   {

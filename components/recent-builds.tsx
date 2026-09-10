@@ -1,57 +1,133 @@
 import Link from "next/link";
 import { Eyebrow } from "./eyebrow";
-import { CtaButton } from "./cta-button";
+import { AdvisorMark, PulseMark } from "./product-marks";
 
-const featured = {
-  type: "Buyer Engine",
-  client: "Paradise Capital · sell-side M&A advisory",
-  body: "A living buyer universe that refreshes itself and expands coverage. When a mandate is live, it builds a curated buyer list from that universe plus targeted search. Weeks of list-building compressed into minutes.",
-  capabilities: [
-    "Living buyer universe that refreshes",
-    "Coverage that keeps expanding",
-    "Curated list per client",
-    "Weeks of list-building compressed into minutes",
-  ],
-  href: "/case-studies/paradise-capital",
-  cta: "Read the case study",
-};
-
-const commercial: Array<{
-  type: string;
-  client: string;
-  body: string;
-  href?: string;
-  cta?: string;
-  external?: boolean;
-}> = [
+const ownProducts = [
   {
-    type: "Lead Generation Platform",
-    client: "SaaS company serving real-estate teams",
-    body: "Discovers teams, brokerages, and franchises; enriches each from their website and LinkedIn; scores them against the ideal customer profile; drafts the outreach.",
+    kicker: "Own product · For business owners",
+    name: "Fidelis Pulse",
+    mark: "pulse" as const,
+    body: "I built this for a pain I already knew: owners could not see the business without fighting four tabs. Now it is a live dashboard. Cash, margin, and what to do this week, in one place.",
+    href: "/pulse",
+    cta: "See Pulse",
+    internal: true,
   },
   {
-    type: "Glow Routine",
-    client: "Linked by Lexi · live consumer app",
-    body: "A wellness app someone can actually open and use: daily checklists, reminders, streaks, and an AI advisor in her pocket.",
-    href: "https://glow-routine-seven.vercel.app",
-    cta: "Open Glow Routine",
-    external: true,
-  },
-  {
-    type: "Volunteer & Member Portal",
-    client: "Grace Evangelical Church · pro bono",
-    body: "Shift sign-up, scheduling, reminders, and member care for a small bilingual church. Builds on the website, online giving, and Microsoft 365 migration we did for them first.",
-    href: "https://eagangrace.com",
-    cta: "Visit eagangrace.com",
-    external: true,
+    kicker: "Own product · For M&A firms",
+    name: "Fidelis Advisor",
+    mark: "advisor" as const,
+    body: "A workspace for advisory firms: onboard clients, keep them buyer-ready, share documents, and see who needs you this week. Same standard as Pulse. Built and operated by me.",
+    href: "/pulse",
+    cta: "See Advisor",
+    internal: true,
   },
 ];
 
-function LiveMark() {
+const equalBuilds = [
+  ...ownProducts,
+  {
+    kicker: "Linked by Lexi",
+    name: "Glow Routine",
+    mark: null,
+    body: "A wellness app built around how she actually operates: checklists, reminders, and an advisor in her pocket.",
+    href: "https://glow-routine-seven.vercel.app",
+    cta: "Open Glow Routine",
+    internal: false,
+  },
+  {
+    kicker: "Grace Evangelical Church",
+    name: "Volunteer & member portal",
+    mark: null,
+    body: "Scheduling, reminders, and member care in one place, on top of the site and giving we built first.",
+    href: "https://eagangrace.com",
+    cta: "Visit eagangrace.com",
+    internal: false,
+  },
+];
+
+const leadGens = [
+  {
+    name: "Real estate lead gen",
+    body: "Automated prospect discovery and enrichment for a SaaS company serving real-estate teams. Fit scoring and first-touch drafts, without starting from a blank list.",
+  },
+  {
+    name: "M&A lead gen",
+    body: "Automated acquisition-target discovery and qualification. Scoring against fit criteria, a persistent database, and weekly reports for the advisory team.",
+  },
+];
+
+const cardClass =
+  "card-lift flex h-full flex-col rounded-2xl border border-moss-olive/25 bg-linen/40 p-6 md:p-8 hover:border-moss-olive";
+
+function ProductMark({ mark }: { mark: "pulse" | "advisor" }) {
   return (
-    <span className="shrink-0 font-sans text-[10px] font-bold uppercase tracking-wider px-2 py-[3px] bg-deep-olive text-bone">
-      Live
+    <span className="text-moss-olive/70">
+      {mark === "pulse" ? <PulseMark size={22} /> : <AdvisorMark size={24} />}
     </span>
+  );
+}
+
+function EqualCard({
+  kicker,
+  name,
+  mark,
+  body,
+  href,
+  cta,
+  internal,
+}: {
+  kicker: string;
+  name: string;
+  mark: "pulse" | "advisor" | null;
+  body: string;
+  href: string;
+  cta: string;
+  internal: boolean;
+}) {
+  const inner = (
+    <>
+      {mark ? (
+        <div className="flex items-center gap-2.5">
+          <ProductMark mark={mark} />
+          <div>
+            <p
+              className="text-[11px] font-semibold tracking-[0.14em] uppercase text-moss-olive/80 leading-none"
+              style={{ fontFamily: "var(--font-cinzel), Georgia, serif" }}
+            >
+              Fidelis
+            </p>
+            <p className="font-sans text-[10px] uppercase tracking-button text-moss-olive/70 mt-1">
+              {kicker}
+            </p>
+          </div>
+        </div>
+      ) : (
+        <p className="font-sans text-[11px] uppercase tracking-button text-moss-olive font-semibold">
+          {kicker}
+        </p>
+      )}
+      <h3 className="font-display font-bold text-xl md:text-[22px] text-deep-olive tracking-tight mt-6">
+        {name}
+      </h3>
+      <p className="font-sans text-[15px] text-ink/75 leading-relaxed mt-3 flex-1">{body}</p>
+      <span className="font-sans text-[12px] uppercase tracking-button text-deep-olive font-semibold mt-6 inline-flex items-center gap-2">
+        {cta} <span aria-hidden>→</span>
+      </span>
+    </>
+  );
+
+  if (internal) {
+    return (
+      <Link href={href} className={cardClass}>
+        {inner}
+      </Link>
+    );
+  }
+
+  return (
+    <a href={href} target="_blank" rel="noopener noreferrer" className={cardClass}>
+      {inner}
+    </a>
   );
 }
 
@@ -59,103 +135,58 @@ export function RecentBuilds() {
   return (
     <section id="recent-builds" className="bg-bone scroll-mt-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 py-16 md:py-24">
-        <Eyebrow size="lg" tone="moss">RECENT BUILDS</Eyebrow>
+        <Eyebrow size="lg" tone="moss">
+          SYSTEMS WE BUILT
+        </Eyebrow>
         <h2 className="font-display font-bold text-3xl md:text-[48px] text-deep-olive mt-8 tracking-tight max-w-3xl">
-          Real systems, running in real businesses.
+          Live software. Some of it mine. Some built inside a client&apos;s process.
         </h2>
-        <p className="font-display font-light text-lg md:text-xl text-moss-olive mt-3 max-w-2xl">
-          Named when we&apos;re allowed. Private when we&apos;re not. Glow Routine is a live app you can open.
+        <p className="font-sans text-[16px] text-ink/70 leading-relaxed mt-4 max-w-2xl">
+          Pulse started as a pain I already knew, then became a product. The rest is custom
+          work, shaped to how that business already runs.
         </p>
 
         <Link
-          href={featured.href}
-          className="card-lift mt-12 block p-8 md:p-10 border border-moss-olive/40 bg-bone hover:border-moss-olive"
+          href="/case-studies/paradise-capital"
+          className="card-lift mt-12 block rounded-2xl border border-moss-olive/40 bg-linen/40 p-8 md:p-10 hover:border-moss-olive"
         >
-          <div className="flex items-start justify-between gap-3">
-            <div className="font-sans text-[12px] uppercase tracking-button text-moss-olive font-semibold">
-              Flagship · sell-side
-            </div>
-            <LiveMark />
-          </div>
-          <h3 className="font-display font-bold text-2xl md:text-[32px] text-deep-olive tracking-tight leading-snug mt-4">
-            {featured.type}
-          </h3>
-          <div className="font-sans text-[13px] uppercase tracking-button text-moss-olive font-semibold mt-2">
-            {featured.client}
-          </div>
-          <p className="font-sans text-[16px] text-ink/75 leading-relaxed mt-4 max-w-3xl">
-            {featured.body}
+          <p className="font-sans text-[11px] uppercase tracking-button text-moss-olive font-semibold">
+            Paradise Capital · sell-side M&amp;A
           </p>
-          <ul className="mt-6 grid sm:grid-cols-2 gap-x-8 gap-y-2 max-w-3xl">
-            {featured.capabilities.map((item) => (
-              <li
-                key={item}
-                className="font-sans text-[15px] text-ink/80 leading-snug flex gap-2"
-              >
-                <span className="text-moss-olive shrink-0" aria-hidden>
-                  ◇
-                </span>
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
+          <h3 className="font-display font-bold text-2xl md:text-[32px] text-deep-olive tracking-tight leading-snug mt-4">
+            Buyer Engine
+          </h3>
+          <p className="font-sans text-[16px] text-ink/75 leading-relaxed mt-4 max-w-3xl">
+            A living buyer universe that refreshes itself and expands coverage. When a mandate is
+            live, it builds a curated buyer list from that universe plus targeted search. Weeks of
+            list-building compressed into minutes.
+          </p>
           <span className="font-sans text-[12px] uppercase tracking-button text-deep-olive font-semibold mt-6 inline-flex items-center gap-2">
-            {featured.cta} <span aria-hidden>→</span>
+            Read the case study <span aria-hidden>→</span>
           </span>
         </Link>
 
-        <div className="grid md:grid-cols-2 gap-5 mt-5">
-          {commercial.map((b) => {
-            const inner = (
-              <>
-                <div className="flex items-start justify-between gap-3">
-                  <h3 className="font-display font-bold text-[19px] md:text-[22px] text-deep-olive tracking-tight leading-snug">
-                    {b.type}
-                  </h3>
-                  {b.href && <LiveMark />}
+        <div className="mt-5 grid md:grid-cols-2 gap-5">
+          {equalBuilds.map((p) => (
+            <EqualCard key={p.name} {...p} />
+          ))}
+
+          <div className={cardClass}>
+            <p className="font-sans text-[11px] uppercase tracking-button text-moss-olive font-semibold">
+              Client builds · Lead gen
+            </p>
+            <h3 className="font-display font-bold text-xl md:text-[22px] text-deep-olive tracking-tight mt-6">
+              Lead gen engines
+            </h3>
+            <div className="mt-4 flex-1 divide-y divide-moss-olive/20">
+              {leadGens.map((b) => (
+                <div key={b.name} className="py-4 first:pt-0 last:pb-0">
+                  <p className="font-sans text-[13px] font-semibold text-deep-olive">{b.name}</p>
+                  <p className="font-sans text-[15px] text-ink/75 leading-relaxed mt-1">{b.body}</p>
                 </div>
-                <div className="font-sans text-[12px] uppercase tracking-button text-moss-olive font-semibold mt-2">
-                  {b.client}
-                </div>
-                <p className="font-sans text-[15px] text-ink/75 leading-relaxed mt-3">
-                  {b.body}
-                </p>
-                {b.cta && (
-                  <span className="font-sans text-[12px] uppercase tracking-button text-deep-olive font-semibold mt-auto pt-4 inline-flex items-center gap-2">
-                    {b.cta} <span aria-hidden>→</span>
-                  </span>
-                )}
-              </>
-            );
-
-            const className =
-              "p-6 md:p-8 border border-moss-olive/30 bg-bone h-full flex flex-col" +
-              (b.href ? " hover:border-moss-olive card-lift" : "");
-
-            if (b.href && b.external) {
-              return (
-                <a
-                  key={b.type}
-                  href={b.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={className}
-                >
-                  {inner}
-                </a>
-              );
-            }
-
-            return b.href ? (
-              <Link key={b.type} href={b.href} className={className}>
-                {inner}
-              </Link>
-            ) : (
-              <div key={b.type} className={className}>
-                {inner}
-              </div>
-            );
-          })}
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
