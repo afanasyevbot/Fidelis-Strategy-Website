@@ -110,12 +110,12 @@ export default function Page() {
         <section className="bg-bone border-t border-moss-olive/15">
           <div className="mx-auto max-w-4xl px-6 pb-24 pt-16">
             <Eyebrow size="lg" tone="moss">THE PROBLEM</Eyebrow>
-            <h2 className="font-display font-bold text-4xl md:text-[48px] text-deep-olive mt-8 tracking-tight">Best-in-class at closing. Weeks of work to build each buyer list.</h2>
+            <h2 className="font-display font-bold text-4xl md:text-[48px] text-deep-olive mt-8 tracking-tight">Exceptional at the work. The buyer list was eating their time.</h2>
             <p className="font-sans text-[17px] text-ink/80 leading-relaxed mt-6">
-              Paradise Capital is exceptional at what they do on sell-side mandates. When the right buyers are in front of them, they evaluate thoroughly, structure well, and close. That edge is real and hard-earned.
+              Paradise Capital is exceptional at what they do. They evaluate thoroughly, structure well, and close. That edge is real and hard-earned.
             </p>
             <p className="font-sans text-[17px] text-ink/80 leading-relaxed mt-4">
-              The gap was earlier. Building the buyer list for each mandate was a manual process: research from scratch, scattered lists, coverage that did not grow between deals. The practice could not scale while the book still took weeks to assemble.
+              The gap was earlier. Building the buyer list for each mandate was a manual process, and it took their time: research from scratch, lists that did not carry from one deal to the next. Buyer Engine gives that time back, so they can scale the practice and stay on the work they are already great at.
             </p>
           </div>
         </section>

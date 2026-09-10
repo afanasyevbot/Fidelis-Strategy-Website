@@ -3,6 +3,7 @@ import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { Eyebrow } from "@/components/eyebrow";
 import { FinalCta } from "@/components/final-cta";
+import { ProofBeforeAfter } from "@/components/proof-before-after";
 
 export const metadata = {
   title: "Case Studies",
@@ -76,6 +77,7 @@ export default function Page() {
             </p>
           </div>
         </section>
+        <ProofBeforeAfter />
         <FinalCta />
       </main>
       <Footer />
