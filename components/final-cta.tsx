@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { trackEvent } from "@/lib/analytics";
 import { siteConfig } from "@/lib/siteConfig";
 import { Eyebrow } from "./eyebrow";
@@ -9,18 +10,22 @@ import { Reveal } from "./reveal";
 export function FinalCta({
   eyebrow = "START YOUR GROWTH JOURNEY",
   headline = "You've built something real. Let's take it further.",
-  sub = "A 30-minute call. We'll talk about where the business is, where you want it, and how to grow the top line. No pitch deck. Just a real conversation.",
+  sub,
   primaryHref,
-  primaryLabel = "Book a Call →",
+  primaryLabel,
+  secondaryHref,
+  secondaryLabel,
 }: {
   eyebrow?: string;
   headline?: string;
   sub?: string;
-  /** Override the primary CTA target. Defaults to the booking URL. */
   primaryHref?: string;
   primaryLabel?: string;
+  secondaryHref?: string;
+  secondaryLabel?: string;
 }) {
-  const href = primaryHref ?? siteConfig.bookingUrl;
+  const href = primaryHref ?? siteConfig.primaryCta.href;
+  const label = primaryLabel ?? `${siteConfig.primaryCta.label} →`;
   const isInternal = href.startsWith("/");
 
   function handlePrimaryClick() {
@@ -33,7 +38,6 @@ export function FinalCta({
 
   return (
     <section className="relative bg-moss-olive text-bone overflow-hidden">
-      {/* Subtle radial glow accent */}
       <div
         aria-hidden
         className="absolute inset-0 pointer-events-none opacity-60"
@@ -53,26 +57,36 @@ export function FinalCta({
           )}
         </Reveal>
         <Reveal delay={120}>
-          <div className="mt-10">
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <CtaButton
               href={href}
               external={!isInternal}
               onClick={handlePrimaryClick}
             >
-              {primaryLabel}
+              {label}
             </CtaButton>
+            {secondaryHref && secondaryLabel && (
+              <Link
+                href={secondaryHref}
+                className="font-sans text-[13px] uppercase tracking-button text-linen/90 hover:text-bone font-semibold link-underline"
+              >
+                {secondaryLabel} →
+              </Link>
+            )}
           </div>
-          <p className="font-sans text-[13px] text-linen/80 mt-5">
-            Prefer to talk first?{" "}
-            <a href={siteConfig.bookingUrl} className="link-underline hover:text-bone">
-              Book a call
-            </a>
-            . Or{" "}
-            <a href="/contact" className="link-underline hover:text-bone">
-              send a note
-            </a>
-            .
-          </p>
+          {!secondaryHref && (
+            <p className="font-sans text-[13px] text-linen/80 mt-5">
+              Prefer to talk first?{" "}
+              <a href={siteConfig.bookingUrl} className="link-underline hover:text-bone">
+                Book a call
+              </a>
+              . Or{" "}
+              <a href="/contact/" className="link-underline hover:text-bone">
+                send a note
+              </a>
+              .
+            </p>
+          )}
         </Reveal>
       </div>
     </section>

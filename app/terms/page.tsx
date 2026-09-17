@@ -31,7 +31,7 @@ export default function Page() {
             <section>
               <h2 className="font-display font-bold text-2xl text-deep-olive tracking-tight">The site</h2>
               <p className="mt-3">
-                This site is published by Fidelis Strategy LLC for information about our services. Content is general and is not legal, financial, or investment advice. Case studies describe specific engagements; they are not a guarantee of similar results.
+                This site is published by Fidelis Strategy LLC for information about our services. Content is general and is not legal, financial, or investment advice. Case studies and illustrative guides describe specific engagements or hypothetical design approaches; they are not a guarantee of similar results.
               </p>
             </section>
 

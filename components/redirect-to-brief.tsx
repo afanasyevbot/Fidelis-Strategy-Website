@@ -9,7 +9,7 @@ export function RedirectToBrief() {
   }, []);
   return (
     <p className="p-8 font-sans text-ink">
-      Redirecting to the First System Brief…
+      Redirecting to the inquiry…
     </p>
   );
 }

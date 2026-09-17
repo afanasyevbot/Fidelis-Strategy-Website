@@ -1,20 +1,24 @@
 import Image from "next/image";
+import type { Metadata } from "next";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { Eyebrow } from "@/components/eyebrow";
 import { FinalCta } from "@/components/final-cta";
+import { pageDescriptions, pageTitles } from "@/lib/seo";
+import { siteConfig } from "@/lib/siteConfig";
+import Link from "next/link";
 
-export const metadata = {
-  title: "About | Matthew Afanasiev, Growth Strategy + AI Consultant",
-  description:
-    "Matthew Afanasiev founded Fidelis Strategy after nearly five years in SaaS sales working with thousands of suppliers and retailers. We design growth plans and build the AI-powered systems that run them.",
-  alternates: { canonical: "/about" },
+export const metadata: Metadata = {
+  title: pageTitles.about,
+  description: pageDescriptions.about,
+  alternates: { canonical: "/about/" },
 };
 
 const principles = [
-  { title: "Build, don't just brief.", body: "Every engagement ends with working systems your team uses every day. That's the bar." },
-  { title: "Own the outcome.", body: "We stay with you through launch, optimization, and the next iteration. Growth is compounding work." },
-  { title: "One partner. One accountability line.", body: "Strategy, design, and the AI build: all from one person who stays close to your business, start to finish." },
+  "Learn before prescribing.",
+  "Explain tradeoffs.",
+  "Keep the business goal connected to the build.",
+  "Improve the process as well as the software.",
 ];
 
 export default function Page() {
@@ -24,31 +28,19 @@ export default function Page() {
       <main>
         <section className="bg-moss-olive text-bone">
           <div className="mx-auto max-w-5xl px-6 py-24">
-            <div className="flex justify-center mb-6">
-              <Image
-                src="/logo.png?v=3"
-                alt="Fidelis Strategy Crest"
-                width={160}
-                height={160}
-                className="w-24 h-24 md:w-40 md:h-40"
-                style={{ filter: "saturate(0.7) brightness(1.1)" }}
-                priority
-              />
-            </div>
             <Eyebrow size="lg">ABOUT</Eyebrow>
-            <h1 className="font-display font-bold text-5xl md:text-[60px] leading-[1.02] mt-8 tracking-[-0.02em] uppercase">
-              Faithful. Loyal. Trustworthy.
+            <h1 className="font-display font-bold text-5xl md:text-[60px] leading-[1.02] mt-8 tracking-[-0.02em] max-w-4xl">
+              Business judgment. Operational curiosity. Hands-on building.
             </h1>
-            <p className="font-display text-2xl md:text-[26px] leading-tight mt-5 text-linen max-w-3xl tracking-[-0.01em]">
-              <strong>Fidelis</strong> (fi-DEL-is) is Latin for faithful. Not a tagline. The operating principle behind every plan we write and every system we build.
+            <p className="font-display text-xl md:text-2xl leading-tight mt-5 text-linen max-w-3xl">
+              I&apos;m Matthew Afanasiev, founder of Fidelis Strategy. I combine a background in sales and business software with an interest in how companies actually operate—and the ability to build systems that support better ways of working.
             </p>
           </div>
         </section>
 
         <section className="bg-bone">
           <div className="mx-auto max-w-4xl px-6 py-24">
-            <Eyebrow size="lg" tone="moss">FOUNDER</Eyebrow>
-            <div className="flex items-center gap-5 mt-8">
+            <div className="flex items-center gap-5">
               <div className="relative h-20 w-20 rounded-full overflow-hidden border-2 border-moss-olive shrink-0">
                 <Image
                   src="/matthew.jpg"
@@ -59,7 +51,7 @@ export default function Page() {
                 />
               </div>
               <div>
-                <h2 className="font-display font-bold text-4xl md:text-[48px] text-deep-olive tracking-tight leading-none">
+                <h2 className="font-display font-bold text-3xl text-deep-olive tracking-tight">
                   Matthew Afanasiev
                 </h2>
                 <p className="font-sans text-[13px] uppercase tracking-button text-moss-olive mt-1 font-semibold">
@@ -67,85 +59,70 @@ export default function Page() {
                 </p>
               </div>
             </div>
-            <div className="font-sans text-[17px] text-ink/80 leading-[1.75] space-y-5 mt-6">
+
+            <div className="font-sans text-[17px] text-ink/80 leading-[1.75] space-y-5 mt-8">
               <p>
-                I started my career in SaaS sales, where I was fortunate to
-                work with thousands of suppliers and retailers to help
-                streamline their order-to-cash workflows. That meant getting
-                into the details: order placement, fulfillment, invoicing,
-                chargeback reduction, POS systems, and finding the systems
-                and processes that actually drove growth.
-              </p>
-              <p>
-                Across hundreds of those conversations, I kept seeing the
-                same patterns: manual processes holding teams back, tools
-                that didn&apos;t talk to each other, uncoordinated tech
-                stacks, and no real growth plan holding it all together. I
-                wanted to help more broadly, but in that role I was limited
-                to what our product could solve. After working with mentors
-                on my next move, the decision was clear: start my own
-                growth strategy consulting firm and help businesses grow
-                their top line the right way.
-              </p>
-              <p>
-                That experience of diving into businesses&apos; operations
-                naturally led me to AI. I immersed myself in it: studying
-                the technology, learning how to build with it, experimenting
-                with real use cases, and developing expertise hands-on. The
-                improvements in AI are solving real business problems at a
-                pace I hadn&apos;t seen before, and the businesses that
-                adopt it are widening the gap on the ones that don&apos;t.
-              </p>
-              <p>
-                Early on I was pointing businesses toward software providers
-                to solve their pain points. Then it hit me: I can build
-                this myself. So I dove deeper and built. The results were
-                real, and the experience changed how I think about
-                everything. That includes{" "}
-                <a href="https://fidelispulse.com" target="_blank" rel="noopener noreferrer" className="text-deep-olive underline decoration-moss-olive/40 underline-offset-2 hover:text-moss-olive">Fidelis Pulse</a>,
-                a dashboard that gives you a pulse on your business so you can see
-                where everything stands and make the right calls,
-                and{" "}
-                <a href="https://glow-routine-seven.vercel.app" target="_blank" rel="noopener noreferrer" className="text-deep-olive underline decoration-moss-olive/40 underline-offset-2 hover:text-moss-olive">Glow Routine</a>,
-                a live consumer wellness app I built for the founder of Linked by Lexi.
-                That&apos;s what Fidelis is built on: growth strategy and
-                AI-powered systems that actually move the business forward.
+                In supply chain software, I saw businesses adapt their processes around tools that did not always fit. That experience shaped a principle I bring to Fidelis: understand the business before recommending changes.
               </p>
             </div>
-          </div>
-        </section>
 
-        <section className="bg-bone border-t border-moss-olive/15">
-          <div className="mx-auto max-w-4xl px-6 py-24">
-            <Eyebrow size="lg" tone="moss">ONE PARTNER</Eyebrow>
-            <h2 className="font-display font-bold text-4xl md:text-[48px] text-deep-olive mt-8 tracking-tight leading-[1.05] max-w-3xl">
-              The person who plans it builds it. That person is me.
-            </h2>
-            <div className="font-sans text-[17px] text-ink/80 leading-relaxed space-y-4 mt-6 max-w-2xl">
-              <p>
-                Most growth work breaks between strategy and build. Here, it&apos;s the same
-                person from plan through launch.
-              </p>
-              <p>
-                Everything I build is documented, runs in your environment, and stays yours.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="bg-moss-olive text-bone">
-          <div className="mx-auto max-w-6xl px-6 py-24">
-            <Eyebrow size="lg">PRINCIPLES</Eyebrow>
-            <h2 className="font-display font-bold text-4xl md:text-[48px] mt-8 tracking-tight">
-              How we work.
-            </h2>
-            <div className="grid md:grid-cols-3 gap-4 mt-12">
-              {principles.map((p) => (
-                <div key={p.title} className="p-6 bg-moss-olive border border-linen/25">
-                  <h3 className="font-display font-bold text-xl md:text-[22px] text-linen">{p.title}</h3>
-                  <p className="font-sans text-[15px] text-bone/85 leading-relaxed mt-3">{p.body}</p>
+            <div className="mt-16 space-y-12">
+              <div>
+                <h2 className="font-display font-bold text-2xl md:text-[32px] text-deep-olive tracking-tight">
+                  Strategy should connect to what happens next
+                </h2>
+                <div className="font-sans text-[17px] text-ink/80 leading-relaxed mt-4 space-y-4">
+                  <p>
+                    A useful recommendation needs a way to be put into practice. That is why I bring growth strategy, AI planning, and systems development together.
+                  </p>
+                  <p>
+                    The work starts with questions about the business, not a predetermined product. I want to understand the opportunity, identify what is worth changing, and help build the appropriate solution.
+                  </p>
                 </div>
-              ))}
+              </div>
+
+              <div>
+                <h2 className="font-display font-bold text-2xl md:text-[32px] text-deep-olive tracking-tight">
+                  Work directly with the person building with you
+                </h2>
+                <div className="font-sans text-[17px] text-ink/80 leading-relaxed mt-4 space-y-4">
+                  <p>
+                    You work with me through discovery and the agreed implementation. As the system is used, we can continue refining it around what the business needs.
+                  </p>
+                  <p>
+                    My role is to bring AI and systems expertise without expecting you or your team to make technology research another full-time responsibility.
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <h2 className="font-display font-bold text-2xl md:text-[32px] text-deep-olive tracking-tight">
+                  The principles behind the work
+                </h2>
+                <ul className="mt-4 space-y-2 font-sans text-[17px] text-ink/80">
+                  {principles.map((p) => (
+                    <li key={p} className="flex gap-2">
+                      <span className="text-moss-olive">◇</span>
+                      <span>{p}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="pt-4 border-t border-moss-olive/15">
+                <p className="font-display text-lg text-deep-olive">
+                  <strong>Fidelis</strong> (fi-DEL-is) is Latin for faithful. Not a tagline. The operating principle behind every plan and every system.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap gap-4 mt-12">
+              <Link href="/case-studies/" className="font-sans text-[12px] uppercase tracking-button text-deep-olive hover:text-moss-olive font-semibold link-underline">
+                See the work →
+              </Link>
+              <Link href={siteConfig.primaryCta.href} className="font-sans text-[12px] uppercase tracking-button text-deep-olive hover:text-moss-olive font-semibold link-underline">
+                Tell me about your business →
+              </Link>
             </div>
           </div>
         </section>

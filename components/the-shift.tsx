@@ -1,45 +1,57 @@
+import Link from "next/link";
 import { Eyebrow } from "./eyebrow";
 import { Reveal } from "./reveal";
+import { siteConfig } from "@/lib/siteConfig";
 
-/**
- * Why now + educator + integrated-not-bolt-on. No em dashes in user-facing copy.
- */
 export function TheShift() {
   return (
-    <section className="bg-bone text-ink">
+    <section className="bg-moss-olive text-bone">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 py-16 md:py-24">
-        <Reveal className="text-center md:text-left max-w-2xl mx-auto">
-          <Eyebrow size="lg" tone="moss">
-            THE SHIFT
-          </Eyebrow>
-          <h2 className="font-display font-bold text-3xl md:text-[44px] text-deep-olive mt-8 tracking-tight leading-[1.08]">
-            The industry already moved. Most owners haven&apos;t been shown what that means for
-            their business.
+        <Reveal>
+          <h2 className="font-display font-bold text-3xl md:text-[44px] tracking-tight leading-[1.08]">
+            The advantage isn&apos;t having AI. It&apos;s putting it to work.
           </h2>
+          <div className="mt-6 space-y-4 font-sans text-[17px] text-bone/85 leading-relaxed">
+            <p>
+              When a competitor can respond faster, prepare work with less manual effort, or take on more business without sacrificing service, that changes what you&apos;re competing against.
+            </p>
+            <p>
+              You don&apos;t need to chase every tool. You do need to understand which improvements are worth making in your business—and have a way to act on them.
+            </p>
+          </div>
         </Reveal>
-        <Reveal delay={80} className="mt-8 space-y-5 font-sans text-[17px] md:text-[18px] text-ink/80 leading-relaxed text-left max-w-2xl mx-auto">
-          <p>
-            Competitors are using AI to move faster. Customers are starting to expect it. A lot of
-            owners are still asking: &ldquo;How do I even use this? What does AI mean for my
-            business?&rdquo;
-          </p>
-          <p>
-            You don&apos;t need another tool bolted on. You need someone who can explain what&apos;s
-            possible and build it into how you already work: your tools, your team&apos;s rhythm,
-            the process you run today.
-          </p>
-          <p>
-            Buy what&apos;s universal: accounting, email, payroll. Build what&apos;s yours: how you
-            find customers, move deals, and deliver.
-          </p>
-        </Reveal>
-        <Reveal delay={120} className="mt-8 max-w-2xl mx-auto border-l-2 border-moss-olive/35 pl-5">
-          <p className="font-sans text-[17px] md:text-[18px] text-deep-olive leading-relaxed">
-            I translate AI into your everyday process: what changes in your tools, with your team,
-            in the work you already run.
-          </p>
-          <p className="font-sans text-[14px] text-ink/55 leading-relaxed mt-4">
-            Not a magic button. Not ChatGPT pasted on top of your workflow.
+
+        <Reveal delay={80} className="mt-16 pt-12 border-t border-linen/20">
+          <h2 className="font-display font-bold text-2xl md:text-[36px] tracking-tight leading-[1.1]">
+            You don&apos;t need a finished project idea to get started.
+          </h2>
+          <ul className="mt-8 space-y-6">
+            {[
+              {
+                title: "I'm exploring AI.",
+                body: "You want to understand what it could do for your business and what deserves attention.",
+              },
+              {
+                title: "Something needs to work better.",
+                body: "A process, handoff, or information problem is taking more effort than it should.",
+              },
+              {
+                title: "I have an idea.",
+                body: "You see an opportunity for a better tool, service, or way of working and need help shaping it.",
+              },
+            ].map((item) => (
+              <li key={item.title}>
+                <p className="font-sans text-[16px] font-semibold text-linen">{item.title}</p>
+                <p className="font-sans text-[16px] text-bone/80 leading-relaxed mt-1">{item.body}</p>
+              </li>
+            ))}
+          </ul>
+          <p className="font-sans text-[16px] text-bone/85 mt-8">
+            All three are valid starting points.{" "}
+            <Link href={siteConfig.primaryCta.href} className="text-linen font-semibold link-underline hover:text-bone">
+              Tell me about your business
+            </Link>
+            .
           </p>
         </Reveal>
       </div>
