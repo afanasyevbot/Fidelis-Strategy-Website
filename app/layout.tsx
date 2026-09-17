@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Space_Grotesk, Cinzel } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { siteConfig } from "@/lib/siteConfig";
+import { pageDescriptions, pageTitles } from "@/lib/seo";
 import "./globals.css";
 
 const inter = Inter({
@@ -27,11 +28,10 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: {
-    default: "Fidelis Strategy | Growth strategy. And the systems built to run it.",
-    template: "%s · Fidelis Strategy",
+    default: `${pageTitles.home} — Fidelis Strategy`,
+    template: "%s — Fidelis Strategy",
   },
-  description:
-    "Growth strategy + custom AI systems for owner-operated businesses. Whether you run on spreadsheets or software that doesn't fit, we design the plan and build the systems that execute it.",
+  description: pageDescriptions.home,
   metadataBase: new URL(siteConfig.url),
   alternates: { canonical: "/" },
   icons: {
@@ -41,18 +41,16 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: "Fidelis Strategy",
-    title: "Fidelis Strategy | Growth strategy. And the systems built to run it.",
-    description:
-      "Growth strategy + custom AI systems for owner-operated businesses. One partner, strategy through launch.",
+    title: `${pageTitles.home} — Fidelis Strategy`,
+    description: pageDescriptions.home,
     url: siteConfig.url,
     locale: "en_US",
     // OG image is generated at build time by app/opengraph-image.tsx — Next auto-attaches it.
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fidelis Strategy | Growth strategy. And the systems built to run it.",
-    description:
-      "Growth strategy + custom AI systems for owner-operated businesses. One partner, strategy through launch.",
+    title: `${pageTitles.home} — Fidelis Strategy`,
+    description: pageDescriptions.home,
     // Twitter image is generated at build time by app/twitter-image.tsx — Next auto-attaches it.
   },
   robots: {
@@ -86,7 +84,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       url: siteConfig.url,
     },
     description:
-      "Growth strategy + AI consultant. SaaS sales and operations background; designs and builds AI-powered growth systems for owner-operated businesses.",
+      "Founder of Fidelis Strategy. Growth strategy, operational discovery, and hands-on AI and systems implementation for businesses.",
   };
 
   return (

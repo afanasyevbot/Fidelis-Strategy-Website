@@ -1,11 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
+import { siteConfig } from "@/lib/siteConfig";
+import { CtaButton } from "./cta-button";
 
 const GRADE =
   "brightness(0.52) sepia(0.35) hue-rotate(22deg) saturate(1.15) contrast(1.08)";
 
-/**
- * Homepage hero: positioning only. Brief door is in BriefDoor below.
- */
 export function Hero() {
   return (
     <section className="relative overflow-hidden bg-forest-floor text-bone min-h-[85vh] flex flex-col justify-end">
@@ -47,16 +47,35 @@ export function Hero() {
 
       <div className="relative z-10 mx-auto max-w-4xl w-full px-4 sm:px-6 pb-14 pt-24 text-center md:pb-20 md:pt-28">
         <p className="mb-5 font-sans text-[11px] font-bold uppercase tracking-[0.25em] text-linen/70">
-          For owner-operated businesses
+          AI strategy + hands-on implementation
         </p>
 
-        <h1 className="mx-auto max-w-[24ch] font-display text-[32px] font-bold leading-[1.08] tracking-[-0.03em] text-bone sm:text-[40px] md:text-[52px] md:leading-[1.06]">
-          Growth strategy. Custom AI systems. Built for how you{" "}
-          <em className="font-bold italic text-linen">actually work</em>.
+        <h1 className="mx-auto max-w-[22ch] font-display text-[32px] font-bold leading-[1.08] tracking-[-0.03em] text-bone sm:text-[40px] md:text-[52px] md:leading-[1.06]">
+          Growth strategy. Custom AI systems. Built around your business.
         </h1>
 
-        <p className="mx-auto mt-5 max-w-[34ch] font-display text-[18px] font-light leading-snug tracking-[-0.01em] text-linen/85 md:text-[22px]">
-          Not off-the-shelf software. Not a bolt-on. Built into the process you already run.
+        <p className="mx-auto mt-5 max-w-[40ch] font-display text-[18px] font-light leading-snug tracking-[-0.01em] text-linen/85 md:text-[22px]">
+          I learn how your business works, identify opportunities to grow and work more efficiently, and build the systems to put the right changes into practice.
+        </p>
+
+        <p className="mx-auto mt-5 max-w-[36ch] font-sans text-[16px] font-semibold text-linen">
+          You don&apos;t need to know the tools—or even where to start.
+        </p>
+
+        <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <CtaButton href={siteConfig.primaryCta.href}>
+            {siteConfig.primaryCta.label} →
+          </CtaButton>
+          <Link
+            href={siteConfig.secondaryCta.href}
+            className="font-sans text-[13px] uppercase tracking-button text-linen/90 hover:text-bone font-semibold link-underline"
+          >
+            {siteConfig.secondaryCta.label} →
+          </Link>
+        </div>
+
+        <p className="mx-auto mt-6 max-w-[42ch] font-sans text-[14px] leading-relaxed text-linen/70">
+          Share a little about your business. I&apos;ll personally review it and follow up with a useful starting point—or the questions we should explore first.
         </p>
       </div>
     </section>

@@ -1,43 +1,35 @@
-import Link from "next/link";
 import { Eyebrow } from "./eyebrow";
 import { Reveal } from "./reveal";
 
-/**
- * Homepage "what we build" beat: outcome-led, not a four-SKU menu.
- * Proof of range lives in Recent Builds. Catalog page stays at /what-we-build.
- */
+const examples = [
+  "Faster research, more consistent follow-through, clearer information, or a better way to serve customers.",
+];
+
 export function WhatWeBuildHome() {
   return (
-    <section id="what-we-build" className="bg-bone">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 py-16 md:py-24">
+    <section className="bg-bone text-ink">
+      <div className="mx-auto max-w-3xl px-4 sm:px-6 py-16 md:py-24">
         <Reveal>
-          <Eyebrow size="lg" tone="moss">WHAT WE BUILD</Eyebrow>
-          <h2 className="font-display font-bold text-3xl md:text-[48px] text-deep-olive mt-8 tracking-tight max-w-3xl">
-            AI systems that grow the top line.
+          <h2 className="font-display font-bold text-3xl md:text-[44px] text-deep-olive tracking-tight leading-[1.08]">
+            Your systems should fit your business—not force your business to fit the software.
           </h2>
-          <p className="font-display font-light text-lg md:text-xl text-moss-olive mt-3 max-w-2xl">
-            Not a product list. Whatever is leaking: a workflow, a process, a data gap, a bottleneck.
-          </p>
+          <div className="mt-6 space-y-4 font-sans text-[17px] text-ink/80 leading-relaxed">
+            <p>
+              I start with how the work happens and what could work better. Sometimes the answer is a simpler process or better use of software you already have. Sometimes it is a connection between tools or a custom system built for the job.
+            </p>
+            <p>
+              The goal is not to preserve every workaround. It is to make the process better and give it the right support.
+            </p>
+          </div>
         </Reveal>
-        <Reveal delay={80} className="mt-8 max-w-2xl space-y-4 font-sans text-[17px] text-ink/80 leading-relaxed">
-          <p>
-            Every engagement is custom. We look at how you already work, find where growth is getting
-            stuck, and build the system that unblocks it. Same person who spots the leak builds the fix.
+
+        <Reveal delay={80} className="mt-16 pt-12 border-t border-moss-olive/20">
+          <h2 className="font-display font-bold text-2xl md:text-[36px] text-deep-olive tracking-tight">
+            Better ways to work. More room to grow.
+          </h2>
+          <p className="font-sans text-[17px] text-ink/80 leading-relaxed mt-4">
+            The opportunity might be {examples[0]} Discovery helps identify what matters in your business and what is worth doing next.
           </p>
-        </Reveal>
-        <Reveal delay={120} className="mt-10 flex flex-wrap gap-x-8 gap-y-3">
-          <Link
-            href="/what-we-build"
-            className="arrow-nudge inline-flex items-center gap-2 text-[12px] uppercase tracking-button text-deep-olive hover:text-moss-olive font-semibold link-underline"
-          >
-            See the systems <span data-arrow>→</span>
-          </Link>
-          <Link
-            href="#recent-builds"
-            className="arrow-nudge inline-flex items-center gap-2 text-[12px] uppercase tracking-button text-deep-olive hover:text-moss-olive font-semibold link-underline"
-          >
-            See it in real businesses <span data-arrow>→</span>
-          </Link>
         </Reveal>
       </div>
     </section>

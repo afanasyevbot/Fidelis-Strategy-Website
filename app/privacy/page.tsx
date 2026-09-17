@@ -7,7 +7,7 @@ import { siteConfig } from "@/lib/siteConfig";
 export const metadata = {
   title: "Privacy Policy",
   description:
-    "How Fidelis Strategy collects, uses, and retains information from the website, contact form, and Growth Audit checklist.",
+    "How Fidelis Strategy collects, uses, and retains information from the website, contact form, and inquiry wizard.",
   alternates: { canonical: "/privacy/" },
 };
 
@@ -49,7 +49,7 @@ export default function Page() {
               <h2 className="font-display font-bold text-2xl text-deep-olive tracking-tight">What we collect</h2>
               <ul className="mt-3 space-y-2 list-disc pl-5">
                 <li>
-                  <strong className="text-deep-olive">Contact and checklist forms.</strong> Name, email, optional company, and the message you write. We use this only to reply to you.
+                  <strong className="text-deep-olive">Contact and inquiry forms.</strong> Name, email, optional company, and the message or business context you write. The brief wizard also collects your stated intent and a short business description. We use this only to reply to you.
                 </li>
                 <li>
                   <strong className="text-deep-olive">Analytics.</strong> Google Analytics 4 records pages viewed, approximate location, device, and referral source. It uses cookies. We use this to see which pages help people, not to build a marketing list.
@@ -86,11 +86,7 @@ export default function Page() {
             <section>
               <h2 className="font-display font-bold text-2xl text-deep-olive tracking-tight">Your choices</h2>
               <p className="mt-3">
-                You can use the site without submitting a form. The Growth Audit checklist is also available to{" "}
-                <Link href="/growth-audit/checklist/" className="text-deep-olive underline decoration-moss-olive/40 underline-offset-2">
-                  read online without giving an email
-                </Link>
-                . You can block analytics cookies in your browser. If you are in a jurisdiction with a formal access or deletion right, email us and we will honor it.
+                You can use the site without submitting a form. You can block analytics cookies in your browser. If you are in a jurisdiction with a formal access or deletion right, email us and we will honor it.
               </p>
             </section>
 
