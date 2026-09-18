@@ -11,7 +11,7 @@ export function FinalCta({
   sub = "Bring a challenge, an idea, or a question about AI. You don't need to arrive with the answer.",
   primaryHref,
   primaryLabel,
-  helperText = "A personal review and a useful starting point—or the questions we should explore first.",
+  helperText,
 }: {
   eyebrow?: string;
   headline?: string;
@@ -64,7 +64,9 @@ export function FinalCta({
               {label}
             </CtaButton>
           </div>
-          <p className="text-[12px] text-linen/80 mt-4 md:mt-[18px] max-w-[400px]">{helperText}</p>
+          {helperText ? (
+            <p className="text-[12px] text-linen/80 mt-4 md:mt-[18px] max-w-[400px]">{helperText}</p>
+          ) : null}
         </Reveal>
       </div>
     </section>

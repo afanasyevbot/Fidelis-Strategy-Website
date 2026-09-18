@@ -274,17 +274,16 @@ export function TreeHero() {
         </aside>
       </div>
 
-      <div className="relative z-[3] mx-auto w-[min(1216px,calc(100%-80px))] flex justify-start lg:justify-end min-h-11 mt-5">
+      {!toggleHidden ? (
         <button
           type="button"
-          className="tree-hero-toggle min-h-11 px-3.5 py-2 text-[12px] font-medium text-bone bg-[rgba(18,34,23,0.87)] border border-linen/70 rounded-sm hover:bg-forest-floor focus-visible:outline focus-visible:outline-3 focus-visible:outline-bone focus-visible:outline-offset-4 motion-reduce:hidden"
+          className="tree-hero-toggle"
           aria-controls="tree-hero-video"
-          hidden={toggleHidden}
           onClick={onToggle}
         >
           {toggleLabel}
         </button>
-      </div>
+      ) : null}
     </section>
   );
 }
