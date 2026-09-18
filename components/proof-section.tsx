@@ -55,45 +55,47 @@ export function ProofSection() {
           </article>
         </Reveal>
 
-        <Reveal delay={80} className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-[52px] mt-8 md:mt-10">
-          <article className="border-t border-deep-olive/25 pt-6 md:pt-7">
-            <p className="font-sans text-[9px] md:text-[10px] font-semibold uppercase tracking-[0.1em] text-moss-olive mb-5">
+        <Reveal delay={80} className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-[52px] mt-8 md:mt-10 md:items-stretch">
+          <article className="border-t border-deep-olive/25 pt-6 md:pt-7 flex flex-col h-full">
+            <p className="font-sans text-[9px] md:text-[10px] font-semibold uppercase tracking-[0.1em] text-moss-olive mb-5 md:min-h-[2.5rem]">
               Linked by Lexi / Custom application
             </p>
-            <blockquote>
-              <p className="text-[16px] leading-[1.75]">{lexi.text}</p>
-              <footer className="mt-5 text-[11px] md:text-[12px] font-semibold text-moss-olive">
+            <blockquote className="flex flex-col flex-1">
+              <p className="text-[16px] leading-[1.75] md:flex-1">{lexi.text}</p>
+              <footer className="mt-5 text-[11px] md:text-[12px] font-semibold text-moss-olive shrink-0">
                 {lexi.attribution}
               </footer>
               <a
                 href="https://glow-routine-seven.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="polish-text-link inline-flex items-center gap-2 text-[12px] font-semibold mt-4"
+                className="polish-text-link inline-flex items-center gap-2 text-[12px] font-semibold mt-4 shrink-0"
               >
                 Open Glow Routine <span data-arrow aria-hidden>↗</span>
               </a>
             </blockquote>
           </article>
 
-          <article className="border-t border-deep-olive/25 pt-6 md:pt-7">
-            <p className="font-sans text-[9px] md:text-[10px] font-semibold uppercase tracking-[0.1em] text-moss-olive mb-5">
+          <article className="border-t border-deep-olive/25 pt-6 md:pt-7 flex flex-col h-full">
+            <p className="font-sans text-[9px] md:text-[10px] font-semibold uppercase tracking-[0.1em] text-moss-olive mb-5 md:min-h-[2.5rem]">
               Grace Evangelical Church / Community work
             </p>
-            <blockquote>
-              {testimonialParagraphs(grace.text).map((paragraph) => (
-                <p key={paragraph} className="text-[16px] leading-[1.75] [&+&]:mt-4">
-                  {paragraph}
-                </p>
-              ))}
-              <footer className="mt-5 text-[11px] md:text-[12px] font-semibold text-moss-olive">
+            <blockquote className="flex flex-col flex-1">
+              <div className="md:flex-1">
+                {testimonialParagraphs(grace.text).map((paragraph) => (
+                  <p key={paragraph} className="text-[16px] leading-[1.75] [&+&]:mt-4">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+              <footer className="mt-5 text-[11px] md:text-[12px] font-semibold text-moss-olive shrink-0">
                 {grace.attribution}
               </footer>
               <a
                 href="https://eagangrace.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="polish-text-link inline-flex items-center gap-2 text-[12px] font-semibold mt-4"
+                className="polish-text-link inline-flex items-center gap-2 text-[12px] font-semibold mt-4 shrink-0"
               >
                 Visit the church website <span data-arrow aria-hidden>↗</span>
               </a>
