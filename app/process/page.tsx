@@ -4,7 +4,6 @@ import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { pageDescriptions, pageTitles } from "@/lib/seo";
 import { siteConfig } from "@/lib/siteConfig";
-import { ProcessDiagram } from "./process-diagrams";
 import { ProcessEnhancements } from "./process-enhancements";
 import { processStages } from "./process-stages";
 import "./process.css";
@@ -81,29 +80,20 @@ export default function ProcessPage() {
               <article
                 key={stage.id}
                 id={stage.id}
-                className="process-stage process-chapter"
+                className={`process-stage process-chapter${stage.id === "design" ? " process-chapter-featured" : ""}`}
                 aria-labelledby={`${stage.id}-heading`}
               >
-                <div className="process-chapter-grid">
-                  <div className="process-chapter-copy">
-                    <p className="process-stage-label">{stage.num} / {stage.label}</p>
-                    <h2 id={`${stage.id}-heading`}>{stage.heading}</h2>
-                    <p className="process-chapter-body">{stage.body}</p>
-                    <div className="process-chapter-glance">
-                      <p><strong>Your part:</strong> {stage.yourPart}</p>
-                      <p><strong>What takes shape:</strong> {stage.takesShape}</p>
-                    </div>
-                    {stage.closingLine ? (
-                      <p className="process-chapter-tagline">{stage.closingLine}</p>
-                    ) : null}
-                  </div>
-
-                  <div
-                    className={`process-chapter-visual process-visual-panel${stage.id === "design" ? " process-visual-panel-design" : " process-visual-panel-light"}`}
-                  >
-                    <ProcessDiagram stage={stage.id} />
-                  </div>
+                <p className="process-stage-num">{stage.num}</p>
+                <h2 id={`${stage.id}-heading`} className="process-stage-title">{stage.label}</h2>
+                <p className="process-chapter-kicker">{stage.heading}</p>
+                <p className="process-chapter-body">{stage.body}</p>
+                <div className="process-chapter-glance">
+                  <p><strong>Your part:</strong> {stage.yourPart}</p>
+                  <p><strong>What takes shape:</strong> {stage.takesShape}</p>
                 </div>
+                {stage.closingLine ? (
+                  <p className="process-chapter-tagline">{stage.closingLine}</p>
+                ) : null}
               </article>
             ))}
           </div>
