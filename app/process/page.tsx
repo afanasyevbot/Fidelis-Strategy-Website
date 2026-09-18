@@ -89,22 +89,17 @@ export default function ProcessPage() {
                     <p className="process-stage-label">{stage.num} / {stage.label}</p>
                     <h2 id={`${stage.id}-heading`}>{stage.heading}</h2>
                     <p className="process-chapter-body">{stage.body}</p>
-                    <p className="process-chapter-meta">
-                      <strong>Your part</strong>
-                      {stage.yourPart}
-                    </p>
-                    <p className="process-chapter-outcome">
-                      <strong>What takes shape</strong>
-                      {stage.takesShape}
-                    </p>
+                    <div className="process-chapter-glance">
+                      <p><strong>Your part:</strong> {stage.yourPart}</p>
+                      <p><strong>What takes shape:</strong> {stage.takesShape}</p>
+                    </div>
                     {stage.closingLine ? (
-                      <p className="process-chapter-closing">{stage.closingLine}</p>
+                      <p className="process-chapter-tagline">{stage.closingLine}</p>
                     ) : null}
                   </div>
 
                   <div
-                    className={`process-chapter-visual process-diagram-panel${stage.id === "design" ? " process-diagram-panel-design" : ""}`}
-                    data-process-diagram
+                    className={`process-chapter-visual process-visual-panel${stage.id === "design" ? " process-visual-panel-design" : " process-visual-panel-light"}`}
                   >
                     <ProcessDiagram stage={stage.id} />
                   </div>
