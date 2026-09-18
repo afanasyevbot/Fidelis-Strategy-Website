@@ -125,9 +125,17 @@ export function BriefWizard() {
               Fidelis Strategy
             </span>
           </Link>
-          <p className="font-sans text-[12px] font-semibold uppercase tracking-[0.18em] text-linen/80">
-            {step === "success" ? "Done" : `${stepNumber} of 3`}
-          </p>
+          <div className="flex items-center gap-4 shrink-0">
+            <p className="font-sans text-[12px] font-semibold uppercase tracking-[0.18em] text-linen/80">
+              {step === "success" ? "Done" : `${stepNumber} of 3`}
+            </p>
+            <Link
+              href="/"
+              className="font-sans text-[13px] font-semibold text-linen/80 hover:text-linen min-h-11 inline-flex items-center underline underline-offset-[3px]"
+            >
+              Exit
+            </Link>
+          </div>
         </div>
         <div className="mt-3 h-[2px] w-full bg-linen/20" aria-hidden>
           <div
@@ -351,6 +359,12 @@ export function BriefWizard() {
             >
               {siteConfig.email}
             </a>
+            <Link
+              href="/"
+              className="btn-press mt-8 w-full min-h-11 inline-flex items-center justify-center font-sans text-[12px] font-semibold uppercase tracking-button px-6 py-3 border border-linen/50 text-linen hover:bg-linen/10"
+            >
+              Back to site
+            </Link>
           </section>
         )}
       </main>
