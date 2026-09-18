@@ -4,6 +4,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { siteConfig } from "@/lib/siteConfig";
 import { pageDescriptions, pageTitles } from "@/lib/seo";
 import "./globals.css";
+import { SitePolish } from "@/components/site-polish";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -89,11 +90,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
   return (
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable} ${cinzel.variable}`}>
-      <body className="bg-bone text-ink font-sans antialiased">
+      <body className="bg-bone text-ink font-sans antialiased" data-polish>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
         />
+        <SitePolish />
         {children}
         {hasRealGaId ? <GoogleAnalytics gaId={siteConfig.gaId} /> : null}
       </body>

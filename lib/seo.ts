@@ -122,7 +122,7 @@ export const pageTitles = {
   about: "Matthew Afanasiev — Founder of Fidelis Strategy",
   caseStudies: "Selected Work",
   paradiseCapital: "Paradise Capital Buyer Engine",
-  pulse: "Fidelis Advisor & Pulse — Products Built by Fidelis",
+  pulse: "Fidelis Advisor & Pulse — Software & Systems",
   contact: "Contact Matthew",
   brief: "Find Where AI Could Help",
   blog: "AI, Growth & Business Systems Articles",

@@ -13,24 +13,13 @@ export function Nav() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const primaryNav = siteConfig.nav.filter((i) => !i.secondary);
-  const secondaryNav = siteConfig.nav.filter((i) => i.secondary);
+  const primaryNav = siteConfig.nav;
 
-  function navLinkClass(isActive: boolean, secondary = false) {
+  function navLinkClass(isActive: boolean) {
     return cn(
-      "relative inline-flex items-center transition-colors duration-200",
-      secondary
-        ? "text-bone/45 text-[12px] hover:text-bone/70"
-        : "text-bone/80 text-[13px] hover:text-linen",
-      !secondary &&
-        "after:absolute after:left-0 after:right-0 after:-bottom-1 after:h-[2px] after:bg-linen after:origin-left after:transition-transform after:duration-300",
-      secondary
-        ? isActive
-          ? "text-bone/65 font-medium"
-          : ""
-        : isActive
-          ? "text-linen font-semibold after:scale-x-100"
-          : "after:scale-x-0 hover:after:scale-x-100",
+      "polish-nav-link inline-flex items-center py-3",
+      "text-bone/80 text-[13px] hover:text-linen",
+      isActive && "text-linen",
     );
   }
 
@@ -44,15 +33,9 @@ export function Nav() {
     const className = options?.mobile
       ? cn(
           "flex items-center py-3 text-[16px] border-b border-white/5 transition-colors",
-          i.secondary
-            ? isActive
-              ? "text-bone/55 font-medium"
-              : "text-bone/45"
-            : isActive
-              ? "text-linen font-semibold"
-              : "text-bone/70",
+          isActive ? "text-linen font-semibold" : "text-bone/70",
         )
-      : navLinkClass(isActive, i.secondary);
+      : navLinkClass(isActive);
 
     if (i.external) {
       return (
@@ -69,7 +52,12 @@ export function Nav() {
     }
 
     return (
-      <Link href={i.href} className={className} onClick={options?.onNavigate}>
+      <Link
+        href={i.href}
+        className={className}
+        onClick={options?.onNavigate}
+        aria-current={isActive ? "page" : undefined}
+      >
         {i.label}
       </Link>
     );
@@ -94,16 +82,31 @@ export function Nav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Escape closes mobile menu and returns focus
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setOpen(false);
+        const toggle = document.querySelector<HTMLButtonElement>("[data-menu-toggle]");
+        toggle?.focus();
+      }
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [open]);
+
   return (
     <>
       <header
         className={cn(
-          "sticky top-0 z-50 bg-deep-olive/95 backdrop-blur border-b transition-all duration-300",
-          scrolled
-            ? "border-linen/20 shadow-[0_4px_24px_-8px_rgba(13,26,14,0.6)]"
-            : "border-linen/20",
+          "site-header sticky top-0 z-50 bg-deep-olive/95 backdrop-blur border-b border-linen/20 transition-shadow duration-300 relative",
+          scrolled && "is-scrolled",
         )}
       >
+        <div className="article-progress" aria-hidden="true">
+          <span data-reading-progress />
+        </div>
         <nav className="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="group flex items-center gap-2 text-bone">
@@ -114,7 +117,7 @@ export function Nav() {
               height={64}
               priority
               style={{ filter: "saturate(0.7) brightness(1.05)" }}
-              className="transition-transform duration-500 group-hover:rotate-[8deg]"
+              className="shrink-0"
             />
             <span
               className="font-bold text-xl tracking-wide text-bone"
@@ -128,11 +131,6 @@ export function Nav() {
             <ul className="flex items-center gap-7 font-sans">
               {primaryNav.map((i) => (
                 <li key={i.href}>{renderNavItem(i)}</li>
-              ))}
-              {secondaryNav.map((i) => (
-                <li key={i.href} className="border-l border-linen/15 pl-7 -ml-1">
-                  {renderNavItem(i)}
-                </li>
               ))}
             </ul>
 
@@ -155,10 +153,13 @@ export function Nav() {
               {siteConfig.primaryCta.mobileLabel} →
             </CtaButton>
             <button
+              type="button"
+              data-menu-toggle
               onClick={() => setOpen((v) => !v)}
-              className="flex flex-col justify-center items-center w-10 h-10 gap-[5px] text-bone"
+              className="flex flex-col justify-center items-center w-10 h-10 gap-[5px] text-bone border border-linen/40 rounded-sm"
               aria-label={open ? "Close menu" : "Open menu"}
               aria-expanded={open}
+              aria-controls="mobile-menu"
             >
                 <span className={cn(
                   "block w-6 h-[2px] bg-current rounded-full transition-all duration-200",
@@ -195,6 +196,8 @@ export function Nav() {
 
         {/* Slide-in panel */}
         <div
+          id="mobile-menu"
+          hidden={!open}
           className={cn(
             "absolute top-16 left-0 right-0 bg-deep-olive border-b border-white/10 transition-all duration-300 ease-out",
             open ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"
@@ -204,18 +207,6 @@ export function Nav() {
             {primaryNav.map((i) => (
               <li key={i.href}>{renderNavItem(i, { mobile: true, onNavigate: () => setOpen(false) })}</li>
             ))}
-            {secondaryNav.length > 0 && (
-              <>
-                <li aria-hidden className="pt-3 pb-1">
-                  <span className="font-sans text-[11px] uppercase tracking-[0.18em] text-bone/35">
-                    Product
-                  </span>
-                </li>
-                {secondaryNav.map((i) => (
-                  <li key={i.href}>{renderNavItem(i, { mobile: true, onNavigate: () => setOpen(false) })}</li>
-                ))}
-              </>
-            )}
           </ul>
 
           {/* CTA inside drawer — same door as desktop */}

@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
-import { BlogArticle } from "@/components/blog-article";
+import { Nav } from "@/components/nav";
+import { Footer } from "@/components/footer";
+import { FidelisArticle } from "@/components/fidelis-article";
+import { getFidelisArticle } from "@/content/fidelis-articles";
 import type { ArticlePost } from "@/content/articles/registry";
 
 export function articleMetadata(post: ArticlePost): Metadata {
@@ -28,6 +31,24 @@ export function articleMetadata(post: ArticlePost): Metadata {
   };
 }
 
+export function FidelisArticlePageView({ slug }: { slug: string }) {
+  const data = getFidelisArticle(slug);
+  if (!data) return null;
+
+  return (
+    <>
+      <Nav />
+      <FidelisArticle
+        article={data.article}
+        datePublished={data.datePublished}
+        dateModified={data.dateModified}
+      />
+      <Footer />
+    </>
+  );
+}
+
+/** @deprecated Use FidelisArticlePageView */
 export function ArticlePageView({ post }: { post: ArticlePost }) {
-  return <BlogArticle post={post} />;
+  return <FidelisArticlePageView slug={post.slug} />;
 }

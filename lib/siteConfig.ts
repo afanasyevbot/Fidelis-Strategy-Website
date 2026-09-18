@@ -23,7 +23,6 @@ export const siteConfig = {
     { label: "Work", href: "/case-studies/" },
     { label: "About", href: "/about/" },
     { label: "Contact", href: "/contact/" },
-    { label: "Products", href: "/pulse/", secondary: true },
   ] as Array<{ label: string; href: string; external?: boolean; secondary?: boolean }>,
 
   primaryCta: {

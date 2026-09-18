@@ -69,7 +69,7 @@ export function ContactForm() {
   }
 
   const input =
-    "w-full bg-transparent border border-moss-olive/40 px-4 py-3 font-sans text-[15px] text-ink placeholder:text-ink/45 transition-colors duration-200 hover:border-moss-olive focus:outline-none focus:border-deep-olive focus:ring-2 focus:ring-deep-olive/15";
+    "polish-field w-full bg-transparent border border-moss-olive/40 px-4 py-3 font-sans text-[15px] text-ink placeholder:text-ink/45 hover:border-moss-olive";
   const label = "block font-sans text-[12px] uppercase tracking-button text-moss-olive font-semibold mb-2";
 
   return (
@@ -104,10 +104,10 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="btn-press arrow-nudge inline-flex items-center justify-center font-sans text-[11px] font-semibold uppercase tracking-button px-6 py-3 bg-moss-olive text-bone hover:bg-deep-olive disabled:opacity-60 disabled:cursor-not-allowed"
+        className="polish-btn btn-press arrow-nudge inline-flex items-center justify-center font-sans text-[11px] font-semibold uppercase tracking-button px-6 py-3 bg-moss-olive text-bone hover:bg-deep-olive disabled:opacity-60 disabled:cursor-not-allowed"
       >
         {status === "submitting" ? "Sending…" : "Send message"}
-        <span data-arrow className="ml-2">→</span>
+        <span data-arrow className="ml-2" aria-hidden>→</span>
       </button>
       {status === "error" && (
         <p role="alert" className="font-sans text-[13px] text-red-700">

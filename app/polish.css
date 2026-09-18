@@ -1,0 +1,403 @@
+/* Interaction polish — scoped via body[data-polish] for focus overrides */
+
+:root {
+  --polish-feedback: 160ms;
+  --polish-interface: 240ms;
+  --polish-result: 650ms;
+  --polish-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ---------- Primary buttons ---------- */
+.polish-btn {
+  transition:
+    transform var(--polish-feedback) var(--polish-ease),
+    box-shadow var(--polish-feedback) var(--polish-ease),
+    background-color var(--polish-feedback) ease,
+    color var(--polish-feedback) ease,
+    opacity var(--polish-feedback) ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .polish-btn:not(:disabled):hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px -12px rgba(26, 42, 28, 0.42);
+  }
+  .polish-btn:not(:disabled):hover [data-arrow] {
+    transform: translateX(3px);
+  }
+}
+.polish-btn:not(:disabled):active {
+  transform: translateY(0);
+  box-shadow: 0 2px 0 rgba(26, 42, 28, 0.08);
+}
+.polish-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.58;
+}
+.polish-btn [data-arrow] {
+  display: inline-block;
+  transition: transform var(--polish-feedback) var(--polish-ease);
+}
+
+/* ---------- Text links ---------- */
+.polish-text-link {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+  transition:
+    text-decoration-color var(--polish-feedback) var(--polish-ease),
+    opacity var(--polish-feedback) var(--polish-ease);
+}
+@media (hover: hover) and (pointer: fine) {
+  .polish-text-link:hover {
+    text-decoration-thickness: 2px;
+  }
+  .polish-text-link:hover [data-arrow] {
+    transform: translateX(3px);
+  }
+}
+.polish-text-link [data-arrow] {
+  display: inline-block;
+  transition: transform var(--polish-feedback) var(--polish-ease);
+}
+
+/* ---------- Navigation ---------- */
+body[data-polish] .site-header :focus-visible {
+  outline-color: var(--color-bone);
+}
+.polish-nav-link {
+  position: relative;
+  transition: color var(--polish-feedback) ease;
+}
+.polish-nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 2px;
+  background: var(--color-linen);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--polish-interface) var(--polish-ease);
+}
+.polish-nav-link:hover::after,
+.polish-nav-link:focus-visible::after,
+.polish-nav-link[aria-current="page"]::after {
+  transform: scaleX(1);
+}
+.polish-nav-link[aria-current="page"] {
+  color: var(--color-linen);
+  font-weight: 600;
+}
+
+/* Sticky header elevation */
+.site-header.is-scrolled {
+  box-shadow: 0 4px 20px -10px rgba(13, 26, 14, 0.55);
+  border-bottom-color: rgba(212, 196, 160, 0.32);
+}
+
+body[data-polish] .polish-btn:focus-visible {
+  outline: 2px solid var(--color-linen);
+  outline-offset: 3px;
+}
+body[data-polish] .bg-bone .polish-btn:focus-visible,
+body[data-polish] .bg-bone .polish-text-link:focus-visible {
+  outline-color: var(--color-deep-olive);
+}
+
+/* Article reading progress */
+.article-progress {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: rgba(212, 196, 160, 0.28);
+  pointer-events: none;
+  z-index: 1;
+}
+.article-progress > span {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: var(--color-linen);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 80ms linear;
+}
+@media (prefers-reduced-motion: reduce) {
+  .article-progress > span {
+    transition: none;
+  }
+}
+
+/* ---------- Clickable rows ---------- */
+.polish-row {
+  transition:
+    transform var(--polish-feedback) var(--polish-ease),
+    background-color var(--polish-feedback) ease,
+    border-color var(--polish-feedback) ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .polish-row:hover {
+    transform: translateY(-2px);
+    background-color: rgba(212, 196, 160, 0.12);
+  }
+}
+.polish-row:active {
+  transform: translateY(0);
+}
+
+/* ---------- Informational cards (not clickable) ---------- */
+.polish-info-card {
+  cursor: default;
+  transition: border-color var(--polish-feedback) ease;
+}
+.polish-info-card:hover {
+  border-color: rgba(42, 61, 44, 0.38);
+}
+
+/* ---------- FAQ ---------- */
+.polish-faq details {
+  border-top: 1px solid rgba(42, 61, 44, 0.24);
+  transition: background-color var(--polish-feedback) ease;
+}
+.polish-faq details:last-child {
+  border-bottom: 1px solid rgba(42, 61, 44, 0.24);
+}
+.polish-faq summary {
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  padding: 21px 28px 21px 0;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color var(--polish-feedback) ease;
+}
+.polish-faq summary::-webkit-details-marker {
+  display: none;
+}
+.polish-faq summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  line-height: 1;
+  transition: transform var(--polish-interface) var(--polish-ease);
+}
+.polish-faq details[open] summary::after {
+  content: "−";
+}
+.polish-faq details:hover,
+.polish-faq details:focus-within {
+  background-color: rgba(212, 196, 160, 0.14);
+}
+.polish-faq details > p {
+  padding: 0 0 18px;
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 680px;
+  opacity: 1;
+  transition: opacity var(--polish-interface) var(--polish-ease);
+}
+
+/* ---------- Form fields ---------- */
+.polish-field {
+  transition:
+    border-color var(--polish-feedback) ease,
+    background-color var(--polish-feedback) ease,
+    box-shadow var(--polish-feedback) ease;
+}
+.polish-field:focus {
+  outline: none;
+  border-color: var(--color-deep-olive);
+  box-shadow: 0 0 0 2px rgba(42, 61, 44, 0.14);
+}
+.polish-field[aria-invalid="true"] {
+  border-color: var(--color-ink);
+  box-shadow: 0 0 0 2px rgba(28, 26, 22, 0.12);
+}
+.polish-form-error {
+  font-size: 12px;
+  font-weight: 600;
+  border-left: 3px solid var(--color-ink);
+  padding-left: 10px;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+/* ---------- Wizard step transition ---------- */
+.wizard-step {
+  animation: wizard-fade-in var(--polish-interface) var(--polish-ease);
+}
+@keyframes wizard-fade-in {
+  from { opacity: 0.72; }
+  to { opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .wizard-step {
+    animation: none;
+  }
+}
+
+/* ---------- Process stage rail ---------- */
+.process-stage {
+  scroll-margin-top: 105px;
+  border-top: 1px solid rgba(42, 61, 44, 0.24);
+  padding: 49px 0;
+  transition: border-color var(--polish-interface) var(--polish-ease);
+}
+.process-stage:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+.process-stage.is-current {
+  border-left: 3px solid var(--color-moss-olive);
+  padding-left: 22px;
+  margin-left: -25px;
+}
+.process-stage-link.is-current {
+  border-color: var(--color-moss-olive);
+  color: var(--color-deep-olive);
+  font-weight: 600;
+}
+
+/* ---------- Article TOC active ---------- */
+.article-toc nav a.is-active {
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ---------- Result moment: Weeks → Minutes ---------- */
+.result-moment {
+  background: rgba(18, 30, 20, 0.72);
+  color: var(--color-bone);
+  padding: 24px 26px 20px;
+  border-radius: 4px;
+  border: 1px solid rgba(212, 196, 160, 0.28);
+}
+.result-moment .result-context {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(237, 228, 204, 0.72);
+  margin-bottom: 12px;
+}
+.result-compare {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 10px 14px;
+}
+.result-from {
+  font-family: var(--font-display);
+  font-size: clamp(18px, 2.2vw, 24px);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(212, 196, 160, 0.62);
+  text-decoration: line-through;
+  text-decoration-color: rgba(212, 196, 160, 0.45);
+  text-decoration-thickness: 2px;
+}
+.result-arrow {
+  font-size: 20px;
+  line-height: 1;
+  color: rgba(212, 196, 160, 0.75);
+  transform: translateX(0);
+  transition: transform var(--polish-result) var(--polish-ease);
+}
+.result-to-wrap {
+  position: relative;
+  display: inline-block;
+}
+.result-to {
+  font-family: var(--font-display);
+  font-size: clamp(42px, 6vw, 58px);
+  font-weight: 600;
+  letter-spacing: -0.045em;
+  text-transform: uppercase;
+  color: var(--color-bone);
+  line-height: 0.95;
+}
+.result-underline {
+  display: block;
+  height: 4px;
+  margin-top: 8px;
+  background: linear-gradient(90deg, var(--color-linen), rgba(212, 196, 160, 0.35));
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform var(--polish-result) var(--polish-ease);
+}
+.result-moment.has-motion:not(.is-emphasized) .result-underline {
+  transform: scaleX(0.35);
+}
+.result-moment.is-emphasized .result-arrow {
+  transform: translateX(10px);
+}
+.result-moment.is-emphasized .result-underline {
+  transform: scaleX(1);
+}
+.result-claim {
+  margin-top: 14px;
+  font-size: 10px;
+  line-height: 1.55;
+  letter-spacing: 0.04em;
+  color: rgba(212, 196, 160, 0.65);
+}
+@media (max-width: 700px) {
+  .result-compare {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .result-arrow {
+    transform: rotate(90deg);
+  }
+  .result-moment.is-emphasized .result-arrow {
+    transform: rotate(90deg) translateX(8px);
+  }
+}
+
+/* ---------- Meaning band ---------- */
+.meaning-band {
+  background: var(--color-deep-olive);
+  color: var(--color-linen);
+  border-bottom: 1px solid rgba(212, 196, 160, 0.2);
+  text-align: center;
+  padding: 14px 20px;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+}
+.meaning-band strong {
+  color: var(--color-bone);
+  font-weight: 600;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .polish-btn,
+  .polish-text-link,
+  .polish-text-link [data-arrow],
+  .polish-btn [data-arrow],
+  .polish-row,
+  .result-arrow,
+  .result-underline {
+    transition: none !important;
+    transform: none !important;
+  }
+  .result-moment.is-emphasized .result-arrow {
+    transform: none;
+  }
+  @media (max-width: 700px) {
+    .result-arrow {
+      transform: rotate(90deg);
+    }
+    .result-moment.is-emphasized .result-arrow {
+      transform: rotate(90deg);
+    }
+  }
+}

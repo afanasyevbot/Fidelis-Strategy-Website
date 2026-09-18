@@ -20,7 +20,7 @@ export default function Page() {
       <main>
         <section className="bg-moss-olive text-bone">
           <div className="mx-auto max-w-5xl px-6 py-24">
-            <Eyebrow size="lg">PRODUCTS</Eyebrow>
+            <Eyebrow size="lg">Software &amp; systems</Eyebrow>
             <h1 className="font-display font-bold text-5xl md:text-[60px] leading-[1.02] mt-8 tracking-[-0.02em] max-w-4xl">
               Software built by Fidelis.
             </h1>

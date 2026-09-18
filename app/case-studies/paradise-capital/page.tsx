@@ -7,6 +7,8 @@ import { FinalCta } from "@/components/final-cta";
 import { breadcrumbSchema, pageDescriptions, pageTitles } from "@/lib/seo";
 import { siteConfig } from "@/lib/siteConfig";
 import Link from "next/link";
+import { ResultMoment } from "@/components/result-moment";
+import { testimonials } from "@/content/testimonials";
 
 export const metadata: Metadata = {
   title: pageTitles.paradiseCapital,
@@ -73,26 +75,20 @@ export default function Page() {
               <h2 className="font-display font-bold text-3xl md:text-[36px] text-deep-olive tracking-tight">
                 What the client reports
               </h2>
-              <p className="font-sans text-[17px] text-deep-olive font-semibold leading-relaxed mt-4">
-                Buyer-list creation moved from weeks to minutes, according to the client.
-              </p>
+              <div className="mt-6 max-w-lg">
+                <ResultMoment />
+              </div>
               <blockquote className="mt-8 relative border-l-4 border-moss-olive pl-6 md:pl-10">
                 <p className="font-display font-light text-xl md:text-2xl text-deep-olive leading-[1.35]">
-                  Before the Buyer Engine, building the buyer list for each mandate
-                  was a manual process. Now we have a living buyer universe that
-                  refreshes itself, continuously expands our buyer coverage, and most
-                  importantly builds a curated buyer list for each client from that
-                  universe plus targeted searches. Weeks of manual work compressed into{" "}
-                  <strong className="font-bold underline decoration-deep-olive/50 underline-offset-4">
-                    minutes
-                  </strong>. That lets us scale
-                  the practice, put the strongest buyers in front of our clients, and
-                  keep our attention on serving them.
+                  {testimonials.paradise.text}
                 </p>
                 <footer className="mt-6 font-sans text-[13px] tracking-widest text-moss-olive uppercase">
-                  Paul Niccum · CEO, Paradise Capital
+                  {testimonials.paradise.attribution}
                 </footer>
               </blockquote>
+              <p className="font-sans text-[12px] text-moss-olive mt-4">
+                Client-reported buyer-list creation result.
+              </p>
             </div>
 
             <div>

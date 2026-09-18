@@ -6,7 +6,7 @@ const navLinks = [
   { label: "How I Help", href: "/what-we-build/" },
   { label: "Process", href: "/process/" },
   { label: "Work", href: "/case-studies/" },
-  { label: "Products", href: "/pulse/" },
+  { label: "Software & systems", href: "/pulse/" },
   { label: "Articles", href: "/blog/" },
   { label: "About", href: "/about/" },
 ];

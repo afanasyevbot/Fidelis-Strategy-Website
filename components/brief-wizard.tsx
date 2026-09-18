@@ -22,7 +22,7 @@ type Step = 1 | 2 | 3 | "success";
 type Status = "idle" | "submitting" | "error" | "mailto";
 
 const fieldClass =
-  "w-full bg-bone text-ink placeholder:text-ink/45 px-3 py-3 font-sans text-[16px] border border-linen/40 focus:outline-none";
+  "polish-field w-full bg-bone text-ink placeholder:text-ink/45 px-3 py-3 font-sans text-[16px] border border-linen/40";
 
 export function BriefWizard() {
   const [step, setStep] = useState<Step>(1);
@@ -139,7 +139,7 @@ export function BriefWizard() {
 
       <main className="flex-1 w-full max-w-[480px] mx-auto px-5 pb-8">
         {step === 1 && (
-          <section>
+          <section className="wizard-step" key="step-1">
             <h1 className="font-display font-bold text-[32px] leading-[1.08] tracking-[-0.03em] text-bone mt-10">
               What brings you here?
             </h1>
@@ -182,13 +182,13 @@ export function BriefWizard() {
             </button>
 
             {error && (
-              <p role="alert" className="font-sans text-[14px] text-[#f3d2c2] mt-3">{error}</p>
+              <p role="alert" className="polish-form-error text-[#f3d2c2]">{error}</p>
             )}
           </section>
         )}
 
         {step === 2 && intent && (
-          <section>
+          <section className="wizard-step" key="step-2">
             <h1 className="font-display font-bold text-[32px] leading-[1.08] tracking-[-0.03em] text-bone mt-5">
               Tell me a little about your business.
             </h1>
@@ -247,7 +247,7 @@ export function BriefWizard() {
         )}
 
         {step === 3 && intent && (
-          <section>
+          <section className="wizard-step" key="step-3">
             <h1 className="font-display font-bold text-[32px] leading-[1.08] tracking-[-0.03em] text-bone mt-5">
               Where should I follow up?
             </h1>

@@ -1,52 +1,109 @@
 import Link from "next/link";
-import { Eyebrow } from "./eyebrow";
-import { CtaButton } from "./cta-button";
+import { testimonials } from "@/content/testimonials";
+import { ResultMoment } from "./result-moment";
 import { Reveal } from "./reveal";
 
 export function ProofSection() {
+  const { paradise, lexi, grace } = testimonials;
+
   return (
-    <section className="bg-bone text-ink">
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 py-16 md:py-24">
+    <section id="work" className="bg-bone text-ink py-11 md:py-[66px]">
+      <div className="mx-auto w-[min(1216px,calc(100%-80px))]">
         <Reveal>
-          <Eyebrow size="lg" tone="moss">SHOW JUDGMENT EARLY</Eyebrow>
-          <h2 className="font-display font-bold text-3xl md:text-[44px] text-deep-olive mt-8 tracking-tight leading-[1.08] max-w-3xl">
-            The request was a buyer list. The opportunity was a reusable system.
-          </h2>
-        </Reveal>
-
-        <Reveal delay={60} className="mt-8 space-y-5 font-sans text-[17px] text-ink/80 leading-relaxed max-w-3xl">
-          <p>
-            Paradise Capital needed help creating buyer lists. I saw an opportunity to make the research reusable rather than leave each assignment as a separate spreadsheet. The Buyer Engine brought that work into a living database and a repeatable way to create buyer lists.
-          </p>
-          <p className="font-semibold text-deep-olive">
-            The client reports moving buyer-list creation from weeks to minutes.
-          </p>
-        </Reveal>
-
-        <Reveal delay={100} className="mt-10">
-          <blockquote className="relative border-l-4 border-moss-olive pl-6 md:pl-10">
-            <p className="font-display font-semibold text-lg md:text-xl leading-relaxed text-deep-olive">
-              Before the Buyer Engine, building the buyer list for each mandate
-              was a manual process. Now we have a living buyer universe that
-              refreshes itself, continuously expands our buyer coverage, and most
-              importantly builds a curated buyer list for each client from that
-              universe plus targeted searches. Weeks of manual work compressed into{" "}
-              <span className="font-black text-moss-olive underline decoration-moss-olive/50 underline-offset-4">
-                minutes
-              </span>
-              . That lets us scale the practice, put the strongest buyers in
-              front of our clients, and keep our attention on serving them.
+          <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-6 md:gap-10 mb-10 md:mb-11">
+            <p className="font-sans text-[11px] font-semibold uppercase tracking-[0.15em] text-moss-olive md:pt-2">
+              The work, in their words
             </p>
-            <footer className="mt-4 font-sans text-[13px] tracking-widest text-moss-olive uppercase">
-              Paul Niccum · CEO, Paradise Capital
-            </footer>
-          </blockquote>
+            <h2 className="font-display font-semibold text-[34px] md:text-[46px] leading-[1.12] tracking-[-0.045em] text-deep-olive md:max-w-[760px]">
+              What it&apos;s like to
+              <br />
+              work with Fidelis.
+            </h2>
+          </div>
         </Reveal>
 
-        <Reveal delay={140} className="mt-8">
-          <CtaButton href="/case-studies/paradise-capital/">
-            See the Paradise Capital project →
-          </CtaButton>
+        <Reveal delay={40}>
+          <article className="grid grid-cols-1 md:grid-cols-[0.82fr_1.18fr] rounded-sm overflow-hidden">
+            <div className="bg-forest-floor text-bone p-7 md:p-[43px]">
+              <p className="font-sans text-[9px] md:text-[10px] font-semibold uppercase tracking-[0.1em] text-linen mb-5 md:mb-6">
+                Client project / Paradise Capital
+              </p>
+              <h3 className="font-display text-[29px] md:text-[32px] font-semibold leading-[1.18] max-w-[340px]">
+                The request was a buyer list.
+                <br />
+                The opportunity was a reusable system.
+              </h3>
+              <p className="text-[13px] md:text-[14px] leading-[1.65] text-linen mt-5 max-w-[335px]">
+                A living database and a repeatable way to create buyer lists.
+              </p>
+              <Link
+                href="/case-studies/paradise-capital/"
+                className="polish-text-link inline-flex items-center gap-2 text-[12px] md:text-[13px] font-semibold mt-5"
+              >
+                Read the case study <span data-arrow aria-hidden>↗</span>
+              </Link>
+            </div>
+            <div className="bg-deep-olive text-bone p-7 md:p-[43px] flex flex-col justify-center gap-6">
+              <ResultMoment />
+              <blockquote>
+                <p className="font-sans text-[16px] md:text-[18px] leading-[1.75]">{paradise.text}</p>
+                <footer className="mt-5 md:mt-6 text-[11px] md:text-[12px] font-semibold text-bone">
+                  {paradise.attribution}
+                </footer>
+              </blockquote>
+            </div>
+          </article>
+        </Reveal>
+
+        <Reveal delay={80} className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-[52px] mt-8 md:mt-10">
+          <article className="border-t border-deep-olive/25 pt-6 md:pt-7 flex flex-col items-start">
+            <p className="font-sans text-[9px] md:text-[10px] font-semibold uppercase tracking-[0.1em] text-moss-olive mb-5">
+              Linked by Lexi / Custom application
+            </p>
+            <blockquote className="mb-3.5">
+              <p className="text-[16px] leading-[1.75]">{lexi.text}</p>
+              <footer className="mt-5 text-[11px] md:text-[12px] font-semibold text-moss-olive">
+                {lexi.attribution}
+              </footer>
+            </blockquote>
+            <a
+              href="https://glow-routine-seven.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="polish-text-link inline-flex items-center gap-2 text-[12px] font-semibold mt-auto"
+            >
+              Open Glow Routine <span data-arrow aria-hidden>↗</span>
+            </a>
+          </article>
+
+          <article className="border-t border-deep-olive/25 pt-6 md:pt-7 flex flex-col items-start">
+            <p className="font-sans text-[9px] md:text-[10px] font-semibold uppercase tracking-[0.1em] text-moss-olive mb-5">
+              Grace Evangelical Church / Community work
+            </p>
+            <blockquote className="mb-3.5">
+              <p className="text-[16px] leading-[1.75]">{grace.text}</p>
+              <footer className="mt-5 text-[11px] md:text-[12px] font-semibold text-moss-olive">
+                {grace.attribution}
+              </footer>
+            </blockquote>
+            <a
+              href="https://eagangrace.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="polish-text-link inline-flex items-center gap-2 text-[12px] font-semibold mt-auto"
+            >
+              Visit the church website <span data-arrow aria-hidden>↗</span>
+            </a>
+          </article>
+        </Reveal>
+
+        <Reveal delay={120} className="mt-7">
+          <Link
+            href="/case-studies/"
+            className="polish-text-link inline-flex items-center gap-2 text-[12px] md:text-[14px] font-semibold"
+          >
+            Explore the projects <span data-arrow aria-hidden>↗</span>
+          </Link>
         </Reveal>
       </div>
     </section>
