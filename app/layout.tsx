@@ -29,8 +29,8 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: {
-    default: `${pageTitles.home} — Fidelis Strategy`,
-    template: "%s — Fidelis Strategy",
+    default: `${pageTitles.home} | Fidelis Strategy`,
+    template: "%s | Fidelis Strategy",
   },
   description: pageDescriptions.home,
   metadataBase: new URL(siteConfig.url),
@@ -42,17 +42,17 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: "Fidelis Strategy",
-    title: `${pageTitles.home} — Fidelis Strategy`,
+    title: `${pageTitles.home} | Fidelis Strategy`,
     description: pageDescriptions.home,
     url: siteConfig.url,
     locale: "en_US",
-    // OG image is generated at build time by app/opengraph-image.tsx — Next auto-attaches it.
+    // OG image is generated at build time by app/opengraph-image.tsx | Next auto-attaches it.
   },
   twitter: {
     card: "summary_large_image",
-    title: `${pageTitles.home} — Fidelis Strategy`,
+    title: `${pageTitles.home} | Fidelis Strategy`,
     description: pageDescriptions.home,
-    // Twitter image is generated at build time by app/twitter-image.tsx — Next auto-attaches it.
+    // Twitter image is generated at build time by app/twitter-image.tsx | Next auto-attaches it.
   },
   robots: {
     index: true,

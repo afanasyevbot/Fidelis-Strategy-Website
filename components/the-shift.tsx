@@ -37,7 +37,7 @@ export function TheShift() {
               When a competitor can respond faster, prepare work with less manual effort, or take on more business without sacrificing service, that changes what you&apos;re competing against.
             </p>
             <p>
-              You don&apos;t need to chase every tool. You do need to understand which improvements are worth making in your business—and have a way to act on them.
+              You don&apos;t need to chase every tool. You do need to understand which improvements are worth making in your business, and have a way to act on them.
             </p>
           </div>
         </Reveal>

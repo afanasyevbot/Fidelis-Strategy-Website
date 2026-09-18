@@ -1,6 +1,6 @@
 export const BRIEF_BUSINESS_FAIL = "Tell me what the business does.";
 export const BRIEF_EMAIL_FAIL = "I need an email address to follow up.";
-export const BRIEF_STEP1_HELPER = "You don't need to know the tools—or even where to start.";
+export const BRIEF_STEP1_HELPER = "You don't need to know the tools, or even where to start.";
 
 export const BRIEF_INTENTS = [
   {

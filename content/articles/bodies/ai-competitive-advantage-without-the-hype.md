@@ -8,7 +8,7 @@ Imagine two service businesses receiving similar customer inquiries. This is a h
 
 In one, the request sits until the right person gathers the details, works out who should handle it, and prepares a reply. In the other, the information is organized for review and the responsible person has a clear next action.
 
-The second arrangement may create a better response process. But its value depends on accuracy, usefulness, and follow-through—not simply whether AI was involved.
+The second arrangement may create a better response process. But its value depends on accuracy, usefulness, and follow-through, not simply whether AI was involved.
 
 The same question applies to your business: what would the customer or your team notice if the work improved?
 
@@ -56,7 +56,7 @@ Write down one business goal and one process connected to it. Walk through a rec
 
 For a fuller walkthrough, read [how to identify AI opportunities in your business](/blog/where-ai-could-help-your-business/).
 
-You do not need to know the tools—or even where to start. What matters is creating a way to move from curiosity to an informed decision.
+You do not need to know the tools, or even where to start. What matters is creating a way to move from curiosity to an informed decision.
 
 At Fidelis, that is the connection between growth strategy and custom systems: learn the business, identify worthwhile changes, and put them into practice.
 

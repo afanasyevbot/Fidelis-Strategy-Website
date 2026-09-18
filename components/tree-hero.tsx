@@ -6,7 +6,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { siteConfig } from "@/lib/siteConfig";
 import { CtaButton } from "./cta-button";
 
-/** Same grade as the original homepage hero — keeps the forest footage recognizable. */
+/** Same grade as the original homepage hero | keeps the forest footage recognizable. */
 const HERO_GRADE =
   "brightness(0.52) sepia(0.35) hue-rotate(22deg) saturate(1.15) contrast(1.08)";
 
@@ -232,7 +232,7 @@ export function TreeHero() {
             I learn how your business works, identify opportunities to grow and work more efficiently, and build the systems to put the right changes into practice.
           </p>
           <p className="reassurance mt-6 text-[14px] md:text-[15px] font-medium text-bone">
-            You don&apos;t need to know the tools—or even where to start.
+            You don&apos;t need to know the tools, or even where to start.
           </p>
           <div className="actions mt-7 flex flex-wrap items-center gap-5 md:gap-7">
             <CtaButton href={siteConfig.primaryCta.href}>

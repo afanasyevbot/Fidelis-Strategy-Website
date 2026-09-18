@@ -1,6 +1,6 @@
 /**
  * Simple Discover → Qualify emphasis for the lead-gen showcase.
- * Static motif — no metrics, dashboards, or animation.
+ * Static motif | no metrics, dashboards, or animation.
  */
 export function LeadGenMotif({ className = "" }: { className?: string }) {
   return (

@@ -114,15 +114,15 @@ export function breadcrumbSchema(items: BreadcrumbItem[]) {
   };
 }
 
-/** Page metadata titles — avoid doubling brand suffix through layout template. */
+/** Page metadata titles | avoid doubling brand suffix through layout template. */
 export const pageTitles = {
   home: "Growth Strategy & Custom AI Systems",
   whatWeBuild: "AI Consulting & Custom Business Systems",
   process: "Discover, Design, Deploy, Drive",
-  about: "Matthew Afanasiev — Founder of Fidelis Strategy",
+  about: "Matthew Afanasiev | Founder of Fidelis Strategy",
   caseStudies: "Selected Work",
   paradiseCapital: "Paradise Capital Buyer Engine",
-  pulse: "Fidelis Advisor & Pulse — Software & Systems",
+  pulse: "Fidelis Advisor & Pulse | Software & Systems",
   contact: "Contact Matthew",
   brief: "Find Where AI Could Help",
   blog: "AI, Growth & Business Systems Articles",

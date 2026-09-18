@@ -1,4 +1,4 @@
-A useful small-business dashboard starts with the decisions someone needs to make—not a collection of every available metric. I would define the questions, the data sources, the person responsible for acting, and the review routine before designing the charts.
+A useful small-business dashboard starts with the decisions someone needs to make, not a collection of every available metric. I would define the questions, the data sources, the person responsible for acting, and the review routine before designing the charts.
 
 That sounds straightforward. But it is possible to build an impressive collection of charts without making the business any easier to run.
 
@@ -42,7 +42,7 @@ These are design requirements to establish and test. Adding another chart does n
 
 The goal is not an appearance of certainty. It is a clearer basis for decisions.
 
-## Use AI to assist interpretation—not manufacture an explanation
+## Use AI to assist interpretation, not manufacture an explanation
 
 AI may help prepare a plain-language summary or draw attention to changes that deserve review.
 
@@ -66,7 +66,7 @@ Evaluate whether the new arrangement reduces preparation effort and improves the
 
 ## Product or custom system?
 
-I have built two separate products: Fidelis Pulse, intended for individual business owners and operators, and Fidelis Advisor, intended for M&A brokerage firms. On the Fidelis Strategy website, they are examples of my software-building work—not products every client needs to adopt.
+I have built two separate products: Fidelis Pulse, intended for individual business owners and operators, and Fidelis Advisor, intended for M&A brokerage firms. On the Fidelis Strategy website, they are examples of my software-building work, not products every client needs to adopt.
 
 A product example shows one way I have approached a software idea. Your own reporting needs should be evaluated on their merits.
 

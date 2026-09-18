@@ -1,4 +1,4 @@
-# Deploy — Hostinger
+# Deploy | Hostinger
 
 Production is a static export (`next build` → `out/`) on Hostinger shared hosting.
 **The live path is GitHub Actions**, not a zip upload. Pushing `main` runs
@@ -10,7 +10,7 @@ Merging a PR to `main` is a production deploy.
 ## What is actually live vs what is broken
 
 `https://fidelisstrategy.net` works. That is the site. A visual review of that URL
-will look operational — it is.
+will look operational | it is.
 
 `www` DNS was pointed at the same LiteSpeed IPs as the apex on 22 Aug 2026
 (Website Builder `CNAME connect.hostinger.com` removed). Public resolvers already
@@ -21,17 +21,17 @@ HTTPS `www` still fails: the Let's Encrypt cert SAN is only
 `.htaccess` www → apex rewrite. The rewrite itself already works if you skip
 certificate verification (`curl -k`).
 
-Hostinger's public API cannot issue SSL. `www` is a reserved name — it cannot be
+Hostinger's public API cannot issue SSL. `www` is a reserved name | it cannot be
 added as a parked domain or a subdomain. Reinstall Lifetime SSL in hPanel.
 
 Mail is mixed: MX is Microsoft 365 (`*.mail.protection.outlook.com`) but
 `autodiscover` still points at Hostinger mail. Apex TXT/SPF/DMARC were empty from
 public resolvers. Inbound Outlook can still work; spoofing protection and some
 clients will not. A leftover `@ ALIAS connect.hostinger.com` still exists in the
-zone; public A/AAAA already serve the real site — do not wipe the zone to remove
+zone; public A/AAAA already serve the real site | do not wipe the zone to remove
 it.
 
-## Fix `www` SSL (hPanel click — API cannot do this)
+## Fix `www` SSL (hPanel click | API cannot do this)
 
 1. hPanel → Websites → `fidelisstrategy.net` → Dashboard → Security → SSL.
 2. If a certificate is already **Active**, ⋮ → **Uninstall**.
@@ -82,7 +82,7 @@ Add them in the Cursor environment dashboard for this repo. Then:
 npm run deploy:hostinger
 ```
 
-That builds `out/` and rsyncs to Hostinger — same path as the GitHub Action.
+That builds `out/` and rsyncs to Hostinger | same path as the GitHub Action.
 Use this for preview deploys from a branch; keep `main` → GitHub Actions as
 the normal production path unless you intentionally want agent-only deploys.
 
@@ -98,10 +98,10 @@ many Hostinger sites from one token (`HOSTINGER_API_TOKEN`).
 
 Already used by `.github/workflows/deploy.yml`:
 
-- `SSH_HOST` — Hostinger SSH hostname
-- `SSH_PORT` — usually `65002` (or `22`)
-- `SSH_USERNAME` — hosting username
-- `SSH_PASSWORD` — hosting password
+- `SSH_HOST` | Hostinger SSH hostname
+- `SSH_PORT` | usually `65002` (or `22`)
+- `SSH_USERNAME` | hosting username
+- `SSH_PASSWORD` | hosting password
 
 hPanel → Advanced → SSH Access.
 

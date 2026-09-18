@@ -1,4 +1,4 @@
-**Illustrative design—not a client case study or a description of Paradise Capital’s proprietary system.**
+**Illustrative design, not a client case study or a description of Paradise Capital’s proprietary system.**
 
 An AI research workflow should connect a defined question, appropriate information sources, reviewable findings, and a useful handoff. This guide explains how I would think through that design. It does not describe a completed engagement or claim measured results.
 
@@ -66,7 +66,7 @@ Review relevant results, missed results where practical, factual corrections, so
 
 Also measure the ongoing cost of information access and operation. Set limits on repeated research or retries, and make errors visible to the responsible person.
 
-The objective is useful completed work—not the largest volume of generated records.
+The objective is useful completed work, not the largest volume of generated records.
 
 ## 7. Learn from use without hiding uncertainty
 
@@ -78,7 +78,7 @@ The same principle applies to growth claims. Faster research may create capacity
 
 For a comparison of buying and extending a product, see [Apollo versus a custom research system](/blog/ai-lead-engine-vs-apollo/). The design question remains the same: decide what matters, make the work inspectable, and choose useful automation.
 
-Fidelis can help investigate whether an approach like this belongs in your business—or whether a simpler change would be more appropriate.
+Fidelis can help investigate whether an approach like this belongs in your business, or whether a simpler change would be more appropriate.
 
 [Discuss your research workflow](/brief/)
 

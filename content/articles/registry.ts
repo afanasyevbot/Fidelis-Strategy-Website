@@ -113,7 +113,7 @@ export const ARTICLE_POSTS: ArticlePost[] = [
     title: "Small Business Dashboards: Choose the Numbers That Matter",
     seoTitle: "Small Business Dashboards: Choose the Numbers That Matter",
     description:
-      "Design a useful business dashboard around decisions, clear definitions, current sources, and responsibility—not just a larger collection of charts.",
+      "Design a useful business dashboard around decisions, clear definitions, current sources, and responsibility, not just a larger collection of charts.",
     editorialType: "Practical guide",
     queryHypothesis: "small business dashboard",
     datePublished: "2026-04-28",
@@ -169,7 +169,7 @@ export const TEARDOWN_POST: ArticlePost = {
   title: "How to Design an AI Research Workflow: An Illustrative Guide",
   seoTitle: "How to Design an AI Research Workflow",
   description:
-    "An illustrative guide to research questions, source handling, human review, and approved handoffs—not a client case or a proprietary architecture.",
+    "An illustrative guide to research questions, source handling, human review, and approved handoffs, not a client case or a proprietary architecture.",
   editorialType: "Illustrative design",
   queryHypothesis: "AI research workflow design",
   datePublished: "2026-09-17",

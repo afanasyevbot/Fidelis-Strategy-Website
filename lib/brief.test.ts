@@ -55,7 +55,7 @@ describe("validateBrief", () => {
 
 describe("brief intents", () => {
   it("exposes the three v4 intent choices", () => {
-    assert.equal(BRIEF_STEP1_HELPER, "You don't need to know the tools—or even where to start.");
+    assert.equal(BRIEF_STEP1_HELPER, "You don't need to know the tools, or even where to start.");
     assert.equal(BRIEF_INTENTS.length, 3);
     assert.equal(BRIEF_INTENTS[0].label, "I want to understand where AI could help.");
     assert.equal(BRIEF_INTENTS[1].label, "I have a process I want to improve.");

@@ -134,7 +134,7 @@ export function Nav() {
               ))}
             </ul>
 
-            {/* Header CTA — door is the Brief, not Calendly */}
+            {/* Header CTA | door is the Brief, not Calendly */}
             <CtaButton
               href={siteConfig.primaryCta.href}
               onClick={() => trackEvent("cta_click", { location: "nav_desktop", target: "brief" })}
@@ -209,7 +209,7 @@ export function Nav() {
             ))}
           </ul>
 
-          {/* CTA inside drawer — same door as desktop */}
+          {/* CTA inside drawer | same door as desktop */}
           <div className="px-6 pb-8 pt-2">
             <a
               href={siteConfig.primaryCta.href}

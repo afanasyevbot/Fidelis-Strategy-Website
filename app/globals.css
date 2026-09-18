@@ -65,7 +65,7 @@
               0 6px 14px -8px rgba(26, 42, 28, 0.18);
 }
 
-/* Arrow nudge — pair with `.arrow-nudge` and put `[data-arrow]` on the icon. */
+/* Arrow nudge | pair with `.arrow-nudge` and put `[data-arrow]` on the icon. */
 .arrow-nudge [data-arrow] {
   display: inline-block;
   transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
@@ -75,7 +75,7 @@
   transform: translateX(4px);
 }
 
-/* Magnetic-feel CTA — gentle scale + shadow on press. */
+/* Magnetic-feel CTA | gentle scale + shadow on press. */
 .btn-press {
   transition:
     transform 0.18s cubic-bezier(0.22, 1, 0.36, 1),
@@ -107,7 +107,7 @@
   .link-underline { background-size: 100% 1px; transition: none; }
 }
 
-/* ---------- Scroll cue — vertical line that ticks downward forever ---------- */
+/* ---------- Scroll cue | vertical line that ticks downward forever ---------- */
 @keyframes scroll-cue {
   0%   { transform: translateY(-100%); }
   60%  { transform: translateY(100%); }
@@ -120,7 +120,7 @@
   .scroll-cue-line { animation: none; }
 }
 
-/* Homepage tree hero — video layer only; content visible immediately */
+/* Homepage tree hero | video layer only; content visible immediately */
 @media (prefers-reduced-motion: reduce) {
   .tree-hero-video {
     display: none !important;

@@ -149,7 +149,7 @@ export default function Page() {
                     AI Lead Discovery &amp; Qualification
                   </h2>
                   <p>
-                    Custom tools I built to automate lead discovery and qualification—one example of how AI can support the work behind business growth.
+                    Custom tools I built to automate lead discovery and qualification, one example of how AI can support the work behind business growth.
                   </p>
                   <Link
                     href="/brief/"

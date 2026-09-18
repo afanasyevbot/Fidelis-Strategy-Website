@@ -9,10 +9,10 @@ export const siteConfig = {
   linkedinUrl: "https://www.linkedin.com/in/matthewafanasiev/",
   bookingUrl: "https://calendly.com/mafanasiev-fidelisstrategy/30min",
 
-  // Analytics — replace with real GA4 measurement ID when ready
+  // Analytics | replace with real GA4 measurement ID when ready
   gaId: "G-YTNMFSRD8L",
 
-  // Web3Forms access key — powers the checklist + contact forms on this
+  // Web3Forms access key | powers the checklist + contact forms on this
   // static site (no server). Safe to expose publicly. Get yours free at
   // web3forms.com. Until this is set, forms fall back to opening a mail client.
   web3formsKey: "2591fd46-1309-4746-afa8-94474da37113",
@@ -29,7 +29,7 @@ export const siteConfig = {
     label: "Find where AI could help",
     href: "/brief/",
     mobileLabel: "Get started",
-    mobileAriaLabel: "Get started — find where AI could help",
+    mobileAriaLabel: "Get started: find where AI could help",
   },
 
   secondaryCta: {

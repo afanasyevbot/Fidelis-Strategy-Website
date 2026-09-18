@@ -75,7 +75,7 @@ export default function Page() {
                   I help you identify opportunities to grow, improve how work gets done, and build or connect the systems that support those changes.
                 </p>
                 <p className="wwb-hero-reassurance">
-                  You don&apos;t need to know the tools—or even where to start.
+                  You don&apos;t need to know the tools, or even where to start.
                 </p>
                 <div className="wwb-hero-actions">
                   <Link

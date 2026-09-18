@@ -1,4 +1,4 @@
-# Fidelis Strategy — Hostinger shared hosting config
+# Fidelis Strategy: Hostinger shared hosting config
 # Next.js static export with trailingSlash: true
 # Each route is exported as /route/index.html
 

@@ -13,7 +13,7 @@ export function WhatWeBuildHome() {
               Better ways to work. More room to grow.
             </p>
             <h2 className="font-display font-semibold text-[29px] md:text-[34px] leading-[1.14] tracking-[-0.045em] text-bone">
-              Your systems should fit your business—not force your business to fit the software.
+              Your systems should fit your business, not force your business to fit the software.
             </h2>
           </Reveal>
           <Reveal delay={60}>

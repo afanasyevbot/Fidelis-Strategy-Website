@@ -1,4 +1,4 @@
-My view on business process improvement is simple: your systems should fit your business—not force your business to fit the software. But improving the fit can mean changing the process, configuring an existing tool, connecting systems, or building something new.
+My view on business process improvement is simple: your systems should fit your business, not force your business to fit the software. But improving the fit can mean changing the process, configuring an existing tool, connecting systems, or building something new.
 
 My background in supply chain software sales brought me into conversations about how businesses operate. Seeing companies work around software that did not fit their processes shaped the way I want to approach systems work at Fidelis.
 
@@ -18,7 +18,7 @@ For a hypothetical proposal-to-delivery process, faster proposal drafting may no
 
 That is why I do not want to recommend a system from a task name alone.
 
-## 2. Repeated work is a clue—not a complete diagnosis
+## 2. Repeated work is a clue, not a complete diagnosis
 
 Copying information between tools is worth examining. So is rebuilding a report or answering the same internal question repeatedly.
 
@@ -42,7 +42,7 @@ Sometimes the answer is better use of what already exists. Sometimes it is an in
 
 The point is not to keep or replace software on principle. It is to decide which approach helps the business operate better without creating unnecessary complexity.
 
-That mindset is also useful with AI. A new model or feature is relevant when it can improve a task the business needs done—not simply because it is available.
+That mindset is also useful with AI. A new model or feature is relevant when it can improve a task the business needs done, not simply because it is available.
 
 ## 4. Growth depends on what happens after the sale
 
@@ -66,7 +66,7 @@ During discovery, I want to see real examples of the work and hear from the peop
 
 That is the thinking behind my approach to [AI strategy and custom systems](/what-we-build/): understand how the business works, then decide what would make it work better.
 
-You do not need to know the tools—or even where to start. Bring the business context. We can work through the next step together.
+You do not need to know the tools, or even where to start. Bring the business context. We can work through the next step together.
 
 [Find where AI could help](/brief/)
 

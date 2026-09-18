@@ -8,7 +8,7 @@ export type SystemEntry = {
   whoFor: string;
 };
 
-// High-level capability categories. We don't name specific client builds —
+// High-level capability categories. We don't name specific client builds , 
 // every engagement is custom, and most of our work is confidential.
 export const systems: SystemEntry[] = [
   {

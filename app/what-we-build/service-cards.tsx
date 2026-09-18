@@ -19,7 +19,7 @@ const cards = [
   {
     title: "Custom systems & integrations",
     body:
-      "I build custom applications, connect existing tools, and automate the right parts of the workflow. The approach follows the business need—not a predetermined software package.",
+      "I build custom applications, connect existing tools, and automate the right parts of the workflow. The approach follows the business need, not a predetermined software package.",
     support: "Research tools, portals, reporting, integrations, and automation.",
     motif: (
       <div className="wwb-motif-row" aria-hidden="true">

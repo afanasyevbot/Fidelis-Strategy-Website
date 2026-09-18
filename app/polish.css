@@ -1,4 +1,4 @@
-/* Interaction polish — scoped via body[data-polish] for focus overrides */
+/* Interaction polish | scoped via body[data-polish] for focus overrides */
 
 :root {
   --polish-feedback: 160ms;

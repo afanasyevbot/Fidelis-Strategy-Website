@@ -10,7 +10,7 @@ Repo: afanasyevbot/Fidelis-Strategy-Website. This PR (#15) is the Brief door. PR
 - 301 `/growth-audit` and `/growth-audit/checklist` → `/brief/`.
 - Leak is required, open box. Taps are examples they can edit or write their own. Not a radio of three issues. Not a 5-question form. Not an AI audit. Not a leak scanner.
 - Chatbot / deck / strategy-only is not a leak. Error: Name the actual work that’s still by hand.
-- Brief wizard success **default CTA** → Paradise / Buyer Engine case study (commercial flagship). Church and Glow stay on the site as proof — see **Proof portfolio** below.
+- Brief wizard success **default CTA** → Paradise / Buyer Engine case study (commercial flagship). Church and Glow stay on the site as proof | see **Proof portfolio** below.
 - No SKU chrome on homepage taps. Catalog (pipeline / dashboards / workflow apps / custom CRMs) is not listed on `/` or `/brief/`.
 - Fulfillment: high-level one-pager in ~24h. Bot drafts, Matthew sends. Cap ~4/week.
 - H1: Custom AI systems for how you actually grow.
@@ -46,13 +46,13 @@ These chrome lines stay valid as leak chrome if the titles change; remap, don’
 
 Question-lead home-390 is current. Wires were attached to the 2026-09-02 Cursor session. Structure: systems H1, question, four title-only taps, micro, Paradise proof. Get the Brief is the only CTA. Forest/olive/linen kept.
 
-Wires (not copied onto disk from this session — files were not available at `/workspace/fidelis-hero/`):
+Wires (not copied onto disk from this session | files were not available at `/workspace/fidelis-hero/`):
 
-- `home-390` — question lead homepage
-- `brief-390-s1-ai` — `/brief/` step 1 with AI chrome
-- `brief-390-s2` — business
-- `brief-390-s3` — email
-- `brief-390-done` — success
+- `home-390` | question lead homepage
+- `brief-390-s1-ai` | `/brief/` step 1 with AI chrome
+- `brief-390-s2` | business
+- `brief-390-s3` | email
+- `brief-390-done` | success
 
 If the PNGs land later, put them in `docs/brief-door-wires/`.
 
@@ -64,36 +64,36 @@ If the PNGs land later, put them in `docs/brief-door-wires/`.
 
 Fidelis GTM hunt is HELD. Do not start Founders.
 
-## Matthew direction (2026-09-02 — rebrand, not locked copy)
+## Matthew direction (2026-09-02 | rebrand, not locked copy)
 
-**Motion — reject “find, score, act” as the headline.** That describes one build type (lead/pipeline tools), not Fidelis. It silos the brand into a Legion-style product. Better unifying line: **custom AI systems for work still done by hand or trapped in someone’s head** — strategy through production build, one principal.
+**Motion | reject “find, score, act” as the headline.** That describes one build type (lead/pipeline tools), not Fidelis. It silos the brand into a Legion-style product. Better unifying line: **custom AI systems for work still done by hand or trapped in someone’s head** | strategy through production build, one principal.
 
-**Brief micro — drop ~24h as the lead.** Offer a one-pager on **ways to fix the leak**, not a speed guarantee.
+**Brief micro | drop ~24h as the lead.** Offer a one-pager on **ways to fix the leak**, not a speed guarantee.
 
 **4D stays.** Discover / Design / Deploy / Drive is the paid engagement frame on `/process/`. Not dead. Cold door stays First System Brief.
 
-**Example pains (direction).** Include **missed / stagnant opportunities** — deals that go cold, prospects who move on when follow-up isn’t in a system, revenue lost to slow or inconsistent response. Ties to follow-ups but names **competitive loss**, not a CRM feature. Other candidates: nothing talks to anything; only one person knows how it works; Something else.
+**Example pains (direction).** Include **missed / stagnant opportunities** | deals that go cold, prospects who move on when follow-up isn’t in a system, revenue lost to slow or inconsistent response. Ties to follow-ups but names **competitive loss**, not a CRM feature. Other candidates: nothing talks to anything; only one person knows how it works; Something else.
 
-**Proof portfolio — do not undersell church.**
+**Proof portfolio | do not undersell church.**
 
 | Build | Role on site |
 |-------|----------------|
 | **Paradise / Buyer Engine** | Commercial flagship, case study, Brief wizard “See the work” default |
-| **Grace church portal** | **Strong proof** — fragmented processes, no consistent follow-ups, no data in one place → consolidated portal + routines. Same motion as owner-operated ops, different vertical. Pro bono is fine; shows breadth. **Elevate, don’t bury.** |
-| **Glow Routine** | Live app you can open — proves you ship product, not decks |
+| **Grace church portal** | **Strong proof** | fragmented processes, no consistent follow-ups, no data in one place → consolidated portal + routines. Same motion as owner-operated ops, different vertical. Pro bono is fine; shows breadth. **Elevate, don’t bury.** |
+| **Glow Routine** | Live app you can open | proves you ship product, not decks |
 | **Lead gen platform** | Example of pipeline work without making that *the* brand |
-| **Pulse** | Own SaaS — operator numbers |
+| **Pulse** | Own SaaS | operator numbers |
 
 **More examples of stuff built = better.** Don’t trim the portfolio to one story. Reframe each around the pattern: **fragmentation → one system → consistent follow-up / routine**.
 
-**Why now + integrated AI (Matthew, 2026-09-02).** Emphasize early on the homepage — not buried under What We Build.
+**Why now + integrated AI (Matthew, 2026-09-02).** Emphasize early on the homepage | not buried under What We Build.
 
 - **Industry shift:** AI is changing how businesses operate. Competitors are already using it to move faster. The gap widens every quarter you wait.
-- **Owner confusion is real:** Many owners are asking *How do I even use AI? What is AI for my business?* Fidelis is who they come to for **education + build** — not hype, not a chatbot bolted onto broken process.
-- **Anti-bolt-on:** Not another tool on the pile. Not “add ChatGPT to your workflow.” **Integrated into how you already work** — your tools, your rhythm, your team’s actual process. Custom system shaped to today’s workflow, not a template they have to learn.
+- **Owner confusion is real:** Many owners are asking *How do I even use AI? What is AI for my business?* Fidelis is who they come to for **education + build** | not hype, not a chatbot bolted onto broken process.
+- **Anti-bolt-on:** Not another tool on the pile. Not “add ChatGPT to your workflow.” **Integrated into how you already work** | your tools, your rhythm, your team’s actual process. Custom system shaped to today’s workflow, not a template they have to learn.
 - **Matthew’s role:** Trusted guide who explains what’s possible, then **ships** the system (plans it / builds it). Educator + builder, same person.
 
-**Differentiator — small operator language (not “deck”):** They don’t fear Bain; they fear **another thing that doesn’t stick**. Frame against: tools that don’t fit, projects that never ship, work still by hand. *The person who plans it builds it* — same accountable principal, no handoff, system that runs in their environment.
+**Differentiator | small operator language (not “deck”):** They don’t fear Bain; they fear **another thing that doesn’t stick**. Frame against: tools that don’t fit, projects that never ship, work still by hand. *The person who plans it builds it* | same accountable principal, no handoff, system that runs in their environment.
 
 **Retire from homepage/marketing:** “Most consultants hand you a deck,” “we build what consultants can’t,” anti-big-consultancy framing. Keep **deck/strategy-only** only as Brief wizard *validation* (not a leak), not as brand positioning.
 
@@ -102,9 +102,9 @@ Fidelis GTM hunt is HELD. Do not start Founders.
 | Beat | Direction |
 |------|-----------|
 | **Why now** | The industry moved. Competitors are already faster. Waiting compounds. |
-| **The question** | “How do I even use AI?” — you don’t have to figure that out alone. |
+| **The question** | “How do I even use AI?” | you don’t have to figure that out alone. |
 | **The answer** | Not a bolt-on. A workflow built around **how you work today**. |
-| **The proof** | Live systems (Paradise, church, Pulse, Glow) — integrated, not slideware. |
+| **The proof** | Live systems (Paradise, church, Pulse, Glow) | integrated, not slideware. |
 
 **Homepage section candidate:** “Why now” block sits **after hero or after pain**, before solo-builder / proof. Job: urgency + demystify AI + integrated-not-bolt-on. Pain section stays owner leaks; this section names **stakes + approach**.
 

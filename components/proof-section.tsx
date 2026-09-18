@@ -108,7 +108,7 @@ export function ProofSection() {
                 AI Lead Discovery &amp; Qualification
               </h3>
               <p className="text-[15px] leading-[1.7] max-w-[520px]">
-                Custom tools I built to automate lead discovery and qualification—one example of how AI can support the work behind business growth.
+                Custom tools I built to automate lead discovery and qualification, one example of how AI can support the work behind business growth.
               </p>
               <Link
                 href="/case-studies/#ai-lead-generation"

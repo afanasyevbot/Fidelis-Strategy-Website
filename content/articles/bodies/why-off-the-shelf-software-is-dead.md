@@ -1,4 +1,4 @@
-My view: choose the approach that supports the work, not the one that wins an abstract argument about custom software versus off-the-shelf tools. Compare the actual process, the important gaps, the people using it, and the ongoing costs. Sometimes the right answer is an existing product with a custom connection—not a replacement.
+My view: choose the approach that supports the work, not the one that wins an abstract argument about custom software versus off-the-shelf tools. Compare the actual process, the important gaps, the people using it, and the ongoing costs. Sometimes the right answer is an existing product with a custom connection, not a replacement.
 
 A spreadsheet sitting beside your main software is a useful clue. Your team may be doing work the official system does not handle well. The next step is to understand why.
 
@@ -49,7 +49,7 @@ The same applies to AI. It may help interpret documents, investigate information
 
 Custom software does not need an AI component in every screen or step to be useful.
 
-## Compare the full cost—not a subscription against a prototype
+## Compare the full cost, not a subscription against a prototype
 
 A useful comparison includes setup, migration, integrations, data access, hosting, usage charges, maintenance, training, and the work people still need to do.
 
@@ -77,7 +77,7 @@ Instead of asking “Should we buy software or build it?”, start with “What 
 
 The answer may be a new application. It may be a better connection between existing tools. It may be a process change you should make before touching the technology.
 
-Fidelis combines [growth strategy, AI planning, and implementation](/what-we-build/) to help work through that decision. You do not need to arrive with a specification—or assume a custom build is the answer.
+Fidelis combines [growth strategy, AI planning, and implementation](/what-we-build/) to help work through that decision. You do not need to arrive with a specification, or assume a custom build is the answer.
 
 [Find where AI could help](/brief/)
 

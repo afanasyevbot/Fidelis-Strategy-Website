@@ -1,8 +1,8 @@
-# Fidelis Strategy — Website Rebuild Design Spec
+# Fidelis Strategy | Website Rebuild Design Spec
 
 **Date:** 2026-04-24
 **Owner:** Matthew Afanasiev (Founder, Fidelis Strategy)
-**Status:** Locked — ready for implementation plan
+**Status:** Locked | ready for implementation plan
 
 ---
 
@@ -14,18 +14,18 @@ Rebuild [fidelisstrategy.net](https://fidelisstrategy.net) as a modern, classy, 
 
 > **Most consultants advise. We *build* what they can't.**
 
-Fidelis is not a deck-and-recommendations shop. The site must make it obvious that the founder personally ships custom AI systems, apps, and automation — lead-enrichment pipelines, AI outreach agents, internal operator tools, valuation apps, dashboards.
+Fidelis is not a deck-and-recommendations shop. The site must make it obvious that the founder personally ships custom AI systems, apps, and automation | lead-enrichment pipelines, AI outreach agents, internal operator tools, valuation apps, dashboards.
 
 ### Audience
 
-Founders and operators of ambitious small-to-mid businesses who need both strategy *and* execution — and who are tired of consultants who hand over a PDF and disappear.
+Founders and operators of ambitious small-to-mid businesses who need both strategy *and* execution | and who are tired of consultants who hand over a PDF and disappear.
 
 ### Success criteria
 
 1. Visitors immediately understand Fidelis **builds**, not just advises.
 2. At least one proof asset (Paradise Capital) makes the capability believable.
 3. The 4D Growth Engine frames engagement structure without feeling corporate.
-4. Single primary CTA — **Book a Discovery Call** — visible on every section.
+4. Single primary CTA | **Book a Discovery Call** | visible on every section.
 5. Mobile-first, fast (Lighthouse perf ≥ 90), static-hostable on Hostinger.
 
 ---
@@ -37,7 +37,7 @@ Founders and operators of ambitious small-to-mid businesses who need both strate
 | Framework | Next.js 15, App Router | `output: 'export'` for static HTML |
 | Styling | Tailwind CSS | Custom theme tokens for Natural Earth palette |
 | Components | shadcn/ui | Buttons, Dialog, Accordion only (keep minimal) |
-| Fonts | Google Fonts — Space Grotesk + Inter | Self-hosted via `next/font` for perf |
+| Fonts | Google Fonts | Space Grotesk + Inter | Self-hosted via `next/font` for perf |
 | Forms | Formspree | `/contact` form POSTs to Formspree endpoint |
 | Analytics | Google Analytics 4 | Via `@next/third-parties/google` |
 | Hosting | Hostinger `public_html/` | Upload static export via File Manager or FTP |
@@ -47,16 +47,16 @@ No backend, no DB, no server functions. Everything static.
 
 ---
 
-## 3. Visual System — Natural Earth
+## 3. Visual System | Natural Earth
 
 ### 3.1 Color palette (locked)
 
 | Token | Hex | Use |
 |---|---|---|
-| `forest-floor` | `#1A2A1C` | Deepest background — final CTA section only |
-| `deep-olive` | `#2A3D2C` | Primary dark background — hero, nav, main dark sections |
-| `moss-olive` | `#4A5D3C` | Secondary olive — cards inside dark sections, the Proof section background |
-| `linen` | `#D4C4A0` | Primary accent — CTAs, eyebrows, emphasis, headline "build" |
+| `forest-floor` | `#1A2A1C` | Deepest background | final CTA section only |
+| `deep-olive` | `#2A3D2C` | Primary dark background | hero, nav, main dark sections |
+| `moss-olive` | `#4A5D3C` | Secondary olive | cards inside dark sections, the Proof section background |
+| `linen` | `#D4C4A0` | Primary accent | CTAs, eyebrows, emphasis, headline "build" |
 | `bone` (ivory) | `#FAF5E4` | Light alternating sections background |
 | `sage-dust` | `#B4B09A` | Muted body copy on dark backgrounds |
 | `ink` | `#1C1A16` | Body text on Bone sections |
@@ -89,11 +89,11 @@ Use the existing shield + eagle + laurel + ribbon mark (user-provided SVG). Rend
 
 ### 3.4 Components
 
-- **Buttons** — primary: Linen bg / Deep Olive text / uppercase / 12px vertical padding. Secondary: Linen border / Linen text / transparent bg.
-- **Cards (inside dark sections)** — Moss Olive bg, no border, 18–22px padding, Linen numerals/eyebrows.
-- **Cards (inside Bone sections)** — white-free: Bone bg with 1px Linen border, or Moss Olive reversed card for contrast.
-- **Eyebrow pattern** — `◇  EYEBROW TEXT  ◇` diamond glyphs flanking uppercase label in Linen.
-- **Dividers** — 1px Linen rule, 30% opacity.
+- **Buttons** | primary: Linen bg / Deep Olive text / uppercase / 12px vertical padding. Secondary: Linen border / Linen text / transparent bg.
+- **Cards (inside dark sections)** | Moss Olive bg, no border, 18–22px padding, Linen numerals/eyebrows.
+- **Cards (inside Bone sections)** | white-free: Bone bg with 1px Linen border, or Moss Olive reversed card for contrast.
+- **Eyebrow pattern** | `◇  EYEBROW TEXT  ◇` diamond glyphs flanking uppercase label in Linen.
+- **Dividers** | 1px Linen rule, 30% opacity.
 
 ---
 
@@ -125,26 +125,26 @@ No blog at launch. 404 page falls back to Home with a short "lost your way?" lin
 
 Sections in order:
 
-1. **Hero** — Deep Olive → Moss gradient. Eyebrow `◇  MOST CONSULTANTS ADVISE  ◇`. Headline: *We **build** what they can't.* Sub: "Strategy, AI systems, custom apps — grown for your business." Short supporting paragraph. Two buttons: **Book a Discovery Call →** (primary), **See What We Build** (secondary, anchor-scroll to #what-we-build).
+1. **Hero** | Deep Olive → Moss gradient. Eyebrow `◇  MOST CONSULTANTS ADVISE  ◇`. Headline: *We **build** what they can't.* Sub: "Strategy, AI systems, custom apps | grown for your business." Short supporting paragraph. Two buttons: **Book a Discovery Call →** (primary), **See What We Build** (secondary, anchor-scroll to #what-we-build).
    - *Placeholder block* reserved for user's Claude-designed animated hero asset. Spec: up to 640px tall desktop, Deep Olive background, must accept a SVG/Lottie/HTML-canvas drop-in. Current static hero lives in code as fallback.
-2. **What We Build** — Bone. Six AI-system cards in a 3×2 grid: Buyer Engine, Weekly Intel Engine, Valuation App, Outreach Agents, Pipeline Systems, Operator Dashboards. Each card: Moss Olive mini-icon, title (Space Grotesk Medium 500 20px), 2-line description, "How it works →" link to `/what-we-build#<slug>`.
-3. **Problem** — Deep Olive. "The cost of staying still." Three bullets on the pain of advice-only consulting.
-4. **4D Growth Engine** — Bone with Moss Olive cards. Four numbered cards: **01 Discover · 02 Design · 03 Deploy · 04 Drive**. Deploy card emphasized (Linen border) to reinforce the build moat.
-5. **Proof** — Moss Olive. Paradise Capital testimonial (quote + attribution + metric if available). CTA: **See the full case study →**.
-6. **About teaser** — Bone. Short founder paragraph + "Faithful. Loyal. Trustworthy." + button to `/about`.
-7. **Final CTA** — Forest Floor. "The best time is now." Single large **Book a Discovery Call →** button.
+2. **What We Build** | Bone. Six AI-system cards in a 3×2 grid: Buyer Engine, Weekly Intel Engine, Valuation App, Outreach Agents, Pipeline Systems, Operator Dashboards. Each card: Moss Olive mini-icon, title (Space Grotesk Medium 500 20px), 2-line description, "How it works →" link to `/what-we-build#<slug>`.
+3. **Problem** | Deep Olive. "The cost of staying still." Three bullets on the pain of advice-only consulting.
+4. **4D Growth Engine** | Bone with Moss Olive cards. Four numbered cards: **01 Discover · 02 Design · 03 Deploy · 04 Drive**. Deploy card emphasized (Linen border) to reinforce the build moat.
+5. **Proof** | Moss Olive. Paradise Capital testimonial (quote + attribution + metric if available). CTA: **See the full case study →**.
+6. **About teaser** | Bone. Short founder paragraph + "Faithful. Loyal. Trustworthy." + button to `/about`.
+7. **Final CTA** | Forest Floor. "The best time is now." Single large **Book a Discovery Call →** button.
 
 ### 5.2 What We Build (`/what-we-build`)
 
 - Hero (Deep Olive): eyebrow "WHAT WE BUILD", headline "Real systems, shipped." + 1-sentence lede.
-- Six detailed sections (alternating Bone / Deep Olive) — one per AI system. Each: short intro, 3-bullet "How it works", stack used (chips in Linen), "who this is for" line.
+- Six detailed sections (alternating Bone / Deep Olive) | one per AI system. Each: short intro, 3-bullet "How it works", stack used (chips in Linen), "who this is for" line.
 - 4D Growth Engine recap (Moss cards on Deep Olive).
 - Final CTA (Forest Floor).
 
 ### 5.3 About (`/about`)
 
 - Hero (Deep Olive): eyebrow "ABOUT", headline "Faithful. Loyal. Trustworthy.", sub on the Latin meaning of *Fidelis*.
-- Founder section (Bone): photo left / story right — operator background, why Fidelis exists, the build philosophy.
+- Founder section (Bone): photo left / story right | operator background, why Fidelis exists, the build philosophy.
 - Principles (Deep Olive, 3 Moss cards): e.g. "Ship, don't slide-ware", "Own the outcome", "Small team, full stack".
 - Final CTA (Forest Floor).
 
@@ -152,16 +152,16 @@ Sections in order:
 
 - Hero (Deep Olive): eyebrow "CASE STUDY", headline, client name + engagement dates.
 - The Problem (Bone).
-- What We Built (Deep Olive with Moss cards — list of systems: weekly scrape + enrich + Slack recap).
-- The Outcome (Moss Olive): testimonial quote + metrics (to be filled — placeholder tokens in code).
+- What We Built (Deep Olive with Moss cards | list of systems: weekly scrape + enrich + Slack recap).
+- The Outcome (Moss Olive): testimonial quote + metrics (to be filled | placeholder tokens in code).
 - Final CTA.
 
 ### 5.5 Contact (`/contact`)
 
 - Hero (Deep Olive): "Let's build something." + 1-line invitation.
 - Two-column (Bone):
-  - Left: Formspree form — Name, Email, Company, What are you trying to build? (textarea), budget range (select, optional).
-  - Right: direct booking link (Cal.com or Calendly — URL TBD), email link, expected response time.
+  - Left: Formspree form | Name, Email, Company, What are you trying to build? (textarea), budget range (select, optional).
+  - Right: direct booking link (Cal.com or Calendly | URL TBD), email link, expected response time.
 - Final CTA.
 
 ---
@@ -180,10 +180,10 @@ Sections in order:
 
 ### 6.2 Assets to collect from user
 
-- [ ] Logo SVG (already received — add to repo as `public/logo.svg`)
+- [ ] Logo SVG (already received | add to repo as `public/logo.svg`)
 - [ ] Founder photo for `/about`
 - [ ] Paradise Capital logo + testimonial text + metrics (if shareable)
-- [ ] Claude-designed animated hero asset (when ready — will slot into hero placeholder)
+- [ ] Claude-designed animated hero asset (when ready | will slot into hero placeholder)
 - [ ] Formspree endpoint URL
 - [ ] GA4 measurement ID
 - [ ] Cal.com / Calendly booking URL
@@ -206,11 +206,11 @@ Sections in order:
 
 ## 8. Open Items (before implementation kicks off)
 
-1. Founder photo and Paradise Capital testimonial copy — user to provide.
-2. Formspree account + endpoint — user to create.
-3. GA4 property + measurement ID — user to create or share existing.
-4. Cal.com / Calendly URL — user to confirm.
-5. Animated hero asset — user will design in Claude, I slot in later. Launch v1 with static hero fallback.
+1. Founder photo and Paradise Capital testimonial copy | user to provide.
+2. Formspree account + endpoint | user to create.
+3. GA4 property + measurement ID | user to create or share existing.
+4. Cal.com / Calendly URL | user to confirm.
+5. Animated hero asset | user will design in Claude, I slot in later. Launch v1 with static hero fallback.
 
 None of these block the implementation plan or initial build. Placeholders (`<!-- TBD: paradise-quote -->` etc.) will be used and listed in the PR so the user can do a single pass at the end.
 

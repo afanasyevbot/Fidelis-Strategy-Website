@@ -26,7 +26,7 @@ I start by learning about the business, its goals, and the work involved. That m
 
 The owner’s perspective is essential, but it should not be the only perspective. A team member may know about an exception, an unofficial spreadsheet, or a necessary check that changes the solution.
 
-The aim is to understand enough to make a worthwhile recommendation—not to make every inquiry undergo the same exhaustive assessment.
+The aim is to understand enough to make a worthwhile recommendation, not to make every inquiry undergo the same exhaustive assessment.
 
 ## Design: connect the goal to a workable approach
 
@@ -66,7 +66,7 @@ The right arrangement depends on the project. It should be understood rather tha
 
 ## Keep the strategy open to correction
 
-Sometimes implementation exposes a weakness in the original idea. A sensible response is to revise the approach—not force the team to use something because it appeared on the roadmap.
+Sometimes implementation exposes a weakness in the original idea. A sensible response is to revise the approach, not force the team to use something because it appeared on the roadmap.
 
 Sometimes the best discovery result is to improve existing software instead of building a new system. Sometimes the cost or risk does not justify proceeding. GOV.UK’s discovery guidance leaves room for that decision.[^a2-2]
 
@@ -74,7 +74,7 @@ At Fidelis, [Discover, Design, Deploy, and Drive](/process/) describe a connecte
 
 The goal is to move from uncertainty to a worthwhile change, then to a system people can use with confidence.
 
-You do not need to know the tools—or even where to start.
+You do not need to know the tools, or even where to start.
 
 [Find where AI could help](/brief/)
 

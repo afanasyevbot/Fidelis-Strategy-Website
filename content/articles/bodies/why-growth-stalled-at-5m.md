@@ -62,7 +62,7 @@ I would agree how the improvement is expected to help before implementation. The
 
 A useful review separates the effort to produce an output from the effort to check and use it. It also distinguishes capacity made available from new business actually won.
 
-Try writing one sentence before commissioning anything: “When ___ happens, the work waits for ___ because ___.” If the cause is uncertain, that is a discovery question—not a reason to fill the blank with “we need AI.”
+Try writing one sentence before commissioning anything: “When ___ happens, the work waits for ___ because ___.” If the cause is uncertain, that is a discovery question, not a reason to fill the blank with “we need AI.”
 
 Those distinctions make the business case more useful, not less ambitious.
 

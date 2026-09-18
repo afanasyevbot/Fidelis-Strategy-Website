@@ -90,7 +90,7 @@ Fidelis combines [growth strategy, operational discovery, and hands-on implement
 
 Bring a challenge, an idea, or simply an interest in understanding what AI could do for your business.
 
-You don’t need to know the tools—or even where to start.
+You don’t need to know the tools, or even where to start.
 
 [Find where AI could help](/brief/)
 

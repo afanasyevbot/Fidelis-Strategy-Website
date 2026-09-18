@@ -1,12 +1,12 @@
 Four useful areas to investigate are research, customer follow-through, internal coordination, and reporting. Below, I explain what a possible workflow could involve, where a person remains responsible, and what I would evaluate before calling it an improvement.
 
-These are illustrative possibilities, not completed client projects. My starting point is the work the business needs to do—not a list of tools.
+These are illustrative possibilities, not completed client projects. My starting point is the work the business needs to do, not a list of tools.
 
 Where does someone spend time gathering information? Which handoffs need repeated attention? What makes it difficult to respond to a customer or decide what matters next?
 
 Those questions can reveal opportunities. They do not determine in advance which system should be built.
 
-Here are four areas I would consider during discovery. They are starting points for investigation—not four products every business needs or a required order of implementation.
+Here are four areas I would consider during discovery. They are starting points for investigation, not four products every business needs or a required order of implementation.
 
 ## 1. Research and finding information
 
@@ -54,7 +54,7 @@ AI might help explain a change or prepare a narrative summary. The underlying nu
 
 Consider a hypothetical weekly delivery review. A useful view might show which assignments need intervention and why. A less useful one might display twenty attractive charts with no clear action attached.
 
-Evaluate whether the information helps someone make a better-informed decision—not whether the dashboard looks sophisticated.
+Evaluate whether the information helps someone make a better-informed decision, not whether the dashboard looks sophisticated.
 
 ## Choose based on the business, not this list
 

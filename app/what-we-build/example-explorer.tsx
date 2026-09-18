@@ -45,7 +45,7 @@ export function ExampleExplorer() {
           What could work better in your business?
         </h2>
         <p className="wwb-examples-intro">
-          Your systems should fit your business—not force your business to fit the software. That can mean improving the process itself, connecting what already exists, or building something new.
+          Your systems should fit your business, not force your business to fit the software. That can mean improving the process itself, connecting what already exists, or building something new.
         </p>
 
         <div className="wwb-explorer">

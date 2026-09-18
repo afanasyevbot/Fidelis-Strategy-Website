@@ -1,4 +1,4 @@
-Start with the research output your team needs, then compare whether Apollo, a custom workflow, or a combination can produce it. My recommendation is to evaluate fit, evidence quality, review effort, handoff, and ongoing cost—not assume that a custom build is automatically better.
+Start with the research output your team needs, then compare whether Apollo, a custom workflow, or a combination can produce it. My recommendation is to evaluate fit, evidence quality, review effort, handoff, and ongoing cost, not assume that a custom build is automatically better.
 
 A company can have access to a large contact database and still spend substantial effort producing a useful shortlist.
 
@@ -68,7 +68,7 @@ Do not turn a faster research step into an automatic revenue promise. The busine
 
 ## Choose the workflow, not a side
 
-At Fidelis, research systems are one example of [custom systems and implementation](/what-we-build/)—not a mandatory part of every engagement.
+At Fidelis, research systems are one example of [custom systems and implementation](/what-we-build/), not a mandatory part of every engagement.
 
 An existing platform, a custom application, or a combination can each be the right answer. Discovery should determine which is justified by the business need.
 

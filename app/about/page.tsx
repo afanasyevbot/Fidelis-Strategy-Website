@@ -21,7 +21,7 @@ const approachBlocks = [
   {
     title: "Choose what fits",
     body:
-      "We decide which changes deserve attention. The answer might involve AI, connected tools, a better process, or custom software—not necessarily another application.",
+      "We decide which changes deserve attention. The answer might involve AI, connected tools, a better process, or custom software, not necessarily another application.",
   },
   {
     title: "Build and refine together",
@@ -72,7 +72,7 @@ export default function Page() {
                   I saw businesses adapting their processes around software that didn&apos;t quite fit. The tools addressed part of the need, but teams still had to work around their limitations. In my role, I could help with what our product supported. I wanted to help with the broader picture.
                 </p>
                 <p>
-                  That experience shaped a principle behind Fidelis: your systems should fit your business—not force your business to fit the software.
+                  That experience shaped a principle behind Fidelis: your systems should fit your business, not force your business to fit the software.
                 </p>
                 <p>
                   I started with growth strategy. As the work developed, I began building custom systems to put those recommendations into practice. That became the connection I wanted to offer: someone who could understand the business, identify a worthwhile opportunity, and help make it happen.

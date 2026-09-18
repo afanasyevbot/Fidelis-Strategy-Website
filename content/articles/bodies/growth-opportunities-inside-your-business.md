@@ -38,7 +38,7 @@ A simple record could include the referring contact, the stated need, the respon
 
 Staying in touch should have a purpose for the recipient. A relevant observation, helpful resource, or genuine check-in is different from repeatedly asking for more business.
 
-I would decide what continued contact is useful before setting a cadence. The timing should reflect the relationship and the nature of the work—not a universal schedule copied from a marketing template.
+I would decide what continued contact is useful before setting a cadence. The timing should reflect the relationship and the nature of the work, not a universal schedule copied from a marketing template.
 
 Also decide what the referring person should hear back. Thanking them and closing the loop can be appropriate, while the prospective customer's private information should remain private.
 

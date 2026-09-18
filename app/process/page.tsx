@@ -46,7 +46,7 @@ const stages = [
     title: "Refine through real use",
     body: [
       "The first release is a starting point. We can adjust what needs to work differently and develop the next improvements around how the business uses the system.",
-      "Ongoing development and support are agreed for the project. This stage is about continued refinement—not a promise of unlimited revisions or permanent operation without upkeep.",
+      "Ongoing development and support are agreed for the project. This stage is about continued refinement, not a promise of unlimited revisions or permanent operation without upkeep.",
     ],
   },
 ];

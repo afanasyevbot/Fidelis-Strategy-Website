@@ -97,7 +97,7 @@ export default function Page() {
               </h2>
               <div className="font-sans text-[17px] text-ink/80 leading-relaxed mt-4 space-y-4">
                 <p>
-                  The improvement came from considering what the underlying work could become—not simply delivering the original spreadsheet request. It illustrates the connection between understanding a business need and building a more useful system around it.
+                  The improvement came from considering what the underlying work could become, not simply delivering the original spreadsheet request. It illustrates the connection between understanding a business need and building a more useful system around it.
                 </p>
                 <p>
                   The Buyer Engine is proprietary to Paradise Capital. This overview does not disclose its data, screens, or internal architecture.
