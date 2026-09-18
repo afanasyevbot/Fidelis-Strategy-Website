@@ -4,7 +4,6 @@ import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { pageDescriptions, pageTitles } from "@/lib/seo";
 import { siteConfig } from "@/lib/siteConfig";
-import { ProcessEnhancements } from "./process-enhancements";
 import { processStages } from "./process-stages";
 import "./process.css";
 
@@ -18,20 +17,19 @@ export default function ProcessPage() {
   return (
     <>
       <Nav />
-      <ProcessEnhancements />
       <main className="process-page bg-bone text-ink">
         <section className="bg-forest-floor text-bone border-b border-linen/20 process-hero">
-          <div className="process-container">
-            <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-2 text-[12px] text-linen mb-8">
+          <div className="process-container process-hero-inner">
+            <nav aria-label="Breadcrumb" className="process-hero-breadcrumb flex flex-wrap items-center justify-center gap-2 text-[12px] text-linen">
               <Link href="/" className="underline underline-offset-4 hover:text-bone">Home</Link>
               <span aria-hidden>/</span>
               <span aria-current="page">Process</span>
             </nav>
 
-            <p className="font-sans text-[11px] font-semibold uppercase tracking-[0.15em] text-linen">
+            <p className="process-hero-eyebrow font-sans text-[11px] font-semibold uppercase tracking-[0.15em] text-linen">
               The process
             </p>
-            <h1>
+            <h1 className="process-hero-title">
               Discover. Design.
               <br />
               Deploy. Drive.
@@ -56,46 +54,34 @@ export default function ProcessPage() {
           </div>
         </section>
 
-        <div className="process-rail-wrap">
+        <section className="process-cards-section" aria-label="Process stages">
           <div className="process-container">
-            <nav className="process-rail" aria-label="Process stages">
+            <div className="process-cards-grid">
               {processStages.map((stage) => (
-                <a
+                <article
                   key={stage.id}
-                  href={`#${stage.id}`}
-                  data-process-stage
-                  className="process-rail-link process-stage-link"
+                  id={stage.id}
+                  className="process-card"
+                  aria-labelledby={`${stage.id}-heading`}
                 >
-                  <span>{stage.num}</span>
-                  {stage.label}
-                </a>
+                  <p className="process-card-num">{stage.num}</p>
+                  <h2 id={`${stage.id}-heading`} className="process-card-title">{stage.label}</h2>
+                  <p className="process-card-kicker">{stage.heading}</p>
+                  <p className="process-card-body">{stage.body}</p>
+                  <p className="process-card-your-part">
+                    <span className="process-card-label">Your part</span>
+                    {stage.yourPart}
+                  </p>
+                  <div className="process-card-outcome">
+                    <p className="process-card-label">What takes shape</p>
+                    <p className="process-card-outcome-text">{stage.takesShape}</p>
+                  </div>
+                  {stage.closingLine ? (
+                    <p className="process-card-tagline">{stage.closingLine}</p>
+                  ) : null}
+                </article>
               ))}
-            </nav>
-          </div>
-        </div>
-
-        <section className="process-chapters" aria-label="Process stages">
-          <div className="process-container">
-            {processStages.map((stage) => (
-              <article
-                key={stage.id}
-                id={stage.id}
-                className={`process-stage process-chapter${stage.id === "design" ? " process-chapter-featured" : ""}`}
-                aria-labelledby={`${stage.id}-heading`}
-              >
-                <p className="process-stage-num">{stage.num}</p>
-                <h2 id={`${stage.id}-heading`} className="process-stage-title">{stage.label}</h2>
-                <p className="process-chapter-kicker">{stage.heading}</p>
-                <p className="process-chapter-body">{stage.body}</p>
-                <div className="process-chapter-glance">
-                  <p><strong>Your part:</strong> {stage.yourPart}</p>
-                  <p><strong>What takes shape:</strong> {stage.takesShape}</p>
-                </div>
-                {stage.closingLine ? (
-                  <p className="process-chapter-tagline">{stage.closingLine}</p>
-                ) : null}
-              </article>
-            ))}
+            </div>
           </div>
         </section>
 
