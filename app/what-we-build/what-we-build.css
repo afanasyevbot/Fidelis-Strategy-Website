@@ -249,43 +249,6 @@
   color: var(--color-moss-olive);
 }
 
-.wwb-service-motif {
-  margin-top: auto;
-  padding-top: 0.5rem;
-}
-
-.wwb-motif-row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.45rem 0.55rem;
-  font-size: 0.6875rem;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--color-moss-olive);
-}
-
-.wwb-motif-chip {
-  padding: 0.35rem 0.55rem;
-  border: 1px solid rgba(42, 61, 44, 0.22);
-  border-radius: 3px;
-  background: rgba(255, 255, 255, 0.35);
-  color: var(--color-deep-olive);
-  white-space: nowrap;
-}
-
-.wwb-motif-chip-accent {
-  background: rgba(42, 61, 44, 0.08);
-  border-color: rgba(42, 61, 44, 0.3);
-}
-
-.wwb-motif-arrow {
-  color: rgba(42, 61, 44, 0.45);
-  font-size: 0.8rem;
-  line-height: 1;
-}
-
 .wwb-process-link {
   margin-top: 2rem;
   font-size: 0.9375rem;
