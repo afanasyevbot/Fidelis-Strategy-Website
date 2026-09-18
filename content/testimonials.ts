@@ -14,10 +14,8 @@ export const testimonials = {
   grace: {
     name: "Grace Evangelical Church",
     attribution: "Leadership · Grace Evangelical Church",
-    text: [
-      "Matthew gave his time pro bono to help our small church solve a practical challenge: coordinating volunteers and keeping our members informed. He built a custom member and volunteer portal that gives us one place to manage our member directory, schedule teams, and send church announcements and event reminders.",
-      "He also rebuilt our website, moved our staff onto Microsoft 365 Business, and integrated online giving directly into the site. Together, these improvements help us organize the work behind church life and keep our community connected.",
-    ],
+    text:
+      "Matthew gave his time pro bono to help our small church solve a practical challenge: coordinating volunteers and keeping our members informed. He built a custom member and volunteer portal for our directory and team scheduling, rebuilt our website, and integrated online giving. Together, these improvements help us organize the work behind church life and keep our community connected.",
   },
 } as const;
 
