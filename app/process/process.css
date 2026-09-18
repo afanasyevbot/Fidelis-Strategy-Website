@@ -114,13 +114,7 @@
 
 @media (min-width: 1024px) {
   .process-page .process-stage {
-    scroll-margin-top: calc(var(--process-header-offset) + 4rem);
-  }
-
-  .process-rail-wrap {
-    position: sticky;
-    top: var(--process-header-offset);
-    z-index: 40;
+    scroll-margin-top: calc(var(--process-header-offset) + 0.75rem);
   }
 
   .process-rail {

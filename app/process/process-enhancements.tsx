@@ -7,15 +7,13 @@ export function ProcessEnhancements() {
   useEffect(() => {
     const stageLinks = Array.from(document.querySelectorAll<HTMLAnchorElement>("[data-process-stage]"));
     const stages = Array.from(document.querySelectorAll<HTMLElement>(".process-stage"));
-    const rail = document.querySelector<HTMLElement>(".process-rail");
 
     if (!stages.length || !stageLinks.length) return;
 
     const syncStages = () => {
       const header = document.querySelector<HTMLElement>(".site-header");
       const headerHeight = header?.offsetHeight ?? 72;
-      const railHeight = rail && window.matchMedia("(min-width: 1024px)").matches ? rail.offsetHeight : 0;
-      const offset = headerHeight + railHeight + 24;
+      const offset = headerHeight + 24;
       let current = stages[0]?.id ?? "";
 
       for (const stage of stages) {
