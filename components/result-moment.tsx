@@ -55,7 +55,6 @@ export function ResultMoment({ className = "" }: { className?: string }) {
           <span className="result-underline" />
         </span>
       </div>
-      <p className="result-claim">Client-reported result.</p>
     </div>
   );
 }

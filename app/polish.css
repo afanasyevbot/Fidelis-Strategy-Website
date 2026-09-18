@@ -342,13 +342,6 @@ body[data-polish] .bg-bone .polish-text-link:focus-visible {
 .result-moment.is-emphasized .result-underline {
   transform: scaleX(1);
 }
-.result-claim {
-  margin-top: 14px;
-  font-size: 10px;
-  line-height: 1.55;
-  letter-spacing: 0.04em;
-  color: rgba(212, 196, 160, 0.65);
-}
 @media (max-width: 700px) {
   .result-compare {
     flex-direction: column;
