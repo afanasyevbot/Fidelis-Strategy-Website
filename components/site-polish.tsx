@@ -81,7 +81,7 @@ export function SitePolish() {
     const stageLinks = Array.from(
       document.querySelectorAll<HTMLAnchorElement>("[data-process-stage]"),
     );
-    if (stages.length) {
+    if (stages.length && !document.querySelector(".process-page")) {
       const syncStages = () => {
         const offset = 120;
         let current = stages[0]?.id ?? "";

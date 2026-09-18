@@ -98,7 +98,7 @@ export default function Page() {
         <ServiceCards />
         <ExampleExplorer />
 
-        <section className="wwb-faq" aria-labelledby="wwb-faq-heading">
+        <section id="faq" className="wwb-faq" aria-labelledby="wwb-faq-heading">
           <div className="wwb-container wwb-faq-grid">
             <div>
               <h2 id="wwb-faq-heading" className="wwb-faq-heading">
