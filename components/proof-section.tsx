@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { testimonials } from "@/content/testimonials";
+import { LeadGenMotif } from "./lead-gen-motif";
 import { ResultMoment } from "./result-moment";
 import { Reveal } from "./reveal";
 
@@ -94,6 +95,29 @@ export function ProofSection() {
             >
               Visit the church website <span data-arrow aria-hidden>↗</span>
             </a>
+          </article>
+        </Reveal>
+
+        <Reveal delay={100} className="mt-8 md:mt-10">
+          <article className="lead-gen-tile polish-info-card grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 md:gap-10 items-center border border-deep-olive/25 rounded-sm p-6 md:p-8">
+            <div>
+              <p className="font-sans text-[9px] md:text-[10px] font-semibold uppercase tracking-[0.1em] text-moss-olive mb-4">
+                Custom system
+              </p>
+              <h3 className="font-display text-[22px] md:text-[26px] font-semibold tracking-[-0.03em] text-deep-olive mb-3">
+                AI Lead Discovery &amp; Qualification
+              </h3>
+              <p className="text-[15px] leading-[1.7] max-w-[520px]">
+                Custom tools I built to automate lead discovery and qualification—one example of how AI can support the work behind business growth.
+              </p>
+              <Link
+                href="/case-studies/#ai-lead-generation"
+                className="polish-text-link inline-flex items-center gap-2 text-[12px] md:text-[13px] font-semibold mt-5"
+              >
+                Explore the work <span data-arrow aria-hidden>↗</span>
+              </Link>
+            </div>
+            <LeadGenMotif className="md:justify-self-end" />
           </article>
         </Reveal>
 

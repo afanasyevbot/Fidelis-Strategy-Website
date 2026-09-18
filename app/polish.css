@@ -356,6 +356,44 @@ body[data-polish] .bg-bone .polish-text-link:focus-visible {
   }
 }
 
+/* ---------- Lead gen motif: Discover → Qualify ---------- */
+.lead-gen-motif {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 10px 14px;
+  color: var(--color-deep-olive);
+}
+.lead-gen-from,
+.lead-gen-to {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+.lead-gen-from {
+  color: rgba(42, 61, 44, 0.72);
+}
+.lead-gen-arrow {
+  font-size: 20px;
+  line-height: 1;
+  color: var(--color-moss-olive);
+}
+.lead-gen-tile {
+  background: rgba(237, 228, 204, 0.22);
+}
+@media (max-width: 700px) {
+  .lead-gen-motif {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  .lead-gen-arrow {
+    transform: rotate(90deg);
+  }
+}
+
 /* ---------- Tree hero: screen-reader / keyboard-only video control ---------- */
 .tree-hero-toggle {
   position: absolute;

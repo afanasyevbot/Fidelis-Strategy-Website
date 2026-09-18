@@ -4,6 +4,7 @@ import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { pageDescriptions, pageTitles } from "@/lib/seo";
 import { siteConfig } from "@/lib/siteConfig";
+import { LeadGenMotif } from "@/components/lead-gen-motif";
 import { testimonials } from "@/content/testimonials";
 
 export const metadata: Metadata = {
@@ -134,6 +135,31 @@ export default function Page() {
                     <p className="text-[16px] leading-[1.8]">{grace.text}</p>
                     <footer className="mt-5 text-[12px] font-semibold text-moss-olive">{grace.attribution}</footer>
                   </blockquote>
+                </div>
+              </div>
+            </article>
+
+            <article id="ai-lead-generation" className="py-10 md:py-11 border-b border-deep-olive/25">
+              <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-7 lg:gap-[72px]">
+                <div className="text-[16px] leading-[1.75]">
+                  <p className="font-sans text-[11px] font-semibold uppercase tracking-[0.1em] text-moss-olive mb-4">
+                    Custom system
+                  </p>
+                  <h2 className="font-display text-[32px] md:text-[39px] font-semibold tracking-[-0.045em] text-deep-olive mb-5">
+                    AI Lead Discovery &amp; Qualification
+                  </h2>
+                  <p>
+                    Custom tools I built to automate lead discovery and qualification—one example of how AI can support the work behind business growth.
+                  </p>
+                  <Link
+                    href="/brief/"
+                    className="inline-flex items-center gap-3 text-[14px] font-semibold border-b border-current pb-2 mt-5 hover:opacity-75"
+                  >
+                    Discuss a similar system <span aria-hidden>↗</span>
+                  </Link>
+                </div>
+                <div className="bg-linen/25 border-l-[3px] border-moss-olive p-7 md:p-8 flex items-center justify-center">
+                  <LeadGenMotif />
                 </div>
               </div>
             </article>
