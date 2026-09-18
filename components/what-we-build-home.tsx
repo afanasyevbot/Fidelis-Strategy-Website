@@ -3,7 +3,7 @@ import { Reveal } from "./reveal";
 
 export function WhatWeBuildHome() {
   return (
-    <section className="bg-bone py-10 md:pb-14 md:pt-8">
+    <section className="bg-bone py-10 md:py-12">
       <div className="mx-auto w-[min(1216px,calc(100%-80px))]">
         <div
           className="home-systems-inset grid grid-cols-1 lg:grid-cols-2 gap-7 lg:gap-[78px] items-center rounded-sm bg-deep-olive text-bone px-6 py-7 md:px-14 md:py-[52px]"

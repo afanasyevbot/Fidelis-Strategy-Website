@@ -20,8 +20,8 @@ export default function HomePage() {
         <TreeHero />
         <MeaningBand />
         <ProofSection />
-        <TheShift />
         <WhatWeBuildHome />
+        <TheShift />
         <FinalCta />
       </main>
       <Footer />

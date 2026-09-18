@@ -21,7 +21,7 @@ const START_PATHS = [
 
 export function TheShift() {
   return (
-    <section className="bg-bone text-ink border-t border-deep-olive/25 py-11 md:py-14">
+    <section className="bg-bone text-ink py-11 md:py-14">
       <div className="mx-auto w-[min(1216px,calc(100%-80px))] grid grid-cols-1 lg:grid-cols-2 gap-9 lg:gap-[105px]">
         <Reveal>
           <p className="font-sans text-[11px] font-semibold uppercase tracking-[0.15em] text-moss-olive mb-6">
