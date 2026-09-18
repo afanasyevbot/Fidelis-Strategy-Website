@@ -92,7 +92,7 @@ export default function Page() {
               {approachBlocks.map((block) => (
                 <article key={block.title} className="about-approach-block">
                   <h3>{block.title}</h3>
-                  <p>&ldquo;{block.body}&rdquo;</p>
+                  <p>{block.body}</p>
                 </article>
               ))}
             </div>
