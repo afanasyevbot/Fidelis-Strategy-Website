@@ -137,20 +137,22 @@ export function Nav() {
             {/* Header CTA | door is the Brief, not Calendly */}
             <CtaButton
               href={siteConfig.primaryCta.href}
+              size="nav"
               onClick={() => trackEvent("cta_click", { location: "nav_desktop", target: "brief" })}
             >
-              {siteConfig.primaryCta.label} →
+              {siteConfig.primaryCta.label} ↗
             </CtaButton>
           </div>
 
           <div className="lg:hidden flex items-center gap-2">
             <CtaButton
               href={siteConfig.primaryCta.href}
-              className="text-[11px] py-2.5 px-3.5 whitespace-nowrap"
+              size="nav"
+              className="text-[11px] px-3 min-h-[40px]"
               aria-label={siteConfig.primaryCta.mobileAriaLabel}
               onClick={() => trackEvent("cta_click", { location: "nav_mobile_header", target: "brief" })}
             >
-              {siteConfig.primaryCta.mobileLabel} →
+              {siteConfig.primaryCta.mobileLabel} ↗
             </CtaButton>
             <button
               type="button"
@@ -211,16 +213,17 @@ export function Nav() {
 
           {/* CTA inside drawer | same door as desktop */}
           <div className="px-6 pb-8 pt-2">
-            <a
+            <CtaButton
               href={siteConfig.primaryCta.href}
-              className="btn-press block w-full text-center bg-linen text-deep-olive font-sans font-semibold text-[14px] py-3 px-6 tracking-button uppercase"
+              size="nav"
+              className="w-full text-[14px] min-h-[48px]"
               onClick={() => {
                 trackEvent("cta_click", { location: "nav_mobile", target: "brief" });
                 setOpen(false);
               }}
             >
-              {siteConfig.primaryCta.label} →
-            </a>
+              {siteConfig.primaryCta.label} ↗
+            </CtaButton>
           </div>
         </div>
       </div>
