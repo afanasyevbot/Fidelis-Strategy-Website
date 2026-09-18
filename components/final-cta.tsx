@@ -2,77 +2,71 @@
 
 import { trackEvent } from "@/lib/analytics";
 import { siteConfig } from "@/lib/siteConfig";
-import { Eyebrow } from "./eyebrow";
 import { CtaButton } from "./cta-button";
 import { Reveal } from "./reveal";
 
 export function FinalCta({
-  eyebrow = "START YOUR GROWTH JOURNEY",
-  headline = "You've built something real. Let's take it further.",
-  sub = "A 30-minute call. We'll talk about where the business is, where you want it, and how to grow the top line. No pitch deck. Just a real conversation.",
+  eyebrow = "Start with a conversation",
+  headline = "Let's find what could work better.",
+  sub = "Bring a challenge, an idea, or a question about AI. You don't need to arrive with the answer.",
   primaryHref,
-  primaryLabel = "Book a Call →",
+  primaryLabel,
+  helperText,
 }: {
   eyebrow?: string;
   headline?: string;
   sub?: string;
-  /** Override the primary CTA target. Defaults to the booking URL. */
   primaryHref?: string;
   primaryLabel?: string;
+  helperText?: string;
 }) {
-  const href = primaryHref ?? siteConfig.bookingUrl;
+  const href = primaryHref ?? siteConfig.primaryCta.href;
+  const label = primaryLabel ?? `${siteConfig.primaryCta.label} →`;
   const isInternal = href.startsWith("/");
 
   function handlePrimaryClick() {
     if (isInternal) {
       trackEvent("cta_click", { location: "final_cta", target: href });
-      return;
     }
-    trackEvent("book_call_click", { location: "final_cta" });
   }
 
+  const displayHeadline = headline.includes("\n")
+    ? headline
+    : headline.replace(/could work better\./, "could work\nbetter.");
+
+  const [line1, line2] = displayHeadline.includes("\n")
+    ? displayHeadline.split("\n")
+    : [displayHeadline, ""];
+
   return (
-    <section className="relative bg-moss-olive text-bone overflow-hidden">
-      {/* Subtle radial glow accent */}
-      <div
-        aria-hidden
-        className="absolute inset-0 pointer-events-none opacity-60"
-        style={{
-          background:
-            "radial-gradient(circle at 50% 0%, rgba(212,196,160,0.18) 0%, transparent 55%)",
-        }}
-      />
-      <div className="relative mx-auto max-w-4xl px-4 sm:px-6 py-16 md:py-24 text-center">
+    <section className="bg-forest-floor text-bone py-10 md:py-[53px] closing">
+      <div className="mx-auto w-[min(1216px,calc(100%-80px))] grid grid-cols-1 lg:grid-cols-2 gap-7 lg:gap-[105px] items-center">
         <Reveal>
-          <Eyebrow size="lg">{eyebrow}</Eyebrow>
-          <h2 className="font-display font-bold text-3xl md:text-[48px] mt-8 tracking-tight leading-tight">{headline}</h2>
-          {sub && (
-            <p className="font-sans text-[17px] text-bone/85 leading-relaxed mt-6 max-w-2xl mx-auto">
-              {sub}
-            </p>
-          )}
+          <p className="font-sans text-[11px] font-semibold uppercase tracking-[0.15em] text-linen mb-6">
+            {eyebrow}
+          </p>
+          <h2 className="font-display font-medium text-[36px] md:text-[44px] lg:text-[56px] leading-[1.08] tracking-[-0.045em]">
+            {line2 ? (
+              <>
+                {line1}
+                <br />
+                {line2}
+              </>
+            ) : (
+              line1
+            )}
+          </h2>
         </Reveal>
-        <Reveal delay={120}>
-          <div className="mt-10">
-            <CtaButton
-              href={href}
-              external={!isInternal}
-              onClick={handlePrimaryClick}
-            >
-              {primaryLabel}
+        <Reveal delay={80}>
+          <p className="text-[16px] md:text-[18px] leading-[1.65] text-linen max-w-[430px]">{sub}</p>
+          <div className="mt-6 md:mt-7">
+            <CtaButton href={href} onClick={handlePrimaryClick}>
+              {label}
             </CtaButton>
           </div>
-          <p className="font-sans text-[13px] text-linen/80 mt-5">
-            Prefer to talk first?{" "}
-            <a href={siteConfig.bookingUrl} className="link-underline hover:text-bone">
-              Book a call
-            </a>
-            . Or{" "}
-            <a href="/contact" className="link-underline hover:text-bone">
-              send a note
-            </a>
-            .
-          </p>
+          {helperText ? (
+            <p className="text-[12px] text-linen/80 mt-4 md:mt-[18px] max-w-[400px]">{helperText}</p>
+          ) : null}
         </Reveal>
       </div>
     </section>

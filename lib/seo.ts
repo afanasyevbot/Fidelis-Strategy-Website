@@ -9,6 +9,8 @@ type BlogPostSchemaArgs = {
   datePublished: string; // ISO 8601 (YYYY-MM-DD or full)
   dateModified?: string;
   image?: string; // path or absolute URL
+  /** Override canonical path (e.g. /teardowns/ai-lead-engine/) */
+  urlPath?: string;
 };
 
 /**
@@ -22,8 +24,9 @@ export function blogPostSchema({
   datePublished,
   dateModified,
   image = "/opengraph-image",
+  urlPath,
 }: BlogPostSchemaArgs) {
-  const url = `${baseUrl}/blog/${slug}/`;
+  const url = `${baseUrl}${urlPath ?? `/blog/${slug}/`}`;
   const imageUrl = image.startsWith("http") ? image : `${baseUrl}${image}`;
   return {
     "@context": "https://schema.org",
@@ -54,8 +57,6 @@ export function blogPostSchema({
 
 /**
  * Returns ProfessionalService (Organization) JSON-LD for the homepage.
- * Tells search engines and AI answer engines who Fidelis is, who runs it,
- * and how to reach it — a credibility/entity signal Google uses for E-E-A-T.
  */
 export function organizationSchema() {
   return {
@@ -67,7 +68,7 @@ export function organizationSchema() {
     image: `${baseUrl}/opengraph-image`,
     logo: `${baseUrl}/logo.png`,
     description:
-      "Fidelis Strategy designs growth strategy and builds custom AI systems for owner-operated businesses: AI pipeline systems, operator dashboards, workflow apps, and custom CRMs shaped to how each team actually works.",
+      "Fidelis Strategy helps businesses identify opportunities to grow and operate better through AI strategy, custom software, and connected systems.",
     email: siteConfig.email,
     telephone: siteConfig.phone,
     address: {
@@ -86,12 +87,10 @@ export function organizationSchema() {
     areaServed: "US",
     knowsAbout: [
       "Growth strategy",
-      "Custom AI systems",
-      "AI lead generation",
-      "Operator dashboards",
-      "Custom CRM",
+      "AI strategy",
+      "Custom software",
+      "Business process improvement",
       "Workflow automation",
-      "M&A advisory technology",
     ],
   };
 }
@@ -114,3 +113,40 @@ export function breadcrumbSchema(items: BreadcrumbItem[]) {
     })),
   };
 }
+
+/** Page metadata titles | avoid doubling brand suffix through layout template. */
+export const pageTitles = {
+  home: "Growth Strategy & Custom AI Systems",
+  whatWeBuild: "AI Consulting & Custom Business Systems",
+  process: "Discover, Design, Deploy, Drive",
+  about: "Matthew Afanasiev | Founder of Fidelis Strategy",
+  caseStudies: "Selected Work",
+  paradiseCapital: "Paradise Capital Buyer Engine",
+  pulse: "Fidelis Advisor & Pulse | Software & Systems",
+  contact: "Contact Matthew",
+  brief: "Find Where AI Could Help",
+  blog: "AI, Growth & Business Systems Articles",
+} as const;
+
+export const pageDescriptions = {
+  home:
+    "Find opportunities to grow and operate better with AI strategy, custom software, and hands-on implementation. You don't need to know where to start.",
+  whatWeBuild:
+    "Understand where AI could help, develop a tailored growth and systems plan, and implement the right processes, integrations, or custom software.",
+  process:
+    "See how Fidelis connects business discovery, a tailored growth and systems plan, implementation, and continued refinement.",
+  about:
+    "Meet Matthew and the business-first approach behind Fidelis: growth strategy, operational discovery, and hands-on AI and systems implementation.",
+  caseStudies:
+    "Explore custom client work, community projects, and products built by Fidelis, with project status and reported outcomes clearly identified.",
+  paradiseCapital:
+    "How a buyer-list request developed into reusable research and a living database. Paradise reports moving list creation from weeks to minutes.",
+  pulse:
+    "See two software products built by Fidelis: Advisor for M&A brokerage firms and Pulse for individual business owners and operators.",
+  contact:
+    "Ask about growth strategy, AI, or a custom system. A challenge, an idea, or a question is enough to start a conversation.",
+  brief:
+    "Share a little about your business for personal follow-up from Matthew. You do not need to identify a bottleneck or choose a tool first.",
+  blog:
+    "Read practical guides and perspectives on AI strategy, process improvement, custom software, and business growth.",
+} as const;

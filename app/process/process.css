@@ -1,0 +1,299 @@
+/* Scoped to /process/ only */
+
+.process-page {
+  --process-container: min(1160px, calc(100% - 80px));
+  --process-header-offset: 72px;
+  --process-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.process-container {
+  width: var(--process-container);
+  margin-inline: auto;
+}
+
+/* ---------- Hero ---------- */
+.process-hero {
+  padding: clamp(2.25rem, 4vw, 4rem) 0;
+}
+
+.process-hero-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 38rem;
+  margin-inline: auto;
+}
+
+.process-hero-breadcrumb {
+  width: 100%;
+  margin-bottom: clamp(1.5rem, 3vw, 2rem);
+}
+
+.process-hero-eyebrow {
+  margin: 0;
+}
+
+.process-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.125rem, 4.8vw, 3.75rem);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  margin-top: 1rem;
+}
+
+.process-hero-support {
+  margin-top: 1.15rem;
+  font-size: clamp(1.0625rem, 1.6vw, 1.25rem);
+  line-height: 1.65;
+  color: rgba(237, 228, 204, 0.94);
+  max-width: 36ch;
+}
+
+.process-hero-reassurance {
+  margin-top: 0.75rem;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: rgba(212, 196, 160, 0.85);
+  max-width: 32ch;
+}
+
+.process-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem 1.15rem;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+.process-hero-secondary {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-linen);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.process-hero-secondary:hover {
+  opacity: 0.85;
+}
+
+.process-hero-secondary:focus-visible {
+  outline: 2px solid var(--color-linen);
+  outline-offset: 3px;
+}
+
+/* ---------- Card grid ---------- */
+.process-cards-section {
+  padding: clamp(2.5rem, 5vw, 3.5rem) 0 clamp(2rem, 4vw, 2.75rem);
+}
+
+.process-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+@media (min-width: 900px) {
+  .process-cards-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.75rem;
+  }
+}
+
+.process-card {
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  min-height: 0;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  background: rgba(252, 249, 242, 0.92);
+  border: 1px solid rgba(42, 61, 44, 0.12);
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(42, 61, 44, 0.04);
+  scroll-margin-top: calc(var(--process-header-offset) + 0.75rem);
+  transition:
+    border-color 200ms var(--process-ease),
+    box-shadow 200ms var(--process-ease);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .process-card:hover {
+    border-color: rgba(42, 61, 44, 0.2);
+    box-shadow: 0 2px 10px rgba(42, 61, 44, 0.06);
+  }
+}
+
+.process-card-num {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--color-moss-olive);
+  margin-bottom: 0.4rem;
+}
+
+.process-card-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 2.8vw, 2.25rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.12;
+  color: var(--color-deep-olive);
+}
+
+.process-card-kicker {
+  margin-top: 0.45rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.125rem, 1.6vw, 1.3125rem);
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  color: rgba(42, 61, 44, 0.9);
+}
+
+.process-card-body {
+  margin-top: 0.9rem;
+  font-size: clamp(1.0625rem, 1.2vw, 1.125rem);
+  line-height: 1.72;
+  color: rgba(26, 26, 26, 0.84);
+}
+
+.process-card-label {
+  display: block;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-moss-olive);
+  margin-bottom: 0.35rem;
+}
+
+.process-card-your-part {
+  margin-top: 1.1rem;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: rgba(26, 26, 26, 0.72);
+}
+
+.process-card-outcome {
+  margin-top: 1.1rem;
+  padding: 0.85rem 1rem;
+  background: rgba(237, 228, 204, 0.45);
+  border-radius: 4px;
+  border: 1px solid rgba(42, 61, 44, 0.08);
+}
+
+.process-card-outcome-text {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--color-deep-olive);
+}
+
+.process-card-tagline {
+  margin-top: 1rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.45;
+  color: var(--color-moss-olive);
+}
+
+/* ---------- Closing ---------- */
+.process-closing {
+  padding: 0 0 clamp(2.75rem, 5vw, 3.5rem);
+}
+
+.process-closing-panel {
+  background: var(--color-deep-olive);
+  color: var(--color-bone);
+  border-radius: 6px;
+  padding: clamp(1.75rem, 3.5vw, 2.35rem);
+}
+
+.process-closing-panel h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.375rem, 2.5vw, 1.625rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  max-width: 28rem;
+}
+
+.process-closing-body {
+  margin-top: 0.65rem;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: rgba(237, 228, 204, 0.9);
+  max-width: 36rem;
+}
+
+.process-closing-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1rem;
+  margin-top: 1.25rem;
+}
+
+.process-closing-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  min-height: 48px;
+  padding: 0.7rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-deep-olive);
+  background: var(--color-linen);
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.process-closing-primary:hover {
+  background: #c6b48a;
+}
+
+.process-closing-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-linen);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.process-closing-faq {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.8125rem;
+  color: rgba(212, 196, 160, 0.88);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.process-closing-primary:focus-visible,
+.process-closing-secondary:focus-visible,
+.process-closing-faq:focus-visible {
+  outline: 2px solid var(--color-linen);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .process-card {
+    transition: none;
+  }
+}
+
+@media (max-width: 359px) {
+  .process-container {
+    width: calc(100% - 40px);
+  }
+}

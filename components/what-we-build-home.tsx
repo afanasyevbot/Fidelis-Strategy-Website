@@ -1,44 +1,50 @@
 import Link from "next/link";
-import { Eyebrow } from "./eyebrow";
 import { Reveal } from "./reveal";
 
-/**
- * Homepage "what we build" beat: outcome-led, not a four-SKU menu.
- * Proof of range lives in Recent Builds. Catalog page stays at /what-we-build.
- */
 export function WhatWeBuildHome() {
   return (
-    <section id="what-we-build" className="bg-bone">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 py-16 md:py-24">
-        <Reveal>
-          <Eyebrow size="lg" tone="moss">WHAT WE BUILD</Eyebrow>
-          <h2 className="font-display font-bold text-3xl md:text-[48px] text-deep-olive mt-8 tracking-tight max-w-3xl">
-            AI systems that grow the top line.
-          </h2>
-          <p className="font-display font-light text-lg md:text-xl text-moss-olive mt-3 max-w-2xl">
-            Not a product list. Whatever is leaking: a workflow, a process, a data gap, a bottleneck.
-          </p>
-        </Reveal>
-        <Reveal delay={80} className="mt-8 max-w-2xl space-y-4 font-sans text-[17px] text-ink/80 leading-relaxed">
-          <p>
-            Every engagement is custom. We look at how you already work, find where growth is getting
-            stuck, and build the system that unblocks it. Same person who spots the leak builds the fix.
-          </p>
-        </Reveal>
-        <Reveal delay={120} className="mt-10 flex flex-wrap gap-x-8 gap-y-3">
-          <Link
-            href="/what-we-build"
-            className="arrow-nudge inline-flex items-center gap-2 text-[12px] uppercase tracking-button text-deep-olive hover:text-moss-olive font-semibold link-underline"
-          >
-            See the systems <span data-arrow>→</span>
-          </Link>
-          <Link
-            href="#recent-builds"
-            className="arrow-nudge inline-flex items-center gap-2 text-[12px] uppercase tracking-button text-deep-olive hover:text-moss-olive font-semibold link-underline"
-          >
-            See it in real businesses <span data-arrow>→</span>
-          </Link>
-        </Reveal>
+    <section className="bg-bone py-10 md:py-12">
+      <div className="mx-auto w-[min(1216px,calc(100%-80px))]">
+        <div
+          className="home-systems-inset grid grid-cols-1 lg:grid-cols-2 gap-7 lg:gap-[78px] items-center rounded-sm bg-deep-olive text-bone px-6 py-7 md:px-14 md:py-[52px]"
+        >
+          <Reveal>
+            <p className="font-sans text-[11px] font-semibold uppercase tracking-[0.15em] text-linen mb-5">
+              Better ways to work. More room to grow.
+            </p>
+            <h2 className="font-display font-semibold text-[29px] md:text-[34px] leading-[1.14] tracking-[-0.045em] text-bone">
+              Your systems should fit your business, not force your business to fit the software.
+            </h2>
+          </Reveal>
+          <Reveal delay={60}>
+            <p className="text-[15px] md:text-[16px] leading-[1.65] text-bone">
+              I start with how the work happens and what could work better. The right approach may involve a better process, connected tools, or a custom system.
+            </p>
+            <div className="flex flex-wrap items-center gap-5 md:gap-6 mt-5 md:mt-6">
+              <Link
+                href="/what-we-build/"
+                className="polish-text-link inline-flex items-center gap-3 text-[14px] font-semibold text-bone"
+              >
+                How I help <span data-arrow aria-hidden>↗</span>
+              </Link>
+              <Link
+                href="/process/"
+                className="polish-text-link inline-flex items-center gap-3 text-[14px] font-semibold text-bone"
+              >
+                Discover the 4Ds <span data-arrow aria-hidden>↗</span>
+              </Link>
+            </div>
+            <p className="text-[14px] mt-5 md:mt-[22px] text-bone">
+              Work directly with Matthew, from understanding the situation to refining the solution.{" "}
+              <Link
+                href="/about/"
+                className="polish-text-link text-linen underline underline-offset-[3px] hover:text-bone"
+              >
+                Meet the founder.
+              </Link>
+            </p>
+          </Reveal>
+        </div>
       </div>
     </section>
   );

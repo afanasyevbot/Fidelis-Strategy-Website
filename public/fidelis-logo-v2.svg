@@ -33,7 +33,7 @@
   " fill="none" stroke="#D4C4A0" stroke-width="1.5" opacity="0.5"/>
 
   <!-- ═══════════════════════════════
-       EAGLE HEAD — facing right
+       EAGLE HEAD | facing right
        Heraldic, geometric silhouette
   ═══════════════════════════════ -->
   <path d="
@@ -64,11 +64,11 @@
   <circle cx="219.5" cy="146.5" r="1" fill="#FAF5E4"/>
 
   <!-- ═══════════════════════════════
-       LAUREL BRANCHES — perfectly symmetric
+       LAUREL BRANCHES | perfectly symmetric
        Built on right, mirrored for left
   ═══════════════════════════════ -->
 
-  <!-- RIGHT branch — curves up-right from center-bottom of shield -->
+  <!-- RIGHT branch | curves up-right from center-bottom of shield -->
   <g fill="#2A3D2C">
     <!-- Stem line -->
     <path d="M 210,378 C 232,365 258,345 278,318 C 295,295 306,270 312,248"
@@ -86,7 +86,7 @@
     <ellipse cx="298" cy="260" rx="8"  ry="3.5" transform="rotate(-68 298 260)"/>
   </g>
 
-  <!-- LEFT branch — exact mirror of right -->
+  <!-- LEFT branch | exact mirror of right -->
   <g fill="#2A3D2C" transform="translate(400,0) scale(-1,1)">
     <path d="M 210,378 C 232,365 258,345 278,318 C 295,295 306,270 312,248"
           fill="none" stroke="#2A3D2C" stroke-width="1.8" stroke-linecap="round"/>

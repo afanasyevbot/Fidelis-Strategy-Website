@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { ARTICLE_POSTS } from "@/content/articles/registry";
 import { siteConfig } from "@/lib/siteConfig";
 
 export const dynamic = "force-static";
@@ -20,32 +21,33 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/privacy",
     "/terms",
     "/blog",
-    "/blog/why-off-the-shelf-software-is-dead",
-    "/blog/why-strategies-dont-get-implemented",
-    "/blog/ai-lead-engine-vs-apollo",
-    "/blog/ai-systems-that-move-revenue",
-    "/blog/why-growth-stalled-at-5m",
-    "/blog/what-supplier-conversations-taught-me",
-    "/blog/why-founders-dont-know-their-numbers",
+    ...ARTICLE_POSTS.map((p) => `/blog/${p.slug}`),
   ];
-  // Priority tiers: homepage (1.0), pillar pages (0.9), case studies + blog posts (0.8),
-  // utility pages (0.6). changeFrequency: blog/audit refresh monthly, others quarterly.
+
   const priorityFor = (path: string): number => {
     if (path === "") return 1.0;
     if (["/process", "/what-we-build", "/about", "/brief"].includes(path)) return 0.9;
-    if (path === "/pulse" || path === "/case-studies" || path.startsWith("/case-studies/") || path.startsWith("/teardowns/") || (path.startsWith("/blog/") && path !== "/blog")) return 0.8;
+    if (
+      path === "/pulse" ||
+      path === "/case-studies" ||
+      path.startsWith("/case-studies/") ||
+      path.startsWith("/teardowns/") ||
+      (path.startsWith("/blog/") && path !== "/blog")
+    ) {
+      return 0.8;
+    }
     if (path === "/blog") return 0.7;
-    return 0.6; // /contact and similar
+    return 0.6;
   };
+
   const changeFreqFor = (path: string): "monthly" | "yearly" => {
     if (path === "" || path === "/blog" || path.startsWith("/blog/") || path === "/brief") {
       return "monthly";
     }
     return "yearly";
   };
+
   return routes.map((path) => ({
-    // trailingSlash: true in next.config — sitemap locs must match the live URLs
-    // or Googlebot spends crawl budget on 301s.
     url: path === "" ? `${base}/` : `${base}${path}/`,
     lastModified: now,
     changeFrequency: changeFreqFor(path),

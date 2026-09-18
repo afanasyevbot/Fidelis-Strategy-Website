@@ -1,45 +1,71 @@
-import { Eyebrow } from "./eyebrow";
+import Link from "next/link";
 import { Reveal } from "./reveal";
 
-/**
- * Why now + educator + integrated-not-bolt-on. No em dashes in user-facing copy.
- */
+const START_PATHS = [
+  {
+    href: "/brief/?intent=explore-ai",
+    title: "I'm exploring AI.",
+    body: "You want to know what it could do for your business.",
+  },
+  {
+    href: "/brief/?intent=improve-process",
+    title: "Something needs to work better.",
+    body: "A process, handoff, or information gap needs attention.",
+  },
+  {
+    href: "/brief/?intent=build-idea",
+    title: "I have an idea.",
+    body: "You see an opportunity and need help shaping it.",
+  },
+] as const;
+
 export function TheShift() {
   return (
-    <section className="bg-bone text-ink">
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 py-16 md:py-24">
-        <Reveal className="text-center md:text-left max-w-2xl mx-auto">
-          <Eyebrow size="lg" tone="moss">
-            THE SHIFT
-          </Eyebrow>
-          <h2 className="font-display font-bold text-3xl md:text-[44px] text-deep-olive mt-8 tracking-tight leading-[1.08]">
-            The industry already moved. Most owners haven&apos;t been shown what that means for
-            their business.
+    <section className="bg-bone text-ink py-11 md:py-14">
+      <div className="mx-auto w-[min(1216px,calc(100%-80px))] grid grid-cols-1 lg:grid-cols-2 gap-9 lg:gap-[105px]">
+        <Reveal>
+          <p className="font-sans text-[11px] font-semibold uppercase tracking-[0.15em] text-moss-olive mb-6">
+            Why look at this now?
+          </p>
+          <h2 className="font-display font-semibold text-[33px] md:text-[40px] leading-[1.12] tracking-[-0.045em] text-deep-olive max-w-[480px] mb-6">
+            The advantage isn&apos;t having AI.
+            <br />
+            It&apos;s putting it to work.
           </h2>
+          <div className="space-y-[18px] text-[15px] md:text-[16px] leading-[1.65] text-ink/85">
+            <p>
+              When a competitor can respond faster, prepare work with less manual effort, or take on more business without sacrificing service, that changes what you&apos;re competing against.
+            </p>
+            <p>
+              You don&apos;t need to chase every tool. You do need to understand which improvements are worth making in your business, and have a way to act on them.
+            </p>
+          </div>
         </Reveal>
-        <Reveal delay={80} className="mt-8 space-y-5 font-sans text-[17px] md:text-[18px] text-ink/80 leading-relaxed text-left max-w-2xl mx-auto">
-          <p>
-            Competitors are using AI to move faster. Customers are starting to expect it. A lot of
-            owners are still asking: &ldquo;How do I even use this? What does AI mean for my
-            business?&rdquo;
+
+        <Reveal delay={60} className="pt-1">
+          <p className="font-sans text-[11px] font-semibold uppercase tracking-[0.15em] text-moss-olive mb-5">
+            There&apos;s more than one starting point
           </p>
-          <p>
-            You don&apos;t need another tool bolted on. You need someone who can explain what&apos;s
-            possible and build it into how you already work: your tools, your team&apos;s rhythm,
-            the process you run today.
-          </p>
-          <p>
-            Buy what&apos;s universal: accounting, email, payroll. Build what&apos;s yours: how you
-            find customers, move deals, and deliver.
-          </p>
-        </Reveal>
-        <Reveal delay={120} className="mt-8 max-w-2xl mx-auto border-l-2 border-moss-olive/35 pl-5">
-          <p className="font-sans text-[17px] md:text-[18px] text-deep-olive leading-relaxed">
-            I translate AI into your everyday process: what changes in your tools, with your team,
-            in the work you already run.
-          </p>
-          <p className="font-sans text-[14px] text-ink/55 leading-relaxed mt-4">
-            Not a magic button. Not ChatGPT pasted on top of your workflow.
+          <div>
+            {START_PATHS.map((path) => (
+              <Link
+                key={path.href}
+                href={path.href}
+                className="polish-row flex justify-between items-center gap-6 border-t border-deep-olive/25 py-5 md:py-6 px-1 -mx-1 rounded-sm group"
+              >
+                <div>
+                  <h3 className="font-display text-[21px] md:text-[23px] font-semibold tracking-[-0.035em] group-hover:underline underline-offset-4">
+                    {path.title}
+                  </h3>
+                  <p className="text-[13px] text-moss-olive mt-2">{path.body}</p>
+                </div>
+                <span className="text-2xl shrink-0" data-arrow aria-hidden>↗</span>
+              </Link>
+            ))}
+            <div className="border-t border-deep-olive/25" />
+          </div>
+          <p className="text-[12px] font-medium mt-4 text-ink/80">
+            You don&apos;t need a finished project idea to get started.
           </p>
         </Reveal>
       </div>

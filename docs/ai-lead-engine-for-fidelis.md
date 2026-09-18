@@ -1,4 +1,4 @@
-# AI Lead Engine — For Fidelis Itself
+# AI Lead Engine | For Fidelis Itself
 
 **Status:** Brief / pre-build
 **Owner:** Matthew
@@ -25,7 +25,7 @@ This is not a website task. It's a real backend system that lives next to
 
 ---
 
-## Scope (v1 — 30 days)
+## Scope (v1 | 30 days)
 
 **ICP target:**
 
@@ -54,9 +54,9 @@ Custom scoring rubric. Three weights:
 
 **Output / delivery:**
 
-- **Daily Slack digest** to `#fidelis-leads` — top 10 surfaced accounts with one-line context
-- **Weekly CRM sync** — auto-create accounts in CRM with enrichment payload attached
-- **Monthly teardown export** — markdown summary of the month's surfacing, ready to publish as a blog post
+- **Daily Slack digest** to `#fidelis-leads` | top 10 surfaced accounts with one-line context
+- **Weekly CRM sync** | auto-create accounts in CRM with enrichment payload attached
+- **Monthly teardown export** | markdown summary of the month's surfacing, ready to publish as a blog post
 
 **What we are NOT building in v1:**
 
@@ -70,7 +70,7 @@ Custom scoring rubric. Three weights:
 
 ```
 [ Signal sources ]
-   ├── LinkedIn scraper        (existing buyer-engine module — extend)
+   ├── LinkedIn scraper        (existing buyer-engine module | extend)
    ├── Crunchbase / news API
    ├── BuiltWith
    └── Job boards
@@ -96,7 +96,7 @@ Custom scoring rubric. Three weights:
 ```
 
 Run on Claude Code Routines (per the existing Paradise Capital pattern in
-MEMORY) — weekly cron, fanned out to per-source scrapers, results merged
+MEMORY) | weekly cron, fanned out to per-source scrapers, results merged
 and scored in one place.
 
 ---
@@ -104,10 +104,10 @@ and scored in one place.
 ## What gets reported back to the website
 
 - A small "Built with our own engine" trust line on the homepage About teaser
-  (already shipped — `components/about-teaser.tsx`)
-- Monthly teardown blog posts under `/blog` — see `ai-lead-engine-vs-apollo`
+  (already shipped | `components/about-teaser.tsx`)
+- Monthly teardown blog posts under `/blog` | see `ai-lead-engine-vs-apollo`
   as the editorial frame
-- Eventually: a sanitized "Fidelis Engine — 90 day teardown" case study slot
+- Eventually: a sanitized "Fidelis Engine | 90 day teardown" case study slot
   reserved next to Paradise Capital and Brokerage
 
 ---
@@ -118,14 +118,14 @@ and scored in one place.
 |------|--------------------------------------------------------------------------------|
 | 1    | Spec the ICP scoring rubric. Extend buyer-engine schema. Wire 3 signal sources.|
 | 2    | Add enrichment layer. Get first 100 surfaced accounts into SQLite.             |
-| 3    | Slack digest live. Manual review for a week — tune weights.                    |
+| 3    | Slack digest live. Manual review for a week | tune weights.                    |
 | 4    | CRM sync + markdown export. First public teardown blog post drafted.           |
 
 ---
 
 ## Risks / honest reads
 
-- **Scraper fragility.** LinkedIn changes break things. Acceptable in v1 — we
+- **Scraper fragility.** LinkedIn changes break things. Acceptable in v1 | we
   control the runbook.
 - **Volume problem (good kind).** If the engine surfaces 50 great accounts/week
   and we only have time to engage 5, the constraint moves to outreach capacity.
@@ -142,4 +142,4 @@ Pick the v1 signal sources to start with. My recommendation: **funding events
 in-market intent based on our existing closed-won pattern). Everything else is
 v2.
 
-Then this becomes a sprint — not a website edit.
+Then this becomes a sprint | not a website edit.

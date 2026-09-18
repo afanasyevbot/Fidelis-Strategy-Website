@@ -108,7 +108,7 @@ export function LeadMagnetForm() {
         <label htmlFor="audit-company" className={label}>Company <span className="font-normal normal-case tracking-normal text-ink/45">(optional)</span></label>
         <input id="audit-company" name="company" autoComplete="organization" placeholder="Company" className={input} />
       </div>
-      {/* Honeypot — bots fill this, humans don't. Web3Forms drops these. */}
+      {/* Honeypot | bots fill this, humans don't. Web3Forms drops these. */}
       <input type="checkbox" name="botcheck" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden />
       <button
         type="submit"

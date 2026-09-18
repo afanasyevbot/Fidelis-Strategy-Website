@@ -25,7 +25,7 @@ const WARN_BORDER = "rgba(199, 119, 0, 0.30)";
 const SERIF = '"Iowan Old Style", "Charter", "Source Serif 4", Georgia, serif';
 const SANS = "var(--font-inter), ui-sans-serif, system-ui, sans-serif";
 
-// ── Logo mark helpers (inline SVG — no image files needed) ─────────────────
+// ── Logo mark helpers (inline SVG | no image files needed) ─────────────────
 // Adapted from fidelis-dashboard/components/logos/FidelisLogos.tsx
 
 function PulseMark({ size = 20 }: { size?: number }) {

@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "./polish.css";
 
 @theme {
   --color-forest-floor: #1A2A1C;
@@ -64,7 +65,7 @@
               0 6px 14px -8px rgba(26, 42, 28, 0.18);
 }
 
-/* Arrow nudge — pair with `.arrow-nudge` and put `[data-arrow]` on the icon. */
+/* Arrow nudge | pair with `.arrow-nudge` and put `[data-arrow]` on the icon. */
 .arrow-nudge [data-arrow] {
   display: inline-block;
   transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
@@ -74,7 +75,7 @@
   transform: translateX(4px);
 }
 
-/* Magnetic-feel CTA — gentle scale + shadow on press. */
+/* Magnetic-feel CTA | gentle scale + shadow on press. */
 .btn-press {
   transition:
     transform 0.18s cubic-bezier(0.22, 1, 0.36, 1),
@@ -106,7 +107,7 @@
   .link-underline { background-size: 100% 1px; transition: none; }
 }
 
-/* ---------- Scroll cue — vertical line that ticks downward forever ---------- */
+/* ---------- Scroll cue | vertical line that ticks downward forever ---------- */
 @keyframes scroll-cue {
   0%   { transform: translateY(-100%); }
   60%  { transform: translateY(100%); }
@@ -117,6 +118,19 @@
 }
 @media (prefers-reduced-motion: reduce) {
   .scroll-cue-line { animation: none; }
+}
+
+/* Homepage tree hero | video layer only; content visible immediately */
+@media (prefers-reduced-motion: reduce) {
+  .tree-hero-video {
+    display: none !important;
+    transition: none !important;
+  }
+}
+@media (max-width: 700px) {
+  .tree-hero .tree-hero-overlay {
+    background: rgba(18, 34, 23, 0.84) !important;
+  }
 }
 
 /* Hero copy paints with the poster. No entrance hide. */

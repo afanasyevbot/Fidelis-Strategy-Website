@@ -1,5 +1,5 @@
 /**
- * Hero — lone pine animation.
+ * Hero | lone pine animation.
  *
  * Inspired by: a solitary white pine emerging from morning mist.
  * Pure SVG + CSS. No JS, no video file needed.
@@ -53,7 +53,7 @@ export function HeroAnimation() {
         /* trunk */
         .tk { animation: drawTree 2.0s cubic-bezier(0.25,0.1,0.25,1) 0.4s both; }
 
-        /* branch tiers — bottom-up reveal */
+        /* branch tiers | bottom-up reveal */
         .t6l { animation: drawTree 1.1s ease-out 2.2s both; }
         .t6r { animation: drawTree 1.1s ease-out 2.3s both; }
         .t5l { animation: drawTree 1.0s ease-out 2.8s both; }
@@ -116,13 +116,13 @@ export function HeroAnimation() {
           <stop offset="100%" stopColor="#2A3D2C" stopOpacity="0" />
         </radialGradient>
 
-        {/* Ground fog — horizontal band at bottom */}
+        {/* Ground fog | horizontal band at bottom */}
         <linearGradient id="fogGrad" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%"   stopColor="#2A3D2C" stopOpacity="0" />
           <stop offset="100%" stopColor="#1A2A1C" stopOpacity="0.55" />
         </linearGradient>
 
-        {/* Side fades — fade tree toward edges so it feels emergent */}
+        {/* Side fades | fade tree toward edges so it feels emergent */}
         <linearGradient id="fadeR" x1="0" y1="0" x2="1" y2="0">
           <stop offset="70%"  stopColor="#2A3D2C" stopOpacity="0" />
           <stop offset="100%" stopColor="#2A3D2C" stopOpacity="0.70" />
@@ -154,7 +154,7 @@ export function HeroAnimation() {
       {/* ─── EVERYTHING ABOVE GROUND SWAYS TOGETHER ─── */}
       <g className="canopy">
 
-        {/* TIER 6 — widest, lowest ~y=748 */}
+        {/* TIER 6 | widest, lowest ~y=748 */}
         <g stroke="#D4C4A0" strokeOpacity="0.20" strokeWidth="2.2" fill="none" strokeLinecap="round">
           <path className="pl t6l" pathLength="1" strokeDashoffset="1"
             d="M 1180,748 C 1135,718 1042,712 888,755" />
@@ -165,7 +165,7 @@ export function HeroAnimation() {
         <ellipse className="fc f3" cx="888"  cy="748" rx="46" ry="22" fill="#D4C4A0" fillOpacity="0.14" />
         <ellipse className="fc f4" cx="1472" cy="748" rx="44" ry="21" fill="#D4C4A0" fillOpacity="0.14" />
 
-        {/* TIER 5 — ~y=645 */}
+        {/* TIER 5 | ~y=645 */}
         <g stroke="#D4C4A0" strokeOpacity="0.22" strokeWidth="2.0" fill="none" strokeLinecap="round">
           <path className="pl t5l" pathLength="1" strokeDashoffset="1"
             d="M 1180,645 C 1138,616 1056,610 926,646" />
@@ -175,7 +175,7 @@ export function HeroAnimation() {
         <ellipse className="fc f1" cx="926"  cy="640" rx="42" ry="20" fill="#D4C4A0" fillOpacity="0.15" />
         <ellipse className="fc f2" cx="1434" cy="640" rx="40" ry="20" fill="#D4C4A0" fillOpacity="0.15" />
 
-        {/* TIER 4 — ~y=545 */}
+        {/* TIER 4 | ~y=545 */}
         <g stroke="#D4C4A0" strokeOpacity="0.22" strokeWidth="1.9" fill="none" strokeLinecap="round">
           <path className="pl t4l" pathLength="1" strokeDashoffset="1"
             d="M 1180,545 C 1142,518 1068,514 964,546" />
@@ -185,7 +185,7 @@ export function HeroAnimation() {
         <ellipse className="fc f5" cx="964"  cy="540" rx="38" ry="18" fill="#B4B09A" fillOpacity="0.16" />
         <ellipse className="fc f6" cx="1398" cy="540" rx="36" ry="18" fill="#B4B09A" fillOpacity="0.16" />
 
-        {/* TIER 3 — ~y=452 */}
+        {/* TIER 3 | ~y=452 */}
         <g stroke="#D4C4A0" strokeOpacity="0.23" strokeWidth="1.7" fill="none" strokeLinecap="round">
           <path className="pl t3l" pathLength="1" strokeDashoffset="1"
             d="M 1180,452 C 1146,428 1082,424 1002,450" />
@@ -195,7 +195,7 @@ export function HeroAnimation() {
         <ellipse className="fc f7" cx="1002" cy="446" rx="34" ry="16" fill="#D4C4A0" fillOpacity="0.17" />
         <ellipse className="fc f8" cx="1360" cy="446" rx="32" ry="16" fill="#D4C4A0" fillOpacity="0.17" />
 
-        {/* TIER 2 — ~y=365 */}
+        {/* TIER 2 | ~y=365 */}
         <g stroke="#D4C4A0" strokeOpacity="0.24" strokeWidth="1.5" fill="none" strokeLinecap="round">
           <path className="pl t2l" pathLength="1" strokeDashoffset="1"
             d="M 1180,365 C 1150,344 1098,342 1042,362" />
@@ -205,7 +205,7 @@ export function HeroAnimation() {
         <ellipse className="fc f9"  cx="1042" cy="358" rx="28" ry="13" fill="#B4B09A" fillOpacity="0.18" />
         <ellipse className="fc f10" cx="1318" cy="358" rx="26" ry="13" fill="#B4B09A" fillOpacity="0.18" />
 
-        {/* TIER 1 — ~y=288 */}
+        {/* TIER 1 | ~y=288 */}
         <g stroke="#D4C4A0" strokeOpacity="0.24" strokeWidth="1.3" fill="none" strokeLinecap="round">
           <path className="pl t1l" pathLength="1" strokeDashoffset="1"
             d="M 1180,288 C 1156,270 1118,270 1086,284" />
@@ -215,7 +215,7 @@ export function HeroAnimation() {
         <ellipse className="fc f11" cx="1086" cy="280" rx="20" ry="10" fill="#D4C4A0" fillOpacity="0.20" />
         <ellipse className="fc f12" cx="1276" cy="280" rx="20" ry="10" fill="#D4C4A0" fillOpacity="0.20" />
 
-        {/* CROWN — top tuft */}
+        {/* CROWN | top tuft */}
         <path className="pl t0" pathLength="1" strokeDashoffset="1"
           d="M 1181,248 C 1178,220 1180,196 1180,178"
           stroke="#D4C4A0" strokeOpacity="0.24" strokeWidth="1.2" fill="none" strokeLinecap="round"

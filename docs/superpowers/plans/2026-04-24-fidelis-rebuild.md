@@ -1,4 +1,4 @@
-# Fidelis Strategy Website Rebuild — Implementation Plan
+# Fidelis Strategy Website Rebuild | Implementation Plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
@@ -10,7 +10,7 @@
 
 **Companion spec:** `docs/superpowers/specs/2026-04-24-fidelis-rebuild-design.md`
 
-**Project root assumption:** `/Users/matthewafanasiev/Downloads/claudeskills/fidelis-rebuild/` — all paths below are relative to this unless noted.
+**Project root assumption:** `/Users/matthewafanasiev/Downloads/claudeskills/fidelis-rebuild/` | all paths below are relative to this unless noted.
 
 ---
 
@@ -114,7 +114,7 @@ git commit -m "chore: scaffold Next.js app with static export"
 
 ## Task 2: Wire up theme tokens + fonts
 
-> **Note (Tailwind v4 adaptation):** The scaffold landed on Next 16 + Tailwind v4. Tailwind v4 has **no `tailwind.config.ts`** — all theme tokens live inline in CSS via `@theme`. Step 2.1 below uses the v4 syntax.
+> **Note (Tailwind v4 adaptation):** The scaffold landed on Next 16 + Tailwind v4. Tailwind v4 has **no `tailwind.config.ts`** | all theme tokens live inline in CSS via `@theme`. Step 2.1 below uses the v4 syntax.
 
 **Files:**
 - Modify: `app/globals.css`
@@ -181,9 +181,9 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Fidelis Strategy — We build what they can't.",
+  title: "Fidelis Strategy | We build what they can't.",
   description:
-    "Strategy, AI systems, custom apps — grown for your business. Custom lead-enrichment pipelines, AI outreach agents, internal tools, operator dashboards.",
+    "Strategy, AI systems, custom apps | grown for your business. Custom lead-enrichment pipelines, AI outreach agents, internal tools, operator dashboards.",
   metadataBase: new URL(siteConfig.url),
 };
 
@@ -229,14 +229,14 @@ import { twMerge } from "tailwind-merge";
 export function cn(...inputs: ClassValue[]) { return twMerge(clsx(inputs)); }
 ```
 
-- [ ] **Step 2.5: (Obsolete under Tailwind v4 — globals.css was overwritten in 2.1)**
+- [ ] **Step 2.5: (Obsolete under Tailwind v4 | globals.css was overwritten in 2.1)**
 
 Skip. No separate action.
 
 - [ ] **Step 2.6: Verify build**
 
 Run: `npm run build`
-Expected: success. Open `out/index.html` — fonts declared, no errors.
+Expected: success. Open `out/index.html` | fonts declared, no errors.
 
 - [ ] **Step 2.7: Commit**
 
@@ -405,7 +405,7 @@ export function Footer() {
 
 - [ ] **Step 4.3: Drop temporary logo placeholder**
 
-Save a temporary `public/logo.svg` — 28×28 olive shield so pages render until the real asset is committed:
+Save a temporary `public/logo.svg` | 28×28 olive shield so pages render until the real asset is committed:
 ```bash
 cat > public/logo.svg <<'EOF'
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><path d="M30 6 L50 14 L50 32 Q50 46 30 54 Q10 46 10 32 L10 14 Z" fill="#4A5D3C" stroke="#D4C4A0" stroke-width="1.5"/></svg>
@@ -477,7 +477,7 @@ export function Hero() {
           We <em className="not-italic md:italic text-linen font-bold">build</em> what they can&apos;t.
         </h1>
         <p className="font-display text-xl md:text-[26px] leading-tight mt-5 text-linen tracking-[-0.01em] md:whitespace-nowrap">
-          Strategy, AI systems, custom apps — grown for your business.
+          Strategy, AI systems, custom apps | grown for your business.
         </p>
         <p className="font-sans text-base md:text-[17px] leading-[1.65] mt-6 text-[#C8C4AC] max-w-[640px]">
           Custom lead-enrichment pipelines, AI outreach agents, internal tools, operator dashboards.
@@ -493,7 +493,7 @@ export function Hero() {
 }
 ```
 
-Note: the `md:italic` is intentional — keeps "build" italic on desktop. Remove the `not-italic` class if the italic looks right on mobile too; leave as-is for now.
+Note: the `md:italic` is intentional | keeps "build" italic on desktop. Remove the `not-italic` class if the italic looks right on mobile too; leave as-is for now.
 
 - [ ] **Step 5.3: Commit**
 
@@ -803,7 +803,7 @@ export function ProofSection() {
         <blockquote className="mt-10">
           <p className="font-display font-light text-2xl md:text-3xl leading-snug text-bone">
             {/* TODO: replace with real Paradise Capital quote */}
-            &ldquo;Fidelis didn&apos;t just tell us what to build — they built it.
+            &ldquo;Fidelis didn&apos;t just tell us what to build | they built it.
             The weekly intel pipeline is now core to how we source deals.&rdquo;
           </p>
           <footer className="mt-6 text-[13px] tracking-wide text-linen uppercase">
@@ -841,7 +841,7 @@ export function AboutTeaser() {
         </h2>
         <p className="font-sans text-[17px] text-ink/80 leading-relaxed mt-6 max-w-2xl mx-auto">
           Fidelis is Latin for faithful. We&apos;re a small team of operators who believe
-          the right consulting partner doesn&apos;t just advise — they stick with you
+          the right consulting partner doesn&apos;t just advise | they stick with you
           through the ship.
         </p>
         <div className="mt-10">
@@ -906,7 +906,7 @@ export default function HomePage() {
 
 Run: `npm run dev` and open http://localhost:3000
 
-Checklist — all must be true:
+Checklist | all must be true:
 - [ ] Nav sticks on scroll, Deep Olive bg.
 - [ ] Hero: bold 60px headline, italic "build" in Linen, 30px Linen sub, 17px Sage body.
 - [ ] "What We Build" shows 6 cards in 3-col grid (2-col tablet, 1-col mobile).
@@ -949,7 +949,7 @@ import { systems } from "@/content/systems";
 import { cn } from "@/lib/cn";
 
 export const metadata = {
-  title: "What We Build — Fidelis Strategy",
+  title: "What We Build | Fidelis Strategy",
   description: "Six custom AI systems Fidelis deploys: Buyer Engine, Weekly Intel, Valuation App, Outreach Agents, Pipeline Systems, Operator Dashboards.",
 };
 
@@ -1061,14 +1061,14 @@ import { Eyebrow } from "@/components/eyebrow";
 import { FinalCta } from "@/components/final-cta";
 
 export const metadata = {
-  title: "About — Fidelis Strategy",
+  title: "About | Fidelis Strategy",
   description: "Fidelis is Latin for faithful. We're a small team of operators who advise and build.",
 };
 
 const principles = [
   { title: "Ship, don't slide-ware.", body: "Every engagement ends with working systems, not a PDF." },
   { title: "Own the outcome.", body: "We stay embedded through deployment, optimization, and iteration." },
-  { title: "Small team, full stack.", body: "Strategy, design, engineering — one partner, one accountability line." },
+  { title: "Small team, full stack.", body: "Strategy, design, engineering | one partner, one accountability line." },
 ];
 
 export default function Page() {
@@ -1083,7 +1083,7 @@ export default function Page() {
               Faithful. Loyal. Trustworthy.
             </h1>
             <p className="font-display text-2xl md:text-[30px] leading-tight mt-6 text-linen max-w-3xl">
-              Fidelis is Latin for faithful. That's not a tagline — it's the operating principle.
+              Fidelis is Latin for faithful. That's not a tagline | it's the operating principle.
             </p>
           </div>
         </section>
@@ -1098,8 +1098,8 @@ export default function Page() {
             <div className="font-sans text-[17px] text-ink/80 leading-[1.75] space-y-5 mt-6">
               <p>
                 I&apos;ve spent the last several years building the systems most consultants
-                only recommend — lead-enrichment pipelines, AI outreach agents, internal
-                operator tools, valuation apps, dashboards — for real businesses with real
+                only recommend | lead-enrichment pipelines, AI outreach agents, internal
+                operator tools, valuation apps, dashboards | for real businesses with real
                 P&amp;Ls on the line.
               </p>
               <p>
@@ -1160,7 +1160,7 @@ import { Eyebrow } from "@/components/eyebrow";
 import { FinalCta } from "@/components/final-cta";
 
 export const metadata = {
-  title: "Paradise Capital — Fidelis Case Study",
+  title: "Paradise Capital | Fidelis Case Study",
   description: "How Fidelis built a weekly scrape + enrichment + Slack recap pipeline for Paradise Capital deal sourcing.",
 };
 
@@ -1194,7 +1194,7 @@ export default function Page() {
             <h2 className="font-display text-4xl text-deep-olive mt-6 tracking-tight">Sourcing without signal.</h2>
             <p className="font-sans text-[17px] text-ink/80 leading-relaxed mt-6">
               {/* TODO: confirm with client */}
-              The team was spending days each week on manual scraping and filtering —
+              The team was spending days each week on manual scraping and filtering , 
               time that should have gone to diligence and conversations, not data plumbing.
             </p>
           </div>
@@ -1222,7 +1222,7 @@ export default function Page() {
             <blockquote className="mt-8">
               <p className="font-display font-light text-2xl md:text-3xl leading-snug">
                 {/* TODO: replace with actual client quote */}
-                &ldquo;Fidelis didn&apos;t just tell us what to build — they built it. The
+                &ldquo;Fidelis didn&apos;t just tell us what to build | they built it. The
                 weekly intel pipeline is now core to how we source deals.&rdquo;
               </p>
               <footer className="mt-4 text-[13px] tracking-wide text-linen uppercase">
@@ -1286,7 +1286,7 @@ export function ContactForm() {
   if (status === "ok") {
     return (
       <div className="p-6 border border-moss-olive/30 bg-bone">
-        <p className="font-display text-2xl text-deep-olive">Got it — talk soon.</p>
+        <p className="font-display text-2xl text-deep-olive">Got it | talk soon.</p>
         <p className="font-sans text-[15px] text-ink/70 mt-2">
           We&apos;ll reply within one business day.
         </p>
@@ -1318,7 +1318,7 @@ export function ContactForm() {
         {status === "loading" ? "Sending…" : "Send →"}
       </button>
       {status === "err" && (
-        <p className="text-sm text-red-700">Something went wrong — email us directly instead.</p>
+        <p className="text-sm text-red-700">Something went wrong | email us directly instead.</p>
       )}
     </form>
   );
@@ -1337,7 +1337,7 @@ import { ContactForm } from "@/components/contact-form";
 import { siteConfig } from "@/lib/siteConfig";
 
 export const metadata = {
-  title: "Contact — Fidelis Strategy",
+  title: "Contact | Fidelis Strategy",
   description: "Tell us what you want to build.",
 };
 
@@ -1375,7 +1375,7 @@ export default function Page() {
                 Grab a time.
               </h2>
               <p className="font-sans text-[17px] text-ink/80 leading-relaxed mt-6">
-                A 30-minute discovery call — we&apos;ll talk about what you&apos;re trying
+                A 30-minute discovery call | we&apos;ll talk about what you&apos;re trying
                 to build and whether we&apos;re the right partner.
               </p>
               <div className="mt-6 space-y-3 font-sans text-[15px]">
@@ -1490,7 +1490,7 @@ Common fixes if low:
 - [ ] **Step 15.4: Manual a11y sweep**
 
 Check:
-- [ ] Tab through nav + hero buttons + all CTAs — focus rings visible.
+- [ ] Tab through nav + hero buttons + all CTAs | focus rings visible.
 - [ ] Headings are h1 → h2 → h3 (no skipped levels).
 - [ ] Form has visible labels (placeholder-only is OK per spec for this stage, but confirm contrast).
 
@@ -1512,7 +1512,7 @@ git commit -m "chore: a11y + perf polish"
 
 Create `docs/deploy.md`:
 ```markdown
-# Deploy — Hostinger
+# Deploy | Hostinger
 
 ## First deploy
 
@@ -1523,7 +1523,7 @@ Create `docs/deploy.md`:
    `cd out && zip -r ../site.zip . && cd ..`
 5. Upload `site.zip` to `public_html/` via File Manager.
 6. Right-click → Extract. Delete the zip.
-7. Visit https://fidelisstrategy.net — should load the new home.
+7. Visit https://fidelisstrategy.net | should load the new home.
 
 ## Subsequent deploys
 
@@ -1542,7 +1542,7 @@ ErrorDocument 404 /404.html
 ```
 
 Because `trailingSlash: true` is set in `next.config.mjs`, Next.js emits
-directory-style paths (`/about/index.html`) — Apache serves these by default
+directory-style paths (`/about/index.html`) | Apache serves these by default
 without rewrites. The rule above is a belt-and-braces fallback.
 ```
 
@@ -1557,9 +1557,9 @@ Follow `docs/deploy.md`.
 - [ ] **Step 16.4: Smoke test production**
 
 Visit in incognito:
-- [ ] https://fidelisstrategy.net — home loads, hero renders, fonts applied.
-- [ ] Click every nav link — all 4 pages load.
-- [ ] `/contact` — submit a real form entry, confirm Formspree inbox receives it.
+- [ ] https://fidelisstrategy.net | home loads, hero renders, fonts applied.
+- [ ] Click every nav link | all 4 pages load.
+- [ ] `/contact` | submit a real form entry, confirm Formspree inbox receives it.
 - [ ] GA4 real-time view shows your session.
 - [ ] Bad URL (e.g. `/nope`) → shows 404 page.
 
@@ -1611,8 +1611,8 @@ git commit -m "docs: hero animation swap instructions"
 
 ## Self-review summary (checked by author before handoff)
 
-- **Spec coverage:** every spec section maps to a task — palette (T2), type (T2/T5), nav/footer (T4), home (T5-9), what-we-build (T10), about (T11), case study (T12), contact (T13), 404 (T14), a11y/perf (T15), deploy (T16), animation swap (T17).
-- **Placeholders:** only user-supplied values (Formspree ID, GA4 ID, Cal URL, founder copy, Paradise quote, metrics) are marked `TODO` — these are real open items that need the user, not filler.
+- **Spec coverage:** every spec section maps to a task | palette (T2), type (T2/T5), nav/footer (T4), home (T5-9), what-we-build (T10), about (T11), case study (T12), contact (T13), 404 (T14), a11y/perf (T15), deploy (T16), animation swap (T17).
+- **Placeholders:** only user-supplied values (Formspree ID, GA4 ID, Cal URL, founder copy, Paradise quote, metrics) are marked `TODO` | these are real open items that need the user, not filler.
 - **Type consistency:** `SystemEntry` shape defined once in `content/systems.ts`, consumed in `components/system-card.tsx` and `app/what-we-build/page.tsx`. `Eyebrow.tone` values (`"linen" | "moss"`) used consistently everywhere. `CtaButton.variant` values (`"primary" | "secondary"`) used consistently. `GrowthEngine.tone` (`"bone" | "dark"`) used consistently.
 
 ---
@@ -1621,8 +1621,8 @@ git commit -m "docs: hero animation swap instructions"
 
 Plan complete and saved to `docs/superpowers/plans/2026-04-24-fidelis-rebuild.md`. Two execution options:
 
-**1. Subagent-Driven (recommended)** — I dispatch a fresh subagent per task, review between tasks, fast iteration.
+**1. Subagent-Driven (recommended)** | I dispatch a fresh subagent per task, review between tasks, fast iteration.
 
-**2. Inline Execution** — Execute tasks in this session using executing-plans, batch execution with checkpoints.
+**2. Inline Execution** | Execute tasks in this session using executing-plans, batch execution with checkpoints.
 
 Which approach?

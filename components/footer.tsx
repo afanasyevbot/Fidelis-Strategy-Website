@@ -3,20 +3,18 @@ import Image from "next/image";
 import { siteConfig } from "@/lib/siteConfig";
 
 const navLinks = [
-  { label: "What We Build", href: "/what-we-build" },
-  { label: "Process",       href: "/process" },
-  { label: "Pulse",         href: "/pulse" },
-  { label: "Case Studies",  href: "/case-studies" },
-  { label: "Blog",          href: "/blog" },
-  { label: "About",         href: "/about" },
+  { label: "How I Help", href: "/what-we-build/" },
+  { label: "Process", href: "/process/" },
+  { label: "Work", href: "/case-studies/" },
+  { label: "Software & systems", href: "/pulse/" },
+  { label: "Articles", href: "/blog/" },
+  { label: "About", href: "/about/" },
 ];
 
 export function Footer() {
   return (
     <footer className="bg-forest-floor text-bone">
-      {/* Main footer grid */}
       <div className="mx-auto max-w-6xl px-4 sm:px-6 py-14 grid md:grid-cols-3 gap-8 md:gap-10">
-        {/* Brand */}
         <div>
           <div className="flex items-center gap-3 mb-3">
             <Image src="/logo.png?v=3" alt="Fidelis Strategy" width={72} height={72} style={{ filter: "saturate(0.7) brightness(1.05)" }} />
@@ -26,14 +24,10 @@ export function Footer() {
             {siteConfig.tagline}
           </div>
           <p className="font-sans text-[13px] text-bone/60 leading-relaxed mt-4 max-w-xs">
-            Growth strategy and AI-powered systems for owner-operated businesses. Strategy through launch, one partner.
-          </p>
-          <p className="font-sans text-[12px] text-linen/50 mt-4">
-            All engagements run under NDA.
+            {siteConfig.footerDescription}
           </p>
         </div>
 
-        {/* Navigation */}
         <div>
           <div className="font-sans text-[12px] uppercase tracking-button text-linen/60 font-semibold mb-4">
             Navigation
@@ -52,7 +46,6 @@ export function Footer() {
           </ul>
         </div>
 
-        {/* Contact */}
         <div>
           <div className="font-sans text-[12px] uppercase tracking-button text-linen/60 font-semibold mb-4">
             Get in Touch
@@ -96,17 +89,16 @@ export function Footer() {
             </div>
             <div className="pt-2">
               <Link
-                href="/contact"
+                href="/contact/"
                 className="font-sans text-[13px] text-linen/60 hover:text-linen underline underline-offset-2 transition-colors"
               >
-                Not ready to talk? Send a note instead.
+                Contact Matthew
               </Link>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Bottom bar */}
       <div className="border-t border-bone/10">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-2">
           <p className="font-sans text-[12px] text-bone/35">

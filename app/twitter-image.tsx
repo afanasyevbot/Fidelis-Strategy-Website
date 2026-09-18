@@ -1,4 +1,4 @@
-// Twitter card image — same look as the OG image, served separately at /twitter-image.
+// Twitter card image | same look as the OG image, served separately at /twitter-image.
 // Re-exporting the route segment config (runtime) isn't allowed, so each value is declared inline.
 export { default } from "./opengraph-image";
 
