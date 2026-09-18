@@ -16,7 +16,6 @@ export const metadata: Metadata = {
 
 const principles = [
   "Learn before prescribing.",
-  "Explain tradeoffs.",
   "Keep the business goal connected to the build.",
   "Improve the process as well as the software.",
 ];
@@ -39,34 +38,52 @@ export default function Page() {
         </section>
 
         <section className="bg-bone">
-          <div className="mx-auto max-w-4xl px-6 py-24">
-            <div className="flex items-center gap-5">
-              <div className="relative h-20 w-20 rounded-full overflow-hidden border-2 border-moss-olive shrink-0">
-                <Image
-                  src="/matthew.jpg"
-                  alt="Matthew Afanasiev, Founder, Fidelis Strategy"
-                  fill
-                  className="object-cover object-top"
-                  sizes="80px"
-                />
-              </div>
-              <div>
-                <h2 className="font-display font-bold text-3xl text-deep-olive tracking-tight">
+          <div className="mx-auto w-[min(1216px,calc(100%-80px))] py-16 md:py-24">
+            <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,38%)_1fr] gap-8 md:gap-10 lg:gap-14 items-start">
+              <figure className="w-full max-w-[min(100%,320px)] lg:max-w-[400px] mx-auto lg:mx-0">
+                <div className="relative aspect-[3/4] w-full overflow-hidden rounded-sm border border-deep-olive/22 bg-linen/15">
+                  <Image
+                    src="/matthew.jpg"
+                    alt="Matthew Afanasiev, Founder, Fidelis Strategy"
+                    width={900}
+                    height={1200}
+                    className="h-full w-full object-cover object-top"
+                    sizes="(max-width: 1024px) 320px, 400px"
+                    priority
+                  />
+                </div>
+              </figure>
+
+              <div className="min-w-0">
+                <h2 className="font-display font-bold text-3xl md:text-[36px] text-deep-olive tracking-tight">
                   Matthew Afanasiev
                 </h2>
-                <p className="font-sans text-[13px] uppercase tracking-button text-moss-olive mt-1 font-semibold">
+                <p className="font-sans text-[13px] uppercase tracking-button text-moss-olive mt-2 font-semibold">
                   Founder, Fidelis Strategy
                 </p>
+                <div className="font-sans text-[17px] text-ink/80 leading-[1.75] space-y-5 mt-6">
+                  <p>
+                    In supply chain software, I saw businesses adapt their processes around tools that did not always fit. That experience shaped a principle I bring to Fidelis: understand the business before recommending changes.
+                  </p>
+                </div>
               </div>
             </div>
 
-            <div className="font-sans text-[17px] text-ink/80 leading-[1.75] space-y-5 mt-8">
-              <p>
-                In supply chain software, I saw businesses adapt their processes around tools that did not always fit. That experience shaped a principle I bring to Fidelis: understand the business before recommending changes.
-              </p>
-            </div>
+            <div className="mt-14 md:mt-16 space-y-12 max-w-3xl">
+              <div className="rounded-sm border border-deep-olive/20 bg-linen/15 p-6 md:p-8">
+                <h2 className="font-display font-bold text-2xl md:text-[32px] text-deep-olive tracking-tight">
+                  Integrity comes first.
+                </h2>
+                <div className="font-sans text-[17px] text-ink/80 leading-[1.75] mt-4 space-y-4">
+                  <p>
+                    My faith is a big part of my life, and it shapes how I approach my work. I want to do right by the people and businesses who trust me: listen carefully, give honest advice, and build something that genuinely helps.
+                  </p>
+                  <p>
+                    That means being clear about tradeoffs, not overselling what technology can do, and recommending a simpler approach when it better serves the business.
+                  </p>
+                </div>
+              </div>
 
-            <div className="mt-16 space-y-12">
               <div>
                 <h2 className="font-display font-bold text-2xl md:text-[32px] text-deep-olive tracking-tight">
                   Strategy should connect to what happens next
@@ -102,7 +119,7 @@ export default function Page() {
                 <ul className="mt-4 space-y-2 font-sans text-[17px] text-ink/80">
                   {principles.map((p) => (
                     <li key={p} className="flex gap-2">
-                      <span className="text-moss-olive">◇</span>
+                      <span className="text-moss-olive" aria-hidden>◇</span>
                       <span>{p}</span>
                     </li>
                   ))}
@@ -116,7 +133,7 @@ export default function Page() {
               </div>
             </div>
 
-            <div className="flex flex-wrap gap-4 mt-12">
+            <div className="flex flex-wrap gap-4 mt-12 max-w-3xl">
               <Link href="/case-studies/" className="font-sans text-[12px] uppercase tracking-button text-deep-olive hover:text-moss-olive font-semibold link-underline">
                 See the work →
               </Link>
