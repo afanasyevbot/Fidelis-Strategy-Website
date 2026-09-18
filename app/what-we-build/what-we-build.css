@@ -333,10 +333,19 @@
   outline-offset: 2px;
 }
 
-.wwb-tab-input:nth-of-type(1):checked ~ .wwb-explorer-tabs label[for="wwb-example-research"],
-.wwb-tab-input:nth-of-type(2):checked ~ .wwb-explorer-tabs label[for="wwb-example-workflows"],
-.wwb-tab-input:nth-of-type(3):checked ~ .wwb-explorer-tabs label[for="wwb-example-reporting"],
-.wwb-tab-input:nth-of-type(4):checked ~ .wwb-explorer-tabs label[for="wwb-example-applications"] {
+.wwb-examples-selector-label {
+  margin-bottom: 0.65rem;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-moss-olive);
+}
+
+.wwb-tab-input:nth-of-type(1):checked ~ .wwb-examples-selector-label ~ .wwb-explorer-tabs label[for="wwb-example-repeated-work"],
+.wwb-tab-input:nth-of-type(2):checked ~ .wwb-examples-selector-label ~ .wwb-explorer-tabs label[for="wwb-example-customer-follow-through"],
+.wwb-tab-input:nth-of-type(3):checked ~ .wwb-examples-selector-label ~ .wwb-explorer-tabs label[for="wwb-example-scattered-information"],
+.wwb-tab-input:nth-of-type(4):checked ~ .wwb-examples-selector-label ~ .wwb-explorer-tabs label[for="wwb-example-growth-opportunities"] {
   background: var(--color-deep-olive);
   border-color: var(--color-deep-olive);
   color: var(--color-bone);
@@ -427,17 +436,26 @@
 }
 
 .wwb-examples-note {
-  margin-top: 0.85rem;
+  margin-top: 1.25rem;
   font-size: 0.8125rem;
   color: var(--color-moss-olive);
+}
+
+.wwb-examples-invite {
+  margin-top: 1rem;
+  max-width: 36rem;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  font-weight: 600;
+  color: var(--color-deep-olive);
 }
 
 .wwb-examples-link {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  margin-top: 1.5rem;
-  font-size: 0.875rem;
+  margin-top: 1rem;
+  font-size: 0.9375rem;
   font-weight: 600;
   color: var(--color-deep-olive);
   text-decoration: underline;
