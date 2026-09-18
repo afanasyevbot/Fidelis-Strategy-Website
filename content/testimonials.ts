@@ -3,7 +3,7 @@ export const testimonials = {
     name: "Paradise Capital",
     attribution: "Paul Niccum · CEO, Paradise Capital",
     text:
-      "Before the Buyer Engine, building the buyer list for each mandate was a manual process. Now we have a living buyer universe that refreshes itself, continuously expands our buyer coverage, and most importantly builds a curated buyer list for each client from that universe plus targeted searches. Weeks of manual work compressed into minutes. That lets us scale the practice, put the strongest buyers in front of our clients, and keep our attention on serving them.",
+      "Before the Buyer Engine, building the buyer list for each deal was a manual process. Now we have a living buyer universe that refreshes itself, continuously expands our buyer coverage, and most importantly builds a curated buyer list for each client from that universe plus targeted searches. Weeks of manual work compressed into minutes. That lets us scale the practice, put the strongest buyers in front of our clients, and keep our attention on serving them.",
   },
   lexi: {
     name: "Linked by Lexi",
@@ -14,7 +14,13 @@ export const testimonials = {
   grace: {
     name: "Grace Evangelical Church",
     attribution: "Leadership · Grace Evangelical Church",
-    text:
-      "Fidelis Strategy gave their time pro bono to help our small church. Matthew rebuilt our website, moved our staff onto proper email through a nonprofit Microsoft 365 tenant, and built online giving right into the site. Then he built a volunteer and member portal: one place to schedule our teams, keep track of our members, send reminders when we need volunteers for an event, and just keep our whole church connected.",
+    text: [
+      "Matthew gave his time pro bono to help our small church solve a practical challenge: coordinating volunteers and keeping our members informed. He built a custom member and volunteer portal that gives us one place to manage our member directory, schedule teams, and send church announcements and event reminders.",
+      "He also rebuilt our website, moved our staff onto Microsoft 365 Business, and integrated online giving directly into the site. Together, these improvements help us organize the work behind church life and keep our community connected.",
+    ],
   },
 } as const;
+
+export function testimonialParagraphs(text: string | readonly string[]): string[] {
+  return typeof text === "string" ? [text] : [...text];
+}

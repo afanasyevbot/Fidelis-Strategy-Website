@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { testimonials } from "@/content/testimonials";
+import { testimonials, testimonialParagraphs } from "@/content/testimonials";
 import { LeadGenMotif } from "./lead-gen-motif";
 import { ResultMoment } from "./result-moment";
 import { Reveal } from "./reveal";
@@ -82,7 +82,11 @@ export function ProofSection() {
               Grace Evangelical Church / Community work
             </p>
             <blockquote className="mb-3.5">
-              <p className="text-[16px] leading-[1.75]">{grace.text}</p>
+              {testimonialParagraphs(grace.text).map((paragraph) => (
+                <p key={paragraph} className="text-[16px] leading-[1.75] [&+&]:mt-4">
+                  {paragraph}
+                </p>
+              ))}
               <footer className="mt-5 text-[11px] md:text-[12px] font-semibold text-moss-olive">
                 {grace.attribution}
               </footer>

@@ -5,7 +5,7 @@ import { Footer } from "@/components/footer";
 import { pageDescriptions, pageTitles } from "@/lib/seo";
 import { siteConfig } from "@/lib/siteConfig";
 import { LeadGenMotif } from "@/components/lead-gen-motif";
-import { testimonials } from "@/content/testimonials";
+import { testimonials, testimonialParagraphs } from "@/content/testimonials";
 
 export const metadata: Metadata = {
   title: pageTitles.caseStudies,
@@ -132,7 +132,11 @@ export default function Page() {
                 </div>
                 <div className="bg-linen/25 border-l-[3px] border-moss-olive p-7 md:p-8">
                   <blockquote>
-                    <p className="text-[16px] leading-[1.8]">{grace.text}</p>
+                    {testimonialParagraphs(grace.text).map((paragraph) => (
+                      <p key={paragraph} className="text-[16px] leading-[1.8] [&+&]:mt-4">
+                        {paragraph}
+                      </p>
+                    ))}
                     <footer className="mt-5 text-[12px] font-semibold text-moss-olive">{grace.attribution}</footer>
                   </blockquote>
                 </div>
