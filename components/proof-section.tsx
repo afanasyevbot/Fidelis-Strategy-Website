@@ -25,7 +25,7 @@ export function ProofSection() {
         <Reveal delay={40}>
           <article className="grid grid-cols-1 md:grid-cols-[0.82fr_1.18fr] rounded-sm overflow-hidden">
             <div className="bg-forest-floor text-bone p-7 md:p-[43px]">
-              <p className="font-sans text-[9px] md:text-[10px] font-semibold uppercase tracking-[0.1em] text-linen mb-5 md:mb-6">
+              <p className="font-sans text-[12px] md:text-[14px] font-bold uppercase tracking-[0.12em] text-bone mb-5 md:mb-6">
                 Client project / Paradise Capital
               </p>
               <h3 className="font-display text-[29px] md:text-[32px] font-semibold leading-[1.18] max-w-[340px]">

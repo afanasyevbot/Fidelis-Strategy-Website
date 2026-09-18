@@ -245,9 +245,6 @@ export function TreeHero() {
               {siteConfig.secondaryCta.label} <span aria-hidden>↗</span>
             </Link>
           </div>
-          <p className="hero-helper mt-4 text-[10px] md:text-[12px] text-linen max-w-[300px] leading-[1.65]">
-            A personal review and a useful starting point—or the questions we should explore first.
-          </p>
         </div>
 
         <aside
