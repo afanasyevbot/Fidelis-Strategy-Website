@@ -20,39 +20,43 @@ export default function ProcessPage() {
       <main className="process-page bg-bone text-ink">
         <section className="bg-forest-floor text-bone border-b border-linen/20 process-hero">
           <div className="process-container process-hero-inner">
-            <nav aria-label="Breadcrumb" className="process-hero-breadcrumb flex flex-wrap items-center justify-center gap-2 text-[12px] text-linen">
+            <nav aria-label="Breadcrumb" className="process-hero-breadcrumb flex flex-wrap items-center gap-2 text-[12px] text-linen">
               <Link href="/" className="underline underline-offset-4 hover:text-bone">Home</Link>
               <span aria-hidden>/</span>
               <span aria-current="page">Process</span>
             </nav>
 
-            <p className="process-hero-eyebrow font-sans text-[11px] font-semibold uppercase tracking-[0.15em] text-linen">
-              The Fidelis 4D Method
-            </p>
-            <h1 className="process-hero-title">
-              Discover. Design.
-              <br />
-              Deploy. Drive.
-            </h1>
-            <p className="process-hero-support">
-              From understanding your business and identifying growth opportunities to implementing the right systems and improving them through use.
-            </p>
-            <p className="process-hero-clarification">
-              The method provides structure. The recommendations, systems, and scope are tailored to your business.
-            </p>
-            <p className="process-hero-reassurance">
-              You don&apos;t need to know the tools, or even where to start.
-            </p>
-            <div className="process-hero-actions">
-              <Link
-                href={siteConfig.primaryCta.href}
-                className="polish-btn btn-press inline-flex items-center justify-center gap-2 min-h-[50px] px-5 py-3 bg-linen text-deep-olive text-[14px] font-semibold rounded-sm hover:bg-[#c6b48a]"
-              >
-                {siteConfig.primaryCta.label} <span data-arrow aria-hidden>↗</span>
-              </Link>
-              <Link href={siteConfig.secondaryCta.href} className="process-hero-secondary">
-                {siteConfig.secondaryCta.label} →
-              </Link>
+            <div className="process-hero-grid">
+              <div className="process-hero-heading">
+                <p className="process-hero-eyebrow font-sans text-[11px] font-semibold uppercase tracking-[0.15em] text-linen">
+                  The Fidelis 4D Method
+                </p>
+                <h1 className="process-hero-title">
+                  Discover. Design.
+                  <br />
+                  Deploy. Drive.
+                </h1>
+              </div>
+
+              <div className="process-hero-copy">
+                <p className="process-hero-support">
+                  A clear approach to finding growth opportunities, putting the right systems in place, and improving them as your business evolves.
+                </p>
+                <p className="process-hero-reassurance">
+                  You don&apos;t need to know the tools, or even where to start.
+                </p>
+                <div className="process-hero-actions">
+                  <Link
+                    href={siteConfig.primaryCta.href}
+                    className="polish-btn btn-press inline-flex items-center justify-center gap-2 min-h-[50px] px-5 py-3 bg-linen text-deep-olive text-[14px] font-semibold rounded-sm hover:bg-[#c6b48a]"
+                  >
+                    {siteConfig.primaryCta.label} <span data-arrow aria-hidden>↗</span>
+                  </Link>
+                  <Link href={siteConfig.secondaryCta.href} className="process-hero-secondary">
+                    {siteConfig.secondaryCta.label} →
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </section>
