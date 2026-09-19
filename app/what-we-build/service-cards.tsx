@@ -42,10 +42,15 @@ export function ServiceCards() {
           ))}
         </div>
 
-        <p className="wwb-process-link">
-          See how Discover, Design, Deploy, and Drive connect the work.{" "}
-          <Link href="/process/">Explore the process</Link>
-        </p>
+        <div className="wwb-method-invite">
+          <h3 className="wwb-method-invite-heading">Connected through the Fidelis 4D Method.</h3>
+          <p className="wwb-method-invite-body">
+            Discover the opportunity. Design the approach. Deploy the solution. Drive continued improvement. The structure stays clear while the recommendations and systems are shaped around your business.
+          </p>
+          <Link href="/process/" className="wwb-method-invite-link">
+            Explore the 4D method <span aria-hidden>↗</span>
+          </Link>
+        </div>
       </div>
     </section>
   );

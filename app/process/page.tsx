@@ -27,7 +27,7 @@ export default function ProcessPage() {
             </nav>
 
             <p className="process-hero-eyebrow font-sans text-[11px] font-semibold uppercase tracking-[0.15em] text-linen">
-              The process
+              The Fidelis 4D Method
             </p>
             <h1 className="process-hero-title">
               Discover. Design.
@@ -35,7 +35,10 @@ export default function ProcessPage() {
               Deploy. Drive.
             </h1>
             <p className="process-hero-support">
-              A clear path from understanding your business to putting the right strategy and systems into practice, then improving them through use.
+              From understanding your business and identifying growth opportunities to implementing the right systems and improving them through use.
+            </p>
+            <p className="process-hero-clarification">
+              The method provides structure. The recommendations, systems, and scope are tailored to your business.
             </p>
             <p className="process-hero-reassurance">
               You don&apos;t need to know the tools, or even where to start.

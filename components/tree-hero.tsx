@@ -252,7 +252,7 @@ export function TreeHero() {
           className="hero-aside hidden lg:block border-l border-linen/35 pl-8 mt-14"
         >
           <p className="font-sans text-[9px] font-semibold uppercase tracking-[0.13em] text-bone mb-7 max-w-[205px] leading-[1.8]">
-            From understanding to implementation
+            The Fidelis 4D Method
           </p>
           <div className="method-preview">
             {METHOD.map((step) => (
@@ -269,7 +269,7 @@ export function TreeHero() {
             href="/process/"
             className="inline-flex items-center gap-3 text-[12px] font-semibold border-b border-current pb-2 mt-1.5 hover:opacity-75"
           >
-            Explore the process <span aria-hidden>↗</span>
+            Explore the 4D method <span aria-hidden>↗</span>
           </Link>
         </aside>
       </div>

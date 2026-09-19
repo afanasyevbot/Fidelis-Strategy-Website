@@ -96,6 +96,9 @@ export default function Page() {
                 </article>
               ))}
             </div>
+            <p className="about-approach-method">
+              <Link href="/process/">The Fidelis 4D Method</Link> connects this work, from discovery and planning to implementation and continued refinement.
+            </p>
           </section>
 
           <section className="about-integrity" aria-labelledby="about-integrity-heading">

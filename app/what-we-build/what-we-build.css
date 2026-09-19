@@ -249,14 +249,32 @@
   color: var(--color-moss-olive);
 }
 
-.wwb-process-link {
+.wwb-method-invite {
   margin-top: 2rem;
+  max-width: 40rem;
+}
+
+.wwb-method-invite-heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2.2vw, 1.5rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: var(--color-deep-olive);
+}
+
+.wwb-method-invite-body {
+  margin-top: 0.65rem;
   font-size: 0.9375rem;
-  line-height: 1.65;
+  line-height: 1.7;
   color: rgba(26, 26, 26, 0.82);
 }
 
-.wwb-process-link a {
+.wwb-method-invite-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.85rem;
+  font-size: 0.875rem;
   font-weight: 600;
   color: var(--color-deep-olive);
   text-decoration: underline;

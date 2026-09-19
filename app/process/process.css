@@ -48,7 +48,15 @@
   font-size: clamp(1.0625rem, 1.6vw, 1.25rem);
   line-height: 1.65;
   color: rgba(237, 228, 204, 0.94);
-  max-width: 36ch;
+  max-width: 42ch;
+}
+
+.process-hero-clarification {
+  margin-top: 0.85rem;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: rgba(212, 196, 160, 0.9);
+  max-width: 38ch;
 }
 
 .process-hero-reassurance {

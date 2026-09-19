@@ -31,7 +31,7 @@ export function WhatWeBuildHome() {
                 href="/process/"
                 className="polish-text-link inline-flex items-center gap-3 text-[14px] font-semibold text-bone"
               >
-                Discover the 4Ds <span data-arrow aria-hidden>↗</span>
+                Explore the 4D method <span data-arrow aria-hidden>↗</span>
               </Link>
             </div>
             <p className="text-[14px] mt-5 md:mt-[22px] text-bone">

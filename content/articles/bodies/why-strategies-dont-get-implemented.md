@@ -1,4 +1,4 @@
-AI implementation means turning a business goal into a working process: choosing the right opportunity, defining what changes, building or configuring the solution, and improving it through use. I organize that work around Discover, Design, Deploy, and Drive.
+AI implementation means turning a business goal into a working process: choosing the right opportunity, defining what changes, building or configuring the solution, and improving it through use. I organize that work with [The Fidelis 4D Method](/process/). Its stages are Discover, Design, Deploy, and Drive.
 
 “Use AI to save time” is an ambition. It is not yet an implementation plan.
 
