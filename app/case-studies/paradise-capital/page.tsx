@@ -10,6 +10,8 @@ import Link from "next/link";
 import { ResultMoment } from "@/components/result-moment";
 import { testimonials } from "@/content/testimonials";
 
+const paradiseOgImageUrl = `${siteConfig.url}/paradise-capital-og-1200x630.png`;
+
 export const metadata: Metadata = {
   title: pageTitles.paradiseCapital,
   description: pageDescriptions.paradiseCapital,
@@ -19,6 +21,20 @@ export const metadata: Metadata = {
     title: pageTitles.paradiseCapital,
     description: pageDescriptions.paradiseCapital,
     url: "/case-studies/paradise-capital/",
+    images: [
+      {
+        url: paradiseOgImageUrl,
+        width: 1200,
+        height: 630,
+        alt: pageTitles.paradiseCapital,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: pageTitles.paradiseCapital,
+    description: pageDescriptions.paradiseCapital,
+    images: [paradiseOgImageUrl],
   },
 };
 
